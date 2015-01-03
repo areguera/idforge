@@ -107,7 +107,7 @@ function idforge {
     #=================================================================
 
     local IDFORGE_FUNCTION=''
-    local -r IDFORGE_FUNCTIONS=$(find ${IDFORGE_LIBRARY}/Functions -type f -name "*.sh")
+    local -r IDFORGE_FUNCTIONS=$(find ${IDFORGE_LIBRARY} -type f -name "${IDFORGE}_*.sh")
 
     for IDFORGE_FUNCTION in ${IDFORGE_FUNCTIONS};do
         if [[ -x ${IDFORGE_FUNCTION} ]];then
