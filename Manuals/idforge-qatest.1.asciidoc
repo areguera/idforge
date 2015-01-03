@@ -1,0 +1,294 @@
+= idforge-qatest(1)
+Alain Reguera Delgado <alain.reguera@gmail.com>
+=COPYRIGHT_YEAR_LAST=:
+
+== Name
+
+idforge-qatest - Manage automated quality assurance tests
+
+== Synopsis
+
+----------------------------------------------------------------------
+=IDFORGE_COMMAND_USAGE=
+----------------------------------------------------------------------
+
+== Description
+
+*idforge-qatest* is a unit testing framework to create and run
+automated quality assurance tests for idforge automation scripts
+quickly and consistently. The *idforge* developers, run
+*idforge-qatest* several times a day. Normally, before committing
+changes up to public repositories so as to be sure local changes
+didn't break anything; and after fixing a bug to reproduce the
+expected behaviour and refrain the fixed bug from happening again
+(because something else was changed and unexpectedly recreates it).
+
+When you execute *idforge-qatest*, it looks for acceptance test shell
+scripts inside the directories you provide as argument in the
+command-line and executes each of them, one by one, in the order they
+were found.  Each acceptance test shell script is normally written to
+reproduce specific features or behaviours with the intention of
+validating them using integrity checks.
+
+== Integrity checks
+
+Integrity checks allows you to infer the commands' result based on a
+previously defined validations (e.g., command's exit status, file
+types and message digests).
+
+=== Exit status
+
+The command's exit status validation is always applied to commands
+defined by *test_setCommand* function inside the assurance test shell
+scripts. As convention, when the command's exit status is 0 it is
+considered to be a successful command, otherwise it is a failed
+command.  This check is useful to know that commands were executed
+without errors (assuming those commands also agree that an exit status
+of 0 is a successful command).  However, this check doesn't validate
+the content produced by the executed command itself.  To do so, it is
+necessary to extend the integrity check by applying content-related
+validation.
+
+=== Content-related validation
+
+The content-related validation include MIME validation and message
+digest validation.
+
+==== MIME validation
+
+The MIME validation is applied whenever you provide the *-f* switch in
+the command-line.  When this happens, *idforge-qatest* looks for a
+file with the +.files+ extension and the same name of the shell script
+being currently executed in the directory you provided as argument in
+the command-line.  When such a file is detected, *idforge-qatest*
+makes a list of all files rendered after executing the command-line
+and compares it with the one in the +.files+ file, so to determine
+whether they both are equal or not.  If the result is equal, it is a
+successful command, otherwise it is a failed command.
+
+Apply this check whenever you want to validate file formats and one
+specific layout of files.
+
+==== Message digest validation
+
+The message digest validation is applied whenever you provide the *-g*
+switch in the command-line. When this happens, *idforge-qatest* looks
+for files with the +.md5sum+, +.sha1sum+ and +.sha256sum+ extensions
+and the same name of the shell script being currently executed in the
+directory you provided as argument in the command-line.  When any of
+these files is detected, *idforge-qatest* performs a message digest
+validation based on each file found. If all files match, it is a
+successful command, otherwise it is a failed command.
+
+Apply this check whenever you want to validate the integrity of one or
+more files bit-per-bit.
+
+Whenever you apply message digest validation it is important to be
+sure that the final file you are validating does not change as part of
+the natural production process. For example, when you render HTML
+documents from Asciidoc sources, the id value of HTML anchors is reset
+each time the HTML document is rendered. This makes impossible to
+apply automated tests that validate such files using static message
+digest files (e.g., the source file will have a different digest each
+time the test is executed). In this case, the MIME validation is
+preferred.
+
+[[options]]
+== Options
+
+*idforge-qatest* supports the following options:
+
+include::../commons/options.inc[]
+
+*-c COMMAND, --command=COMMAND*::
+    This option specifies the command that is subject to validation.
+    When this option is not provided, +/usr/bin/idforge+ is used as
+    default value.
+
+*-a, --add*::
+    This option allows you to add new shell scripts and their related
+    integrity check files in a consistent manner. When you provide
+    this option, you are prompted to enter the commands you want the
+    new quality assurance test to have.
+
+*-f, --filetypes*::
+    This option applies integrity checks related to file types and
+    directory structure.
+
+*-g, --digests*::
+    This option applies integrity checks related to message digests.
+
+
+== Exit Status
+
+*idforge-qatest* exits with the number of failed tests it found.
+
+== Examples
+
+This section describes the process of creating quality assurance tests
+for *idforge-qatest* command, using *idforge-qatest* as testing
+framework.  You can use this information as reference to create
+quality assurance tests for your own commands.
+
+[[idforge-qatest-add]]
+=== How to add new tests?
+
+Quality assurance tests are conceived to be executed inside the root
+location of your development tree, not the installed version of it.
+However, this doesn't mean that you cannot execute quality assurance
+tests against the installed version, it just doesn't make too much
+sense if the same tests were already applied and passed before
+releasing the code that is installed. 
+
+The purpose of adding a new test is verifying a specific feature or
+behaviour. In the case of idforge-qatest we are going to test that it
+is able to validate files using different integrity checks. To do so,
+we create a shell script named +create.sh+ with the commands that will
+create the file target of validation. This shell scripts looks as
+follows:
+
+----------------------------------------------------------------------
+QATEST_UNIT_NAME=${1}
+QATEST_UNIT_TEMPDIR=${2}
+shift 2
+mkdir -p ${QATEST_UNIT_TEMPDIR} 
+echo ${@} > ${QATEST_UNIT_TEMPDIR}/${QATEST_UNIT_NAME}.txt
+----------------------------------------------------------------------
+
+This shell script is necessary because idforge-qatest doesn't produce
+any file itself. So, to validate the actions of performing integrity
+checks related to file types, directory structure and digests it is
+necessary simulate the action of creating files using an auxiliary
+script like this one.  Nevertheless, if the command you are validating
+already produces the content you want to validate, or you just want to
+provide command exit status validation, you don't need to create any
+auxiliary shell script. Instead, you refer your command directly.
+
+Whenever you need to create auxiliary shell scripts for your assurance
+test shell scripts, create them them inside the directory you provided
+as argument in the command-line and begin their file name with a
+string different to +qatest-+ string, so they don't be considered for
+automatic execution when *idforge-qatest* is looking for assurance test
+shell scripts.
+
+Once you have the command you want to validate in place, execute the
+idforge-qatest with the -c option and the command you want to validate
+as argument to it. By default, only the command's exit status
+integrity check is performed so, we added both -f and -g options in
+the command-line to create the files needed to perform file-related
+integrity checks as well (e.g., file types and digests checks). It is
+also mandatory to provide the -a option to infer you are adding a new
+test. The final command would look like the following:
+
+----------------------------------------------------------------------
+IDFORGE_LIBEXECDIR=${PWD}/Libexec \
+    ./idforge qatest -c ./QaTests/idforge-qatest/create.sh -afg ./Qatests/idforge-qatest
+----------------------------------------------------------------------
+
+This command prompts you to enter the arguments that will be subject
+of validation and creates one shell script with them. Once the new
+test has been added, it is immediately validated, so you can know
+whether the it passed or failed.
+
+.Output related to new assurance test creation
+----------------------------------------------------------------------
+Creating        ./QaTests/idforge-qatest/qatest-2014121354413938903.sh
+Enter integrity checks target arguments:    
+./QaTests/idforge-qatest/create.sh ${QATEST_UNIT_NAME} ${QATEST_UNIT_TEMPDIR} Hello
+./QaTests/idforge-qatest/create.sh 
+Creating        ./QaTests/idforge-qatest/qatest-2014121354413938903.files
+Creating        ./QaTests/idforge-qatest/qatest-2014121354413938903.md5sum
+Creating        ./QaTests/idforge-qatest/qatest-2014121354413938903.sha1sum
+Creating        ./QaTests/idforge-qatest/qatest-2014121354413938903.sha256sum
+==================================================================
+./QaTests/idforge-qatest/qatest-2014121354413938903.sh  
+==================================================================
+[ PASSED ]  ./QaTests/idforge-qatest/create.sh qatest-2014121354413938903 ./QaTests/idforge-qatest/Final Hello
+[ PASSED ]  ./QaTests/idforge-qatest/qatest-2014121354413938903.files
+[ PASSED ]  ./QaTests/idforge-qatest/qatest-2014121354413938903.md5sum
+[ PASSED ]  ./QaTests/idforge-qatest/qatest-2014121354413938903.sha1sum
+[ PASSED ]  ./QaTests/idforge-qatest/qatest-2014121354413938903.sha256sum
+==================================================================
+5 tests were executed | 0 failed | 5 passed
+
+[ PASSED ] You can commit your changes now. Good work!
+
+----------------------------------------------------------------------
+
+[[idforge-qatest-layout]]
+=== Where are assurance test files put in?
+
+The assurance test files are stored in the directory you provide as
+argument in the command-line.  As convention, this is a directory
+inside the +./QaTests+ directory at idforge.git repository  (e.g.,
++./QaTests/idforge-qatest/+).  See <<qatest-directory-structre>>. 
+
+[[qatest-directory-structre]]
+.Directory structure and related files
+======================================================================
+----------------------------------------------------------------------
+./QaTests/idforge-qatest/
+|-- create.sh                               <1>
+|-- qatest-2014121354413938903.files        <2>
+|-- qatest-2014121354413938903.md5sum       <3>
+|-- qatest-2014121354413938903.sh           <4>
+|-- qatest-2014121354413938903.sha1sum      <5>
+`-- qatest-2014121354413938903.sha256sum    <6>
+----------------------------------------------------------------------
+<1> Command subject to integrity checks.
+<2> Integrity check file, based on file types and directory structure.
+<3> Integrity check file, based on digests using md5sum command.
+<4> Shell script initiate integrity checks.
+<5> Integrity check file, based on digests using sha1sum command.
+<6> Integrity check file, based on digests using sha256sum command.
+======================================================================
+
+=== How to execute specific tests
+
+When you execute idforge-qatest command, all assurance tests shell
+scripts in the directory you provided as argument are executed. To
+control the number of shell scripts you execute, use idforge --filter
+option. This option allows you to enter a regular expression matching
+the test number (e.g., the string between qatest- and .sh strings in
+the shell script file name). So, if you have the following assurance
+test shell scripts:
+
+----------------------------------------------------------------------
+./QaTests/idforge-qatest/
+|-- qatest-2014121314413169737.sh
+|-- qatest-2014121344576579785.sh
+`-- qatest-2014121354413938903.sh
+----------------------------------------------------------------------
+
+and you just want to run +qatest-2014121344576579785.sh+, then you
+need to run the following command:
+
+----------------------------------------------------------------------
+IDFORGE_LIBEXECDIR=${PWD}/Libexec \
+    ./idforge --filter="2014121344576579785" \
+    qatest -c ./QaTests/idforge-qatest/create.sh -afg ./Qatests/idforge-qatest
+----------------------------------------------------------------------
+
+== Author
+
+Written by {author} <{email}>
+
+== Copyright
+
+Copyright (C) {date} CentOS Artwork SIG
+
+qatest is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; either version 2 of the License, or (at your
+option) any later version.
+
+qatest is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+for more details.
+
+You should have received a copy of the GNU General Public License
+along with qatest; if not, write to the Free Software Foundation,
+Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
+// vim: set syntax=asciidoc:

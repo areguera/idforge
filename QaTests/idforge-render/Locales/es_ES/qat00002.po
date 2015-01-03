@@ -1,0 +1,53 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qat00002-3.pdf\n"
+"POT-Creation-Date: 2014-11-17 22:21-0500\n"
+"PO-Revision-Date: 2014-11-17 22:21-0500\n"
+"Last-Translator: CentOS Documentation SIG <centos-docs@centos.org>\n"
+"Language-Team: Español\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "qat00002"
+msgstr ""
+
+msgid "1"
+msgstr ""
+
+msgid "manpage for testing purposes."
+msgstr "página man para propósitos de prueba"
+
+msgid "Description"
+msgstr "Descripción"
+
+msgid "This is a manpage for testing purposes."
+msgstr "Esta página man es para propósitos de pruebas."
+
+msgid "Authors"
+msgstr "Autores"
+
+msgid "author@example.com"
+msgstr ""
+
+msgid "Written by Author &lt;<placeholder-1/>&gt;"
+msgstr "Escrito por Autor &lt;<placeholder-1/>&gt;"
+
+msgid "qat00002(1)"
+msgstr ""
+
+msgid "Author"
+msgstr "Autor"
+
+msgid "A"
+msgstr "A"
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid "qat00002 - manpage for testing purposes."
+msgstr "qat00002 - página man para propósitos de prueba."
+
+msgid "Synopsis"
+msgstr "Sinopsis"

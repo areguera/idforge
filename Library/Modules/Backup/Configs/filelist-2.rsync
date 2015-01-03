@@ -1,0 +1,70 @@
+#!/bin/bash
+######################################################################
+#
+#   backup - A personal backup tool based on rsync.
+#   Copyright © 2015 Alain Reguera Delgado
+#
+#   This program is free software; you can redistribute it and/or
+#   modify it under the terms of the GNU General Public License as
+#   published by the Free Software Foundation; either version 2 of the
+#   License, or (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+#   General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program; if not, write to the Free Software
+#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#
+#   Alain Reguera Delgado <alain.reguera@gmail.com>
+#   39 Street No. 4426 Cienfuegos, Cuba.
+#
+######################################################################
+
+# Filtering rules set in this file are designed to backup files in an
+# environment where there are two 250GB identical hard drives
+# configured to do software RAID-1 and one external USB device of
+# 150GB available to make important backups from RAID-1. The RAID-1
+# contains the CentOS distribution (default partitioning) and is
+# considered the primary source of information, here is where most
+# work is done.  The external USB device is used to backup critical
+# information only (e.g., development projects).
+
+# Auto-ignore files in the same way CVS does (e.g., ignore .svn/
+# directories).
+#-C
+
+# Backup home directories. Because the external drive has less space
+# than the hard drive, only backup my projects.
++ /home
++ /home/al
++ /home/al/Projects
+- /home/al/*
+- /home/*
+
+# Backup configuration (etc) directories.
++ /etc
+
+# Backup variable content.
++ /var/
++ /var/www/
+- /var/*
+
+# Backup cache directory. Here is where yum updates are stored.
+#+ /var/cache/
+
+# Backup DNS zone definitions.
+#+ /var/named/
+
+# Backup all variable lib and spool files.
+#+ /var/lib/
+#+ /var/spool/
+
+# Backup system's logs.
+#+ /var/log/
+#- /var/*
+
+# Ignore everything else.
+- /*

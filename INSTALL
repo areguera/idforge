@@ -1,0 +1,162 @@
+Installation of idforge
+
+    Copyright © 2015 CentOS Artwork SIG
+
+    Copying and distribution of this file, with or without
+    modification, are permitted in any medium without royalty provided
+    the copyright notice and this notice are preserved.
+
+This document describes the installation of iforge framework.  You can
+read this document to get a global idea about idforge packages and
+decide which of them you need to install.
+
+Overview
+--------
+
+idforge was conceived to be installed and run in CentOS 6. All
+packages required by idforge are available from the base repository of
+CentOS 6 so you don't need to install third party repositories to get
+into production with idforge framework.
+
+At this time there is not a Yum repository available for idforge
+framework. Such infrastructure is desired and will be addressed in the
+future. By now, packages related to idforge framework can be
+downloaded and installed from the following location:
+
+    http://wiki.centos.org/ArtWork/Framework
+
+These packages are all signed. So you need to import the related GPG
+key to your system's RPM database first in order to install these
+packages correctly. The GPG key you need to import is also available
+in the address shown above.
+
+To install these packages, run the following command as root user in
+the location where you downloaded them:
+
+    rpm -Uvhf idforge*.rpm
+
+Packages
+--------
+
+The packages related to idforge framework are all written in lowercase
+and comply the following naming convention:
+
+    idforge-${CATEGORY}-${NAME}.%{_dist}.noarch.rpm
+
+Where CATEGORY can take one of the following values:
+
+    modules
+        Provides modules used to extend idforge library. In this case,
+        NAME is always a verb describing the action of the command it
+        represents (e.g., prepare, render, locale, tuneup, etc.).
+        Packages in this category are installed in the
+        /usr/libexec/idforge-modules-${NAME} directory (e.g., the
+        initialization script of hello module is installed at
+        /usr/libexec/idforge-modules-Hello/hello.sh). Note that module
+        directory is written with the first letter in uppercase while
+        its initialization script is written in lowercase.
+
+    models
+        Provides normative information describing the corporate
+        identity (design models) of different organizations. In this
+        case, NAME is always the name of the organization which
+        normative information is created for (e.g., centos, gnu,
+        fedora, etc.). Packages in this category are installed in the
+        /usr/share/idforge-models-${NAME} directory (e.g., CentOS
+        design models are installed at
+        /usr/share/idforge-models-centos directory).
+
+Here is the list of available packages you need to download:
+
+idforge
+    This package provides the `idforge' command-line interface and
+    related information, including the library of shared functions,
+    documentation and localization files.  
+    
+        NOTE: This package doesn't provide any module. Modules for
+              idforge are provided in their own packages and you need
+              to install them yourself in order to execute them.
+
+    Install path: `/usr/libexec/idforge'
+
+idforge-modules
+    This package doesn't provide any file. However you can install it
+    if you want to install all modules available by running a single
+    command.
+    
+    Install path: none
+
+idforge-modules-hello
+    This package provides the `hello' module. This module prints a
+    greeting and exits successfully.  It provides examples about using
+    the different module supported and conventions about coding style
+    used as reference to write modules.
+    
+    Install path: `/usr/libexec/idforge-modules-hello'
+
+idforge-modules-prepare
+    This package provides the `prepare' module.  This module creates
+    the working directory where you produce corporate identity
+    manuals. It sets the directory structure needed plus all
+    configuration files needed to initiate the rendition process.
+
+    Install path: `/usr/libexec/idforge-modules-prepare'
+
+idforge-modules-render
+    This package provides the `render' module. This module renders
+    content based on configuration files inside the working directory
+    you previously created running the `prepare' module in your
+    workstation.
+
+    Install path: `/usr/libexec/idforge-modules-render'
+
+idforge-modules-locale
+    This package provides the `locale' module. This module retrieves
+    translatable strings from translatable design models and stores
+    them in PO files for translators to edit. The result produced by
+    this module is also used by the `render' module to produce
+    localized content. 
+
+    Install path: `/usr/libexec/idforge-modules-locale'
+
+idforge-modules-tuneup
+    This package provides the `tuneup' module. This module optimizes
+    design models' source files whenever it is possible (e.g., remove
+    unused objects from SVG files, transforms HTML documents into
+    XHTML documents).
+
+    Install path: `/usr/libexec/idforge-modules-tuneup'
+
+idforge-models
+    This package doesn't provide any file. However you can install it
+    if you want to install all models available by running a single
+    command.
+    
+    Install path: none
+
+idforge-models-default
+    This package provides design models common to all organizations
+    (e.g., stationery, clothes) and documentation describing how each
+    organization should distribute their design models for graphic
+    designers to rebuild them using their own artistic motifs. 
+    
+    Install path: `/usr/share/idforge-models-default'
+
+idforge-models-centos
+    This package provides normative files about the CentOS Project
+    corporate visual identity.  This includes the CentOS Project
+    brand, brushes, fonts, palette of colors, configuration files and
+    a detailed description about all visual manifestations the CentOS
+    Project wants to express its existence on. 
+
+        NOTE: Fonts are released as individual packages without the _
+              idforge_ name on them  (e.g., denmark-sans-fonts,
+              vegur-sans-fonts, vegur-serif-fonts,
+              vegur-sans-mono-fonts, etc.) and installed under
+              `/usr/share/fonts' directory. 
+    
+    Install path: `/usr/share/idforge-models-centos'
+
+So far all the packages related to idforge framework. In case you need
+more information about these packages, read the related spec file
+provided inside each source package.

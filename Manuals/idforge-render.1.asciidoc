@@ -1,0 +1,648 @@
+= idforge-render(1)
+Alain Reguera Delgado <alain.reguera@gmail.com>
+
+== Name
+
+idforge-render - Render content from configuration files.
+
+== Synopsis
+
+idforge render [ OPTIONS ] [ CONFIGURATION_FILE ] [ DIRECTORY ]
+
+== Description
+
+The _idforge render_ command reads configuration files provided as
+argument on the command-line. Arguments can be paths either to files
+or directories. When the argument provided is a file, _idforge render_
+processes it in the order they were provided on the command-line.
+When the argument provided is a directory, _idforge render_ looks for
+configuration files recursively inside the directory provided and
+processes configuration files one by one in alphabetic order.  So, to
+control the processing you need to carefully choose the configuration
+file names.
+
+The _idforge render_ command organizes content rendition in different
+rendition types which in turn are organized in rendition flows.
+Rendition types and flows make use of configuration options to collect
+the information they need to complete the content rendition process.
+Inside configuration files, rendition types are specified as value to
+the *render-type* option, and flows as value to the *render-flow*
+option.  Other options have different names based on the information
+they provide.
+
+This page documents the rendition types, flows and options supported
+by _idforge render_ command. This page also describes the structure of
+configuration files in a rendition context. Finally, it provides a
+list of configuration examples that you can use as reference to start
+writing your own configuration files.
+
+[[rendering-images]]
+=== Rendering images
+
+When the *render-type* option is set to ``image'', _idforge render_
+command can render images from either svg or raster images (e.g., png
+images) based on the extension of the first file specified in
+*render-from* configuration option and the rendition flow specified as
+value to *render-flow* configuration option.
+
+==== Rendering images from svg images (base)
+
+When the *render-type* option is set to ``image'', *render-from*
+points to a svg image, and *render-flow* is set to ``base'' (default),
+_idforge render_ command enters in svg image base rendition mode.  In
+this mode, the script creates one PNG image for all SVG files provided
+in the same configuration section.  Once this initial PNG image has
+been rendered, _idforge render_ applies final image transformations like
+branding, commenting, and format duplication on it.
+
+At base rendition, the following configuration options are supported:
+
+render-from::
+    Specifies the SVG file used to produce the final PNG image specified
+    in the section line. This option can receive either absolute or
+    relative paths.  Absolute paths begin with a slash (/) character
+    while relative paths begin with the dot slash (./) characters or
+    no character at all.  This variable can receive more than one
+    value by using either path expansion in one option definition, or
+    several option definitions.
+
+render-back::
+    Specifies the background image used in the final image. This must be
+    an image file (PNG preferably) with exactly the same dimensions
+    used to produce the source file in SVG format. When no background
+    image is found, _idforge render_ tries to find the closest candidate
+    available in the artistic motifs directory and creates a cropped
+    version of it using the image dimensions specified in this option.
+    If no background image is available for cropping, a plain color
+    image is used instead.
+
+locale-from::
+    Specifies the translation file in PO format for one or more SVG
+    files. See <<rendering-localized-files>>.
+
+render-as::
+    Specifies the image formats you want to create copies of the final
+    PNG image for (e.g., jpg, tif, pdf). The values specified in this
+    option are separated by white space and should be supported by
+    ImageMagick tool set.  When this variable is not provided or set
+    in the configuration file, the _idforge render_ command will not
+    create copies of the final PNG image in different formats.
++
+[TIP]
+======================================================================
+To see the list of possible image formats supported by ImageMagick
+tool set, you can run the following command: _identify -list format_.
+======================================================================
+
+render-mark::
+    Specifies the translation marker and the associated value that
+    will be expanded inside the source file instances used to produce
+    final files. The value of this option should be in the
+    ``=\MARKER=VALUE'' format.  Where ``=\MARKER='' is the translation
+    marker you want to expand and ``VALUE'' the associated information
+    that replaces the marker string.  To perform several expansions,
+    you can provide this option several times in the same
+    configuration section or you can provide a single option with
+    several translation markers definitions on it. When you provide
+    several translation markers as value to a single option,
+    translation markers should be set using one or more spaces as
+    separator.
+
+export-id::
+    Specifies the object you want to export from SVG files.  If this
+    variable is not provided or it is empty, the drawing area of the
+    SVG file is used as reference to export the final PNG image.
+
+comment::
+    Specifies the comment you want to write internally in the final
+    image file. This information is only visible in image formats like
+    PNG that support comments internally.
+
+command::
+    Specifies the transformation command that will be applied to
+    temporal PNG images in order to produce the final image. The value
+    of this option has the following syntax:
++
+----------------------------------------------------------------------
+<command> [options] INSTANCES IMAGE
+----------------------------------------------------------------------
++
+In this syntax, you don't write INSTANCES nor IMAGE arguments. These
+arguments are already set internally in the script.  However, you need
+to consider them in order to build a meaningful command-line.
++
+By default, the script produces one temporal PNG image for each SVG
+files provided and appends them all horizontally into a single PNG
+image using the same order in which temporal PNG images were initially
+rendered.  The direction in which the images are appended is set in
+the transformation command provided as value to the *command* option
+(e.g., _/usr/bin/convert +append_).
+
+brand::
+    Specifies the branding image you want to apply on final images. The
+    value of this option has the form ``FILENAME:GEOMETRY'', where
+    FILENAME is the absolute path to the PNG image you want to apply
+    as brand and, GEOMETRY takes the form ``xHEIGHT+X+Y''. In order to
+    apply brand information to final images correctly, the brand
+    images you want to apply must be available. In case they don't
+    exist the _idforge render_ command ends its execution with an error
+    message.
+
+At base rendition it is not possible to render final images in
+different heights or colors. To do so you need to use the extended
+image rendition mode.
+
+[[rendering-images-extended]]
+==== Rendering images from svg images (extended)
+
+When the *render-type* option is set to ``image'', *render-from*
+points to a svg image, and *render-flow* is set to ``extended'', _idforge
+render_ command enters in svg image extended rendition mode.  In this
+mode, several images with different heights, foreground color and
+background color are rendered for each svg file provided in the
+configuration section.
+
+The image extended rendition accepts the same configuration options of
+svg image base rendition mode does, plus the following ones:
+
+heights::
+    Specifies the image heights in pixels you want to create copies of
+    the final PNG image for. The values specified in this option are
+    separated by white space. When no value is provided to this
+    option, the _idforge render_ command will create copies of final PNG
+    image for the following standard heights: 16, 20, 22, 24, 26, 32,
+    36, 38, 40, 48, 52, 64, 72, 78, 96, 112, 124, 128, 148, 164, 196,
+    200, 512.
+
+fgcolors::
+    Specifies the foreground colors you want to render copies of the
+    final PNG image for.  The color information is specified in
+    hexadecimal format and is applied to all objects filled with black
+    color (000000) in the SVG file. The values specified in this
+    option should be all in one line using white space as separator.
+    When this option is not provided, final images are rendered
+    with the foreground color of its SVG file.
+
+bgcolors::
+    Specifies the background colors you want to render copies of the
+    final PNG image for. This variable uses Inkscape's
+    ``--export-background'' and ``--export-background-opacity''
+    options to control the background information of final PNG images.
+    Possible values to this variable take the form +XXXXXX-X+, where
+    +XXXXXX+ represent a color in hexadecimal format and the final +X+
+    might be 1 or 0. 1 for full opacity and 0 for full transparency.
+    Intermediate values between 0 and 1 (e.g., 0.55) can be given to
+    control the background opacity. When this variable is not
+    provided, final images are rendered using white background and
+    full transparency (+ffffff-0+).
+
+[[rendering-images-media]]
+==== Rendering images from svg images (media)
+
+When the *render-type* option is set to ``image'', *render-from*
+points to a svg image, and *render-flow* is set to ``media'', _idforge
+render_ command enters in svg image media rendition mode.  In this
+mode, you can produce several PNG images based on different release
+numbers, architectures, and the number of media related needed.  This
+rendition mode was specially conceived to render images related to
+installation media like CD-ROM, DVD-ROM, and their sleeves.
+
+The media image rendition mode accepts the same configuration options
+of svg image base rendition mode does, plus the following ones:
+
+media-type::
+    Specifies the type of medium you are producing artwork for and the
+    number required to cover the software space requirements. The
+    format of this value must be MEDIUM*NUMBER (e.g., "CD*6", "DVD*2",
+    "USB*1", etc.).
+
+media-release::
+    Specifies the release numbers you want to produce media for.  This
+    option accepts one or more numbers separated by space.
+
+media-arch::
+    Specifies the CentOS architecture you want to produce media for
+    (e.g., i386, x86_64).  This option accepts one or more values
+    separated by space.
+
+[[rendering-images-from-other-images]]
+==== Rendering images from raster images (base)
+
+When the *render-type* option is set to ``image'', *render-from*
+points to a raster image, and *render-flow* is set to ``base''
+(default),  _idforge render_ command enters in raster image base
+rendition mode. In this mode, the raster images provided as value to
+*render-from* are processed based on the value of *command*
+configuration option to create one temporal image that receives final
+image transformations like branding, commenting, and format
+duplications.
+
+In raster image base rendition mode, when the *command* option is not
+provided, the _/bin/cp_ command is used as default, no matter what
+kind of file you specified in the *render-from* option.
+
+In raster image base rendition mode, the command and the number of
+files you provide must be both consequent one another in order for
+them to be processed correctly.  You shouldn't provide two or more
+files as value to *render-from* option when the command you are using
+is _/bin/cp_ and the section name points to a file.  However, when the
+command you are using is _/usr/bin/convert +append_ and the section
+name points to an image file, you can provide more than one image file
+as value to *render-from* option.
+
+In raster image base rendition mode, the command and file type you
+provide must be consequent one another. You shouldn't provide text
+files as value to *render-from* option and expect the
+_/usr/bin/convert +append_ command to produce images from them (unless
+the text file is an image in xpm format or similar).
+
+[[rendering-images-with-reduced-number-of-colors]]
+==== Rendering images from raster images (indexed)
+
+When the *render-type* option is set to ``indexed'', *render-from*
+points to a raster image, and *render-flow* is set to ``indexed'',
+_idforge render_ command enters in raster image indexed rendition mode.
+In this mode, _idforge render_ produces an image with reduced number of
+colors based on the values provided in both the *render-from* and
+*colors-info* options. In this case, the *render-from* option points
+to an image (in PNG format, preferably) and the *colors-info* option
+points to a palette of colors in GPL format holding the optimized set
+of colors you want to use in the final image.
+
+To find the optimized set of colors for your image, you can open the
+image you provided in the *render-from* option using GIMP and reduce
+its colors using GIMP's Indexed feature. Later, create a new palette
+importing it from the indexed image you already have. Once you have
+the palette of colors this way, you need to edit it using the Palettes
+dialog to add each color hexadecimal value in the comment field,
+respectively and save it to disk.
+
+When you have the palette of colors available in your personal GIMP's
+directory, you are ready to write its location as value to
+*colors-info* option and run _idforge render_ command to get final images
+with the exact number of colors you set in the palette.
+
+When images with reduced number of colors include the CentOS symbol on
+them, the palette of colors used to produce them must include the
+following colors: +#262577+, +#932279+, +#efa724+, +#9ccd2a+,
++#ffffff+. These are the CentOS symbol colors, and you must be
+absolutely sure they are exactly set in the palette of colors before
+considering this image final.
+
+When images with reduced number of colors include the CentOS symbol on
+them, it is possible for you to realize that the CentOS symbol doesn't
+look the way it should (e.g., there might be noise all over it). To
+work around this issue you can open the indexed image with GIMP and,
+retouch it with care and attention until the noise is entirely removed
+from it.  The easiest way to do this, is using the CentOS symbol brush
+(48x48) the *idforge-brushes* package installs in your workstation.
+
+[[rendering-documentation]]
+==== Rendering documentation
+
+render-type::
+    Should be set to ``asciidoc''
+render-flow::
+    Should be set to ``article'', ``book'', or ``manpage''.
+render-from::
+    Should point to an asciidoc source file.  This is the file where
+    most of the writing actions take place.
+render-from-xsl::
+    Should point to an xsl file. This is the file you want to use to
+    perform the document transformation from docbook format to final
+    output (e.g., pdf, xhtml, chunk, etc.)  This option is useful when
+    you want to provide customization on top of default xsl
+    stylesheets installed in your system or just want to point out a
+    different xsl file (e.g., by default html output is produced in a
+    single page, if you want to use chunks you need to use this option
+    to point out the appropriate xsl file). In your system, the xsl
+    files are installed in the
+    /usr/share/sgml/docbook/xsl-stylesheets/ directory.
+render-as::
+    May be set either to ``xhtml'', ``pdf'', or ``manpage''.  When you
+    set a value to this option, the value you provide must be
+    consequent with the kind of rendition you are performing. For
+    example, ``manpage'' format is not supported when you render-flow
+    is set to article or book. Nevertheless, when render-flow is set
+    to manpage, all values mentioned earlier are valid. When this
+    option is not provided in the configuration section, the ``xhtml''
+    value is used as default output format.
+manpage-product::
+    This option specifies the manpage product name. This is the
+    information printed on the left bottom of the page. When you don't
+    provide this option, the script name used to produce the manpage
+    (i.e., ``idforge'') is used as default product name.
+asciidoc-opts::
+    This option let you pass specific options to asciidoc at the
+    moment of creating the dockbook instance used to produce the final
+    output.
+    
+
+Other options that you can use in this configuration section are:
+*locale-from*, *render-dir* and *render-file*.
+
+[[rendering-archives]]
+==== Rendering archives
+
+When the *render-type* option is set to ``archive'', the _idforge render_
+command takes the list of files you provided as value to *render-from*
+option and creates an archive with them. The archive contains only one
+directory in the root location with all the files you provided as
+value to *render-from* option inside it. The archive compression is
+determined automatically based on the extension you provide (e.g.,
++tar.gz+, +tar.bz2+) in the section name. The files inside the archive
+are all optimized (e.g., the _idforge tuneup_ command is applied to them)
+before being archived. The directory name where all files are stored
+in is the section name without any extension.
+
+To customize the default archiving behaviour, you should add the
+*command* option to the section and provide its value using the
+``+COMMAND OPTIONS ARCHIVE \*+'' format.  From this format, you should
+pass the COMMAND and OPTIONS arguments only.  The rest of it is set
+inside automation scripts and you don't have to pass them as value to
+the *command* option.  To retain the order of automation scripts'
+archiving command, the last command-line option you pass as value to
+*command* must be the one specifying the file name of the archive you
+want to finally produce (e.g., +-f+ in case of *tar* command).
+Otherwise, if this order is not preserved, the entire archiving
+command would fail because a wrong command-line construction.
+
+When the archive is being created, the files you provided as value to
+*render-from* option are removed from their locations. The only
+exception to this rule are files inside the repository installed in
+your workstation, which are always preserved.
+
+In some occasions you render files with one name but need to archive
+them with another different. To do this, you should provide a value to
+*render-from* option using the "FILENAME:NAME" format.  In this
+format, FILENAME is the absolute path of file you want to archive and
+NAME the final name (without any path or slash) you want to use to
+store the file in the archive.
+
+[[rendering-compressed-files]]
+==== Rendering compressed files
+
+When the *render-type* option is set to ``compress'', the _idforge
+render_ command compresses the file provided as value to *render-from*
+option using the command specified and saves the result using the name
+of the file set as value to *render-from* option. In this case the
+section name is irrelevant but it must be present to mark the section
+definition beginning.
+
+When the *command* option is not provided the _/bin/gzip_ command is
+used as default value for compression.
+
+[[rendering-localized-files]]
+==== Rendering localized files
+
+When the *render-type* option is set to either ``svg'' or
+``asciidoc'', it is possible to render the final file for different
+locales using the *locale-from* option in the configuration section.
+
+The *locale-from* option accepts one or more translation files in PO
+format as value.  When just one translation file is provided it should
+contain the translatable strings of all SVG files.  When more than one
+translation file is provided they should should contain the
+translatable strings of each source file, individually (e.g., the
+first translation file contains translatable strings from the first
+source file, the second translation file from the second source file,
+and so on).
+
+When the *locale-from* option isn't provided, it set to an empty
+value, or it points to malformed PO file, the final content will not
+be localized.
+
+The translation files in PO format needed by _idforge render_ command
+can be managed through _idforge locale_ command. See
+*idforge-locale(1)* man page for more information.
+
+[[rendering-specific-files]]
+==== Rendering specific files
+
+When you provide the _idforge --filter="REGEX" render_ command, the
+number of configuration sections considered for production are reduced
+based on ``REGEX''. Here, REGEX is a regular expression pattern
+matching the names of sections in a configuration file.
+
+Rendering specific content this way accelerates the content rendition
+in some situations.  For example, you want to produce one or more
+final images without producing the dependent images related to them
+again (i.e., because you've already produced them and don't want to
+waste time rendering them again).  On the other hand, however, if
+changes are introduced to dependent images and you don't render them,
+your final images will end up outdated.
+
+As convention, you should create a new working directory and perform a
+full rendition inside it every time you install a new version of idforge
+package in your workstation, so changes introduced to design models
+(specially those to branding) can be reflected in your final work. In
+the middle time, nonetheless, you don't have to render all dependent
+images all the time to get final images in less time.
+
+== Options
+
+The _idforge render_ command accepts the following options:
+
+*-h, --help*::
+    Print documentation (this page).
+
+*-v, --version*::
+    Print version and legal status.
+
+*-s, --description*::
+    Print brief description.
+
+[[managing-content-relation]]
+== Managing Content Relation
+
+Managing content relation is present when you need to produce one or
+more specific images first in order to be able of producing another
+one based on them later. In theses cases, you should grant a
+production order consequent with the base components of the final
+image you want to build.  In this context, graphic designers get
+focused on one component at a time and in producing it well, and let
+people writing configuration file to gear the pieces.
+
+By managing content relation you can improve maintainability of
+certain components like branded images. It let you concentrate design
+models in a single location and make references to them from different
+visual manifestation's configuration file.  This way it is possible to
+introduce changes to design models and propagate them quickly to all
+visual manifestations' images by running a single command.
+
+The process of managing content relation was initially conceived
+inside the _idforge prepare_ command but it made the preparation process
+too long, resource expensive and not all rendered images were always
+used in each single interaction of _idforge render_ command. So, these
+issues led to change the perspective about rendering dependencies
+inside _idforge_ automation scripts from the workstation preparation
+process up to the process of writing configuration files.
+
+== Examples
+
+[[palette-of-colors]]
+.Palette of colors
+----------------------------------------------------------------------
+GIMP Palette
+Name: Syslinux-Default
+Columns: 16
+#
+ 32  76 141 204c8d
+ 37  82 146 255292
+ 52  94 153 345e99
+ 73 110 162 496ea2
+ 91 124 172 5b7cac
+108 136 180 6c88b4
+120 146 186 7892ba
+131 158 193 839ec1
+255 255 255 ffffff
+146 170 200 92aac8
+162 182 209 a2b6d1
+183 199 219 b7c7db
+204 216 230 ccd8e6
+221 229 238 dde5ee
+235 241 245 ebf1f5
+246 251 254 f6fbfe
+----------------------------------------------------------------------
+
+.Rendering archives
+----------------------------------------------------------------------
+[CentOS5-gdm-800x600.tar.gz]
+render-type = "archive"
+render-from = "${IDFORGE_WORKDIR}/Motifs/Default/Final/800x600-dusk.png:background.png"
+render-from = "/usr/share/idforge-models-centos/logos-4.9.16/gdm/GdmGreeterTheme.desktop"
+render-from = "/usr/share/idforge-models-centos/logos-4.9.16/gdm/GdmGreeterTheme.xml"
+render-from = "/usr/share/idforge-models-centos/logos-4.9.16/gdm/icon-language.png"
+render-from = "/usr/share/idforge-models-centos/logos-4.9.16/gdm/icon-reboot.png"
+render-from = "/usr/share/idforge-models-centos/logos-4.9.16/gdm/icon-session.png"
+render-from = "/usr/share/idforge-models-centos/logos-4.9.16/gdm/icon-shutdown.png"
+render-from = "Final/screenshot.png"
+command     = "/bin/tar -czf"
+----------------------------------------------------------------------
+
+.Rendering compressed files
+----------------------------------------------------------------------
+[splash.xpm.gz]
+render-type = "compress"
+render-from = "Final/splash.xpm"
+command     = "/bin/gzip -f"
+----------------------------------------------------------------------
+
+.Rendering images (base)
+----------------------------------------------------------------------
+[splash.png]
+render-type = "image"
+render-flow = "base"
+render-from = "/usr/share/idforge-models-centos/logos-60.0.14/anaconda/splash.svg"
+render-back = "Final/559x319.png"
+locale-from = "no-locale"
+command     = "/usr/bin/convert"
+brand       = "Final/ffffff-0/ffffff/48/centos-symbol.png:x48+30+20"
+brand       = "Final/ffffff-0/ffffff/24/centos-type.png:x24+30+156"
+brand       = "Final/ffffff-0/ffffff/48/centos-release.png:x96+170+132"
+----------------------------------------------------------------------
+
+.Rendering images (extended)
+----------------------------------------------------------------------
+[centos-symbol.png]
+render-type = "image"
+render-flow = "extended"
+render-from = "/usr/share/idforge-models-centos/Branding/0000/168/centos-{symbol,type}.svg"
+render-as   = "png jpg tif"
+heights     = "16 20 22 24 32 36 38 40 48"
+fgcolor     = "000000 ffffff ad7fa8 75507b 5c3566"
+bgcolor     = "ffffff-0 ffffff-1"
+----------------------------------------------------------------------
+
+.Rendering images with reduced number of colors
+----------------------------------------------------------------------
+[syslinux-splash.lss]
+render-type = "image"
+render-type = "indexed"
+render-from = "Final/syslinux-splash.png"
+colors-info = "${HOME}/.gimp-2.6/palettes/syslinux-splash-16c.gpl"
+----------------------------------------------------------------------
+
+.Rendering documentation (manpage)
+----------------------------------------------------------------------
+[idforge-render]
+render-type     = "asciidoc"
+render-flow     = "manpage"
+render-from     = "${PWD}/Scripts/Manuals/${SECTION}.asciidoc"
+locale-from     = "${PWD}/Scripts/Manuals/Locales/${IDFORGE_LANG_LC}/${SECTION}.asciidoc.po"
+render-as       = "manpage xhtml pdf"
+----------------------------------------------------------------------
+
+.Managing rendering dependencies
+----------------------------------------------------------------------
+#=====================================================================
+# 1. Build branding images.
+#=====================================================================
+
+[centos-logo.png]
+render-type = "image"
+render-from = "/usr/share/idforge-models-centos/Branding/0000/168/centos-logo.svg"
+render-flow = "extended"
+formats     = "png"
+heights     = "48"
+fgcolors    = "ffffff"
+bgcolors    = "ffffff-0"
+
+[centos-symbol.png]
+render-type = "image"
+render-from = "/usr/share/idforge-models-centos/Branding/0000/168/centos-symbol.svg"
+render-flow = "extended"
+formats     = "png"
+heights     = "48"
+fgcolors    = "ffffff"
+bgcolors    = "ffffff-0"
+
+#=====================================================================
+# 2. Build background images.
+#=====================================================================
+
+[886x443.png]
+render-type = "image"
+render-from = "${IDFORGE_WORKDIR}/Motifs/Default/Final/1280x1024-dusk.png"
+command     = "/usr/bin/convert -extract 886x443+0+0 +repage"
+brand       = "Final/ffffff-0/ffffff/48/centos-logo.png:x48+16+354"
+brand       = "Final/ffffff-0/ffffff/48/centos-symbol.png:x48+822+16"
+
+#=====================================================================
+# 3. Build final images.
+#=====================================================================
+
+[install-sleeve.png]
+render-type     = "image"
+render-flow     = "media"
+render-from     = "/usr/share/idforge-models/Marketing/Installation/install-sleeve.svg"
+render-back     = "${IDFORGE_WORKDIR}/Marketing/Installation/Final/886x443.png"
+locale-from     = "/usr/share/idforge-models/Marketing/Installation/Locales/${IDFORGE_LANG_LC}/messages.po"
+media-type      = "CD*6 DVD*2"
+media-release   = "6.0 6.1 6.2 6.3 6.4 6.5"
+media-arch      = "i386 x86_64"
+----------------------------------------------------------------------
+
+== Author
+
+Written by {author} <{email}>
+
+== Copyright
+
+Copyright (C) =COPYRIGHT_YEAR_LAST= =COPYRIGHT_HOLDER=
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or (at
+your option) any later version.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
+// vim: set syntax=asciidoc:

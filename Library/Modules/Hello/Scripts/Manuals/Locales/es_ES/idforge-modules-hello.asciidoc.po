@@ -1,0 +1,189 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: idforge-modules-hello\n"
+"POT-Creation-Date: 2014-09-30 00:42-0400\n"
+"PO-Revision-Date: 2014-10-24 12:00-0400\n"
+"Last-Translator: CentOS Documentation SIG <centos-docs@centos.org>\n"
+"Language-Team: Español\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "idforge-modules-hello"
+msgstr ""
+
+msgid "1"
+msgstr ""
+
+msgid "Print a greeting and exit successfully."
+msgstr "Muestra un saludo y termina exitosamente. "
+
+msgid "idforge hello [ OPTIONS ] [ GREETING ]"
+msgstr ""
+
+msgid "Description"
+msgstr "Descripción"
+
+msgid "idforge hello"
+msgstr ""
+
+msgid "idforge"
+msgstr ""
+
+msgid ""
+"The <placeholder-1/> command prints the arguments you provide in the command-"
+"line to the standard output and exits successfully. It provides several "
+"options to let you control how the output message is printed to standard "
+"output. Each of these options is intentionally written to illustrate "
+"specific ways of using modules inside the <placeholder-2/> script. See the "
+"<xref linkend=\"options\"/>."
+msgstr ""
+"El comando <placeholder-1/> imprme a la salida estándar los argumentos que "
+"suministras en la línea de comando y termina satisfactoriamente. Este "
+"comando dispone de varias opciones para controlar la apariencia del saludo "
+"impreso en la salida estándar. Cada una de estas opciones son intencialmente "
+"escritas para ilustrar las formas específicas de usar los módulos dentro del "
+"guión <placeholder-2/>. Vea la <xref linkend=\"options\"/>"
+
+msgid "Options"
+msgstr "Opciones"
+
+msgid "The <placeholder-1/> command accepts the following options:"
+msgstr "El comando <placeholder-1/> acepta las opciones siguientes:"
+
+msgid "-h, --help"
+msgstr ""
+
+msgid "-v, --version"
+msgstr ""
+
+msgid "-s, --description"
+msgstr ""
+
+msgid "-l, --lower"
+msgstr ""
+
+msgid ""
+"Shows message in lowercase. The final output is printed out all in one line."
+msgstr ""
+"Muestra el mensaje en minúsculas. La salida final es impresa en una sola "
+"línea"
+
+msgid "-u, --upper"
+msgstr ""
+
+msgid ""
+"Shows message in uppercase. The final output is printed out all in one line."
+msgstr ""
+"Muestra el mensaje en mayúsculas. La salida final es impresa en una sola "
+"línea."
+
+msgid "-c, --camel"
+msgstr ""
+
+msgid "-r, --random"
+msgstr ""
+
+msgid "Shows command’s documentation (this page)."
+msgstr "Muestra la documentación del comando (esta página)"
+
+msgid "Shows command’s version and legal status."
+msgstr "Muestra la versión y estado legal del comando."
+
+msgid "Shows command’s brief description."
+msgstr "Muestra una breve descripción del comando."
+
+msgid ""
+"Shows messages in camel-case (e.g., \"HeLlO\"). The output is printed one "
+"character per line to describe how execution of sibling modules work inside "
+"idFORGE library. Notice that, when the final output is printed, punctuation "
+"marks doesn’t count for formating."
+msgstr ""
+"Muestra mensajes en camel-case (ej., \"HeLlO\"). La salida es impresa "
+"utilizando un caracter por línea para describir cómo funciona la ejecución "
+"de modulos hermanaos dentro de la librería idFORGE. Advierta que, cuando la "
+"salida final es impresa, los signos de puntuación no cuentan en el formateo."
+
+msgid ""
+"Shows message in a random order (e.g., \"HHHel\"). The final output is "
+"printed one character per line to describe how recursive execution of "
+"sibling modules work."
+msgstr ""
+"Muestra el mensaje en un orden aleatorio (ej., \"HHHel\"). La salida final "
+"es impresa utilizando un caracter por línea para describir cómo funciona la "
+"ejecución recursiva de modules hermanados."
+
+msgid ""
+"The <placeholder-1/> command is also affected by options passed to "
+"<placeholder-2/> script. See, <placeholder-3/> script documentation to know "
+"what these options are."
+msgstr ""
+"El comando <placeholder-1/> es afectado por las opciones pasadas al guión "
+"<placeholder-2/>. Vease, la documentación del guión <placeholder-3/> para "
+"conocer cuales son estas opciones."
+
+msgid "Examples"
+msgstr "Ejemplos"
+
+msgid "idforge --debug hello --lower Hello"
+msgstr ""
+
+msgid "Debug execution environment of parent, child and sibling modules"
+msgstr ""
+"Depura el entorno de ejecución de los módulos padres, hijos y hermanados."
+
+msgid "idforge --debug hello --camel Hello"
+msgstr ""
+
+msgid "Authors"
+msgstr "Autores"
+
+msgid "alain.reguera@gmail.com"
+msgstr ""
+
+msgid "Written by Alain Reguera Delgado &lt;<placeholder-1/>&gt;"
+msgstr "Escrito por Alain Reguera Delgado &lt;<placeholder-1/>&gt;"
+
+msgid "Copyright"
+msgstr ""
+
+msgid "Copyright © =COPYRIGHT_YEAR_LAST= =COPYRIGHT_HOLDER="
+msgstr ""
+
+msgid "Debug execution environment of parent and child modules"
+msgstr "Depura el entorno de ejecución de módulos padres e hijos."
+
+msgid ""
+"idforge-modules-hello is free software; you can redistribute it and/or "
+"modify it under the terms of the GNU General Public License as published by "
+"the Free Software Foundation; either version 2 of the License, or (at your "
+"option) any later version."
+msgstr ""
+"idforge-modules-hello es software libre; usted puede redistribuirlo y/o "
+"modificarlo bajo los términos de la Licencia Pública General de GNU como se "
+"publicó por la Free Software Foundation; ya sea en la versión 2 de la "
+"Licencia, o (a su opinión) cualquier versión posterior."
+
+msgid ""
+"idforge-modules-hello is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
+"or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for "
+"more details."
+msgstr ""
+"idforge-modules-hello es distribuido en la expectativa de que será util, "
+"pero SIN NINGUNA GARANTÍA; incluso sin la garantía implicita de "
+"COMERCIALIZACIÓN o IDIONIDAD PARA UN PROPÓSIGO PARTICULAR. Vease la Licencia "
+"General Pública de GNU para los detalles."
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"idforge-modules-hello; if not, write to the Free Software Foundation, Inc., "
+"675 Mass Ave, Cambridge, MA 02139, USA."
+msgstr ""
+"Usted debe haber recibido uan copia de la Licencia General Pública de GNU "
+"junto a idforge-modules-hello; de lo contrario, escriba a la Free Software "
+"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
+
+msgid "Copyright © =COPYRIGHT_YEAR_LAST= CentOS Artwork SIG"
+msgstr ""

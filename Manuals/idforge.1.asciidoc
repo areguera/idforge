@@ -1,0 +1,146 @@
+= idforge(1)
+Alain Reguera Delgado <alain.reguera@gmail.com>
+
+== Name
+
+idforge - Manage identity manuals in community.
+
+== Synopsis
+
+idforge [ OPTIONS ] <COMMAND> [ OPTIONS ] [ ARGUMENTS ]
+
+== Description
+
+idforge is a framework to manage corporate identity manuals in
+community. It gears the work of graphic designers, translators,
+programmers and packagers using a modular design and standard
+procedures that can be reused by different organizations.
+
+idforge provides a publishing medium for organizations who want to
+distribute normative information needed to reproduce their corporate
+identity manual. Including the organization's brand, colors, visual
+manifestations, and configuration files describing how these
+components must be combined to achieve predictable results. For
+graphic designers, it provides a tool to reproduce corporate identity
+manuals consistently using customized artistic motif and the normative
+specifications the organizations have provided.
+
+idforge results useful for communities who need to distribute the
+construction, maintenance and implementation of their own corporate
+identity manuals. And this way, in community, reducing the work load
+needed to renew it.
+
+== Options
+
+*idforge* interprets option arguments based in the position they are
+written in the command-line. When the option argument is written
+before the command argument, it is interpreted directly by *idforge*
+initialization script and it is considered a common option.  When the
+option argument is written after the command argument, it is
+interpreted by the related command and it is considered a specific
+options to that command instead.
+
+Common options affect the entire execution environment of *idforge*
+script, while specific options affect only the execution environment
+of the command that interprets them. The specific options are
+described in the man page of the command they pertain to.
+
+*idforge* supports the following common options:
+
+-h, --help::
+    Shows *idforge* documentation (this page).
+
+-v, --version::
+    Shows *idforge* version and license information.
+
+-d, --debug::
+    Runs *idforge* in debugging mode. This option is very useful if
+    you want to get a closer look to the way *idforge* modules are
+    opened and closed at execution time. For more information about
+    *idforge* modules, see ``idforge-modules(5)'' manual.
+
+-q, --quiet::
+    Runs the script quietly. This option reduces the amount of
+    information *idforge* prints on the screen.
+
+-y, --yes::
+    Runs the script in affirmative mode. This is answering positively
+    to all boolean questions. This option is useful when you run the
+    *idforge* script with the *--quiet* option.
+
+When no argument is provided to *idforge*, it prints the usage
+information including the list of all modules available. This is also
+true when the only argument provided to *idforge* is a valid module,
+in which case the module's usage information is printed instead.
+
+Exit Status
+-----------
+
+*idforge* ends its execution with one of the following exit status:
+
+* 0 -- Exit successfully without errors.
+* 1 -- Exit with errors.
+
+Execution Environment
+---------------------
+
+*idforge* execution environment can be customized by changing the
+following environment variables:
+
+IDFORGE_BINDIR::
+    Directory where *idforge* initialization script will be installed
+    in. By default this variable takes the `/usr/bin' value.
+IDFORGE_SHAREDIR::
+    Directory where the *idforge* directory will be stored in. By
+    default this variable takes the `/usr/share' value.
+IDFORGE_MANDIR::
+    Directory where the *idforge* man pages will be looked for. By
+    default this variable takes the `/usr/share/man' value.
+IDFORGE_LOCALEDIR::
+    Directory where *idforge* localization will be installed in. By
+    default this variable takes the `/usr/share/locale' value.
+IDFORGE_TEMPDIR::
+    Directory where *idforge* writes temporal files. By default this
+    variable takes the `/tmp' value.
+IDFORGE_ETCDIR::
+    Directory where *idforge* stores configuration files. By default
+    this variable takes the `/etc' value.
+IDFORGE_LIBEXECDIR::
+    Directory where *idforge* stores its library of shared functions
+    and modules. By default this variable takes the `/usr/libexec'
+    value.
+
+== Documentation
+
+*idforge* package comes with the following documentation manuals:
+
+ * idforge(1) - Describes idforge command-line.
+ * idforge-modules(5) - Describe modules used by idforge.
+
+See also the INSTALL, for more information about how to install other
+related packages. Each of these packages come with their respective
+documentation as well.
+
+== Author
+
+Written by {author} <{email}>
+
+== Copyright
+
+Copyright (C) =COPYRIGHT_YEAR_LAST= CentOS Artwork SIG
+
+idforge is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; either version 2 of the License, or (at your
+option) any later version.
+
+idforge is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+for more details.
+
+You should have received a copy of the GNU General Public License
+along with idforge; if not, write to the Free Software Foundation,
+Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
+// vim: set syntax=asciidoc:

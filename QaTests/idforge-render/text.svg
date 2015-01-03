@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.2"
+   width="765"
+   height="990"
+   id="svg2"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="paper-text.svg">
+  <metadata
+     id="metadata56">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1360"
+     inkscape:window-height="693"
+     id="namedview54"
+     showgrid="false"
+     inkscape:zoom="0.78461174"
+     inkscape:cx="252.75222"
+     inkscape:cy="616.22699"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 495 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="765 : 495 : 1"
+       inkscape:persp3d-origin="382.5 : 330 : 1"
+       id="perspective58" />
+  </defs>
+  <image
+     sodipodi:absref="=RENDER_BACK="
+     xlink:href="=RENDER_BACK="
+     x="0"
+     y="-3.8281252e-07"
+     width="765"
+     height="990"
+     id="image5504" />
+  <text
+     sodipodi:linespacing="125%"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
+     xml:space="preserve"
+     id="text4950"
+     y="195"
+     x="74.046875"><tspan
+       id="tspan4952"
+       y="195"
+       x="74.046875">What is QaTest?</tspan></text>
+  <flowRoot
+     style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+     xml:space="preserve"
+     id="flowRoot4954"
+     transform="translate(0,-14.208395)"><flowRegion
+       id="flowRegion4956"><rect
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+         id="rect4958"
+         y="230.54794"
+         x="74.589043"
+         height="134.44565"
+         width="614.79449" /></flowRegion><flowPara
+       id="flowPara2896"><flowSpan
+   style="font-weight:bold"
+   id="flowSpan2951">qatest</flowSpan> is a framework for running quality assurance tests. It is written in Bash and conceived for <flowSpan
+   style="font-weight:bold"
+   id="flowSpan2953">idforge</flowSpan> developers whose need to run frequent tests against the code they write before committing the changes up to idforge.git central repository. <flowSpan
+   style="font-weight:bold"
+   id="flowSpan2959">qatest</flowSpan> helps to reducethe risk of introducing bugs into <flowSpan
+   style="font-weight:bold"
+   id="flowSpan2955">idforge</flowSpan> master branch and quicklyfind them when they arise. As convention, <flowSpan
+   style="font-weight:bold"
+   id="flowSpan2957">idforge</flowSpan> developers don'tcommit their changes without executing <flowSpan
+   style="font-weight:bold"
+   id="flowSpan2961">qatest</flowSpan> first.</flowPara><flowPara
+       id="flowPara2898" /><flowPara
+       id="flowPara2900" /><flowPara
+       id="flowPara2902" /><flowPara
+       id="flowPara2904" /></flowRoot>  <g
+     id="g2912"
+     transform="translate(0,70)">
+    <text
+       x="74.046875"
+       y="315.0332"
+       id="text5042"
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
+       sodipodi:linespacing="125%"><tspan
+         x="74.046875"
+         y="315.0332"
+         id="tspan5044">What is this file for?</tspan></text>
+    <flowRoot
+       transform="translate(0,101.60606)"
+       id="flowRoot5046"
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"><flowRegion
+         id="flowRegion5048"><rect
+           width="614.79449"
+           height="40.887226"
+           x="74.589043"
+           y="230.54794"
+           id="rect5050"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans" /></flowRegion><flowPara
+         id="flowPara5090"><flowSpan
+   id="flowSpan3302"
+   style="font-weight:bold">QaTest</flowSpan> uses this file inside configuration files to verify the actions related to image rendering in different formats and locales using SVG files as input.</flowPara></flowRoot>    <text
+       x="74.046875"
+       y="430.84766"
+       id="text5283"
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
+       sodipodi:linespacing="125%"><tspan
+         x="74.046875"
+         y="430.84766"
+         id="tspan5285">Translation markers</tspan></text>
+    <flowRoot
+       transform="translate(0,217.42051)"
+       id="flowRoot5287"
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"><flowRegion
+         id="flowRegion5289"><rect
+           width="615.41095"
+           height="446.34409"
+           x="74.589043"
+           y="230.54794"
+           id="rect5291"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans" /></flowRegion><flowPara
+         id="flowPara2951">Translation markers is a feature provided by idforge automation scripts to expand markers inside design models instances before they are processed. They provide a way to introduce dynamic information inside designs. There are default translation markers and user-specific translation markers. The first ones are always expanded inside SVG instantances whereas the later are expanded when they are specified in the configuration file only.</flowPara><flowPara
+         id="flowPara2953" /><flowPara
+         style="font-weight:bold;text-align:justify;text-anchor:start"
+         id="flowPara2955">Example of common translation markers are:</flowPara><flowPara
+         id="flowPara2957" /><flowPara
+         style="font-size:10px;text-align:justify;text-anchor:start"
+         id="flowPara2959">=\COPYRIGHT_YEAR_FIRST=: =COPYRIGHT_YEAR_FIRST=</flowPara><flowPara
+         style="font-size:10px;text-align:justify;text-anchor:start"
+         id="flowPara2961">=\COPYRIGHT_HOLDER=: =COPYRIGHT_HOLDER=</flowPara><flowPara
+         style="font-size:10px;text-align:justify;text-anchor:start"
+         id="flowPara2963">=\LICENSE=: =LICENSE=</flowPara><flowPara
+         id="flowPara2965" /><flowPara
+         style="font-weight:bold;text-align:justify;text-anchor:start"
+         id="flowPara2967">Example of user-specific translation markers are:</flowPara><flowPara
+         id="flowPara2969" /><flowPara
+         style="font-size:10px;text-align:start;text-anchor:start;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
+         id="flowPara2971">[paper.png]</flowPara><flowPara
+         style="font-size:10px;text-align:start;text-anchor:start;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
+         id="flowPara2973">render-type     = &quot;image&quot;</flowPara><flowPara
+         style="font-size:10px;text-align:start;text-anchor:start;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
+         id="flowPara2975">render-from     = &quot;${PWD}/Scripts/QaTests/qat00006/paper-text.svg&quot;</flowPara><flowPara
+         style="font-size:10px;text-align:start;text-anchor:start;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
+         id="flowPara2977">render-back     = &quot;${PWD}/Scripts/QaTests/qat00006/Final/765x990.png&quot;</flowPara><flowPara
+         style="font-size:10px;text-align:start;text-anchor:start;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
+         id="flowPara2979">render-mark     = &quot;=\SECTION=${SECTION}&quot;</flowPara><flowPara
+         style="font-size:10px;text-align:start;text-anchor:start;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
+         id="flowPara2985">render-mark     = &quot;=\RENDER_TYPE=${RENDER_TYPE}&quot;</flowPara><flowPara
+         id="flowPara2987" /><flowPara
+         id="flowPara3011">where:</flowPara><flowPara
+         id="flowPara3015" /><flowPara
+         style="font-size:10px;text-align:start;text-anchor:start;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
+         id="flowPara2989"><flowSpan
+   id="flowSpan3028"
+   style="font-weight:bold">=\SECTION=</flowSpan> expands to <flowSpan
+   id="flowSpan3032"
+   style="font-weight:bold">=SECTION=</flowSpan></flowPara><flowPara
+         style="font-size:10px;text-align:start;text-anchor:start;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
+         id="flowPara3001"><flowSpan
+   id="flowSpan3030"
+   style="font-weight:bold">=\RENDER_TYPE=</flowSpan> expands to <flowSpan
+   id="flowSpan3050"
+   style="font-weight:bold">=RENDER_TYPE=</flowSpan></flowPara></flowRoot>  </g>
+</svg>
