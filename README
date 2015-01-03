@@ -1,0 +1,63 @@
+idforge
+
+    Copyright © 2015 CentOS Artwork SIG
+
+    Copying and distribution of this file, with or without
+    modification, are permitted in any medium without royalty provided
+    the copyright notice and this notice are preserved.
+
+idforge is a framework to manage corporate identity manuals in
+community. It gears the work of graphic designers, translators,
+programmers and packagers using a modular design and standard
+procedures that can be reused by different organizations.
+
+idforge provides a publishing medium for organizations who want to
+distribute normative information needed to reproduce their corporate
+identity manual. Including the organization's brand, colors, visual
+manifestations, and configuration files describing how these
+components must be combined to achieve predictable results. For
+graphic designers, it provides a tool to reproduce corporate identity
+manuals consistently using customized artistic motif and the normative
+specifications the organizations have provided.
+
+idforge results useful for communities who need to distribute the
+construction, maintenance and implementation of their own corporate
+identity manuals. And this way, in community, reducing the work load
+needed to renew it.
+
+Documentation
+-------------
+
+idforge package comes with the following documentation manuals:
+
+ * idforge(1) - Describes idforge command-line.
+
+ * idforge-modules(5) - Describe the modular design of idforge
+   command-line.
+
+See also the INSTALL, for more information about how to install other
+related packages.
+
+Website
+-------
+
+Recent updates for idforge are published in
+<http://wiki.centos.org/ArtWork/Framework>.
+
+Mailing Lists
+-------------
+
+Discussion about idforge development and its whole meaning take place
+at CentOS Developers mailing list <centos-devel@centos.org>.
+
+Author
+------
+
+idforge is written by Alain Reguera Delgado <alain.reguera@gmail.com>
+
+License
+-------
+
+idforge is copyright of CentOS Artwork SIG and released as free
+software. See the LICENSE file for more information about copying
+matters.
