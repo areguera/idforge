@@ -87,7 +87,11 @@ function idforge_printMessage {
             else
                 # Build error message. This output communicates what
                 # happened in simple words, without too much details.
-                idforge_printMessage "${IDFORGE}: ${MESSAGE}" --as-stderr-line
+                if [[ -n ${IDFORGE_MODULE_NAME} ]];then
+                    idforge_printMessage "${IDFORGE} (${IDFORGE_MODULE_NAME}): ${MESSAGE}" --as-stderr-line
+                else
+                    idforge_printMessage "${IDFORGE}: ${MESSAGE}" --as-stderr-line
+                fi
             fi
 
             # Finish script execution with exit status 1 (SIGHUP) to
