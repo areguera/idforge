@@ -31,13 +31,13 @@ function idforge_unsetModuleEnvironment {
 
     # Verify suffix value used to retrieve function files.
     if [[ -z ${IDFORGE_MODULE_NAME} ]];then
-        idforge_printMessage "`gettext "The export id was not provided."`" --as-error-line
+        idforge_printMessage "`gettext "The module name was not provided."`" --as-error-line
     fi
 
     # Define list of format-specific functionalities. This is the list
     # of function definitions previously exported by
-    # `idforge_setModuleEnvironmentScripts'.  Be sure to limit the list
-    # to function names that start with the suffix specified only.
+    # `idforge_setModuleFunctions'.  Be sure to limit the list to
+    # function names that start with the suffix specified only.
     local IDFORGE_MODULE_IDFORGE_FN=''
     local IDFORGE_MODULE_IDFORGE_FNS=$(declare -F | gawk '{ print $3 }' | egrep "^${IDFORGE_MODULE_NAME}")
 
