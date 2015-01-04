@@ -43,7 +43,7 @@ function idforge {
     # are stored in. The value of variable is the same for shared
     # functions and modules, so it is exported to the shell
     # environment for wide use.
-    declare -x TEXTDOMAINDIR=${IDFORGE_LOCALEDIR}
+    declare -x TEXTDOMAINDIR=/usr/share/locale
 
     # Set the script language information using the LC format. This
     # format shows both language and country information (e.g.,
@@ -67,6 +67,9 @@ function idforge {
 
     # Base directory where automation script modules are installed in.
     local -r IDFORGE_MODULES=${IDFORGE_LIBRARY}/Modules
+
+    # Base directory where documentation manuals are installed in.
+    local -r IDFORGE_MANUALS=/usr/share/man
 
     # Directory to store temporal files. CAUTION: Don't make this
     # variable local. If you do so, the trap built-in won't be able to
