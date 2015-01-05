@@ -137,16 +137,18 @@ function idforge {
     trap idforge_removeTemporals 0
 
     #=================================================================
+    # Default Action
+    #=================================================================
+
+    [[ $# -eq 0 ]] && idforge_setModuleEnvironment -m 'usage' -t 'child' -g ${IDFORGE} -g ${IDFORGE_LIBRARY}
+
+    #=================================================================
     # Parse Command-line Arguments
     #=================================================================
 
     local ARGUMENTS=''; idforge_setOptions "${@}"; eval set -- "${ARGUMENTS}"
 
-    #=================================================================
-    # Default Action
-    #=================================================================
-
-    [[ $# -eq 0 ]] && idforge_setModuleEnvironment -m 'usage' -t 'child'
+    [[ $# -eq 0 ]] && return
 
     #=================================================================
     # Initiate module name

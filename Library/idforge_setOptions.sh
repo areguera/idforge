@@ -70,7 +70,8 @@ function idforge_setOptions {
                 ;;
 
             -v | --version )
-                idforge_printVersion
+                idforge_setModuleEnvironment -t 'parent' -m 'version' -g ${IDFORGE}
+                shift 1
                 ;;
 
             -q | --quiet )

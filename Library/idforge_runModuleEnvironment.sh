@@ -25,19 +25,17 @@
 
 function idforge_runModuleEnvironment {
 
+    # Print command usage when the module's argument is empty.
+    [[ -z ${IDFORGE_MODULE_ARGUMENT} ]] \
+    && idforge_setModuleEnvironment -t 'parent' -m 'usage' -g "${IDFORGE_MODULE_NAME}" -g "${IDFORGE_MODULE_DIR}" \
+    && return
+
     # Initialize current module's text domain. This is the name of the
     # last parent module in the chain of modules.
     local TEXTDOMAIN="${IDFORGE}" ; idforge_setModuleTextDomain
 
     idforge_printMessage "TEXTDOMAIN: ${TEXTDOMAIN}" --as-debugger-line
     idforge_printMessage "TEXTDOMAINDIR: ${TEXTDOMAINDIR}" --as-debugger-line
-
-    # Print usage information when no argument is provided to a
-    # module's command-line.  This applies to parent modules only.
-    if [[ ${IDFORGE_MODULE_NAME} != 'usage' ]] && [[ -z ${IDFORGE_MODULE_ARGUMENT} ]] && [[ ${#FUNCNAME[*]} -eq 4 ]];then
-        idforge_setModuleEnvironment -m 'usage' -g "${IDFORGE_MODULE_NAME}" -g "${IDFORGE_MODULE_DIR}"
-        return
-    fi
 
     # Define next module's base directory.
     IDFORGE_MODULE_BASEDIRS[${IDFORGE_MODULE_COUNT}]=${IDFORGE_MODULE_DIR_MODULES}
