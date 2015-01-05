@@ -48,12 +48,12 @@ function version_setOptions {
                 ;;
 
             -v | --version )
-                idforge_setModuleEnvironment -t 'child' -m 'status' -g 'version'
+                idforge_setModuleEnvironment -t 'child' -m 'status' -g ${IDFORGE_MODULE_NAME}
                 shift 1
                 ;;
 
             -s | --description )
-                idforge_setModuleEnvironment -t 'child' -m 'description' -g 'version'
+                idforge_setModuleEnvironment -t 'child' -m 'description' -g ${IDFORGE_MODULE_NAME}
                 shift 1
                 ;;
 

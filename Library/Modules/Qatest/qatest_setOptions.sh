@@ -49,11 +49,12 @@ function qatest_setOptions {
                 ;;
 
             -v | --version )
-                idforge_printVersion
+                idforge_setModuleEnvironment -t 'parent' -m 'version' -g ${IDFORGE_MODULE_NAME}
+                shift 1
                 ;;
 
             -s | --description )
-                idforge_setModuleEnvironment -t 'child' -m 'print' -g 'description'
+                idforge_setModuleEnvironment -t 'child' -m 'description' -g ${IDFORGE_MODULE_NAME}
                 exit 0
                 ;;
 

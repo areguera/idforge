@@ -47,11 +47,12 @@ function config_setOptions {
                 ;;
 
             -v | --version )
-                idforge_printVersion
+                idforge_setModuleEnvironment -t 'parent' -m 'version' -g ${IDFORGE_MODULE_NAME}
+                shift 1
                 ;;
 
             -s | --description )
-                idforge_setModuleEnvironment -m 'description' -t 'child'
+                idforge_setModuleEnvironment -m 'description' -t 'child' -g ${IDFORGE_MODULE_NAME}
                 exit 0
                 ;;
 
