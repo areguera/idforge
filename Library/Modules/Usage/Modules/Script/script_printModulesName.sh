@@ -23,21 +23,16 @@
 #
 ######################################################################
 
-function usage_setModule {
+function script_printModulesName {
 
-    # Define the localization domain for this function.
-    local TEXTDOMAIN="${IDFORGE}"
+    [[ ! -d ${IDFORGE_MODULES} ]] && return
 
-    # Define the name of the module that the usage message will be
-    # printed for. Since we are using the usage module to print the
-    # information, the name of the module we want to print the usage
-    # message for is the module loaded before usage.
-    local USAGE_MODULE_NAME=${IDFORGE_MODULE_NAMES[$(( IDFORGE_MODULE_COUNT - 2 ))]}
+    local MODULE_DIR=''
+    local MODULE_DIRS=$(idforge_printFileList -a 1 -i 1 -t d \
+        -p "${IDFORGE_MODULES}/[[:upper:]][[:lower:]]+$" ${IDFORGE_MODULES})
 
-    local OPTIONS=$(usage_setOptions "${USAGE_MODULE_NAME}_setOptions")
-
-    idforge_printMessage "`eval_gettext "Usage"`: ${IDFORGE} ${USAGE_MODULE_NAME} ${OPTIONS} [ARGS]" --as-stdout-line=5
-
-    usage_setMore
+    for MODULE_DIR in ${MODULE_DIRS};do
+        basename ${MODULE_DIR}
+    done
 
 }

@@ -23,15 +23,20 @@
 #
 ######################################################################
 
-function usage_setMore {
+function script_printModules {
 
-    # Define the localization domain for this function.
-    local TEXTDOMAIN="${IDFORGE}"
-
-    local COMMAND=${USAGE_MODULE_NAME:-<`gettext "command"`>}
+    local SCRIPT_MODULES=$(script_printModulesName)
+    local SCRIPT_MODULES_TOTAL=$(echo "${SCRIPT_MODULES}" | wc -l)
 
     echo
 
-    idforge_printMessage "`eval_gettext "See '\\\$IDFORGE \\\$COMMAND --help' for more information."`" --as-stdout-line
+    if [[ -n ${SCRIPT_MODULES} ]];then
+        idforge_printMessage "`eval_ngettext "The following \\\$IDFORGE command is available:" \
+                             "The following \\\$IDFORGE commands are available:" \
+                             "${SCRIPT_MODULES_TOTAL}"`" --as-stdout-line
+        script_printModulesList
+    else
+        idforge_printMessage "`eval_gettext "It looks like no module has been install so far."`" --as-stdout-line
+    fi
 
 }

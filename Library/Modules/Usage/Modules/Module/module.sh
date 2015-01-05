@@ -23,13 +23,22 @@
 #
 ######################################################################
 
-function usage_setScriptModulesList {
+function module {
 
-    local DESCRIPTION=''
+    # Define the name of the module that the usage message will be
+    # printed for.
+    local MODULE_NAME=${1}
 
-    for MODULE in ${MODULES};do
-        DESCRIPTION=$(idforge_setModuleEnvironment -m ${MODULE} -t 'parent' -g '--description')
-        idforge_printMessage "   ${MODULE}: ${DESCRIPTION}" --as-stdout-line=8
-    done
+    # Define the directory of the module that the usage message will
+    # be printed for.
+    local MODULE_DIR=${2}
+
+    # Define the string holding the module options based on the
+    # function file where they are defined.
+    local MODULE_OPTIONS=$(usage_printOptions "${MODULE_DIR}/${MODULE_NAME}_setOptions.sh")
+
+    usage_printHeader "${MODULE_NAME} ${MODULE_OPTIONS} [ARGS]"
+
+    usage_printFooter "${MODULE_NAME}"
 
 }

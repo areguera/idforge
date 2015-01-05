@@ -23,15 +23,12 @@
 #
 ######################################################################
 
-function usage_setScript {
+function usage_printFooter {
 
-    # Define the localization domain for this function.
-    local TEXTDOMAIN="${IDFORGE}"
+    local COMMAND=${1:-<`gettext "command"`>}
 
-    local OPTIONS=$(usage_setOptions)
+    echo
 
-    idforge_printMessage "`gettext "Usage"`: ${IDFORGE} ${OPTIONS} COMMAND [ARGS]" --as-stdout-line=5
-
-    usage_setScriptModules
+    idforge_printMessage "`eval_gettext "See '\\\$IDFORGE \\\$COMMAND --help' for more information."`" --as-stdout-line
 
 }

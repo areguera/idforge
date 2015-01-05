@@ -23,16 +23,8 @@
 #
 ######################################################################
 
-function idforge_printModuleNames {
+function usage_printHeader {
 
-    [[ ! -d ${IDFORGE_MODULES} ]] && return
-
-    local MODULE_DIR=''
-    local MODULE_DIRS=$(idforge_printFileList -a 1 -i 1 -t d \
-        -p "${IDFORGE_MODULES}/[[:upper:]][[:lower:]]+$" ${IDFORGE_MODULES})
-
-    for MODULE_DIR in ${MODULE_DIRS};do
-        basename ${MODULE_DIR}
-    done
+    idforge_printMessage "`gettext "Usage"`: ${IDFORGE} ${@}" --as-stdout-line=5
 
 }
