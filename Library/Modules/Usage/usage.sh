@@ -25,16 +25,13 @@
 
 function usage {
 
-    # Use the function call stack to determine whether to print script
-    # or module usage message. This is an effective way of doing this
-    # verification even when the script is executed from higher shell
-    # environments of itself (e.g., when doing packaging checks).
-    if [[ ${#FUNCNAME[*]} -eq 6 ]];then
+    local COMMAND="${1:-${IDFORGE}}"
+    local COMMAND_DIR="${2:-${IDFORGE_LIBRARY}}"
+
+    if [[ ${COMMAND} == ${IDFORGE}  ]];then
         idforge_setModuleEnvironment -m 'script' -t 'child'
-    elif [[ ${#FUNCNAME[*]} -eq 7 ]];then
-        idforge_setModuleEnvironment -m 'module' -t 'child' -g "${1}" -g "${2}"
     else
-        idforge_printMessage "`gettext "This module is for internal use only."`" --as-error-line
+        idforge_setModuleEnvironment -m 'module' -t 'child' -g "${1}" -g "${2}"
     fi
 
 }

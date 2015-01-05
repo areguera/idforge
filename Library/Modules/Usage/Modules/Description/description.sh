@@ -24,5 +24,5 @@
 ######################################################################
 
 function description {
-    idforge_printMessage "`gettext "Print usage information."`" --as-stdout-line
+    idforge_printMessage "`gettext "Print command usage information."`" --as-stdout-line
 }
