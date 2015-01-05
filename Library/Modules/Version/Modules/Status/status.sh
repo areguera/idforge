@@ -23,27 +23,18 @@
 #
 ######################################################################
 
-# Print idforge version and license information.
-function idforge_printVersion {
+function status {
 
-    # Define the localization domain for this function.
-    local TEXTDOMAIN="${IDFORGE}"
+    local COMMAND="${1:-${IDFORGE}}"
 
-    # Redefine script name and version using the function call stack
-    # to determine whether to print script or module version sentence.
-    # This is an effective way of doing this verification even when
-    # the script is executed from higher shell environments of itself
-    # (e.g., when doing packaging checks).
-    if [[ ${#FUNCNAME[*]} -gt 4 ]];then
-        idforge_printMessage "`eval_gettext "\\\$IDFORGE (\\\$IDFORGE_MODULE_NAME) \\\$IDFORGE_VERSION"`" --as-stdout-line
-    else
+    if [[ ${COMMAND} == ${IDFORGE} ]];then
         idforge_printMessage "`eval_gettext "\\\$IDFORGE \\\$IDFORGE_VERSION"`" --as-stdout-line
+    else
+        idforge_printMessage "`eval_gettext "\\\$IDFORGE (\\\$COMMAND) \\\$IDFORGE_VERSION"`" --as-stdout-line
     fi
 
-    idforge_printCopyright
+    status_printCopyright
 
     echo "`eval_gettext "\\\$IDFORGE comes with NO WARRANTY, to the extent permitted by law. You may redistribute copies of \\\$IDFORGE under the terms of the GNU General Public License. For more information about these matters, see the file named LICENSE."`" | fold --width=66 --spaces
-
-    exit $?
 
 }

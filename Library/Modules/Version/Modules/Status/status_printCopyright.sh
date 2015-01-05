@@ -36,10 +36,7 @@
 # about it.  So, in that sake, I am using CentOS Project as copyright
 # holder and the GNU Public License, version 2 or any later, for
 # software copying.
-function idforge_printCopyright {
-
-    # Define the localization domain for this function.
-    local TEXTDOMAIN="${IDFORGE}"
+function status_printCopyright {
 
     case "${1}" in
 
@@ -64,15 +61,15 @@ function idforge_printCopyright {
 
         --years-range )
 
-            local FIRST_YEAR=$(idforge_printCopyright --first-year)
-            local LAST_YEAR=$(idforge_printCopyright --last-year)
+            local FIRST_YEAR=$(status_printCopyright --first-year)
+            local LAST_YEAR=$(status_printCopyright --last-year)
             echo "${FIRST_YEAR}-${LAST_YEAR}"
             ;;
 
         --years-list )
 
-            local FIRST_YEAR=$(idforge_printCopyright --first-year)
-            local LAST_YEAR=$(idforge_printCopyright --last-year)
+            local FIRST_YEAR=$(status_printCopyright --first-year)
+            local LAST_YEAR=$(status_printCopyright --last-year)
 
             # Define full copyright year string based on first and
             # last year.
@@ -98,14 +95,14 @@ function idforge_printCopyright {
 
         --holder-predicate )
 
-            local HOLDER=$(idforge_printCopyright --holder)
+            local HOLDER=$(status_printCopyright --holder)
             echo "${HOLDER}. `gettext "All rights reserved."`"
             ;;
 
         * )
 
-            local YEAR=$(idforge_printCopyright --last-year)
-            local HOLDER=$(idforge_printCopyright --holder)
+            local YEAR=$(status_printCopyright --last-year)
+            local HOLDER=$(status_printCopyright --holder)
             echo "Copyright © ${YEAR} ${HOLDER}"
             ;;
 
