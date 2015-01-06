@@ -27,13 +27,13 @@
 # message. With this function there is no need to write one printUsage
 # function for each command inside idforge(1) script. With this
 # function we reduce the overall maintenance cost.
-function usage_printOptions {
+function synopsis_printOptions {
 
     # Define absolute path to function where command-line options will
     # be retrieved from. It is required that the function you provide
     # does be defined and use the standard format adopted by
     # idforge.sh script.
-    local FUNCTION_FILE=${1:-${IDFORGE_LIBRARY}/${IDFORGE}_setOptions.sh}
+    local FUNCTION_FILE=${USAGE_COMMAND_DIR}/${USAGE_COMMAND_NAME}_setOptions.sh
 
     # Define the regular expression pattern that matches option
     # definitions inside _getOptions files.

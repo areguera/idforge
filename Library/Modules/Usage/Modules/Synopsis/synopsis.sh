@@ -23,14 +23,18 @@
 #
 ######################################################################
 
-function script_printModulesList {
+function synopsis {
 
-    local MODULE_NAME=''
-    local MODULE_DESCRIPTION=''
+    case ${USAGE_COMMAND_NAME} in
 
-    for MODULE_NAME in ${MODULE_NAMES};do
-        MODULE_DESCRIPTION=$(idforge_setModuleEnvironment -m ${MODULE_NAME} -t 'parent' -g '--description')
-        idforge_printMessage "   ${MODULE_NAME}: ${MODULE_DESCRIPTION}" --as-stdout-line=8
-    done
+        ${IDFORGE} )
+            idforge_setModuleEnvironment -t 'child' -m 'script'
+            ;;
+
+        * )
+            idforge_setModuleEnvironment -t 'child' -m 'module'
+            ;;
+
+    esac
 
 }

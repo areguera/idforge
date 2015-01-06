@@ -23,22 +23,14 @@
 #
 ######################################################################
 
-function module {
+function script {
 
-    # Define the name of the module that the usage message will be
-    # printed for.
-    local MODULE_NAME=${1}
+    local SCRIPT_OPTIONS=$(synopsis_printOptions)
 
-    # Define the directory of the module that the usage message will
-    # be printed for.
-    local MODULE_DIR=${2}
+    synopsis_printHeader "${SCRIPT_OPTIONS} COMMAND [ARGS]"
 
-    # Define the string holding the module options based on the
-    # function file where they are defined.
-    local MODULE_OPTIONS=$(usage_printOptions "${MODULE_DIR}/${MODULE_NAME}_setOptions.sh")
+    script_printModules
 
-    usage_printHeader "${MODULE_NAME} ${MODULE_OPTIONS} [ARGS]"
-
-    usage_printFooter "${MODULE_NAME}"
+    synopsis_printFooter
 
 }

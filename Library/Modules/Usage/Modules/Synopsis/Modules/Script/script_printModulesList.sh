@@ -23,14 +23,14 @@
 #
 ######################################################################
 
-function script {
+function script_printModulesList {
 
-    local SCRIPT_OPTIONS=$(usage_printOptions)
+    local SCRIPT_MODULE_NAME=''
+    local SCRIPT_MODULE_DESCRIPTION=''
 
-    usage_printHeader "${SCRIPT_OPTIONS} COMMAND [ARGS]"
-
-    script_printModules
-
-    usage_printFooter
+    for SCRIPT_MODULE_NAME in ${SCRIPT_MODULES};do
+        SCRIPT_MODULE_DESCRIPTION=$(idforge_setModuleEnvironment -m ${SCRIPT_MODULE_NAME} -t 'parent' -g '--description')
+        idforge_printMessage "   ${SCRIPT_MODULE_NAME}: ${SCRIPT_MODULE_DESCRIPTION}" --as-stdout-line=8
+    done
 
 }

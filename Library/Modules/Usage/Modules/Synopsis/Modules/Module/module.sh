@@ -23,8 +23,14 @@
 #
 ######################################################################
 
-function usage_printHeader {
+function module {
 
-    idforge_printMessage "`gettext "Usage"`: ${IDFORGE} ${@}" --as-stdout-line=5
+    # Define the string holding the module options based on the
+    # function file where they are defined.
+    local USAGE_COMMAND_OPTIONS=$(synopsis_printOptions "${USAGE_COMMAND_DIR}/${USAGE_COMMAND_NAME}_setOptions.sh")
+
+    synopsis_printHeader "${USAGE_COMMAND_NAME} ${USAGE_COMMAND_OPTIONS} [ARGS]"
+
+    synopsis_printFooter "${USAGE_COMMAND_NAME}"
 
 }

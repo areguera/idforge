@@ -23,21 +23,8 @@
 #
 ######################################################################
 
-function usage {
+function synopsis_printHeader {
 
-    # Initialize module command-line and interpret both arguments and
-    # options passed through through it.
-    local ARGUMENT='' ARGUMENTS=''; usage_setOptions "${@}"
-
-    # Define name of the command you want to print usage information
-    # for.
-    local USAGE_COMMAND_NAME="${1:-${IDFORGE}}"
-
-    # Define the absolute path where the command you want to print
-    # usage information for is store in.
-    local USAGE_COMMAND_DIR="${2:-${IDFORGE_LIBRARY}}"
-
-    # Print usage information based on collected information.
-    idforge_setModuleEnvironment -t 'child' -m 'synopsis'
+    idforge_printMessage "`gettext "Usage"`: ${IDFORGE} ${@}" --as-stdout-line=5
 
 }

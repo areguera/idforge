@@ -23,7 +23,7 @@
 #
 ######################################################################
 
-function usage_printFooter {
+function synopsis_printFooter {
 
     local COMMAND=${1:-<`gettext "command"`>}
 
