@@ -25,8 +25,9 @@
 
 function idforge_runModuleEnvironment {
 
-    # Print command usage when the module's argument is empty.
-    [[ -z ${IDFORGE_MODULE_ARGUMENT} ]] \
+    # Print command usage when a parent module is provided with no
+    # argument in the command-line.
+    [[ ${IDFORGE_MODULE_TYPE} == 'parent' ]] && [[ -z ${IDFORGE_MODULE_ARGUMENT} ]] \
     && idforge_setModuleEnvironment -t 'parent' -m 'usage' -g "${IDFORGE_MODULE_NAME}" -g "${IDFORGE_MODULE_DIR}" \
     && return
 
