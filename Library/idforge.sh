@@ -140,7 +140,7 @@ function idforge {
     # Default Action
     #=================================================================
 
-    [[ $# -eq 0 ]] && idforge_setModuleEnvironment -m 'usage' -t 'child' -g ${IDFORGE} -g ${IDFORGE_LIBRARY}
+    [[ $# -eq 0 ]] && idforge_setModuleEnvironment -t 'child' -m 'usage'
 
     #=================================================================
     # Parse Command-line Arguments
