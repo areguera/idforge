@@ -25,9 +25,11 @@
 
 function test {
 
-    local QATEST_UNITS=$(idforge_printFileList -t f -p ".+/${IDFORGE_MODULE_NAMES[0]}-${IDFORGE_FLAG_FILTER}\.sh$" ${ARGUMENT} | sort)
+    local QATEST_UNITS=$(idforge_printFileList -t f -p ".+/.*${IDFORGE_FLAG_FILTER}\.sh$" ${ARGUMENT} | sort)
 
     for QATEST_UNIT in ${QATEST_UNITS};do
+
+        idforge_printMessage "QATEST_UNIT: ${QATEST_UNIT}" --as-debugger-line
 
         local QATEST_UNIT_NAME=$(basename ${QATEST_UNIT%.sh})
         local QATEST_UNIT_DIR=${QATEST_UNIT%/*}
