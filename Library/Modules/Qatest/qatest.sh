@@ -35,8 +35,11 @@ function qatest {
     # options passed through command-line.
     local ARGUMENT='' ARGUMENTS=''; qatest_setOptions "${@}"
 
+    # Verify remaining arguments. They need to be provided to continue.
+    [[ -z ${ARGUMENTS} ]] && return
+
     # Verify remaining arguments. They must be directories.
-    idforge_checkFiles -ed ${ARGUMENTS}
+    idforge_checkFiles -d ${ARGUMENTS}
 
     # Initialize tests counter.
     local QATEST_UNITS_PASSED=0
