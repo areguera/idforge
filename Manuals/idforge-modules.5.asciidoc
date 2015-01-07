@@ -1,6 +1,6 @@
 = idforge-modules(5)
 Alain Reguera Delgado <alain.reguera@gmail.com>
-=IDFORGE_COPYRIGHT_YEAR=:
+0.2, 2015:
 
 == Name
 
@@ -8,40 +8,34 @@ idforge-modules - Describes idforge module environments.
 
 == Synopsis
 
-_idforge_ module environments are a collection of functions written in
-Bash that can call themselves one another to create individual
-execution environments. Module environments can be nested to achieve
-high levels of maintainability and extensibility. 
+The module environment of *idforge* is a collection of Bash functions
+grouped by meaning and executed based on specific conditions only.
+Each module environment can be nested inside another to create a chain
+of individual execution environments with their own scopes. The higher
+module environment is visible to all its subsequent module
+environments, but not the opposite.
 
-_idforge_ module environments were introduced in tcar-0.5, making it
-possible to divide complicated tasks into smaller tasks that can be
-easier to debug, maintain and share with other modules efficiently
-(e.g., instead of loading modules all at once, they are only loaded at
-demand and unset once they conclude their execution).
+The modular design of *idforge* allows you to optimize the
+construction of your shell scripts based on the features you want to
+implement. For example, consider the case of printing both command's
+usage and version information. The output of these actions is
+conceptually different, so each one has its own module inside
+*idforge* (e.g., usage and version, respectively). When you request
+usage information only the functions related to usage information are
+loaded. No function related to version information is loaded in such
+case.
 
-This page describes _idforge_ module environments.  To make this
-description easier to understand, it uses examples taken from _idforge
---debug hello_ command. The description starts with a general
-description about module environments for further delving into their
-implementation using _idforge_ debugging output as reference.
+The modular design of *idforge* was introduced in tcar-0.5, making it
+possible to divide long tasks into smaller tasks easier to debug,
+maintain and share with other modules efficiently.
 
 [[module-environment]]
 == Module Environment
 
-When you execute _idforge_ you create a shell environment in which
-variables and functions can be defined. This environment is the first
-one defined in _idforge_ so it has the highest scope you can work
-with. Inside this environment, we export variables and functions that
-will always be available at run-time.
-
-_idforge_ shell environment can be customized passing environment
-variables described in idforge(1) through command-line. This is useful
-to run _idforge_ in a location different from its default one (e.g.,
-when quality assurance tests are run in the build root).
-
-_idforge_ shell environment is small and doesn't provide too much
-functionality beyond library initialization. A picture of idforge
-shell execution environment is presented below:
+When you execute *idforge* it creates a shell environment in which
+variables and functions can be defined. This environment has the
+highest scope and contains variables and functions that will always be
+available in subsequent module environments.
 
 .Execution environment of hello module
 ======================================================================
@@ -56,8 +50,8 @@ idforge                                 Script initialization
 A module environment is a collection of functions that perform small
 tasks and can be further executed in a specific order to produce
 specific results.  They are executed and destroyed at demand based on
-their hierarchy (e.g., whether they are ``parent modules,'' ``child
-modules,'' or ``sibling modules'').
+their hierarchy (e.g., whether they are "parent modules", "child
+modules", or "sibling modules").
 
 <<module-environments-in-action>> shows how module environments are
 created and destroyed after executing the _idforge hello --camel hello_
@@ -235,17 +229,17 @@ O
 === Parent Modules
 
 Parent modules are initiated executing the
-_idforge_setModuleEnvironment_ function with the _-t "parent"_
+*idforge*setModuleEnvironment_ function with the _-t "parent"_
 arguments set on it. 
 
-When the --debug option is provided to _idforge_, the parent modules
+When the --debug option is provided to *idforge*, the parent modules
 are identified by the word ``parent'' on the right side of
 SCRIPT_MODULE_TYPE environment variable.
 
 Parent modules are very simple in design and you can use them to
 implement simple solutions quickly. Normally, when you execute a
 parent module, you initiate the highest module environment possible
-inside _idforge_ script.  Parent modules are frequently used to define
+inside *idforge* script.  Parent modules are frequently used to define
 module-specifc global variables, interpret module-specific options
 passed through the command-line and execute the appropriate actions
 based on them (e.g., executing a chain of child modules).
@@ -283,7 +277,7 @@ definition format (i.e., it must begin with the word +function+, then
 the function name, and finally the +{+ character).  The name of the
 function is exactly the same of the initialization file but without
 the +.sh+ extension. These conditions are required in order for
-_idforge_ script to execute the function definition and destroy it
+*idforge* script to execute the function definition and destroy it
 when it is no longer used.  See <<hello>>.
 
 Inside the function definition you write all the commands you want the
@@ -348,7 +342,7 @@ function hello {
 ----------------------------------------------------------------------
 ======================================================================
 
-When you write functions for _idforge_ modules, you should add a top
+When you write functions for *idforge* modules, you should add a top
 comment on it, describing the legal status of your code. See the
 section ``How to Apply These Terms to Your New Programs'' in the
 LICENSE file.
@@ -357,7 +351,7 @@ LICENSE file.
 Module Optimization
 -------------------
 
-_idforge_ provides four resources that you can use to optimize your
+*idforge* provides four resources that you can use to optimize your
 module implementations. These resources are ``related functions,''
 ``child modules,'' ``sibling modules'' and ``recursive modules''.
 
@@ -459,7 +453,7 @@ function hello_getOptions {
 [NOTE]
 ======================================================================
 <<hello_getOptions>> related function presents the construction
-standard we use inside _idforge_ for parsing arguments passed through
+standard we use inside *idforge* for parsing arguments passed through
 the command-line in a per-module basis.  As convention, all the parent
 modules definitions you write must be able to interpret the *--help*
 and *--version* options using the construction described here.
@@ -467,22 +461,22 @@ and *--version* options using the construction described here.
 
 Related functions aren't very efficient when you need to execute them
 at demand (e.g., based on specific conditions). When a module is
-executed, related functions are exported to _idforge_ shell
+executed, related functions are exported to *idforge* shell
 environment. They remain there, consuming memory, until the module
 they belong to is destroyed. If you create a related function and
 never execute it, it will consume memory, as well. So, use related
 functions when you are absolutely sure they will be executed at some
-point, in one single iteration of _idforge_.  If you need to execute
+point, in one single iteration of *idforge*.  If you need to execute
 functions at demand, use child modules, instead.
 
 [[child-modules]]
 === Child Modules
 
 Child modules are initiated by executing the
-_idforge_setModuleEnvironment_ function with the _-t "child"_
+*idforge*setModuleEnvironment_ function with the _-t "child"_
 arguments set on it. 
 
-When the --debug option is provided to _idforge_, the parent modules
+When the --debug option is provided to *idforge*, the parent modules
 are identified by the word ``child'' on the right side of
 SCRIPT_MODULE_TYPE environment variable.
 
@@ -492,11 +486,11 @@ executed from parent modules but they can be executed from other child
 modules, as well.
 
 When several child modules are executed in one single iteration of
-_idforge_, they create a chain of modules.  Chain of modules are
+*idforge*, they create a chain of modules.  Chain of modules are
 generally created when you want to divide one large task into smaller
 tasks and also control which of these smaller tasks is executed based
 on specific conditions (e.g., you may want to render images or
-documentation, but not both, in one single iteration of _idforge_
+documentation, but not both, in one single iteration of *idforge*
 script).  
 
 In a chain of modules, lower modules in the chain (those started last)
@@ -525,10 +519,10 @@ executed, you need to use ``sibling modules,'' instead.
 === Sibling Modules
 
 Sibling modules are initiated
-by executing the _idforge_setModuleEnvironment_ function with the _-t
+by executing the *idforge*setModuleEnvironment_ function with the _-t
 "sibling"_ arguments set on it. 
 
-When the --debug option is provided to _idforge_, the parent modules
+When the --debug option is provided to *idforge*, the parent modules
 are identified by the word ``sibling'' on the right side of
 SCRIPT_MODULE_TYPE environment variable.
 
@@ -553,7 +547,7 @@ same point when it has finished its work, however, what if the next
 immediate module you are about to execute is the same module you are
 about to destroy? This is, you need to execute the last module in the
 chain of executed modules again, but, this time, from itself.  In
-cases like this, the _idforge_ script doesn't destroy the last module.
+cases like this, the *idforge* script doesn't destroy the last module.
 It cannot, because you are certainly executing a new module from
 itself, so it has to wait for this new call to finish in order to be
 destroyed. This kind of processing is known as ``processing modules
