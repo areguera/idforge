@@ -32,8 +32,13 @@ function test {
         idforge_printMessage "QATEST_UNIT: ${QATEST_UNIT}" --as-debugger-line
 
         local QATEST_UNIT_NAME=$(basename ${QATEST_UNIT%.sh})
+        idforge_printMessage "QATEST_UNIT_NAME: ${QATEST_UNIT_NAME}" --as-debugger-line
+
         local QATEST_UNIT_DIR=${QATEST_UNIT%/*}
+        idforge_printMessage "QATEST_UNIT_DIR: ${QATEST_UNIT_DIR}" --as-debugger-line
+
         local QATEST_UNIT_TEMPDIR=${QATEST_UNIT_DIR}/Final
+        idforge_printMessage "QATEST_UNIT_TEMPDIR: ${QATEST_UNIT_TEMPDIR}" --as-debugger-line
 
         idforge_printMessage "=" --as-separator-line
         idforge_printMessage "${QATEST_UNIT}" --as-stdout-line
