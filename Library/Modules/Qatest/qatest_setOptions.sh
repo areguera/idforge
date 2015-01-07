@@ -54,8 +54,8 @@ function qatest_setOptions {
                 ;;
 
             -s | --description )
-                idforge_setModuleEnvironment -t 'child' -m 'description'
-                exit 0
+                idforge_printMessage "`gettext "Run quality assurance tests"`" --as-stdout-line
+                shift 1
                 ;;
 
             -c | --command )
