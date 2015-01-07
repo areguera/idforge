@@ -32,7 +32,7 @@ function idforge_setModuleTextDomain {
 
     local COUNT=${#IDFORGE_MODULE_TYPES[*]}
 
-    until [[ ${COUNT} -eq 0 ]];do
+    until [[ ${COUNT} -lt 0 ]];do
         if [[ ${IDFORGE_MODULE_TYPES[${COUNT}]} == 'parent' ]];then
             TEXTDOMAIN=${IDFORGE}-${IDFORGE_MODULE_NAMES[${COUNT}]}
             break
