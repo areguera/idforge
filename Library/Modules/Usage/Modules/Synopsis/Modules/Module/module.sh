@@ -25,12 +25,15 @@
 
 function module {
 
-    # Define the string holding the module options based on the
-    # function file where they are defined.
-    local USAGE_COMMAND_OPTIONS=$(synopsis_printOptions "${USAGE_COMMAND_DIR}/${USAGE_COMMAND_NAME}_setOptions.sh")
+    # Define the module name that you are printing usage information
+    # for. This is necessary to prevent subsequent modules from
+    # changing the expected module name output.
+    local USAGE_MODULE_NAME=$(idforge_printFileName ${USAGE_OPTIONS_FILE} | cut -d '_' -f1)
 
-    synopsis_printHeader "${USAGE_COMMAND_NAME} ${USAGE_COMMAND_OPTIONS} [ARGS]"
+    local USAGE_MODULE_OPTIONS=$(synopsis_printOptions)
 
-    synopsis_printFooter "${USAGE_COMMAND_NAME}"
+    synopsis_printHeader "${USAGE_MODULE_NAME} ${USAGE_MODULE_OPTIONS} [ARGS]"
+
+    synopsis_printFooter "${USAGE_MODULE_NAME}"
 
 }

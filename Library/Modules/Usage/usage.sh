@@ -29,13 +29,11 @@ function usage {
     # options passed through through it.
     local ARGUMENT='' ARGUMENTS=''; usage_setOptions "${@}"
 
-    # Define name of the command you want to print usage information
-    # for.
-    local USAGE_COMMAND_NAME="${1:-${IDFORGE}}"
-
-    # Define the absolute path where the command you want to print
-    # usage information for is store in.
-    local USAGE_COMMAND_DIR="${2:-${IDFORGE_LIBRARY}}"
+    # Define absolute path to function where command-line options will
+    # be retrieved from. It is required that the function you provide
+    # does be defined and use the standard format adopted by
+    # idforge.sh script.
+    local USAGE_OPTIONS_FILE=${1:-${IDFORGE_LIBRARY}/${IDFORGE}_setOptions.sh}
 
     # Print usage information based on collected information.
     idforge_setModuleEnvironment -t 'child' -m 'synopsis'

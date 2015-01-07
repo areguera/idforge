@@ -28,7 +28,7 @@ function idforge_runModuleEnvironment {
     # Print command usage when a parent module is provided with no
     # argument in the command-line.
     [[ ${IDFORGE_MODULE_TYPE} == 'parent' ]] && [[ -z ${IDFORGE_MODULE_ARGUMENT} ]] \
-    && idforge_setModuleEnvironment -t 'parent' -m 'usage' -g "${IDFORGE_MODULE_NAME}" -g "${IDFORGE_MODULE_DIR}" \
+    && idforge_setModuleEnvironment -t 'parent' -m 'usage' -g "${IDFORGE_MODULE_DIR}/${IDFORGE_MODULE_NAME}_setOptions.sh" \
     && return
 
     # Initialize current module's text domain. This is the name of the

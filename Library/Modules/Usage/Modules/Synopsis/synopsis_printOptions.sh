@@ -29,19 +29,13 @@
 # function we reduce the overall maintenance cost.
 function synopsis_printOptions {
 
-    # Define absolute path to function where command-line options will
-    # be retrieved from. It is required that the function you provide
-    # does be defined and use the standard format adopted by
-    # idforge.sh script.
-    local FUNCTION_FILE=${USAGE_COMMAND_DIR}/${USAGE_COMMAND_NAME}_setOptions.sh
-
     # Define the regular expression pattern that matches option
     # definitions inside _getOptions files.
     local PATTERN='^([[:space:]]*)-([[:alpha:]].+)[[:space:]]*\)[[:space:]]*$'
 
     # Retrieve options from module's getOptions function and transform
     # the output to include it in the usage preamble.
-    egrep ${PATTERN} ${FUNCTION_FILE} | sort \
+    egrep ${PATTERN} ${USAGE_OPTIONS_FILE} | sort \
         | tr -d ' ' \
         | sed -r -e 's/^([[:space:]]*)/ [/' \
         | tr ')' ']' | tr -d "\n" \

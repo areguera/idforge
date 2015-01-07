@@ -25,16 +25,10 @@
 
 function synopsis {
 
-    case ${USAGE_COMMAND_NAME} in
-
-        ${IDFORGE} )
-            idforge_setModuleEnvironment -t 'child' -m 'script'
-            ;;
-
-        * )
-            idforge_setModuleEnvironment -t 'child' -m 'module'
-            ;;
-
-    esac
+    if [[ ${USAGE_OPTIONS_FILE} == ${IDFORGE_LIBRARY}/${IDFORGE}_setOptions.sh  ]];then
+        idforge_setModuleEnvironment -t 'child' -m 'script'
+    else
+        idforge_setModuleEnvironment -t 'child' -m 'module'
+    fi
 
 }
