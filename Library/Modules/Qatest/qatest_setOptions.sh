@@ -54,7 +54,7 @@ function qatest_setOptions {
                 ;;
 
             -s | --description )
-                idforge_setModuleEnvironment -t 'child' -m 'description' -g ${IDFORGE_MODULE_NAME}
+                idforge_setModuleEnvironment -t 'child' -m 'description'
                 exit 0
                 ;;
 
