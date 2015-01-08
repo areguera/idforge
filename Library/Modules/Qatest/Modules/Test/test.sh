@@ -29,12 +29,14 @@ function test {
 
     for QATEST_UNIT in ${QATEST_UNITS};do
 
+        idforge_checkFiles -x "${QATEST_UNIT}"
+
         idforge_printMessage "QATEST_UNIT: ${QATEST_UNIT}" --as-debugger-line
 
         local QATEST_UNIT_NAME=$(basename ${QATEST_UNIT%.sh})
         idforge_printMessage "QATEST_UNIT_NAME: ${QATEST_UNIT_NAME}" --as-debugger-line
 
-        local QATEST_UNIT_DIR=${QATEST_UNIT%/*}
+        local QATEST_UNIT_DIR=${QATEST_UNIT%.sh}
         idforge_printMessage "QATEST_UNIT_DIR: ${QATEST_UNIT_DIR}" --as-debugger-line
 
         local QATEST_UNIT_TEMPDIR=${QATEST_UNIT_DIR}/Final

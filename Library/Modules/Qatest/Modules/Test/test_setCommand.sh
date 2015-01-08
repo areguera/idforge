@@ -25,7 +25,7 @@
 
 function test_setCommand {
 
-    ${QATEST_FLAG_COMMAND} ${@} > /dev/null
+    eval ${QATEST_FLAG_COMMAND} ${@} > /dev/null
 
     test_setStatus "${?}" "${QATEST_FLAG_COMMAND} ${@}"
 

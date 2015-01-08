@@ -35,10 +35,13 @@ function qatest {
     # options passed through command-line.
     local ARGUMENT='' ARGUMENTS=''; qatest_setOptions "${@}"
 
-    # Verify remaining arguments. They need to be provided to continue.
+    # Verify command-line arguments. They must be provided. Otherwise
+    # there is not anything elese to do here so return to caller
+    # function.
     [[ -z ${ARGUMENTS} ]] && return
 
-    # Verify remaining arguments. They must be directories.
+    # Verify command-line arguments. They must be directories.
+    # Otherwise, stop script execution with an error message.
     idforge_checkFiles -d ${ARGUMENTS}
 
     # Initialize tests counter.
@@ -46,8 +49,8 @@ function qatest {
     local QATEST_UNITS_FAILED=0
 
     for ARGUMENT in ${ARGUMENTS};do
-        [[ ${QATEST_FLAG_ADD} == 'true' ]] && idforge_setModuleEnvironment -m 'add' -t 'child'
-        idforge_setModuleEnvironment -m 'test' -t 'child'
+        [[ ${QATEST_FLAG_ADD} == 'true' ]] && idforge_setModuleEnvironment -t 'child' -m 'add'
+        idforge_setModuleEnvironment -t 'child' -m 'test'
     done
 
     idforge_setModuleEnvironment -m 'print' -t 'child' -g 'report'

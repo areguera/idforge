@@ -60,8 +60,8 @@ function qatest_setOptions {
 
             -c | --command )
                 QATEST_FLAG_COMMAND="${2:-${QATEST_FLAG_COMMAND}}"
+                idforge_checkFiles -ex "${QATEST_FLAG_COMMAND}"
                 shift 2
-                idforge_checkFiles -ex ${QATEST_FLAG_COMMAND}
                 ;;
 
            -a | --add )
