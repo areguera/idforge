@@ -66,8 +66,13 @@ function idforge_printFileList {
     # remain so we use them as source location for find command to
     # look files for.
 
-    # Verify that locations does exist.
-    idforge_checkFiles -e ${@}
+    # Verify that locations does exist. When no location is available,
+    # return to caller.  Do not print any error message or call any
+    # function that might execute the exit built-in command here.
+    # Remember that this function is called from command expansion
+    # construction for variable assignment mainly and the exit
+    # built-in commands doesn't take effect there.
+    [[ -z ${@} ]] && return
 
     # Redefine pattern as regular expression. When we use regular
     # expressions with find, regular expressions are evaluated against
