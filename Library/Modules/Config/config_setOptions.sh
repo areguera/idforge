@@ -52,8 +52,8 @@ function config_setOptions {
                 ;;
 
             -s | --description )
-                idforge_setModuleEnvironment -m 'description' -t 'child' -g ${IDFORGE_MODULE_NAME}
-                exit 0
+                idforge_printMessage "`gettext "Retrieve information from configuration files."`" --as-stdout-line
+                shift 1
                 ;;
 
             -e | --section )
