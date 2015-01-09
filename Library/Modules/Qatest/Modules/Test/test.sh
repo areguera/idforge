@@ -25,7 +25,7 @@
 
 function test {
 
-    local QATEST_UNITS=$(idforge_printFileList -t f -p ".+/.*${IDFORGE_FLAG_FILTER}\.sh$" ${ARGUMENT} | sort)
+    local QATEST_UNITS=$(idforge_printFileList -i 1 -a 1 -t f -p ".+/.*${IDFORGE_FLAG_FILTER}\.sh$" ${ARGUMENT} | sort)
 
     for QATEST_UNIT in ${QATEST_UNITS};do
 
