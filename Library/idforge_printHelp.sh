@@ -38,9 +38,12 @@ function idforge_printHelp {
     fi
 
     # Print requested documentation. 
-    /usr/bin/man -M ${TEXTDOMAINDIR} "${IDFORGE_MANPAGE_NAME}"
+    /usr/bin/man -M ${IDFORGE_MANUALS} "${IDFORGE_MANPAGE_NAME}"
 
-    # Finish script execution successfully.
-    exit ${?}
+    # Verify man command exit status and terminate the script
+    # execution with an error message if it was not a successful
+    # command.
+    [[ ${?} -ne 0 ]] \
+        && idforge_printMessage "`gettext "The documentation manual is not available."`" --as-error-line
 
 }

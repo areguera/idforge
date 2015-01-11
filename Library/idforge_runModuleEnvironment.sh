@@ -31,6 +31,14 @@ function idforge_runModuleEnvironment {
     && idforge_setModuleEnvironment -t 'parent' -m 'usage' -g "${IDFORGE_MODULE_DIR}/${IDFORGE_MODULE_NAME}_setOptions.sh" \
     && return
 
+    # Initialize options common to all modules. In case, any of these
+    # options are provided in the module's command-line, the script
+    # execution must terminate with a successful exit status and no
+    # further processing.
+    local IDFORGE_MODULE_FLAG_HELP='false'
+    local IDFORGE_MODULE_FLAG_VERSION='false'
+    local IDFORGE_MODULE_FLAG_DESCRIPTION='false'
+
     # Initialize current module's text domain. This is the name of the
     # last parent module in the chain of modules.
     local TEXTDOMAIN="${IDFORGE}" ; idforge_setModuleTextDomain
