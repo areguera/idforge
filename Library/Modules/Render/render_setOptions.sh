@@ -46,16 +46,20 @@ function render_setOptions {
 
             -h | --help )
                 idforge_printHelp
+                shift 1
+                IDFORGE_MODULE_FLAG_HELP='true'
                 ;;
 
             -v | --version )
                 idforge_setModuleEnvironment -t 'parent' -m 'version' -g ${IDFORGE_MODULE_NAME}
                 shift 1
+                IDFORGE_MODULE_FLAG_VERSION='true'
                 ;;
 
             -s | --description )
                 idforge_printMessage "`gettext "Render content based on configuration files"`" --as-stdout-line
                 shift 1
+                IDFORGE_MODULE_FLAG_DESCRIPTION='true'
                 ;;
 
             -- )

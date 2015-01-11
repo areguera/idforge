@@ -30,6 +30,13 @@ function render {
     # options passed through command-line.
     local ARGUMENTS=''; render_setOptions "${@}"
 
+    # Verify common-options that we expect to terminate the script
+    # execution successfully.
+    [[ ${IDFORGE_MODULE_FLAG_HELP} == 'true' ]] \
+        || [[ ${IDFORGE_MODULE_FLAG_VERSION} == 'true' ]] \
+        || [[ ${IDFORGE_MODULE_FLAG_DESCRIPTION} == 'true' ]] \
+        && return
+
     # Initialize configuration files processing.
     local CONFIG_FILE='' CONFIG_FILES=$(render_printConfigFiles "${ARGUMENTS}")
 
