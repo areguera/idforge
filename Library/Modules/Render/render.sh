@@ -26,10 +26,6 @@
 # Standardize content rendition.
 function render {
 
-    # Initialize module version. The value of this variable is reset
-    # from the spec file when the module package is built.
-    local IDFORGE_MODULE_VERSION=0.0
-
     # Initialize command-line arguments and interpret arguments and
     # options passed through command-line.
     local ARGUMENT='' ARGUMENTS=''; render_setOptions "${@}"

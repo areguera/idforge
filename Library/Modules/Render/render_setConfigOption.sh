@@ -40,7 +40,7 @@ function render_setConfigOption {
             # to specify source files. So, the relation source
             # file-translation file can be accurate.
             local FILE=''
-            local FILES=$(render_printConfigValues)
+            local FILES=$(render_printConfigValues "default")
 
             local COUNT=0
 
@@ -79,7 +79,7 @@ function render_setConfigOption {
             # Define value of "render-file" option. This information
             # is used to customize the path of final file being
             # produced.
-            RENDER_FILE=$(render_printConfigValues)
+            RENDER_FILE=$(render_printConfigValues "default")
             if [[ ${RENDER_FILE} =~ ^/ ]];then
                 RENDER_FILE=${RENDER_FILE}
             else
@@ -95,7 +95,7 @@ function render_setConfigOption {
             # option definitions in the configuration file or one,
             # using path expansion.
             local FILE=''
-            local FILES=$(render_printConfigValues)
+            local FILES=$(render_printConfigValues "default")
 
             if [[ -z ${FILES} ]];then
                 idforge_printMessage "`eval_gettext "The \\\"\\\$CONFIG_OPTION\\\" option is required."`" --as-error-line
@@ -147,7 +147,7 @@ function render_setConfigOption {
             # inside source files' instances. When this option is not
             # provided only default translation markers expansion is
             # performed.
-            RENDER_MARK="$(render_printConfigValues '')"
+            RENDER_MARK="$(render_printConfigValues 'default')"
             ;;
 
         release )

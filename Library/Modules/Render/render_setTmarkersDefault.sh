@@ -25,24 +25,6 @@
 
 function render_setTmarkersDefault {
 
-    # Define copyright translation markers.
-    SRC[((++${#SRC[*]}))]='=COPYRIGHT_YEAR_FIRST='
-    DST[((++${#DST[*]}))]="$(idforge_printCopyright --first-year)"
-    SRC[((++${#SRC[*]}))]='=COPYRIGHT_YEAR(_LAST)?='
-    DST[((++${#DST[*]}))]="$(idforge_printCopyright --year)"
-    SRC[((++${#SRC[*]}))]='=COPYRIGHT_YEAR(S)?_LIST='
-    DST[((++${#DST[*]}))]="$(idforge_printCopyright --years-list)"
-    SRC[((++${#SRC[*]}))]='=COPYRIGHT_YEAR(S)?_RANGE='
-    DST[((++${#DST[*]}))]="$(idforge_printCopyright --years-range)"
-    SRC[((++${#SRC[*]}))]='=COPYRIGHT_HOLDER='
-    DST[((++${#DST[*]}))]="$(idforge_printCopyright --holder)"
-    SRC[((++${#SRC[*]}))]='=COPYRIGHT_HOLDER_PREDICATE='
-    DST[((++${#DST[*]}))]="$(idforge_printCopyright --holder-predicate)"
-
-    # Define license translation markers.
-    SRC[((++${#SRC[*]}))]='=(LICENSE_URL|LICENSE)='
-    DST[((++${#DST[*]}))]="$(idforge_printCopyright --license)"
-
     # Define theme translation markers.
     SRC[((++${#SRC[*]}))]='=THEME='
     DST[((++${#DST[*]}))]="$(idforge_printFileNameStyle ${LOCATION} --motif)"
