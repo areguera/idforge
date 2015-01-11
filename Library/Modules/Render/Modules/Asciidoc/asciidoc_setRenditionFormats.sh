@@ -26,7 +26,7 @@
 # Standardize the rendition formats supported by asciidoc module.
 function asciidoc_setRenditionFormats {
 
-    for FORMAT in ${RENDER_AS};do
+    for FORMAT in ${RENDER_AS:-xhtml};do
 
         case ${FORMAT} in
 

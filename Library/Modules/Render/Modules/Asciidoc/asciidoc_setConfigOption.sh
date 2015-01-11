@@ -39,7 +39,7 @@ function asciidoc_setConfigOption {
             ;;
 
         render-as )
-            RENDER_AS=$(render_printConfigValues "xhtml")
+            RENDER_AS=$(render_printConfigValues)
             ;;
 
         asciidoc-opts )

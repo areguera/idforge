@@ -30,9 +30,13 @@ function manpage {
 
     local RENDER_FILE=${RENDER_FILE}.${MANPAGE_SECTION}
 
-    for FORMAT in ${RENDER_AS};do
+    for FORMAT in ${RENDER_AS:-manpage};do
 
         case ${FORMAT} in 
+
+            'manpage' )
+                manpage_setRenditionBase
+                ;;
 
             'xhtml' )
                 manpage_setRenditionXhtml
@@ -40,10 +44,6 @@ function manpage {
 
             'pdf' )
                 manpage_setRenditionPdf
-                ;;
-
-            'manpage' )
-                manpage_setRenditionBase
                 ;;
 
             * )
