@@ -28,10 +28,16 @@ function render {
 
     # Initialize command-line arguments and interpret arguments and
     # options passed through command-line.
-    local CONFIG_FILE='' ARGUMENTS=''; render_setOptions "${@}"
+    local ARGUMENTS=''; render_setOptions "${@}"
 
     # Initialize configuration files processing.
-    for CONFIG_FILE in $(render_printConfigFiles "${ARGUMENTS}"); do
+    local CONFIG_FILE='' CONFIG_FILES=$(render_printConfigFiles "${ARGUMENTS}")
+
+    # Verify configuration files.
+    idforge_checkFiles -e ${CONFIG_FILES}
+
+    # Process configuration files.
+    for CONFIG_FILE in "${CONFIG_FILES}"; do
 
         idforge_printMessage "${CONFIG_FILE}" --as-processing-line
 
