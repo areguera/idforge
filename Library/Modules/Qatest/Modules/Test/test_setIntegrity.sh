@@ -25,9 +25,13 @@
 
 function test_setIntegrity {
 
-    [[ ${QATEST_FLAG_FILETYPES} == 'true' ]] && idforge_setModuleEnvironment -m 'filetypes' -t 'child'
+    [[ ${QATEST_FLAG_FILETYPES} == 'true' ]] \
+        && [[ -f ${QATEST_UNIT_DIR}/${QATEST_UNIT_NAME}.files ]] \
+        && idforge_setModuleEnvironment -m 'filetypes' -t 'child'
 
-    [[ ${QATEST_FLAG_DIGESTS} == 'true' ]] && idforge_setModuleEnvironment -m 'digests' -t 'child'
+    [[ ${QATEST_FLAG_DIGESTS} == 'true' ]] \
+        && [[ -d ${QATEST_UNIT_DIR} ]] \
+        && idforge_setModuleEnvironment -m 'digests' -t 'child'
 
     [[ -d ${QATEST_UNIT_TEMPDIR} ]] && rm -r ${QATEST_UNIT_TEMPDIR}
 

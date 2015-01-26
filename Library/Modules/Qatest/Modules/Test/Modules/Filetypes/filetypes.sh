@@ -27,8 +27,6 @@ function filetypes {
 
     local INTEGRITY_FILES=${QATEST_UNIT_DIR}/${QATEST_UNIT_NAME}.files
 
-    [[ ! -f ${INTEGRITY_FILES} ]] && return
-
     /usr/bin/file -i $(idforge_printFileList -t f -p '.+' ${QATEST_UNIT_TEMPDIR}) | diff -q ${INTEGRITY_FILES} -
 
     test_setStatus "${?}" "${INTEGRITY_FILES}"
