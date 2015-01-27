@@ -49,12 +49,20 @@ function qatest {
     local QATEST_UNITS_FAILED=0
 
     for ARGUMENT in ${ARGUMENTS};do
+
+        # Verify and create new tests for each argument provided.
         [[ ${QATEST_FLAG_ADD} == 'true' ]] && idforge_setModuleEnvironment -t 'child' -m 'add'
+
+        # Run all available tests (including those recently added)
+        # based on arguments provided.
         idforge_setModuleEnvironment -t 'child' -m 'test'
+
     done
 
-    idforge_setModuleEnvironment -m 'print' -t 'child' -g 'report'
+    # Print report about all executed tests.
+    idforge_setModuleEnvironment -m 'report' -t 'child'
 
+    # Return the number of failed tests.
     return ${QATEST_UNITS_FAILED}
 
 }
