@@ -9,15 +9,15 @@ idforge-qatest - Manage automated quality assurance tests
 == Synopsis
 
 ----------------------------------------------------------------------
-=IDFORGE_COMMAND_USAGE=
+=SYNOPSIS=
 ----------------------------------------------------------------------
 
 == Description
 
-*idforge-qatest* is a unit testing framework to create and run
-automated quality assurance tests for idforge automation scripts
-quickly and consistently. The *idforge* developers, run
-*idforge-qatest* several times a day. Normally, before committing
+*idforge-qatest* is a unit testing framework which allows you to
+create and run automated quality assurance tests for idforge
+automation scripts quickly and consistently. The *idforge* developers,
+run *idforge-qatest* several times a day. Normally, before committing
 changes up to public repositories so as to be sure local changes
 didn't break anything; and after fixing a bug to reproduce the
 expected behaviour and refrain the fixed bug from happening again
@@ -108,8 +108,8 @@ include::../commons/options.inc[]
 *-a, --add*::
     This option allows you to add new shell scripts and their related
     integrity check files in a consistent manner. When you provide
-    this option, you are prompted to enter the commands you want the
-    new quality assurance test to have.
+    this option, you are prompted to enter the commands you want to
+    validate explicitly.
 
 *-f, --filetypes*::
     This option applies integrity checks related to file types and
@@ -136,9 +136,9 @@ quality assurance tests for your own commands.
 Quality assurance tests are conceived to be executed inside the root
 location of your development tree, not the installed version of it.
 However, this doesn't mean that you cannot execute quality assurance
-tests against the installed version, it just doesn't make too much
-sense if the same tests were already applied and passed before
-releasing the code that is installed. 
+tests against the installed version, it duplicates the same tests that
+were already applied and passed before releasing the code that is
+installed.
 
 The purpose of adding a new test is verifying a specific feature or
 behaviour. In the case of idforge-qatest we are going to test that it
@@ -180,6 +180,7 @@ integrity checks as well (e.g., file types and digests checks). It is
 also mandatory to provide the -a option to infer you are adding a new
 test. The final command would look like the following:
 
+.Command-line used to create a new test
 ----------------------------------------------------------------------
 IDFORGE_LIBEXECDIR=${PWD}/Libexec \
     ./idforge qatest -c ./QaTests/idforge-qatest/create.sh -afg ./Qatests/idforge-qatest
@@ -228,19 +229,20 @@ inside the +./QaTests+ directory at idforge.git repository  (e.g.,
 ======================================================================
 ----------------------------------------------------------------------
 ./QaTests/idforge-qatest/
-|-- create.sh                               <1>
-|-- qatest-2014121354413938903.files        <2>
-|-- qatest-2014121354413938903.md5sum       <3>
-|-- qatest-2014121354413938903.sh           <4>
-|-- qatest-2014121354413938903.sha1sum      <5>
-`-- qatest-2014121354413938903.sha256sum    <6>
+|-- create.sh                                   <1>
+|-- qatest-2014121354413938903/
+|   |-- qatest-2014121354413938903.files        <2>
+|   |-- qatest-2014121354413938903.md5sum       <3>
+|   |-- qatest-2014121354413938903.sha1sum      <4>
+|   `-- qatest-2014121354413938903.sha256sum    <5>
+`-- qatest-2014121354413938903.sh               <6>
 ----------------------------------------------------------------------
 <1> Command subject to integrity checks.
 <2> Integrity check file, based on file types and directory structure.
 <3> Integrity check file, based on digests using md5sum command.
-<4> Shell script initiate integrity checks.
-<5> Integrity check file, based on digests using sha1sum command.
-<6> Integrity check file, based on digests using sha256sum command.
+<4> Integrity check file, based on digests using sha1sum command.
+<5> Integrity check file, based on digests using sha256sum command.
+<6> Shell script initiate integrity checks.
 ======================================================================
 
 === How to execute specific tests
