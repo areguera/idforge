@@ -23,11 +23,22 @@
 #
 ######################################################################
 
-function asciidoc_setDocbookInstance {
+# Standardize the way docbook files are transformed in XHTML format.
+function xhtml {
 
-    local ASCIIDOC_OPTS=''   ; asciidoc_setConfigOption 'asciidoc-opts'
+    local HTML=${RENDER_FILE}.html
 
-    /usr/bin/asciidoc ${ASCIIDOC_OPTS} --backend="docbook" --doctype="${RENDER_FLOW}" \
-        --out-file="${RENDER_FROM_XML}" ${RENDER_FROM_ASCIIDOC}
+    local HTML_XSL_DEFAULT=/usr/share/sgml/docbook/xsl-stylesheets/xhtml/docbook.xsl
+
+    if [[ ! -f ${RENDER_FROM_XSL} ]];then
+        local RENDER_FROM_XSL=${HTML_XSL_DEFAULT}
+    fi
+
+    idforge_checkFiles -e "${RENDER_FROM_XSL}"
+
+    idforge_printMessage "${HTML}" --as-creating-line
+
+    /usr/bin/xsltproc -o ${HTML} --nonet \
+        ${RENDER_FROM_XSL} ${RENDER_FROM_XML}
 
 }

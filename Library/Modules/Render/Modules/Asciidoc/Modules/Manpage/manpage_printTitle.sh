@@ -23,20 +23,40 @@
 #
 ######################################################################
 
-function manpage_setManualInformation {
+# Standardize man page section titles based on the section number. The
+# relation between section number ans section title was taken from
+# man(1).
+function manpage_printTitle {
 
-    idforge_checkFiles -ef ${MANPAGE}
+    idforge_checkFiles -m '[1-8]' "${MANPAGE_SECTION}"
 
-    # Define the section title of the reference page (e.g., User
-    # Commands) based on the section number.
-    local MANPAGE_MANUAL=$(manpage_getSectionTitle)
+    case ${MANPAGE_SECTION} in
 
-    # Define pattern used for replacement. This is based on the output
-    # produced by xsltproc when the xsl stylesheets provided in the
-    # docbook-style-xsl-1.75.2-6.el6.noarch package are used.
-    local MANPAGE_FIXME='\[FIXME: manual\]'
+        1 )
+            echo `gettext "User Commands"`
+            ;;
+        2 )
+            echo `gettext "System Calls"`
+            ;;
+        3 )
+            echo `gettext "C Library Functions"`
+            ;;
+        4 )
+            echo `gettext "Devices and Special Files"`
+            ;;
+        5 )
+            echo `gettext "File Formats and Conventions"`
+            ;;
+        6 )
+            echo `gettext "Games et. Al."`
+            ;;
+        7 )
+            echo `gettext "Miscellanea"`
+            ;;
+        8 )
+            echo `gettext "System Administration tools and Deamons"`
+            ;;
 
-    # Apply replacements in the man page file.
-    sed -r -i "s/${MANPAGE_FIXME}/${MANPAGE_MANUAL}/g" ${MANPAGE}
+    esac
 
 }

@@ -23,8 +23,8 @@
 #
 ######################################################################
 
-function manpage_setRenditionXhtml {
+function article {
 
-    asciidoc_setRenditionXhtml
+    RENDER_FORMATS=''  ; article_setConfigOption 'render-formats'
 
 }

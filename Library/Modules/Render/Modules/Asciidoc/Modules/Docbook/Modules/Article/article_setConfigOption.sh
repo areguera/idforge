@@ -23,25 +23,23 @@
 #
 ######################################################################
 
-# Standardize the way docbook files are transformed in PDF format.
-function asciidoc_setRenditionPdf {
+function article_setConfigOption {
 
-    local PDF="${RENDER_FILE}.pdf"
+    local CONFIG_OPTION="${1}"
 
-    idforge_printMessage "${PDF}" --as-creating-line
+    case ${CONFIG_OPTION} in
 
-    local FOP=$(idforge_printTemporalFile ${PDF}.fo)
+        'render-formats' )
+            RENDER_FORMATS=$(render_printConfigValues 'xhtml')
+            for RENDER_FORMAT in ${RENDER_FORMATS};do
+                idforge_checkFiles -m '^(xhtml|pdf)$' ${RENDER_FORMAT}
+            done
+            ;;
 
-    [[ ! -f ${RENDER_FROM_XSL} ]] \
-        && local RENDER_FROM_XSL=/usr/share/sgml/docbook/xsl-stylesheets/fo/docbook.xsl
+        * )
+            idforge_printMessage "`eval_gettext "The \\\"\\\$CONFIG_OPTION\\\" option isn't supported."`" --as-error-line
+            ;;
 
-    /usr/bin/xsltproc -o ${FOP} --nonet \
-        ${RENDER_FROM_XSL} ${RENDER_FROM_XML}
-
-    idforge_checkFiles -efi '^application/xml;' ${FOP}
-
-    /usr/bin/fop ${FOP} ${PDF} &> /dev/null
-
-    idforge_checkFiles -efi '^application/pdf;' ${PDF}
+    esac
 
 }

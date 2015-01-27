@@ -23,9 +23,11 @@
 #
 ######################################################################
 
-# Produce docbook documents using book document type.
-function book {
+function docbook_setInstance {
 
-    asciidoc_setRenditionFormats
+    local ASCIIDOC_OPTS=''      ; asciidoc_setConfigOption 'asciidoc-opts'
+
+    /usr/bin/asciidoc ${ASCIIDOC_OPTS} --backend="docbook" --doctype="${RENDER_FLOW}" \
+        --out-file="${RENDER_FROM_XML}" ${RENDER_FROM_ASCIIDOC}
 
 }

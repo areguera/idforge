@@ -23,9 +23,23 @@
 #
 ######################################################################
 
-# Produce docbook documents using article document type.
-function article {
+function manpage_setConfigOption {
 
-    asciidoc_setRenditionFormats
+    local CONFIG_OPTION="${1}"
+
+    case ${CONFIG_OPTION} in
+
+        'render-formats' )
+            RENDER_FORMATS=$(render_printConfigValues 'manpage')
+            for RENDER_FORMAT in ${RENDER_FORMATS};do
+                idforge_checkFiles -m '^(manpage|xhtml|pdf)$' ${RENDER_FORMAT}
+            done
+            ;;
+
+        * )
+            idforge_printMessage "`eval_gettext "The \\\"\\\$CONFIG_OPTION\\\" option isn't supported."`" --as-error-line
+            ;;
+
+    esac
 
 }

@@ -23,27 +23,11 @@
 #
 ######################################################################
 
-function manpage_setRenditionBase {
+function manpage_setSection {
 
-    local MANPAGE=${RENDER_FILE}
+    MANPAGE_SECTION=$(head -n 1 ${RENDER_FROM_ASCIIDOC} \
+        | sed -r 's,^.+\(([[:digit:]])\)[[:space:]]*$,\1,')
 
-    [[ ! -f ${RENDER_FROM_XSL} ]] \
-        && local RENDER_FROM_XSL=/usr/share/sgml/docbook/xsl-stylesheets/manpages/docbook.xsl
-
-    idforge_printMessage "${MANPAGE}" --as-creating-line
-
-    /usr/bin/xsltproc -o ${MANPAGE} --nonet \
-        ${RENDER_FROM_XSL} ${RENDER_FROM_XML}
-
-    # When you produce the final man page with the xsl style sheets
-    # provided by docbook-style-xsl-1.75.2-6.el6.noarch package, the
-    # manual and source information aren't in the final output because
-    # the intermediate docbook file we produced from
-    # asciidoc-8.4.5-4.1.el6.noarch doesn't include the required
-    # information. As result, the final man page suggests you to fix
-    # such information by yourself. So, let's intrude manpage
-    # automation scripts to do it for us :).
-    manpage_setManualInformation
-    manpage_setSourceInformation
+    idforge_checkFiles -m '^[1-8]$' ${MANPAGE_SECTION}
 
 }

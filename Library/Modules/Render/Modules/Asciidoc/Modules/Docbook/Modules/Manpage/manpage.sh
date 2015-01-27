@@ -23,17 +23,9 @@
 #
 ######################################################################
 
-# Standardize the way docbook files are transformed in XHTML format.
-function asciidoc_setRenditionXhtml {
+# Produce docbook documents using manpage document type.
+function manpage {
 
-    local HTML=${RENDER_FILE}.html
-
-    [[ ! -f ${RENDER_FROM_XSL} ]] \
-        && local RENDER_FROM_XSL=/usr/share/sgml/docbook/xsl-stylesheets/xhtml/docbook.xsl
-
-    idforge_printMessage "${HTML}" --as-creating-line
-
-    /usr/bin/xsltproc -o ${HTML} --nonet \
-        ${RENDER_FROM_XSL} ${RENDER_FROM_XML}
+    RENDER_FORMATS=''    ; manpage_setConfigOption 'render-formats'
 
 }

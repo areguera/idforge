@@ -23,40 +23,25 @@
 #
 ######################################################################
 
-# Standardize man page section titles based on the section number. The
-# relation between section number ans section title was taken from the
-# man page of man program.
-function manpage_getSectionTitle {
+# Standardize the way docbook files are transformed in PDF format.
+function pdf {
 
-    idforge_checkFiles -m '[1-8]' "${MANPAGE_SECTION}"
+    local PDF="${RENDER_FILE}.pdf"
 
-    case ${MANPAGE_SECTION} in
+    idforge_printMessage "${PDF}" --as-creating-line
 
-        1 )
-            echo `gettext "User Commands"`
-            ;;
-        2 )
-            echo `gettext "System Calls"`
-            ;;
-        3 )
-            echo `gettext "C Library Functions"`
-            ;;
-        4 )
-            echo `gettext "Devices and Special Files"`
-            ;;
-        5 )
-            echo `gettext "File Formats and Conventions"`
-            ;;
-        6 )
-            echo `gettext "Games et. Al."`
-            ;;
-        7 )
-            echo `gettext "Miscellanea"`
-            ;;
-        8 )
-            echo `gettext "System Administration tools and Deamons"`
-            ;;
+    local FOP=$(idforge_printTemporalFile ${PDF}.fo)
 
-    esac
+    [[ ! -f ${RENDER_FROM_XSL} ]] \
+        && local RENDER_FROM_XSL=/usr/share/sgml/docbook/xsl-stylesheets/fo/docbook.xsl
+
+    /usr/bin/xsltproc -o ${FOP} --nonet \
+        ${RENDER_FROM_XSL} ${RENDER_FROM_XML}
+
+    idforge_checkFiles -efi '^application/xml;' ${FOP}
+
+    /usr/bin/fop ${FOP} ${PDF} &> /dev/null
+
+    idforge_checkFiles -efi '^application/pdf;' ${PDF}
 
 }

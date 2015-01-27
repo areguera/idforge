@@ -38,10 +38,6 @@ function asciidoc_setConfigOption {
             idforge_checkFiles -m '^(article|book|manpage)$' "${RENDER_FLOW}"
             ;;
 
-        render-as )
-            RENDER_AS=$(render_printConfigValues)
-            ;;
-
         asciidoc-opts )
             ASCIIDOC_OPTS=$(render_printConfigValues "--attribute=lang=${IDFORGE_LANG_LL}")
             ;;

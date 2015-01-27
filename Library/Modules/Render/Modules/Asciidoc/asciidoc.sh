@@ -28,7 +28,6 @@ function asciidoc {
 
     local RENDER_FLOW=''        ; asciidoc_setConfigOption 'render-flow'
     local RENDER_FROM_XSL=''    ; asciidoc_setConfigOption 'render-from-xsl'
-    local RENDER_AS=''          ; asciidoc_setConfigOption 'render-as'
 
     if [[ ${#RENDER_FROM[*]} -eq ${#LOCALE_FROM[*]} ]];then
         asciidoc_setRenditionOneToOne

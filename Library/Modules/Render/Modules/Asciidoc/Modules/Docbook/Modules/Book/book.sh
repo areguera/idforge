@@ -23,26 +23,8 @@
 #
 ######################################################################
 
-# Standardize the rendition formats supported by asciidoc module.
-function asciidoc_setRenditionFormats {
+function book {
 
-    for FORMAT in ${RENDER_AS:-xhtml};do
-
-        case ${FORMAT} in
-
-            'xhtml' )
-                asciidoc_setRenditionXhtml
-                ;;
-
-            'pdf' )
-                asciidoc_setRenditionPdf
-                ;;
-
-            * )
-                idforge_printMessage "`eval_gettext "The \\\"\\\$FORMAT\\\" format isn't supported."`" --as-error-line
-                ;;
-        esac
-
-    done
+    RENDER_FORMATS=''  ; book_setConfigOption 'render-formats'
 
 }

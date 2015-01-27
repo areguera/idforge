@@ -23,19 +23,20 @@
 #
 ######################################################################
 
-# Standardize transformation of asciidoc files into docbook files.
-function asciidoc_setRenditionBase {
+function manpage_setManual {
 
-    idforge_printMessage "${RENDER_FROM_ASCIIDOC}" --as-processing-line
+    idforge_checkFiles -ef ${MANPAGE}
 
-    local RENDER_FROM_XML=$(idforge_printTemporalFile ${RENDER_FROM_ASCIIDOC})
+    # Define the section title of the reference page (e.g., User
+    # Commands) based on the section number.
+    local MANPAGE_MANUAL=$(manpage_printTitle)
 
-    asciidoc_setDocbookInstance
+    # Define pattern used for replacement. This is based on the output
+    # produced by xsltproc when the xsl stylesheets provided in the
+    # docbook-style-xsl-1.75.2-6.el6.noarch package are used.
+    local MANPAGE_FIXME='\[FIXME: manual\]'
 
-    render_setLocalizedXml
-
-    render_setTmarkers "${RENDER_FROM_XML}"
-
-    idforge_setModuleEnvironment -m "${RENDER_FLOW}" -t "child"
+    # Apply replacements in the man page file.
+    sed -r -i "s/${MANPAGE_FIXME}/${MANPAGE_MANUAL}/g" ${MANPAGE}
 
 }

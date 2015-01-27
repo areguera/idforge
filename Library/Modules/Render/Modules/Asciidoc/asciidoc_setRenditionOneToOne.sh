@@ -33,7 +33,7 @@ function asciidoc_setRenditionOneToOne {
 
         local PO_FILE=${LOCALE_FROM[${RENDER_FROM_COUNT}]}
 
-        asciidoc_setRenditionBase
+        idforge_setModuleEnvironment -m docbook -t child
 
         RENDER_FROM_COUNT=$(( ++RENDER_FROM_COUNT ))
 

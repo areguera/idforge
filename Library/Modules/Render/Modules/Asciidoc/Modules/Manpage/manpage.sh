@@ -23,35 +23,31 @@
 #
 ######################################################################
 
-# Produce docbook documents using manpage document type.
 function manpage {
 
-    local MANPAGE_SECTION=''    ; manpage_setSectionNumber
+    local MANPAGE=${RENDER_FILE}
 
-    local RENDER_FILE=${RENDER_FILE}.${MANPAGE_SECTION}
+    local MANPAGE_XSL_DEFAULT=/usr/share/sgml/docbook/xsl-stylesheets/manpages/docbook.xsl
 
-    for FORMAT in ${RENDER_AS:-manpage};do
+    if [[ ! -f ${RENDER_FROM_XSL} ]];then
+        local RENDER_FROM_XSL=${MANPAGE_XSL_DEFAULT}
+    fi
 
-        case ${FORMAT} in 
+    idforge_checkFiles -e ${RENDER_FROM_XSL}
 
-            'manpage' )
-                manpage_setRenditionBase
-                ;;
+    idforge_printMessage "${MANPAGE}" --as-creating-line
 
-            'xhtml' )
-                manpage_setRenditionXhtml
-                ;;
+    /usr/bin/xsltproc -o ${MANPAGE} --nonet ${RENDER_FROM_XSL} ${RENDER_FROM_XML}
 
-            'pdf' )
-                manpage_setRenditionPdf
-                ;;
-
-            * )
-                idforge_printMessage "`eval_gettext "The \\\"\\\$FORMAT\\\" format isn't supported."`" --as-error-line
-                ;;
-
-        esac
-
-    done
+    # When you produce the final man page with the xsl style sheets
+    # provided by docbook-style-xsl-1.75.2-6.el6.noarch package, the
+    # manual and source information aren't in the final output because
+    # the intermediate docbook file we produced from
+    # asciidoc-8.4.5-4.1.el6.noarch doesn't include the required
+    # information. As result, the final man page suggests you to fix
+    # such information by yourself. So, let's intrude manpage
+    # automation scripts to do it for us :).
+    manpage_setManual
+    manpage_setSource
 
 }

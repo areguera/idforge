@@ -23,13 +23,23 @@
 #
 ######################################################################
 
-# Standardize the way Asciidoc files are rendered inside the idforge.sh
-# script.
-function asciidoc_setRenditionBaseCommand {
+function book_setConfigOption {
 
-    idforge_checkFiles -m '^(article|book|manpage)$' ${RENDER_TYPE}
+    local CONFIG_OPTION="${1}"
 
-    asciidoc --backend='docbook' --doctype="${RENDER_TYPE}" \
-        --out-file="${RENDER_FILE}"
+    case ${CONFIG_OPTION} in
+
+        'render-formats' )
+            RENDER_FORMATS=$(render_printConfigValues 'xhtml')
+            for RENDER_FORMAT in ${RENDER_FORMATS};do
+                idforge_checkFiles -m '^(xhtml|pdf)$' ${RENDER_FORMAT}
+            done
+            ;;
+
+        * )
+            idforge_printMessage "`eval_gettext "The \\\"\\\$CONFIG_OPTION\\\" option isn't supported."`" --as-error-line
+            ;;
+
+    esac
 
 }

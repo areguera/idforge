@@ -23,11 +23,20 @@
 #
 ######################################################################
 
-function manpage_setSectionNumber {
+function manpage_setSource {
 
-    MANPAGE_SECTION=$(head -n 1 ${RENDER_FROM_ASCIIDOC} \
-        | sed -r 's,^.+\(([[:digit:]])\)[[:space:]]*$,\1,')
+    idforge_checkFiles -ef ${MANPAGE}
 
-    idforge_checkFiles -m '^[1-8]$' ${MANPAGE_SECTION}
+    # Define the name of the software product or component to which
+    # the topic of the man page produced applies.
+    local MANPAGE_PRODUCT=''    ; manpage_setConfigOption 'manpage-product'
+
+    # Define pattern used for replacement. This is based on the output
+    # produced by xsltproc when the xsl stylesheets provided in the
+    # docbook-style-xsl-1.75.2-6.el6.noarch package are used.
+    local MANPAGE_FIXME='\[FIXME: source\]'
+
+    # Apply replacements in the man page file.
+    sed -r -i "s/${MANPAGE_FIXME}/${MANPAGE_PRODUCT}/g" ${MANPAGE}
 
 }
