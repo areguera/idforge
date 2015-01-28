@@ -28,6 +28,8 @@
 # man(1).
 function manpage_printTitle {
 
+    local MANPAGE_SECTION=$(head -n 1 ${RENDER_FROM_ASCIIDOC} | sed -r 's,^.+\(([[:digit:]])\)[[:space:]]*$,\1,')
+
     idforge_checkFiles -m '[1-8]' "${MANPAGE_SECTION}"
 
     case ${MANPAGE_SECTION} in

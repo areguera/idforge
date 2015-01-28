@@ -40,14 +40,6 @@ function docbook {
 
     idforge_setModuleEnvironment -m "${RENDER_FLOW}" -t "child"
 
-    # Redefine the final file name when you are producing manpages so
-    # the file names of all other formats can benefit from it.
-    if [[ ${RENDER_FLOW} == 'manpage' ]];then
-        local MANPAGE_SECTION=$(head -n 1 ${RENDER_FROM_ASCIIDOC} | sed -r 's,^.+\(([[:digit:]])\)[[:space:]]*$,\1,')
-        idforge_checkFiles -m '^[1-8]$' ${MANPAGE_SECTION}
-        local RENDER_FILE=${RENDER_FILE}.${MANPAGE_SECTION}
-    fi
-
     for RENDER_FORMAT in ${RENDER_FORMATS};do
         idforge_setModuleEnvironment -m "${RENDER_FORMAT}" -t "sibling"
     done
