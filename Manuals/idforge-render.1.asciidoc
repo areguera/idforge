@@ -1,13 +1,16 @@
 = idforge-render(1)
 Alain Reguera Delgado <alain.reguera@gmail.com>
+=MANPAGE_YEAR=:
 
 == Name
 
-idforge-render - Render content from configuration files.
+idforge-render - =MANPAGE_DESCRIPTION=
 
 == Synopsis
 
-idforge render [ OPTIONS ] [ CONFIGURATION_FILE ] [ DIRECTORY ]
+----------------------------------------------------------------------
+=MANPAGE_SYNOPSIS=
+----------------------------------------------------------------------
 
 == Description
 
@@ -80,7 +83,7 @@ locale-from::
     Specifies the translation file in PO format for one or more SVG
     files. See <<rendering-localized-files>>.
 
-render-as::
+render-formats::
     Specifies the image formats you want to create copies of the final
     PNG image for (e.g., jpg, tif, pdf). The values specified in this
     option are separated by white space and should be supported by
@@ -318,7 +321,7 @@ render-from-xsl::
     to point out the appropriate xsl file). In your system, the xsl
     files are installed in the
     /usr/share/sgml/docbook/xsl-stylesheets/ directory.
-render-as::
+render-formats::
     May be set either to ``xhtml'', ``pdf'', or ``manpage''.  When you
     set a value to this option, the value you provide must be
     consequent with the kind of rendition you are performing. For
@@ -443,14 +446,7 @@ images all the time to get final images in less time.
 
 The _idforge render_ command accepts the following options:
 
-*-h, --help*::
-    Print documentation (this page).
-
-*-v, --version*::
-    Print version and legal status.
-
-*-s, --description*::
-    Print brief description.
+include::Commons/options.inc[]
 
 [[managing-content-relation]]
 == Managing Content Relation
@@ -545,13 +541,13 @@ brand       = "Final/ffffff-0/ffffff/48/centos-release.png:x96+170+132"
 .Rendering images (extended)
 ----------------------------------------------------------------------
 [centos-symbol.png]
-render-type = "image"
-render-flow = "extended"
-render-from = "/usr/share/idforge-models-centos/Branding/0000/168/centos-{symbol,type}.svg"
-render-as   = "png jpg tif"
-heights     = "16 20 22 24 32 36 38 40 48"
-fgcolor     = "000000 ffffff ad7fa8 75507b 5c3566"
-bgcolor     = "ffffff-0 ffffff-1"
+render-type     = "image"
+render-flow     = "extended"
+render-from     = "/usr/share/idforge-models-centos/Branding/0000/168/centos-{symbol,type}.svg"
+render-formats  = "png jpg tif"
+heights         = "16 20 22 24 32 36 38 40 48"
+fgcolor         = "000000 ffffff ad7fa8 75507b 5c3566"
+bgcolor         = "ffffff-0 ffffff-1"
 ----------------------------------------------------------------------
 
 .Rendering images with reduced number of colors
@@ -570,7 +566,7 @@ render-type     = "asciidoc"
 render-flow     = "manpage"
 render-from     = "${PWD}/Scripts/Manuals/${SECTION}.asciidoc"
 locale-from     = "${PWD}/Scripts/Manuals/Locales/${IDFORGE_LANG_LC}/${SECTION}.asciidoc.po"
-render-as       = "manpage xhtml pdf"
+render-formats  = "manpage xhtml pdf"
 ----------------------------------------------------------------------
 
 .Managing rendering dependencies
@@ -625,24 +621,14 @@ media-arch      = "i386 x86_64"
 
 == Author
 
-Written by {author} <{email}>
+include::Commons/author.inc[]
 
 == Copyright
 
-Copyright (C) =COPYRIGHT_YEAR_LAST= =COPYRIGHT_HOLDER=
+include::Commons/copyright.inc[]
 
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or (at
-your option) any later version.
+== See also
 
-This program is distributed in the hope that it will be useful, but
-WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+=MANPAGE_OTHERS=
 
 // vim: set syntax=asciidoc:

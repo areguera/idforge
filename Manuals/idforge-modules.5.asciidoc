@@ -690,8 +690,16 @@ Module Structure
 +Configs/+::
     This directory contains module-specific configuration files.
 
-include::../commons/authors.inc[]
+== Author
 
-include::../commons/copyright.inc[]
+include::Commons/author.inc[]
+
+== Copyright
+
+include::Commons/copyright.inc[]
+
+== See also
+
+=MANPAGE_OTHERS=
 
 // vim: set syntax=asciidoc:
