@@ -1,0 +1,19 @@
+= manpage(1)
+Author <author@example.com>
+
+== Name
+
+manpage - manpage for testing purposes.
+
+== Synopsis
+
+This is a manpage for testing purposes.
+
+
+== Description
+
+This is a manpage for testing purposes.
+
+== Authors
+
+Written by {author} <{email}>

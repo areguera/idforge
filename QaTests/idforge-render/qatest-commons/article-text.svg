@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.2"
+   width="765"
+   height="990"
+   id="svg2"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="article-text.svg">
+  <metadata
+     id="metadata56">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1360"
+     inkscape:window-height="692"
+     id="namedview54"
+     showgrid="false"
+     inkscape:zoom="0.42104598"
+     inkscape:cx="464.46794"
+     inkscape:cy="459.70834"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 495 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="765 : 495 : 1"
+       inkscape:persp3d-origin="382.5 : 330 : 1"
+       id="perspective2874" />
+  </defs>
+  <image
+     sodipodi:absref="/home/al/Projects/Frameworks/idforge.git/QaTests/idforge-render/qatest-commons/=RENDER_BACK="
+     xlink:href="=RENDER_BACK="
+     x="0"
+     y="-3.8281252e-07"
+     width="765"
+     height="990"
+     id="image5504" />
+  <text
+     sodipodi:linespacing="125%"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
+     xml:space="preserve"
+     id="text4950"
+     y="195"
+     x="74.046875"><tspan
+       id="tspan4952"
+       y="195"
+       x="74.046875"
+       style="fill:#4d4d4d">What is QaTest?</tspan></text>
+  <flowRoot
+     style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+     xml:space="preserve"
+     id="flowRoot4954"
+     transform="translate(0,-14.208395)"><flowRegion
+       id="flowRegion4956"><rect
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+         id="rect4958"
+         y="230.54794"
+         x="74.589043"
+         height="134.44565"
+         width="614.79449" /></flowRegion><flowPara
+       id="flowPara2928"><flowSpan
+   style="font-weight:bold"
+   id="flowSpan2944">idforge-qatest</flowSpan> is a unit testing framework which allows you to create and run automated quality assurance tests for idforge automation scripts quickly and consistently. The *idforge* developers, run *idforge-qatest* several times a day. Normally, before committing changes up to public repositories so as to be sure local changes didn't break anything; and after fixing a bug to reproduce the expected behaviour and refrain the fixed bug from happening again (because something else was changed and unexpectedly recreates it).</flowPara></flowRoot>  <g
+     id="g2912"
+     transform="translate(0,70)"
+     style="fill:#4d4d4d">
+    <text
+       x="74.046875"
+       y="315.0332"
+       id="text5042"
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
+       sodipodi:linespacing="125%"><tspan
+         x="74.046875"
+         y="315.0332"
+         id="tspan5044"
+         style="fill:#4d4d4d">What is this file for?</tspan></text>
+    <flowRoot
+       transform="translate(0,101.60606)"
+       id="flowRoot5046"
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"><flowRegion
+         id="flowRegion5048"><rect
+           width="614.79449"
+           height="59.360683"
+           x="74.589043"
+           y="230.54794"
+           id="rect5050"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans" /></flowRegion><flowPara
+         id="flowPara5090">This file exists for configuration files to verify the actions related to image rendering in different formats as well as localization of SVG files used as input to produce other image formats as outoput.</flowPara></flowRoot>    <text
+       x="74.046875"
+       y="430.84766"
+       id="text5283"
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
+       sodipodi:linespacing="125%"><tspan
+         x="74.046875"
+         y="430.84766"
+         id="tspan5285"
+         style="fill:#4d4d4d">Translation markers</tspan></text>
+    <flowRoot
+       transform="translate(0,217.42051)"
+       id="flowRoot5287"
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"><flowRegion
+         id="flowRegion5289"><rect
+           width="615.41095"
+           height="446.34409"
+           x="74.589043"
+           y="230.54794"
+           id="rect5291"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans" /></flowRegion><flowPara
+         style="font-size:14px;font-weight:normal;text-align:justify;text-anchor:start;fill:#4d4d4d"
+         id="flowPara2963">Translation markers expand information inside design models instances before they are processed and saved to their final output formats. Translation markers provide a versatil tool to introduce dynamic information inside plain-text designs modules (including SVG, and Asciidoc files). Translation markers are set using the render-mark option inside configuration file.</flowPara><flowPara
+         id="flowPara2965" /><flowPara
+         style="font-weight:bold;text-align:justify;text-anchor:start;fill:#4d4d4d"
+         id="flowPara2967">Example of user-specific translation markers are:</flowPara><flowPara
+         id="flowPara2969" /><flowPara
+         style="font-size:9px;text-align:start;text-anchor:start;fill:#4d4d4d;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
+         id="flowPara2985"> 22 # Render image in base mode with customized background image and</flowPara><flowPara
+         style="font-size:9px;text-align:start;text-anchor:start;fill:#4d4d4d;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
+         id="flowPara3021"> 23 # customized translation markers expansion.</flowPara><flowPara
+         style="font-size:9px;text-align:start;text-anchor:start;fill:#4d4d4d;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
+         id="flowPara3023"> 24 [article.png]</flowPara><flowPara
+         style="font-size:9px;text-align:start;text-anchor:start;fill:#4d4d4d;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
+         id="flowPara3025"> 25 render-type     = &quot;image&quot;</flowPara><flowPara
+         style="font-size:9px;text-align:start;text-anchor:start;fill:#4d4d4d;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
+         id="flowPara3027"> 26 render-from     = &quot;${PWD}/QaTests/idforge-render/qatest-2015012847797252944/article-text.svg&quot;</flowPara><flowPara
+         style="font-size:9px;text-align:start;text-anchor:start;fill:#4d4d4d;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
+         id="flowPara3029"> 27 locale-from     = &quot;${PWD}/QaTests/idforge-render/qatest-commons/Locales/${IDFORGE_LANG_LC}/article.po&quot;</flowPara><flowPara
+         style="font-size:9px;text-align:start;text-anchor:start;fill:#4d4d4d;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
+         id="flowPara3031"> 28 render-back     = &quot;${PWD}/QaTests/idforge-render/qatest-2015012847797252944/Final/765x990.png&quot;</flowPara><flowPara
+         style="font-size:9px;text-align:start;text-anchor:start;fill:#4d4d4d;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
+         id="flowPara3033"> 29 render-mark     = &quot;=SECTION=${SECTION}&quot;</flowPara><flowPara
+         style="font-size:9px;text-align:start;text-anchor:start;fill:#4d4d4d;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
+         id="flowPara3035"> 30 render-mark     = &quot;=RENDER_TYPE=${RENDER_TYPE}&quot;</flowPara><flowPara
+         style="font-size:9px;text-align:start;text-anchor:start;fill:#4d4d4d;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
+         id="flowPara3037"> 31 render-mark     = &quot;=RENDER_FROM=${RENDER_FROM}&quot;</flowPara><flowPara
+         style="font-size:9px;text-align:start;text-anchor:start;fill:#4d4d4d;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
+         id="flowPara3039"> 32 render-mark     = &quot;=RENDER_BACK=${RENDER_BACK}&quot;</flowPara><flowPara
+         id="flowPara2987" /><flowPara
+         id="flowPara3011">where:</flowPara><flowPara
+         id="flowPara3015" /><flowPara
+         style="font-size:10px;text-align:start;text-anchor:start;fill:#4d4d4d;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
+         id="flowPara2989"><flowSpan
+   id="flowSpan3028"
+   style="font-weight:bold;fill:#4d4d4d">=\SECTION=</flowSpan> expands to <flowSpan
+   id="flowSpan3032"
+   style="font-weight:bold;fill:#4d4d4d">=SECTION=</flowSpan></flowPara><flowPara
+         style="font-size:10px;text-align:start;text-anchor:start;fill:#4d4d4d;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
+         id="flowPara3001"><flowSpan
+   id="flowSpan3030"
+   style="font-weight:bold;fill:#4d4d4d">=\RENDER_TYPE=</flowSpan> expands to <flowSpan
+   id="flowSpan3050"
+   style="font-weight:bold;fill:#4d4d4d">=RENDER_TYPE=</flowSpan></flowPara></flowRoot>  </g>
+</svg>

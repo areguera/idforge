@@ -1,0 +1,10 @@
+= Title
+Author <author@example.com>
+
+== Section
+
+This is the content of a section
+
+== Section
+
+This is the content of a section
