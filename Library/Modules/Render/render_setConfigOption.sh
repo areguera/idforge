@@ -79,11 +79,11 @@ function render_setConfigOption {
             # Define value of "render-file" option. This information
             # is used to customize the path of final file being
             # produced.
-            RENDER_FILE=$(render_printConfigValues "default")
+            RENDER_FILE=$(render_printConfigValues "${CONFIG_SECTION}")
             if [[ ${RENDER_FILE} =~ ^/ ]];then
                 RENDER_FILE=${RENDER_FILE}
             else
-                RENDER_FILE=${RENDER_DIR}/${RENDER_FILE:-${CONFIG_SECTION}}
+                RENDER_FILE=${RENDER_DIR}/${RENDER_FILE}
             fi
             ;;
 
