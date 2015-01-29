@@ -58,22 +58,31 @@ function config_setOptions {
 
             -e | --section )
                 # Section name.
-                CONFIG_FLAG_SECTION="${2:-}"
-                shift 2
+                CONFIG_FLAG_SECTION="${2:-}"; shift 2
                 ;;
 
             -o | --option )
                 # Option name.
-                CONFIG_FLAG_OPTION="${2:-}"
-                shift 2
+                CONFIG_FLAG_OPTION="${2:-}"; shift 2
                 ;;
 
             -a | --value )
+
                 # Option's default value. This is the value used when
-                # the specified option doesn't have a value inside the
-                # configuration file.
-                CONFIG_FLAG_VALUE="${2:-}"
-                shift 2
+                # the specified option doesn't have a value assigned
+                # inside the configuration file.
+                #
+                # FIXME: This option cannot accept empty values as
+                # argument in order to work as expected.  However, in
+                # some cases, it is necessary to set an empty value as
+                # default value to a configuration option.
+                #
+                # As workaround for this issue, you could adopt the
+                # convention of using the 'null' literal string as
+                # argument to this option whenever you need an empty
+                # value as default value. The implementation of this
+                # convention is set in the 'values' function.
+                CONFIG_FLAG_VALUE="${2:-null}"; shift 2
                 ;;
 
             -- )

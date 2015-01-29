@@ -25,15 +25,11 @@
 
 function render_printConfigValues {
 
-    local CONFIG_VALUE_DEFAULT="${1}"
-
-    if [[ -n ${CONFIG_VALUE_DEFAULT} ]];then
-        CONFIG_VALUE_DEFAULT="-a ${CONFIG_VALUE_DEFAULT}"
-    fi
+    local CONFIG_VALUE_DEFAULT="${1:-null}"
 
     idforge_setModuleEnvironment -m 'config' \
         -t 'parent' -g "-e ${CONFIG_SECTION}" \
-        -g "-o ${CONFIG_OPTION}" -g "${CONFIG_VALUE_DEFAULT}" \
+        -g "-o ${CONFIG_OPTION}" -g "-a ${CONFIG_VALUE_DEFAULT}" \
         -g "${CONFIG_FILE}"
 
 }

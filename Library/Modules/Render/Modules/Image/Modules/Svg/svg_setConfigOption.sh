@@ -88,7 +88,7 @@ function svg_setConfigOption {
             # the area you want to export from SVG file. By default
             # the value is set empty so no specific area but the
             # entire document is exported.
-            EXPORTID=$(render_printConfigValues "")
+            EXPORTID=$(render_printConfigValues)
             ;;
 
         * )

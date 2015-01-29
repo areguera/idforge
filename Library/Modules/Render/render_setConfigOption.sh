@@ -40,7 +40,7 @@ function render_setConfigOption {
             # to specify source files. So, the relation source
             # file-translation file can be accurate.
             local FILE=''
-            local FILES=$(render_printConfigValues "default")
+            local FILES=$(render_printConfigValues)
 
             local COUNT=0
 
@@ -95,7 +95,7 @@ function render_setConfigOption {
             # option definitions in the configuration file or one,
             # using path expansion.
             local FILE=''
-            local FILES=$(render_printConfigValues "default")
+            local FILES=$(render_printConfigValues)
 
             if [[ -z ${FILES} ]];then
                 idforge_printMessage "`eval_gettext "The \\\"\\\$CONFIG_OPTION\\\" option is required."`" --as-error-line
@@ -131,9 +131,10 @@ function render_setConfigOption {
             # is used to determined whether to remove or not the
             # directory where final content is stored in, before new
             # content be put inside it.
-            RENDER_LOGIC=$(render_printConfigValues "overwrite")
+            RENDER_LOGIC=$(render_printConfigValues 'overwrite')
             if [[ ${RENDER_LOGIC} == 'remove-first' ]];then
                 if [[ -d ${RENDER_DIR} ]];then
+                    idforge_printMessage "${RENDER_DIR}" --as-deleting-line
                     rm -r ${RENDER_DIR}
                     idforge_setParentDir "${RENDER_FILE}"
                 fi
@@ -147,7 +148,7 @@ function render_setConfigOption {
             # inside source files' instances. When this option is not
             # provided only default translation markers expansion is
             # performed.
-            RENDER_MARK="$(render_printConfigValues 'default')"
+            RENDER_MARK="$(render_printConfigValues)"
             ;;
 
         release )

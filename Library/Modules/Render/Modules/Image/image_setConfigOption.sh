@@ -37,17 +37,17 @@ function image_setConfigOption {
             COMMENT=$(render_printConfigValues)
             ;;
 
-        render-as )
-            # Define value to "render-as" configuration option. This
-            # information is used to retrieve the image formats you
-            # want to produce the image for. This variable contains
-            # one or more image format supported by ImageMagick.  For
-            # example, `xpm', `jpg', 'tiff', etc.
+        render-formats )
+            # Define value to "render-formats" configuration option.
+            # This information is used to retrieve the image formats
+            # you want to produce the image for. This variable
+            # contains one or more image format supported by
+            # ImageMagick.  For example, `xpm', `jpg', 'tiff', etc.
             FORMATS=$(render_printConfigValues "png")
             ;;
 
         * )
-            idforge_printMessage "`eval_gettext "The \\\"\\\$OPTION\\\" option isn't supported."`" --as-error-line
+            idforge_printMessage "`eval_gettext "The \\\"\\\$CONFIG_OPTION\\\" option isn't supported."`" --as-error-line
             ;;
 
     esac

@@ -34,7 +34,7 @@ function raw_setConfigOption {
             ;;
 
         * )
-            idforge_printMessage "`eval_gettext "The \\\"\\\$OPTION\\\" option isn't supported."`" --as-error-line
+            idforge_printMessage "`eval_gettext "The \\\"\\\$CONFIG_OPTION\\\" option isn't supported."`" --as-error-line
             ;;
 
     esac

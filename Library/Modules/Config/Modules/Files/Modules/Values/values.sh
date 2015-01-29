@@ -36,7 +36,7 @@ function values {
         local CONFIG_VALUE=$(echo "${CONFIG_LINE}" \
             | cut -s -d= -f2- | sed -r -e 's/"//g' -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
 
-        eval echo ${CONFIG_VALUE:-${CONFIG_FLAG_VALUE}}
+        eval echo ${CONFIG_VALUE:-${CONFIG_FLAG_VALUE/null/}}
 
     done
 

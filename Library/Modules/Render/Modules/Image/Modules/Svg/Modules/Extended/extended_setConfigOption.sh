@@ -33,7 +33,7 @@ function extended_setConfigOption {
             # Retrieve heights you want to produce the image for. This
             # variable contains one or more numerical values. For
             # example, `16', `24', `32', etc.
-            HEIGHTS=$(render_printConfigValues "16 20 22 24 26 32 36 38 40 48 52 64 72 78 96 112 124 128 148 164 196 200 512")
+            HEIGHTS=$(render_printConfigValues 48)
             ;;
 
         fgcolors )
@@ -41,8 +41,7 @@ function extended_setConfigOption {
             # for.  This variable contains one or more color number in
             # hexadecimal format. For example, `000000', `ffffff',
             # etc.
-            FGCOLORS=$(render_printConfigValues)
-            [[ -z ${FGCOLORS} ]] && FGCOLORS="000000"
+            FGCOLORS=$(render_printConfigValues 000000)
             ;;
 
         bgcolors )
@@ -53,11 +52,11 @@ function extended_setConfigOption {
             # full transparency and 1.0 full opacity. For example, the
             # following values are accepted: `000000-0', `ffffff-1',
             # etc.
-            BGCOLORS=$(render_printConfigValues "ffffff-0 ffffff-1")
+            BGCOLORS=$(render_printConfigValues 'ffffff-0')
             ;;
 
         * )
-            idforge_printMessage "`eval_gettext "The \\\"\\\$OPTION\\\" option isn't supported."`" --as-error-line
+            idforge_printMessage "`eval_gettext "The \\\"\\\$CONFIG_OPTION\\\" option isn't supported."`" --as-error-line
             ;;
 
     esac

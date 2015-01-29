@@ -30,7 +30,7 @@ function image_setRenditionFormats {
     local RENDER_FILE_NEW=$(echo ${RENDER_FILE} | sed -r "s/\.png$//")
 
     local FORMAT=''
-    local FORMATS=''    ; image_setConfigOption 'render-as'
+    local FORMATS=''    ; image_setConfigOption 'render-formats'
 
     # Convert images from PNG to those formats specified in the
     # configuration file.
