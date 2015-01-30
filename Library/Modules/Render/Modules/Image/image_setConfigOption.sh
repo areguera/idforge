@@ -43,7 +43,7 @@ function image_setConfigOption {
             # you want to produce the image for. This variable
             # contains one or more image format supported by
             # ImageMagick.  For example, `xpm', `jpg', 'tiff', etc.
-            FORMATS=$(render_printConfigValues "png")
+            RENDER_FORMATS=$(render_printConfigValues "png")
             ;;
 
         * )

@@ -29,15 +29,15 @@ function image_setRenditionFormats {
     # extension as reference.
     local RENDER_FILE_NEW=$(echo ${RENDER_FILE} | sed -r "s/\.png$//")
 
-    local FORMAT=''
-    local FORMATS=''    ; image_setConfigOption 'render-formats'
+    local RENDER_FORMAT=''
+    local RENDER_FORMATS=''    ; image_setConfigOption 'render-formats'
 
     # Convert images from PNG to those formats specified in the
     # configuration file.
-    for FORMAT in ${FORMATS};do
-        [[ ${FORMAT} == 'png' ]] && continue
-        idforge_printMessage "${RENDER_FILE_NEW}.${FORMAT}" --as-creating-line
-        convert ${RENDER_FILE} ${RENDER_FILE_NEW}.${FORMAT}
+    for RENDER_FORMAT in ${RENDER_FORMATS};do
+        [[ ${RENDER_FORMAT} == 'png' ]] && continue
+        idforge_printMessage "${RENDER_FILE_NEW}.${RENDER_FORMAT}" --as-creating-line
+        convert ${RENDER_FILE} ${RENDER_FILE_NEW}.${RENDER_FORMAT}
     done
 
 }
