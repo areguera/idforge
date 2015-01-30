@@ -33,9 +33,9 @@ function extended {
     local BGCOLORS=''; extended_setConfigOption 'bgcolors'
 
     for BGCOLOR in ${BGCOLORS};do
-        idforge_checkFiles -m '^[a-fA-F0-9]{6}-(0|1)$' ${BGCOLOR}
+        idforge_checkFiles -m '^[[:alnum:]]{6}-(0(\.[[:digit:]]+)?|1)$' ${BGCOLOR}
         for FGCOLOR in ${FGCOLORS};do
-            idforge_checkFiles -m '^[a-fA-F0-9]{3,6}$' ${FGCOLOR}
+            idforge_checkFiles -m '^[[:alnum:]]{6}-(0(\.[[:digit:]]+)?|1)$' ${FGCOLOR}
             for HEIGHT in ${HEIGHTS};do
                 idforge_checkFiles -m '^[[:digit:]]+(.[[:digit:]]+)?$' ${HEIGHT}
                 extended_setRenditionBase

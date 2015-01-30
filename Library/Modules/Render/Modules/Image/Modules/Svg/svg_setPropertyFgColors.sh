@@ -23,20 +23,12 @@
 #
 ######################################################################
 
-# Standardize the way SVG files are produced inside the idforge.sh
-# script.
-function svg_setRenditionBaseCommand {
+function svg_setPropertyFgColors {
 
-    local INKSCAPE=/usr/bin/inkscape
-    local INKSCAPE_OPTIONS="--export-png=${TARGET_INSTANCES[${RENDER_FROM_COUNT}]}"
+    local COLOR=$(echo ${FGCOLOR} | cut -d- -f1)
 
-    svg_setPropertyExportId
-    svg_setPropertyFgColors
-    svg_setPropertyFgOpacity
-    svg_setPropertyBgColors
-    svg_setPropertyBgOpacity
-    svg_setPropertyHeight
-
-    ${INKSCAPE} ${SOURCE_INSTANCE} ${INKSCAPE_OPTIONS} > /dev/null
+    if [[ -n ${COLOR} ]] && [[ ${COLOR} != '000000' ]];then
+        sed -i -r "s/((fill|stroke):#)000000/\1${FGCOLOR}/g" ${SOURCE_INSTANCE}
+    fi
 
 }

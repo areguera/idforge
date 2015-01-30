@@ -23,27 +23,12 @@
 #
 ######################################################################
 
-# Standardize the way base rendition options are set.
-function svg_setRenditionBaseOptions {
+function svg_setPropertyFgOpacity {
 
-    if [[ -n ${FGCOLOR} ]] && [[ ${FGCOLOR} != '000000' ]];then
-        sed -i -r "s/((fill|stroke):#)000000/\1${FGCOLOR}/g" ${SOURCE_INSTANCE}
-    fi
+    local OPACITY=$(echo ${FGCOLOR} | cut -d- -f2-)
 
-    if [[ -z ${EXPORTID} ]];then
-        INKSCAPE_OPTIONS="${INKSCAPE_OPTIONS} --export-area-drawing "
-    else
-        svg_checkModelExportId "${SOURCE_INSTANCE}" "${EXPORTID}"
-        INKSCAPE_OPTIONS="${INKSCAPE_OPTIONS} --export-id=${EXPORTID} "
-    fi
-
-    if [[ -n ${BGCOLOR} ]];then
-       INKSCAPE_OPTIONS="${INKSCAPE_OPTIONS} --export-background=$(echo ${BGCOLOR} | cut -d'-' -f1) "
-       INKSCAPE_OPTIONS="${INKSCAPE_OPTIONS} --export-background-opacity=$(echo ${BGCOLOR} | cut -d'-' -f2) "
-    fi
-
-    if [[ -n ${HEIGHT} ]];then
-        INKSCAPE_OPTIONS="${INKSCAPE_OPTIONS} --export-height=${HEIGHT} "
+    if [[ -n ${OPACITY} ]] && [[ ${OPACITY} != '1' ]];then
+        sed -i -r "s,(fill-opacity:)1,\1${OPACITY},g" ${SOURCE_INSTANCE}
     fi
 
 }

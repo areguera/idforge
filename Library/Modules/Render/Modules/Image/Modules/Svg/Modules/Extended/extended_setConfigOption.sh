@@ -38,10 +38,13 @@ function extended_setConfigOption {
 
         fgcolors )
             # Retrieve foreground colors you want to produce the image
-            # for.  This variable contains one or more color number in
-            # hexadecimal format. For example, `000000', `ffffff',
-            # etc.
-            FGCOLORS=$(render_printConfigValues 000000)
+            # for. This variable contains one or more color number in
+            # hexadecimal format with the opacity information
+            # included. Opacity is specified between 0.0 and 1.0 where
+            # 0.0 is full transparency and 1.0 full opacity. For
+            # example, the following values are accepted: `000000-0',
+            # `ffffff-1', etc.
+            FGCOLORS=$(render_printConfigValues '000000-1')
             ;;
 
         bgcolors )
