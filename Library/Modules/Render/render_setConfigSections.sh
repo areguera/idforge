@@ -70,4 +70,3 @@ function render_setConfigSections {
     idforge_setModuleEnvironment -m 'make' -t 'child'
 
 }
-
