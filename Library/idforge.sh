@@ -26,7 +26,7 @@
 function idforge {
 
     #=================================================================
-    # Script Internationalization
+    # Internationalization
     #=================================================================
 
     # Set function environments required by GNU gettext system.
@@ -59,7 +59,7 @@ function idforge {
     local -r IDFORGE_LANG_CC=$(echo ${IDFORGE_LANG_LC} | cut -d'_' -f2)
 
     #=================================================================
-    # Script Paths
+    # Paths
     #=================================================================
 
     # Default text editor.
@@ -78,7 +78,7 @@ function idforge {
     IDFORGE_TEMPDIR=$(mktemp -p /tmp -d ${IDFORGE}-XXXXXX)
 
     #=================================================================
-    # Script Flags
+    # Flags
     #=================================================================
 
     # Set filter flag (-f|--filter).  This flag is mainly used to
@@ -106,7 +106,7 @@ function idforge {
     local IDFORGE_FLAG_DEBUG='false'
 
     #=================================================================
-    # Script Global Functions
+    # Functions
     #=================================================================
 
     local IDFORGE_FUNCTION=''
@@ -137,13 +137,13 @@ function idforge {
     trap idforge_removeTemporals 0
 
     #=================================================================
-    # Default Action
+    # Usage (default action)
     #=================================================================
 
     [[ $# -eq 0 ]] && idforge_setModuleEnvironment -t 'child' -m 'usage'
 
     #=================================================================
-    # Parse Command-line Arguments
+    # Arguments
     #=================================================================
 
     local ARGUMENTS=''; idforge_setOptions "${@}"; eval set -- "${ARGUMENTS}"
@@ -151,24 +151,26 @@ function idforge {
     [[ $# -eq 0 ]] && return
 
     #=================================================================
-    # Initiate module name
+    # Modules
     #=================================================================
 
     local IDFORGE_MODULE_NAME="${1}"; shift 1
-
-    #=================================================================
-    # Initiate module arguments
-    #=================================================================
-
     local IDFORGE_MODULE_ARGUMENTS=''
 
     for ARGUMENT in ${@};do
         IDFORGE_MODULE_ARGUMENTS="-g ${ARGUMENT} ${IDFORGE_MODULE_ARGUMENTS}"
     done
 
-    #================================================================
-    # Initialize module environment
-    #================================================================
     idforge_setModuleEnvironment -m "${IDFORGE_MODULE_NAME}" ${IDFORGE_MODULE_ARGUMENTS}
+
+    #=================================================================
+    # Exit
+    #=================================================================
+
+    local IDFORGE_EXIT=${?}
+
+    idforge_printMessage "IDFORGE_EXIT: ${IDFORGE_EXIT}" --as-debugger-line
+
+    return ${IDFORGE_EXIT}
 
 }

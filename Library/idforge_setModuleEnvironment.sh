@@ -45,9 +45,11 @@ function idforge_setModuleEnvironment {
     # have been processed already.
     shift $(( ${OPTIND} - 1 ))
 
+    # Initialize module's exit status.
+    local IDFORGE_MODULE_EXIT=0
+
     # Initialize module's global counter.
     IDFORGE_MODULE_COUNT=${IDFORGE_MODULE_COUNT:-0}
-
     idforge_printMessage "=========================>: [${IDFORGE_MODULE_COUNT}] ${FUNCNAME[1]}" --as-debugger-line
 
     # When the last module in the chain of executed modules is the
@@ -149,5 +151,8 @@ function idforge_setModuleEnvironment {
         unset IDFORGE_MODULE_DIR_MODULES
         unset IDFORGE_MODULE_DIR_CONFIGS
     fi
+
+    # Return based on module's exit status.
+    return ${IDFORGE_MODULE_EXIT}
 
 }

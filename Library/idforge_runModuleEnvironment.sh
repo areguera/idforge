@@ -61,6 +61,11 @@ function idforge_runModuleEnvironment {
     idforge_printMessage '-------------------------> : '"${IDFORGE_MODULE_NAME} ${IDFORGE_MODULE_ARGUMENT}" --as-debugger-line
     ${IDFORGE_MODULE_NAME} ${IDFORGE_MODULE_ARGUMENT}
 
+    # Redefine modules' exit status based on last module execution
+    # exit status, so it can be customized.
+    IDFORGE_MODULE_EXIT=${?}
+    idforge_printMessage "IDFORGE_MODULE_EXIT: ${IDFORGE_MODULE_EXIT}" --as-debugger-line
+
     # Unset module-specific environment.
     idforge_printMessage '<------------------------- : '"${IDFORGE_MODULE_NAME} ${IDFORGE_MODULE_ARGUMENT}" --as-debugger-line
     idforge_unsetModuleEnvironment
