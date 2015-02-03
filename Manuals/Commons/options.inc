@@ -7,5 +7,8 @@
 *-s, --description*::
     Print brief description.
 
+[NOTE]
+======================================================================
 In case no argument is provided after the command, a brief usage
 description will be displayed with the command-line structure.
+======================================================================
