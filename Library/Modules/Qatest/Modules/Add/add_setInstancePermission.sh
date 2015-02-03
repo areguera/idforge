@@ -27,6 +27,6 @@ function add_setInstancePermission {
 
     idforge_checkFiles -e ${QATEST_UNIT_INSTANCE}
 
-    [[ ! -x ${QATEST_UNIT_INSTANCE} ]] && chmod 755 ${ADD_UNIT_INSTANCE}
+    [[ ! -x ${QATEST_UNIT_INSTANCE} ]] && chmod 755 ${QATEST_UNIT_INSTANCE}
 
 }
