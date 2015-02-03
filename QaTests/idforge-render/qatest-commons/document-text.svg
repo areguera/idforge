@@ -41,9 +41,9 @@
      inkscape:window-height="692"
      id="namedview54"
      showgrid="false"
-     inkscape:zoom="1.0034697"
-     inkscape:cx="335.32157"
-     inkscape:cy="433.44814"
+     inkscape:zoom="1.7544193"
+     inkscape:cx="429.88362"
+     inkscape:cy="561.86739"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
@@ -73,7 +73,7 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_z="765 : 495 : 1"
        inkscape:persp3d-origin="382.5 : 330 : 1"
-       id="perspective3073" />
+       id="perspective3074" />
   </defs>
   <image
      sodipodi:absref="/home/al/Projects/Frameworks/idforge.git/QaTests/idforge-render/qatest-commons/=RENDER_BACK="
@@ -95,44 +95,56 @@
          x="74.589043"
          height="58.967369"
          width="614.79449" /></flowRegion><flowPara
-       id="flowPara2928" /></flowRoot>  <text
-     sodipodi:linespacing="125%"
-     style="font-size:24px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#24221c;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
-     xml:space="preserve"
-     id="text5042"
-     y="361.23438"
-     x="74.046875"><tspan
-       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#24221c;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
-       id="tspan5044"
+       id="flowPara2928" /></flowRoot>  <g
+     id="g3078"
+     transform="translate(0,5.213856)">
+    <text
+       x="74.046875"
        y="361.23438"
-       x="74.046875">What Is This File For?</tspan></text>
-  <flowRoot
-     style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#24221c;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
-     xml:space="preserve"
-     id="flowRoot5046"
-     transform="translate(0,147.69393)"><flowRegion
-       id="flowRegion5048"><rect
-         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#24221c;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
-         id="rect5050"
-         y="230.54794"
-         x="74.589043"
-         height="45.227329"
-         width="614.79449" /></flowRegion><flowPara
-       id="flowPara2907">This file provides a predictable SVG input for <flowSpan
-   id="flowSpan2877"
-   style="font-weight:bold;text-align:start;text-anchor:start;fill:#24221c;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono">idforge-qatest(1)</flowSpan> command to validate production processes implemented by <flowSpan
-   id="flowSpan2881"
-   style="font-weight:bold;text-align:start;text-anchor:start;fill:#24221c;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono">idforge-render(1)</flowSpan> command.</flowPara></flowRoot>  <text
-     sodipodi:linespacing="125%"
-     style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#24221c;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
-     xml:space="preserve"
-     id="text5042-1"
-     y="467.81833"
-     x="73.837891"><tspan
-       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#24221c;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
-       id="tspan5044-5"
-       y="467.81833"
-       x="73.837891">Validations This File Implements</tspan></text>
+       id="text5042"
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#24221c;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
+       sodipodi:linespacing="125%"><tspan
+         x="74.046875"
+         y="361.23438"
+         id="tspan5044"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#24221c;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold">=RENDER_FILE_BASENAME=</tspan></text>
+    <flowRoot
+       transform="translate(0,147.69393)"
+       id="flowRoot5046"
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#24221c;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"><flowRegion
+         id="flowRegion5048"><rect
+           width="614.79449"
+           height="377.67401"
+           x="74.589043"
+           y="230.54794"
+           id="rect5050"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#24221c;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans" /></flowRegion><flowPara
+         id="flowPara2907">This file provides a predictable SVG input for <flowSpan
+   style="font-weight:bold;text-align:justify;text-anchor:start;fill:#24221c;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
+   id="flowSpan2877">idforge-qatest(1)</flowSpan> command to validate production processes implemented by <flowSpan
+   style="font-weight:bold;text-align:justify;text-anchor:start;fill:#24221c;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono"
+   id="flowSpan2881">idforge-render(1)</flowSpan> and <flowSpan
+   id="flowSpan3074"
+   style="font-weight:bold;text-align:justify;text-anchor:start;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono">idforge-locale(1)</flowSpan> commands.</flowPara><flowPara
+         id="flowPara3165" /><flowPara
+         id="flowPara3167">This file helps to implement the following validations:</flowPara><flowPara
+         id="flowPara3169" /><flowPara
+         id="flowPara3171">• Create PNG files for different sizes, colors and locales, based on SVG and PO files.</flowPara><flowPara
+         id="flowPara3173">• Create PNG files with dynamic information based on translation markers expansion.</flowPara><flowPara
+         id="flowPara3175">• Create PNG files combining several PNG images on other PNG images.</flowPara><flowPara
+         id="flowPara3177">• Convert PNG files to other image formats (e.g., JPG, TIF).</flowPara><flowPara
+         id="flowPara3179" /><flowPara
+         id="flowPara3181">As result of processing the <flowSpan
+   style="font-weight:bold;text-align:justify;text-anchor:start"
+   id="flowSpan3205">=CONFIG_SECTIONS=</flowSpan> configuration sections, using the production standards implemented by <flowSpan
+   style="font-weight:bold;text-align:justify;text-anchor:start;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
+   id="flowSpan3207">idforge-render(1)</flowSpan> command, you must see a composition made of the following elements: </flowPara><flowPara
+         id="flowPara3183" /><flowPara
+         id="flowPara3185">• Full opacity idFORGE logotype on document header.</flowPara><flowPara
+         id="flowPara3187">• Semi-transparent idFORGE symbol on document background.</flowPara><flowPara
+         id="flowPara3189">• Full opacity idFORGE symbols in different colors and sizes on document footer.</flowPara></flowRoot>  </g>
   <flowRoot
      style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#24221c;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
      xml:space="preserve"
@@ -145,24 +157,7 @@
          x="74.589043"
          height="285.64386"
          width="614.79449" /></flowRegion><flowPara
-       id="flowPara4219">This file implements the following validations:</flowPara><flowPara
-       id="flowPara3906" /><flowPara
-       id="flowPara3908">• Create PNG files for different sizes, colors and locales, based on SVG and PO files.</flowPara><flowPara
-       id="flowPara3912">• Create PNG files with dynamic information based on translation markers expansion.</flowPara><flowPara
-       id="flowPara3914">• Create PNG files combining several PNG images on other PNG images.</flowPara><flowPara
-       id="flowPara3936">• Convert PNG files to other image formats (e.g., JPG, TIF).</flowPara><flowPara
-       id="flowPara3916" /><flowPara
-       id="flowPara3918">As result of processing the <flowSpan
-   style="font-weight:bold"
-   id="flowSpan3920">=CONFIG_SECTION=</flowSpan> configuration section using the  <flowSpan
-   style="font-weight:bold"
-   id="flowSpan3922">=RENDER_FLOW=</flowSpan> rendition flow provided by the <flowSpan
-   style="font-weight:bold;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono"
-   id="flowSpan3924">idforge-render(1)</flowSpan> command, you must see a composition made of the following components: </flowPara><flowPara
-       id="flowPara3885" /><flowPara
-       id="flowPara3887">• idFORGE logotype on document header.</flowPara><flowPara
-       id="flowPara3889">• idFORGE symbol semi-transparent on document background.</flowPara><flowPara
-       id="flowPara3883">• idFORGE symbols in different colors and sizes.</flowPara></flowRoot>  <flowRoot
+       id="flowPara3883" /></flowRoot>  <flowRoot
      transform="translate(780.84116,466.18611)"
      id="flowRoot4225"
      xml:space="preserve"
@@ -1051,17 +1046,6 @@
          id="tspan4859"
          sodipodi:role="line">x16</tspan></text>
   </g>
-  <text
-     xml:space="preserve"
-     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#22241c;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
-     x="73.618164"
-     y="950.1416"
-     id="text6573"
-     sodipodi:linespacing="125%"><tspan
-       sodipodi:role="line"
-       id="tspan6575"
-       x="73.618164"
-       y="950.1416">© =COPYRIGHT_YEAR= =COPYRIGHT_HOLDER=</tspan></text>
   <g
      id="g4211"
      transform="translate(26.332031,0)">
@@ -1510,4 +1494,16 @@
          x="71.638672"
          y="914.88672">Y= 86.530</tspan></text>
   </g>
+  <text
+     xml:space="preserve"
+     style="font-size:9.99985981px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#22241c;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+     x="73.617134"
+     y="960.01343"
+     id="text6573"
+     sodipodi:linespacing="125%"
+     transform="scale(1.000014,0.99998601)"><tspan
+       sodipodi:role="line"
+       id="tspan6575"
+       x="73.617134"
+       y="960.01343">© =COPYRIGHT_YEAR= =COPYRIGHT_HOLDER=</tspan></text>
 </svg>
