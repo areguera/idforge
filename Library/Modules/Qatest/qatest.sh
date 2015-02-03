@@ -28,41 +28,30 @@ function qatest {
     # Initialize module flags.
     local QATEST_FLAG_COMMAND="/usr/bin/${IDFORGE}"
     local QATEST_FLAG_ADD='false'
-    local QATEST_FLAG_FILETYPES='false'
-    local QATEST_FLAG_DIGESTS='false'
+    local QATEST_FLAG_UPDATE='false'
+    local QATEST_FLAG_MIME='false'
+    local QATEST_FLAG_CHECKSUM='false'
 
     # Initialize command-line arguments and interpret arguments and
     # options passed through command-line.
     local ARGUMENT='' ARGUMENTS=''; qatest_setOptions "${@}"
 
-    # Verify command-line arguments. They must be provided. Otherwise
-    # there is not anything elese to do here so return to caller
-    # function.
+    # Verify existence of command-line arguments. When they don't
+    # exist, just return to caller. This is necesary to print the
+    # module's usage information cleanly.
     [[ -z ${ARGUMENTS} ]] && return
 
     # Verify command-line arguments. They must be directories.
     # Otherwise, stop script execution with an error message.
     idforge_checkFiles -d ${ARGUMENTS}
 
-    # Initialize tests counter.
-    local QATEST_UNITS_PASSED=0
-    local QATEST_UNITS_FAILED=0
-
+    # Process command-line arguments.
     for ARGUMENT in ${ARGUMENTS};do
-
-        # Verify and create new tests for each argument provided.
-        [[ ${QATEST_FLAG_ADD} == 'true' ]] && idforge_setModuleEnvironment -t 'child' -m 'add'
-
-        # Run all available tests (including those recently added)
-        # based on arguments provided.
-        idforge_setModuleEnvironment -t 'child' -m 'test'
-
+        if [[ ${QATEST_FLAG_ADD} == 'true' ]];then
+            idforge_setModuleEnvironment -m 'add' -t 'child'
+        else
+            idforge_setModuleEnvironment -m 'run' -t 'child'
+        fi
     done
-
-    # Print report about all executed tests.
-    idforge_setModuleEnvironment -m 'report' -t 'child'
-
-    # Return the number of failed tests.
-    return ${QATEST_UNITS_FAILED}
 
 }

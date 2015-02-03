@@ -23,23 +23,20 @@
 #
 ######################################################################
 
-function add {
+function check_setCommandStatus {
 
-    [[ ${QATEST_FLAG_MIME} == 'true' ]] || [[ ${QATEST_FLAG_CHECKSUM} == 'true' ]] \
-        && idforge_printMessage "`gettext "Content validation isn't supported while a new test is being added."`" --as-error-line
+    if [[ ${1} -eq 0 ]];then
+        idforge_printMessage "[ `gettext "PASSED"` ]" --as-nonew-line='1;32'
+        QATEST_UNITS_PASSED=$(( QATEST_UNITS_PASSED + 1 ))
+    else
+        idforge_printMessage "[ `gettext "FAILED"` ]" --as-nonew-line='1;31'
+        QATEST_UNITS_FAILED=$(( QATEST_UNITS_FAILED + 1 ))
+    fi
 
-    # Define shell script location. Since the final shell script
-    # content is concatenated at different times, it is be possible to
-    # end with an incomplete shell script if the creation process
-    # doesn't count with some sort of atomicity. To do so, we store
-    # the under-construction shell script (instance) in a temporal
-    # directory and move it, once completed, up to its final location.
-    local QATEST_UNIT_INSTANCE=${IDFORGE_TEMPDIR}/qatest-$(date '+%Y%m%d%H%M%S%N').sh
+    shift 1
 
-    # Create shell script instance.
-    add_setInstance
+    idforge_printMessage " : ${@}" --as-stdout-line=0
 
-    # Create shell script based on its instance.
-    add_setScript
+    QATEST_TIMESTAMP=$(echo ${QATEST_TIMESTAMP} ${COMMAND_TIMESTAMP} | gawk '{ print $1 + $2 }')
 
 }

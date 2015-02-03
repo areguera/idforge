@@ -13,7 +13,7 @@ QATEST_FLAG_COMMAND="./idforge.sh"
 #=====================================================================
 # Enter integrity checks target arguments:
 #=====================================================================
-test_setCommand "qatest"
-test_setCommand "qatest --version"
-test_setCommand "qatest --description"
-test_setCommand "qatest --help"
+command_line "qatest"
+command_line "qatest --version"
+command_line "qatest --description"
+command_line "qatest --help"

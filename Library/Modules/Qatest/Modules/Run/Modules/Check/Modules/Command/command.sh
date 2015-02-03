@@ -23,23 +23,16 @@
 #
 ######################################################################
 
-function add {
+function command {
 
-    [[ ${QATEST_FLAG_MIME} == 'true' ]] || [[ ${QATEST_FLAG_CHECKSUM} == 'true' ]] \
-        && idforge_printMessage "`gettext "Content validation isn't supported while a new test is being added."`" --as-error-line
+    idforge_printMessage "=" --as-separator-line
+    idforge_printMessage "${QATEST_UNIT}" --as-stdout-line
+    idforge_printMessage "=" --as-separator-line
 
-    # Define shell script location. Since the final shell script
-    # content is concatenated at different times, it is be possible to
-    # end with an incomplete shell script if the creation process
-    # doesn't count with some sort of atomicity. To do so, we store
-    # the under-construction shell script (instance) in a temporal
-    # directory and move it, once completed, up to its final location.
-    local QATEST_UNIT_INSTANCE=${IDFORGE_TEMPDIR}/qatest-$(date '+%Y%m%d%H%M%S%N').sh
+    [[ -d ${QATEST_UNIT_TEMPDIR} ]] \
+        && idforge_printMessage "${QATEST_UNIT_TEMPDIR}" --as-deleting-line \
+        && rm -r ${QATEST_UNIT_TEMPDIR}
 
-    # Create shell script instance.
-    add_setInstance
-
-    # Create shell script based on its instance.
-    add_setScript
+    . ${QATEST_UNIT} 2>&1
 
 }

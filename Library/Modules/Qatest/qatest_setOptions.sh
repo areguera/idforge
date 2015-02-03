@@ -28,10 +28,10 @@
 function qatest_setOptions {
 
     # Define short options we want to support.
-    local ARGSS="h,v,s,c:,a,f,g"
+    local ARGSS="h,v,s,c:,a,u,m,e"
 
     # Define long options we want to support.
-    local ARGSL="help,version,description,command:,add,filetypes,digests"
+    local ARGSL="help,version,description,command:,add,update,mime,checksum"
 
     # Redefine arguments using getopt(1) command parser and reset
     # positional parameters on this function, using output produced
@@ -69,13 +69,18 @@ function qatest_setOptions {
                 shift 1
                 ;;
 
-           -f | --filetypes )
-                QATEST_FLAG_FILETYPES='true'
+           -u | --update )
+                QATEST_FLAG_UPDATE='true'
                 shift 1
                 ;;
 
-           -g | --digests )
-                QATEST_FLAG_DIGESTS='true'
+           -m | --mime )
+                QATEST_FLAG_MIME='true'
+                shift 1
+                ;;
+
+           -e | --checksum )
+                QATEST_FLAG_CHECKSUM='true'
                 shift 1
                 ;;
 

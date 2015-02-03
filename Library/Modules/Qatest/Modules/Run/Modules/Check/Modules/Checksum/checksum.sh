@@ -23,23 +23,30 @@
 #
 ######################################################################
 
-function add {
+function checksum {
 
-    [[ ${QATEST_FLAG_MIME} == 'true' ]] || [[ ${QATEST_FLAG_CHECKSUM} == 'true' ]] \
-        && idforge_printMessage "`gettext "Content validation isn't supported while a new test is being added."`" --as-error-line
+    local CHECKSUM_REGEX='(sha256sum|sha1sum|md5sum)'
 
-    # Define shell script location. Since the final shell script
-    # content is concatenated at different times, it is be possible to
-    # end with an incomplete shell script if the creation process
-    # doesn't count with some sort of atomicity. To do so, we store
-    # the under-construction shell script (instance) in a temporal
-    # directory and move it, once completed, up to its final location.
-    local QATEST_UNIT_INSTANCE=${IDFORGE_TEMPDIR}/qatest-$(date '+%Y%m%d%H%M%S%N').sh
+    local CHECKSUMS=$(idforge_printFileList -a 1 -i 1 -t f -p ".+/${QATEST_UNIT_NAME}\.${CHECKSUM_REGEX}$" ${QATEST_UNIT_DIR})
 
-    # Create shell script instance.
-    add_setInstance
+    for CHECKSUM in ${CHECKSUMS};do
 
-    # Create shell script based on its instance.
-    add_setScript
+        local CHECKSUM_COMMAND=/usr/bin/$(echo ${CHECKSUM} | sed -r "s,^.+\.${CHECKSUM_REGEX}$,\1,")
+
+        [[ ! -x ${CHECKSUM_COMMAND} ]] && continue
+
+        idforge_printMessage "${CHECKSUM}" --as-processing-line
+
+        local COMMAND_TIMESTAMP=$(date '+%s.%N')
+
+        ${CHECKSUM_COMMAND} --quiet -c ${CHECKSUM}
+
+        local COMMAND_EXIT=${?}
+
+        COMMAND_TIMESTAMP=$(check_printTimestamp ${COMMAND_TIMESTAMP})
+
+        check_setCommandStatus "${COMMAND_EXIT}" "`eval_gettext "in \\\$COMMAND_TIMESTAMP seconds"`"
+
+    done
 
 }
