@@ -49,6 +49,7 @@ function locale_setOptions {
 
             -v | --version )
                 idforge_setModuleEnvironment -t 'parent' -m 'version' -g ${IDFORGE_MODULE_NAME}
+                shift 1
                 ;;
 
             -s | --description )
