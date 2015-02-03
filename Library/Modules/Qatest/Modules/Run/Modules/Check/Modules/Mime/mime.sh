@@ -29,6 +29,8 @@ function mime {
 
     idforge_printMessage "${MIME}" --as-processing-line
 
+    idforge_checkFiles -d ${QATEST_UNIT_TEMPDIR}
+
     local COMMAND_TIMESTAMP=$(date '+%s.%N')
 
     /usr/bin/file -i $(idforge_printFileList -t f -p '.+' ${QATEST_UNIT_TEMPDIR}) | diff -q ${MIME} -

@@ -25,6 +25,8 @@
 
 function update {
 
+    idforge_checkFiles -d ${QATEST_UNIT_TEMPDIR}
+
     local UPDATE_FILES="$(idforge_printFileList -t f -p '.+' ${QATEST_UNIT_TEMPDIR})"
 
     idforge_checkFiles -ef ${UPDATE_FILES}
