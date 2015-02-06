@@ -1,11 +1,11 @@
 *-h, --help*::
-    Print documentation (this page).
+    Prints documentation (this page).
 
 *-v, --version*::
-    Print version and legal status.
+    Prints version and legal status.
 
 *-s, --description*::
-    Print brief description.
+    Prints brief description in one line.
 
 [NOTE]
 ======================================================================
