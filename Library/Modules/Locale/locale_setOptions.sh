@@ -1,22 +1,22 @@
 #!/bin/bash
 ######################################################################
 #
-#   tcar - The CentOS Artwork Repository
-#   Copyright © 2014 The CentOS Artwork SIG
+#   idforge - Manage identity manuals in community.
+#   Copyright © 2015 CentOS Artwork SIG
 #
-#   This program is free software; you can redistribute it and/or
-#   modify it under the terms of the GNU General Public License as
-#   published by the Free Software Foundation; either version 2 of the
-#   License, or (at your option) any later version.
+#   idforge is free software; you can redistribute it and/or modify it
+#   under the terms of the GNU General Public License as published by
+#   the Free Software Foundation; either version 2 of the License, or
+#   (at your option) any later version.
 #
-#   This program is distributed in the hope that it will be useful,
-#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   idforge is distributed in the hope that it will be useful, but
+#   WITHOUT ANY WARRANTY; without even the implied warranty of
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 #   General Public License for more details.
 #
 #   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   along with idforge; if not, write to the Free Software Foundation,
+#   Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
 #   Alain Reguera Delgado <alain.reguera@gmail.com>
 #   39 Street No. 4426 Cienfuegos, Cuba.
@@ -27,10 +27,10 @@
 function locale_setOptions {
 
     # Define short options we want to support.
-    local ARGSS="h,v,s,u,e,d,r"
+    local ARGSS="h,v,s,e,d"
 
     # Define long options we want to support.
-    local ARGSL="help,version,description,update,edit,delete,recursive"
+    local ARGSL="help,version,description,edit,delete"
 
     # Redefine arguments using getopt(1) command parser and reset
     # positional parameters on this function, using output produced
@@ -57,23 +57,13 @@ function locale_setOptions {
                 shift 1
                 ;;
 
-            -u | --update )
-                ACTIONS="${ACTIONS} update"
-                shift 1
-                ;;
-
             -e | --edit )
-                ACTIONS="${ACTIONS} edit"
+                LOCALE_FLAG_EDIT='true'
                 shift 1
                 ;;
 
             -d | --delete )
-                ACTIONS="${ACTIONS} delete"
-                shift 1
-                ;;
-
-            -r | --recursive )
-                LOCALE_FLAG_RECURSIVE="true"
+                LOCALE_FLAG_DELETE='true'
                 shift 1
                 ;;
 

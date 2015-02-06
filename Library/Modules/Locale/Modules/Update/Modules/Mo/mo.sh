@@ -23,28 +23,14 @@
 #
 ######################################################################
 
-function locale {
+function mo {
 
-    # Initialize module's flags.
-    local LOCALE_FLAG_EDIT='false'
-    local LOCALE_FLAG_DELETE='false'
+    idforge_printMessage "${LOCALE_MO[${COUNT}]}" --as-creating-line
 
-    # Initialize command-line arguments and interpret arguments and
-    # options passed through command-line.
-    local ARGUMENT='' ARGUMENTS=''; locale_setOptions "${@}"
+    idforge_setParentDir ${LOCALE_MO[${COUNT}]}
 
-    # Verify existence of command-line arguments. When they don't
-    # exist, just return to caller. This is necessary to print the
-    # module's usage information cleanly.
-    [[ -z ${ARGUMENTS} ]] && return
+    msgfmt --check ${PO} --output-file=${LOCALE_MO[${COUNT}]}
 
-    # Initialize list of configuration files based on arguments
-    # provided in the command-line.
-    local CONFIG_FILE='' CONFIG_FILES=$(locale_printConfigFiles "${ARGUMENTS}")
-
-    # Process list of configuration files.
-    for CONFIG_FILE in "${CONFIG_FILES}"; do
-        locale_setConfigSections
-    done
+    idforge_checkFiles -i 'application/octet-stream' ${LOCALE_MO[${COUNT}]}
 
 }

@@ -23,28 +23,16 @@
 #
 ######################################################################
 
-function locale {
+# This function corrects information set in POT files created by
+# xgettext command which make msginit command to report warning
+# messages about what it considers unportable or problematic. Since
+# the POT file is expected to be corrected before using it as base to
+# create the PO file, it is convenient to simulate that correction
+# actions here.
+function po_setPotMetadata {
 
-    # Initialize module's flags.
-    local LOCALE_FLAG_EDIT='false'
-    local LOCALE_FLAG_DELETE='false'
-
-    # Initialize command-line arguments and interpret arguments and
-    # options passed through command-line.
-    local ARGUMENT='' ARGUMENTS=''; locale_setOptions "${@}"
-
-    # Verify existence of command-line arguments. When they don't
-    # exist, just return to caller. This is necessary to print the
-    # module's usage information cleanly.
-    [[ -z ${ARGUMENTS} ]] && return
-
-    # Initialize list of configuration files based on arguments
-    # provided in the command-line.
-    local CONFIG_FILE='' CONFIG_FILES=$(locale_printConfigFiles "${ARGUMENTS}")
-
-    # Process list of configuration files.
-    for CONFIG_FILE in "${CONFIG_FILES}"; do
-        locale_setConfigSections
-    done
+    # Get rid of the warning message about unportable codification
+    # when processing POT file just created through xgettext command.
+    sed -i 's,CHARSET,ISO-8859-1,' ${POT}
 
 }

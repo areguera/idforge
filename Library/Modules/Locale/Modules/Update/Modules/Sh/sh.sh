@@ -23,28 +23,26 @@
 #
 ######################################################################
 
-function locale {
+function sh {
 
-    # Initialize module's flags.
-    local LOCALE_FLAG_EDIT='false'
-    local LOCALE_FLAG_DELETE='false'
+    [[ ${#LOCALE_FROM[*]} -gt 1 ]] \
+        && idforge_printMessage "`gettext "Incorrect relation between source files and translation files."`" --as-error-line
+    [[ ${#LOCALE_MO[*]} -gt 1 ]] \
+        && idforge_printMessage "`gettext "Incorrect relation between source files and translation files."`" --as-error-line
 
-    # Initialize command-line arguments and interpret arguments and
-    # options passed through command-line.
-    local ARGUMENT='' ARGUMENTS=''; locale_setOptions "${@}"
+    idforge_checkFiles -efi 'text/x-shellscript' "${RENDER_FROM[*]}"
 
-    # Verify existence of command-line arguments. When they don't
-    # exist, just return to caller. This is necessary to print the
-    # module's usage information cleanly.
-    [[ -z ${ARGUMENTS} ]] && return
+    LOCALE_PO_TEMPLATES[0]=$(idforge_printTemporalFile ${LOCALE_FROM[0]})
 
-    # Initialize list of configuration files based on arguments
-    # provided in the command-line.
-    local CONFIG_FILE='' CONFIG_FILES=$(locale_printConfigFiles "${ARGUMENTS}")
+    # Retrieve translatable strings from shell script files and create
+    # the portable object template (.pot) from them.
+    xgettext --output=${LOCALE_PO_TEMPLATES[0]} \
+        --strict \
+        --msgid-bugs-address="centos-docs@centos.org" \
+        --copyright-holder="The CentOS Artwork SIG" \
+        --width=70 --no-location \
+        ${RENDER_FROM[*]}
 
-    # Process list of configuration files.
-    for CONFIG_FILE in "${CONFIG_FILES}"; do
-        locale_setConfigSections
-    done
+    [[ -f ${LOCALE_PO_TEMPLATES[0]} ]] && idforge_setModuleEnvironment -m 'po' -t 'sibling'
 
 }

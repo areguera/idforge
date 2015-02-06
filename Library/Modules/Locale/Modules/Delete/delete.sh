@@ -23,28 +23,27 @@
 #
 ######################################################################
 
-function locale {
+# Standardize elimination of localization files.
+function delete {
 
-    # Initialize module's flags.
-    local LOCALE_FLAG_EDIT='false'
-    local LOCALE_FLAG_DELETE='false'
+    local -a LOCALE_MO      ; delete_setConfigOption 'locale-mo'
 
-    # Initialize command-line arguments and interpret arguments and
-    # options passed through command-line.
-    local ARGUMENT='' ARGUMENTS=''; locale_setOptions "${@}"
+    local LOCALE_FROM_COUNT=0
 
-    # Verify existence of command-line arguments. When they don't
-    # exist, just return to caller. This is necessary to print the
-    # module's usage information cleanly.
-    [[ -z ${ARGUMENTS} ]] && return
+    while [[ ${LOCALE_FROM_COUNT} -lt ${#LOCALE_FROM[*]} ]];do
 
-    # Initialize list of configuration files based on arguments
-    # provided in the command-line.
-    local CONFIG_FILE='' CONFIG_FILES=$(locale_printConfigFiles "${ARGUMENTS}")
+        local PO_FILE=${LOCALE_FROM[${LOCALE_FROM_COUNT}]}
+        [[ -f ${PO_FILE} ]] \
+            && idforge_printMessage "${PO_FILE}" --as-deleting-line \
+            && rm ${PO_FILE}
 
-    # Process list of configuration files.
-    for CONFIG_FILE in "${CONFIG_FILES}"; do
-        locale_setConfigSections
+        local MO_FILE=${LOCALE_MO[${LOCALE_FROM_COUNT}]}
+        [[ -f ${MO_FILE} ]] \
+            && idforge_printMessage "${MO_FILE}" --as-deleting-line \
+            && rm ${MO_FILE}
+
+        LOCALE_FROM_COUNT=$(( ++LOCALE_FROM_COUNT ))
+
     done
 
 }

@@ -23,28 +23,27 @@
 #
 ######################################################################
 
-function locale {
+function po {
 
-    # Initialize module's flags.
-    local LOCALE_FLAG_EDIT='false'
-    local LOCALE_FLAG_DELETE='false'
+    local COUNT=0
 
-    # Initialize command-line arguments and interpret arguments and
-    # options passed through command-line.
-    local ARGUMENT='' ARGUMENTS=''; locale_setOptions "${@}"
+    while [[ ${COUNT} -lt ${#LOCALE_PO_TEMPLATES[*]} ]];do
 
-    # Verify existence of command-line arguments. When they don't
-    # exist, just return to caller. This is necessary to print the
-    # module's usage information cleanly.
-    [[ -z ${ARGUMENTS} ]] && return
+        local POT=${LOCALE_PO_TEMPLATES[${COUNT}]}
+        local PO=${LOCALE_FROM[${COUNT}]}
 
-    # Initialize list of configuration files based on arguments
-    # provided in the command-line.
-    local CONFIG_FILE='' CONFIG_FILES=$(locale_printConfigFiles "${ARGUMENTS}")
+        idforge_printMessage "${PO}" --as-creating-line
 
-    # Process list of configuration files.
-    for CONFIG_FILE in "${CONFIG_FILES}"; do
-        locale_setConfigSections
+        po_setPotMetadata
+
+        po_convertPotToPo
+
+        po_setPoMetadata
+
+        [[ -n ${LOCALE_MO[${COUNT}]} ]] && idforge_setModuleEnvironment -m 'mo' -t 'sibling'
+
+        COUNT=$(( ++COUNT ))
+
     done
 
 }

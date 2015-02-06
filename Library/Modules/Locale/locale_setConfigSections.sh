@@ -2,21 +2,21 @@
 ######################################################################
 #
 #   idforge - Manage identity manuals in community.
-#   Copyright © 2015 The CentOS Artwork SIG
+#   Copyright © 2015 CentOS Artwork SIG
 #
-#   This program is free software; you can redistribute it and/or
-#   modify it under the terms of the GNU General Public License as
-#   published by the Free Software Foundation; either version 2 of the
-#   License, or (at your option) any later version.
+#   idforge is free software; you can redistribute it and/or modify it
+#   under the terms of the GNU General Public License as published by
+#   the Free Software Foundation; either version 2 of the License, or
+#   (at your option) any later version.
 #
-#   This program is distributed in the hope that it will be useful,
-#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   idforge is distributed in the hope that it will be useful, but
+#   WITHOUT ANY WARRANTY; without even the implied warranty of
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 #   General Public License for more details.
 #
 #   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
-#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#   along with idforge; if not, write to the Free Software Foundation,
+#   Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
 #   Alain Reguera Delgado <alain.reguera@gmail.com>
 #   39 Street No. 4426 Cienfuegos, Cuba.
@@ -39,26 +39,16 @@ function locale_setConfigSections {
     for CONFIG_SECTION in ${CONFIG_SECTIONS};do
 
         local -a LOCALE_FROM    ; locale_setConfigOption 'locale-from'
-        local -a RENDER_FROM    ; locale_setConfigOption 'render-from'
 
-        idforge_setModuleEnvironment -m ${RENDER_TYPE} -t 'child'
-
-        COUNT=$(( ++COUNT ))
-
-        # Reset array variable related to section content to avoid
-        # undesired concatenations of their values between different
-        # sections blocks.
-        unset RENDER_FROM
-        unset LOCALE_FROM
+        if [[ ${LOCALE_FLAG_EDIT} == 'true' ]];then
+            idforge_setModuleEnvironment -m 'edit' -t 'child'
+        elif [[ ${LOCALE_FLAG_DELETE} == 'true' ]];then
+            idforge_setModuleEnvironment -m 'delete' -t 'child'
+        else
+            idforge_setModuleEnvironment -m 'update' -t 'child'
+        fi
 
     done
-
-    # Reset array variables to avoid undesired concatenations between
-    # configuration files.
-    unset SECTIONS
-
-    # Execute make files to final files produced.
-    idforge_setModuleEnvironment -m 'make' -t 'child'
 
 }
 

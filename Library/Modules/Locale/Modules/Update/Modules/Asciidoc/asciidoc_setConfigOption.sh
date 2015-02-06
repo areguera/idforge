@@ -23,28 +23,29 @@
 #
 ######################################################################
 
-function locale {
+function asciidoc_setConfigOption {
 
-    # Initialize module's flags.
-    local LOCALE_FLAG_EDIT='false'
-    local LOCALE_FLAG_DELETE='false'
+    local CONFIG_OPTION="${1}"
 
-    # Initialize command-line arguments and interpret arguments and
-    # options passed through command-line.
-    local ARGUMENT='' ARGUMENTS=''; locale_setOptions "${@}"
+    case ${CONFIG_OPTION} in
 
-    # Verify existence of command-line arguments. When they don't
-    # exist, just return to caller. This is necessary to print the
-    # module's usage information cleanly.
-    [[ -z ${ARGUMENTS} ]] && return
+        render-from-xsl )
+            RENDER_FROM_XSL=$(locale_printConfigValues)
+            ;;
 
-    # Initialize list of configuration files based on arguments
-    # provided in the command-line.
-    local CONFIG_FILE='' CONFIG_FILES=$(locale_printConfigFiles "${ARGUMENTS}")
+        render-flow )
+            RENDER_FLOW=$(locale_printConfigValues "article")
+            idforge_checkFiles -m '^(article|book|manpage)$' "${RENDER_FLOW}"
+            ;;
 
-    # Process list of configuration files.
-    for CONFIG_FILE in "${CONFIG_FILES}"; do
-        locale_setConfigSections
-    done
+        asciidoc-opts )
+            ASCIIDOC_OPTS=$(locale_printConfigValues "--attribute=lang=${IDFORGE_LANG_LL}")
+            ;;
+
+        * )
+            idforge_printMessage "`eval_gettext "The \\\"\\\$CONFIG_OPTION\\\" option isn't supported."`" --as-error-line
+            ;;
+
+    esac
 
 }

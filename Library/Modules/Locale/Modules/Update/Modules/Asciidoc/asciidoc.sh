@@ -23,28 +23,24 @@
 #
 ######################################################################
 
-function locale {
+# Standardize update actions related to localization of asciidoc
+# files.
+function asciidoc {
 
-    # Initialize module's flags.
-    local LOCALE_FLAG_EDIT='false'
-    local LOCALE_FLAG_DELETE='false'
+    idforge_checkFiles -efm "\.asciidoc$" "${RENDER_FROM[*]}"
 
-    # Initialize command-line arguments and interpret arguments and
-    # options passed through command-line.
-    local ARGUMENT='' ARGUMENTS=''; locale_setOptions "${@}"
+    local RENDER_FLOW=''        ; asciidoc_setConfigOption 'render-flow'
+    local RENDER_FROM_XSL=''    ; asciidoc_setConfigOption 'render-from-xsl'
+    local ASCIIDOC_OPTS=''      ; asciidoc_setConfigOption 'asciidoc-opts'
 
-    # Verify existence of command-line arguments. When they don't
-    # exist, just return to caller. This is necessary to print the
-    # module's usage information cleanly.
-    [[ -z ${ARGUMENTS} ]] && return
+    local COUNT=0
 
-    # Initialize list of configuration files based on arguments
-    # provided in the command-line.
-    local CONFIG_FILE='' CONFIG_FILES=$(locale_printConfigFiles "${ARGUMENTS}")
-
-    # Process list of configuration files.
-    for CONFIG_FILE in "${CONFIG_FILES}"; do
-        locale_setConfigSections
+    while [[ ${COUNT} -lt ${#RENDER_FROM[*]} ]];do
+        RENDER_FROM_INSTANCES[${COUNT}]=$(idforge_printTemporalFile ${RENDER_FROM[${COUNT}]})
+        asciidoc_convertAsciidocToDocbook
+        COUNT=$(( ++COUNT ))
     done
+
+    idforge_setModuleEnvironment -m 'xml' -t 'sibling'
 
 }

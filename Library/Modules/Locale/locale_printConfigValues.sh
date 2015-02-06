@@ -23,28 +23,13 @@
 #
 ######################################################################
 
-function locale {
+function locale_printConfigValues {
 
-    # Initialize module's flags.
-    local LOCALE_FLAG_EDIT='false'
-    local LOCALE_FLAG_DELETE='false'
+    local CONFIG_VALUE_DEFAULT="${1:-null}"
 
-    # Initialize command-line arguments and interpret arguments and
-    # options passed through command-line.
-    local ARGUMENT='' ARGUMENTS=''; locale_setOptions "${@}"
-
-    # Verify existence of command-line arguments. When they don't
-    # exist, just return to caller. This is necessary to print the
-    # module's usage information cleanly.
-    [[ -z ${ARGUMENTS} ]] && return
-
-    # Initialize list of configuration files based on arguments
-    # provided in the command-line.
-    local CONFIG_FILE='' CONFIG_FILES=$(locale_printConfigFiles "${ARGUMENTS}")
-
-    # Process list of configuration files.
-    for CONFIG_FILE in "${CONFIG_FILES}"; do
-        locale_setConfigSections
-    done
+    idforge_setModuleEnvironment -m 'config' \
+        -t 'parent' -g "-e ${CONFIG_SECTION}" \
+        -g "-o ${CONFIG_OPTION}" -g "-a ${CONFIG_VALUE_DEFAULT}" \
+        -g "${CONFIG_FILE}"
 
 }

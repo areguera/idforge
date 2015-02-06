@@ -1,0 +1,179 @@
+= idforge-locale(1)
+Alain Reguera Delgado <alain.reguera@gmail.com>
+
+== Name
+
+idforge-locale - =MANPAGE_DESCRIPTION=
+
+== Synopsis
+
+----------------------------------------------------------------------
+=MANPAGE_SYNOPSIS=
+----------------------------------------------------------------------
+
+== Description
+
+*idforge-locale* allows you to manage the creation, actualization,
+edition and elimination of translation files in PO and MO formats for
+a wide range of programming languages including shell scripts and
+XML-based file formats like SVG, HTML and DocBook.  This command
+stands on the procedures implemented by both *xml2po(1)* and
+*gettext(1)* commands and is specially designed to reuse the
+configuration files the *idforge-render(1)* command employs to render
+content. So, it results very useful when you need a standard procedure
+to maintain localized images, documents, and shell scripts in a
+community environment.
+
+*idforge-locale* reads the configuration files provided as argument in
+the command-line in the same order they were provided, one by one.
+Inside each configuration file, the sections are processed in the same
+order they were found, from top to bottom, using the extension of the
+first source file provided to *render-from* option as reference to
+initiate the localization process.  When configuration sections are
+being processed, *idforge-locale* evaluates the number of times both
+*render-from* and *locale-from* options have been provided in it. From
+this analysis the following two relations between files can be
+established for further processing:
+
+Processing files in one-to-one relation::
+    When the number of source files provided and translation files
+    specified are the same, *idforge-locale* updates the first
+    translation file provided based on the first source file provided,
+    the second translation file provided based on the second source
+    file provided, and so on.  This processing case is mostly used to
+    manage translation file for XML-based source files (e.g., SVG,
+    HTML, Docbook, etc.) individually.
+
+Processing files in many-to-one relation::
+    When the number of source files provided is greater than the
+    number of translation files provided, *idforge-locale* only
+    updates the first translation file provided, based on the content
+    of all the source files provided. This processing case is mostly
+    used to manage shell script translation files.
+
+All other possible relations between *render-from* and *locale-from*
+options are not supported and make the *idforge(1)* script to exit
+with an error message.
+
+== Options
+
+The *idforge-locale* command accepts the following options:
+
+include::Commons/options.inc[]
+
+*-e, --edit*::
+    Edits translation files set as value to *locale-from*
+    configuration option. This action uses the /usr/bin/vim command as
+    default text editor to perform the action. The translation files
+    are opened individually, one by one. To change the default text
+    editor, you can use the VISUAL or EDITOR environment variables.
+
+*-d, --delete*::
+    Removes translation files set as value to *locale-from* and
+    *locale-mo* configuration options.  This action takes place
+    immediately, without any warning or confirmation.
+
+To control the number of translation files you edit or delete, use the
+*--filter* option in *idforge(1)* command-line. This option affects
+the number of configuration sections you process, not the definition
+of translation files itself. So, when a configuration section has
+several translation files defined they all will be affected by the
+actions you run. To rectify this (in case you need to), expand the
+number of configuration section so you can set only one translation
+file definition in each of them and then use the *--filter* option to
+control what configuration section you want to apply actions to.
+
+== Examples
+
+.Configuring one-to-one relation to produce localized documentation
+======================================================================
+----------------------------------------------------------------------
+[hello_world.asciidoc]
+render-from     = "${PWD}/hello_world.asciidoc"
+locale-from     = "${PWD}/Locales/${IDFORGE_LANG_LC}/hello_world.asciidoc.po"
+----------------------------------------------------------------------
+======================================================================
+
+To enable content localization in a specific configuration section,
+add the *locale-from* option to it. This option must point to a
+translation file in PO format, so translator can use *idforge-locale*
+to edit it. The PO file contains the translatable strings extracted
+from the source file set in the *render-from* option. If you also need
+the related translation file in MO format, add the *locale-mo* option.
+
+[CAUTION]
+======================================================================
+When you edit a translation file in PO format, the related translation
+file in MO format isn't updated automatically. To propagate the
+changes you recently introduced in the PO file into the related MO
+file, you must run *idforge-locale* after editing the PO file.
+======================================================================
+
+.Configuring one-to-one relation to produce localized images
+======================================================================
+----------------------------------------------------------------------
+[hello_world.png]
+render-from     = "${PWD}/hello.svg"
+render-from     = "${PWD}/world.svg"
+locale-from     = "${PWD}/Locales/${IDFORGE_LANG_LC}/hello.svg.po"
+locale-from     = "${PWD}/Locales/${IDFORGE_LANG_LC}/world.svg.po"
+----------------------------------------------------------------------
+======================================================================
+
+In a one-to-one relation, each source file has its own translation
+file.
+
+.Configuring many-to-one relation to produce localized images
+======================================================================
+----------------------------------------------------------------------
+[hello_world.png]
+render-from     = "${PWD}/hello.svg"
+render-from     = "${PWD}/world.svg"
+locale-from     = "${PWD}/Locales/${IDFORGE_LANG_LC}/${CONFIG_SECTION}.po"
+----------------------------------------------------------------------
+======================================================================
+
+In a many-to-one relation there is just one translation file to store
+all source files' translatable strings.
+
+.Configuring many-to-one relation to produce localized scripts
+======================================================================
+----------------------------------------------------------------------
+[idforge]
+render-from     = "${PWD}/Library/idforge*.sh"
+locale-from     = "${PWD}/Locales/${IDFORGE_LANG_LC}/${CONFIG_SECTION}.po"
+locale-mo       = "${PWD}/Locales/${IDFORGE_LANG_LC}/${CONFIG_SECTION}.mo"
+----------------------------------------------------------------------
+======================================================================
+
+In a many-to-one relation, it is possible to use file expansion to
+specify several source files in a single entry of *render-from*
+configuration option.  However, the same is not possible for
+translation files which need to be specified explicitly.
+
+== Environment
+
+include::Commons/environment.inc[]
+
+VISUAL::
+    Specifies the visual editor used to modify translation files in PO
+    format. You can set this variable if you want to use a graphical
+    PO editor like Virtaal. By default, no visual text editor is set
+    and EDITOR environment variable is evaluated instead.
+EDITOR::
+    Specifies the text editor used to modify translation files in PO
+    format. By default, it is set to /usr/bin/vim.
+
+== Author
+
+include::Commons/author.inc[]
+
+== Copyright
+
+include::Commons/copyright.inc[]
+
+== See Also
+
+=MANPAGE_OTHERS=
+
+// vim: set syntax=asciidoc:

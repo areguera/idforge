@@ -23,28 +23,16 @@
 #
 ######################################################################
 
-function locale {
+function xml_convertXmlToPot {
 
-    # Initialize module's flags.
-    local LOCALE_FLAG_EDIT='false'
-    local LOCALE_FLAG_DELETE='false'
+    # Move to final location before processing source file in order
+    # for relative calls (e.g., image files) inside the source files
+    # can be found by xml2po and no warning is printed from it.
+    [[ -d ${RENDER_DIR} ]] && pushd ${RENDER_DIR} > /dev/null
 
-    # Initialize command-line arguments and interpret arguments and
-    # options passed through command-line.
-    local ARGUMENT='' ARGUMENTS=''; locale_setOptions "${@}"
+    xml2po -a -l ${IDFORGE_LANG_LC} ${RENDER_FROM_INSTANCES[${COUNT}]} \
+        | msgcat --output-file=${LOCALE_PO_TEMPLATES[${COUNT}]} --width=70 --no-location -
 
-    # Verify existence of command-line arguments. When they don't
-    # exist, just return to caller. This is necessary to print the
-    # module's usage information cleanly.
-    [[ -z ${ARGUMENTS} ]] && return
-
-    # Initialize list of configuration files based on arguments
-    # provided in the command-line.
-    local CONFIG_FILE='' CONFIG_FILES=$(locale_printConfigFiles "${ARGUMENTS}")
-
-    # Process list of configuration files.
-    for CONFIG_FILE in "${CONFIG_FILES}"; do
-        locale_setConfigSections
-    done
+    [[ -d ${RENDER_DIR} ]] && popd > /dev/null
 
 }

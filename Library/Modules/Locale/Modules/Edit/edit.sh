@@ -23,28 +23,17 @@
 #
 ######################################################################
 
-function locale {
+# Standardize edition actions related to localization files.
+function edit {
 
-    # Initialize module's flags.
-    local LOCALE_FLAG_EDIT='false'
-    local LOCALE_FLAG_DELETE='false'
+    for PO_FILE in ${LOCALE_FROM[*]};do
 
-    # Initialize command-line arguments and interpret arguments and
-    # options passed through command-line.
-    local ARGUMENT='' ARGUMENTS=''; locale_setOptions "${@}"
+        idforge_checkFiles -efi "text/(x-po|plain)" "${PO_FILE}"
 
-    # Verify existence of command-line arguments. When they don't
-    # exist, just return to caller. This is necessary to print the
-    # module's usage information cleanly.
-    [[ -z ${ARGUMENTS} ]] && return
+        idforge_printMessage "${PO_FILE}" --as-editing-line
 
-    # Initialize list of configuration files based on arguments
-    # provided in the command-line.
-    local CONFIG_FILE='' CONFIG_FILES=$(locale_printConfigFiles "${ARGUMENTS}")
+        edit_runEditor
 
-    # Process list of configuration files.
-    for CONFIG_FILE in "${CONFIG_FILES}"; do
-        locale_setConfigSections
     done
 
 }

@@ -23,28 +23,19 @@
 #
 ######################################################################
 
-function locale {
+# This function takes a portable object template (.pot) and creates a
+# language-specific portable object (.po) for it.
+function po_convertPotToPo {
 
-    # Initialize module's flags.
-    local LOCALE_FLAG_EDIT='false'
-    local LOCALE_FLAG_DELETE='false'
+    idforge_setParentDir ${PO}
 
-    # Initialize command-line arguments and interpret arguments and
-    # options passed through command-line.
-    local ARGUMENT='' ARGUMENTS=''; locale_setOptions "${@}"
-
-    # Verify existence of command-line arguments. When they don't
-    # exist, just return to caller. This is necessary to print the
-    # module's usage information cleanly.
-    [[ -z ${ARGUMENTS} ]] && return
-
-    # Initialize list of configuration files based on arguments
-    # provided in the command-line.
-    local CONFIG_FILE='' CONFIG_FILES=$(locale_printConfigFiles "${ARGUMENTS}")
-
-    # Process list of configuration files.
-    for CONFIG_FILE in "${CONFIG_FILES}"; do
-        locale_setConfigSections
-    done
+    if [[ -f ${PO} ]];then
+        msgmerge --output-file="${PO}" "${PO}" "${POT}"
+    else
+        msginit -i ${POT} -o ${PO} \
+            --width=70 \
+            --no-translator \
+            --locale=${IDFORGE_LANG_LC}
+    fi
 
 }
