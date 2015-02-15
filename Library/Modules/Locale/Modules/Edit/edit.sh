@@ -26,7 +26,7 @@
 # Standardize edition actions related to localization files.
 function edit {
 
-    for PO_FILE in ${LOCALE_FROM[*]};do
+    for PO_FILE in ${RENDER_FROM_PO[*]};do
 
         idforge_checkFiles -efi "text/(x-po|plain)" "${PO_FILE}"
 

@@ -29,17 +29,17 @@ function update_setConfigOption {
 
     case ${CONFIG_OPTION} in
 
-        render-dir )
+        render-directory )
             # Define value of "render-dir" option. This information is
             # used to customize the directory where final files are
             # stored in.
-            RENDER_DIR=$(locale_printConfigValues "${CONFIG_FILE%/*}/Final")
+            RENDER_DIRECTORY=$(locale_printConfigValues "${CONFIG_FILE%/*}/Final")
 
             # Verify whether the design model has a related
             # translation file assigned or not and, redefine the
             # target directory based on it.
-            if [[ -n ${LOCALE_FROM[0]} ]];then
-                RENDER_DIR="${RENDER_DIR}/${IDFORGE_LANG_LC}"
+            if [[ -n ${RENDER_FROM_PO[0]} ]];then
+                RENDER_DIRECTORY="${RENDER_DIRECTORY}/${IDFORGE_LANG_LC}"
             fi
             ;;
 
@@ -63,7 +63,7 @@ function update_setConfigOption {
                 if [[ ${FILE} =~ ^/ ]];then
                     RENDER_FROM[${COUNT}]=${FILE}
                 else
-                    RENDER_FROM[${COUNT}]=${RENDER_DIR}/${FILE}
+                    RENDER_FROM[${COUNT}]=${RENDER_DIRECTORY}/${FILE}
                 fi
                 COUNT=$(( ++COUNT ))
             done
@@ -71,25 +71,25 @@ function update_setConfigOption {
             idforge_checkFiles -ef ${RENDER_FROM[*]}
             ;;
 
-        locale-mo )
-            # Define value to "locale-mo" option. This information is
-            # used to retrieve the translation file -in MO format-
-            # associated to the source files provided through
-            # "locale-from" option.
+        render-from-mo )
+            # Define value to "render-from-mo" option. This
+            # information is used to retrieve the translation file -in
+            # MO format- associated to the source files provided
+            # through "render-from-po" option.
             local FILE=''
             local FILES=$(locale_printConfigValues)
 
             local COUNT=0
 
             [[ -z ${FILES} ]] \
-                && LOCALE_MO[${COUNT}]=${FILE} \
+                && RENDER_FROM_MO[${COUNT}]=${FILE} \
                 && return
 
             for FILE in ${FILES};do
                 if [[ ${FILE} =~ ^/ ]];then
-                    LOCALE_MO[${COUNT}]=${FILE}
+                    RENDER_FROM_MO[${COUNT}]=${FILE}
                 else
-                    LOCALE_MO[${COUNT}]=${RENDER_DIR}/${FILE}
+                    RENDER_FROM_MO[${COUNT}]=${RENDER_DIRECTORY}/${FILE}
                 fi
                 COUNT=$(( ++COUNT ))
             done

@@ -25,14 +25,14 @@
 
 function sh {
 
-    [[ ${#LOCALE_FROM[*]} -gt 1 ]] \
+    [[ ${#RENDER_FROM_PO[*]} -gt 1 ]] \
         && idforge_printMessage "`gettext "Incorrect relation between source files and translation files."`" --as-error-line
-    [[ ${#LOCALE_MO[*]} -gt 1 ]] \
+    [[ ${#RENDER_FROM_MO[*]} -gt 1 ]] \
         && idforge_printMessage "`gettext "Incorrect relation between source files and translation files."`" --as-error-line
 
     idforge_checkFiles -efi 'text/x-shellscript' "${RENDER_FROM[*]}"
 
-    LOCALE_PO_TEMPLATES[0]=$(idforge_printTemporalFile ${LOCALE_FROM[0]})
+    LOCALE_PO_TEMPLATES[0]=$(idforge_printTemporalFile ${RENDER_FROM_PO[0]})
 
     # Retrieve translatable strings from shell script files and create
     # the portable object template (.pot) from them.

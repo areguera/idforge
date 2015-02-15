@@ -40,14 +40,14 @@ function delete_setConfigOption {
             local COUNT=0
 
             [[ -z ${FILES} ]] \
-                && LOCALE_MO[${COUNT}]=${FILE} \
+                && RENDER_FROM_MO[${COUNT}]=${FILE} \
                 && return
 
             for FILE in ${FILES};do
                 if [[ ${FILE} =~ ^/ ]];then
-                    LOCALE_MO[${COUNT}]=${FILE}
+                    RENDER_FROM_MO[${COUNT}]=${FILE}
                 else
-                    LOCALE_MO[${COUNT}]=${RENDER_DIR}/${FILE}
+                    RENDER_FROM_MO[${COUNT}]=${RENDER_DIRECTORY}/${FILE}
                 fi
                 COUNT=$(( ++COUNT ))
             done

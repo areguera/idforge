@@ -26,10 +26,10 @@
 # Standardize update actions related to localization.
 function update {
 
-    local RENDER_DIR=''     ; update_setConfigOption 'render-dir'
-    local -a RENDER_FROM    ; update_setConfigOption 'render-from'
+    local RENDER_DIRECTORY=''       ; update_setConfigOption 'render-directory'
+    local -a RENDER_FROM            ; update_setConfigOption 'render-from'
     local -a RENDER_FROM_INSTANCES
-    local -a LOCALE_MO      ; update_setConfigOption 'locale-mo'
+    local -a RENDER_FROM_MO         ; update_setConfigOption 'render-from-mo'
     local -a LOCALE_PO_TEMPLATES
 
     local RENDER_TYPE=$(idforge_printFileExtension "${RENDER_FROM[0]}")

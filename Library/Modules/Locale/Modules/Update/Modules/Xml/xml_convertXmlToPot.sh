@@ -28,11 +28,11 @@ function xml_convertXmlToPot {
     # Move to final location before processing source file in order
     # for relative calls (e.g., image files) inside the source files
     # can be found by xml2po and no warning is printed from it.
-    [[ -d ${RENDER_DIR} ]] && pushd ${RENDER_DIR} > /dev/null
+    [[ -d ${RENDER_DIRECTORY} ]] && pushd ${RENDER_DIRECTORY} > /dev/null
 
     xml2po -a -l ${IDFORGE_LANG_LC} ${RENDER_FROM_INSTANCES[${COUNT}]} \
         | msgcat --output-file=${LOCALE_PO_TEMPLATES[${COUNT}]} --width=70 --no-location -
 
-    [[ -d ${RENDER_DIR} ]] && popd > /dev/null
+    [[ -d ${RENDER_DIRECTORY} ]] && popd > /dev/null
 
 }

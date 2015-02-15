@@ -29,7 +29,7 @@ function xml {
 
     xml_createInstance
 
-    [[ ${#RENDER_FROM_INSTANCES[*]} -ne ${#LOCALE_FROM[*]} ]] \
+    [[ ${#RENDER_FROM_INSTANCES[*]} -ne ${#RENDER_FROM_PO[*]} ]] \
         && idforge_printMessage "`gettext "Incorrect relation between source files and translation files."`" --as-error-line
 
     local COUNT=0
@@ -38,7 +38,7 @@ function xml {
 
         xml_verifyInstance
 
-        LOCALE_PO_TEMPLATES[${COUNT}]=$(idforge_printTemporalFile ${LOCALE_FROM[${COUNT}]})
+        LOCALE_PO_TEMPLATES[${COUNT}]=$(idforge_printTemporalFile ${RENDER_FROM_PO[${COUNT}]})
 
         xml_convertXmlToPot
 

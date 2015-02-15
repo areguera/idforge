@@ -38,7 +38,7 @@ function locale_setConfigSections {
     # Process sections found in the configuration file.
     for CONFIG_SECTION in ${CONFIG_SECTIONS};do
 
-        local -a LOCALE_FROM    ; locale_setConfigOption 'locale-from'
+        local -a RENDER_FROM_PO    ; locale_setConfigOption 'render-from-po'
 
         if [[ ${LOCALE_FLAG_EDIT} == 'true' ]];then
             idforge_setModuleEnvironment -m 'edit' -t 'child'

@@ -30,7 +30,7 @@ function po {
     while [[ ${COUNT} -lt ${#LOCALE_PO_TEMPLATES[*]} ]];do
 
         local POT=${LOCALE_PO_TEMPLATES[${COUNT}]}
-        local PO=${LOCALE_FROM[${COUNT}]}
+        local PO=${RENDER_FROM_PO[${COUNT}]}
 
         idforge_printMessage "${PO}" --as-creating-line
 
@@ -40,7 +40,7 @@ function po {
 
         po_setPoMetadata
 
-        [[ -n ${LOCALE_MO[${COUNT}]} ]] && idforge_setModuleEnvironment -m 'mo' -t 'sibling'
+        [[ -n ${RENDER_FROM_MO[${COUNT}]} ]] && idforge_setModuleEnvironment -m 'mo' -t 'sibling'
 
         COUNT=$(( ++COUNT ))
 

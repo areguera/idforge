@@ -29,8 +29,8 @@ function locale_setConfigOption {
 
     case ${CONFIG_OPTION} in
 
-        locale-from )
-            # Define value to "locale-from" option. This information
+        render-from-po )
+            # Define value to "render-from-po" option. This information
             # is used to retrieve the translation file -in PO format-
             # associated to the source files provided through
             # "render-from" option. This option can be empty -to
@@ -45,14 +45,14 @@ function locale_setConfigOption {
             local COUNT=0
 
             [[ -z ${FILES} ]] \
-                && LOCALE_FROM[${COUNT}]=${FILE} \
+                && RENDER_FROM_PO[${COUNT}]=${FILE} \
                 && return
 
             for FILE in ${FILES};do
                 if [[ ${FILE} =~ ^/ ]];then
-                    LOCALE_FROM[${COUNT}]=${FILE}
+                    RENDER_FROM_PO[${COUNT}]=${FILE}
                 else
-                    LOCALE_FROM[${COUNT}]=${RENDER_DIR}/${FILE}
+                    RENDER_FROM_PO[${COUNT}]=${RENDER_DIRECTORY}/${FILE}
                 fi
                 COUNT=$(( ++COUNT ))
             done

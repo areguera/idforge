@@ -26,23 +26,23 @@
 # Standardize elimination of localization files.
 function delete {
 
-    local -a LOCALE_MO      ; delete_setConfigOption 'locale-mo'
+    local -a RENDER_FROM_MO      ; delete_setConfigOption 'locale-mo'
 
-    local LOCALE_FROM_COUNT=0
+    local RENDER_FROM_PO_COUNT=0
 
-    while [[ ${LOCALE_FROM_COUNT} -lt ${#LOCALE_FROM[*]} ]];do
+    while [[ ${RENDER_FROM_PO_COUNT} -lt ${#RENDER_FROM_PO[*]} ]];do
 
-        local PO_FILE=${LOCALE_FROM[${LOCALE_FROM_COUNT}]}
+        local PO_FILE=${RENDER_FROM_PO[${RENDER_FROM_PO_COUNT}]}
         [[ -f ${PO_FILE} ]] \
             && idforge_printMessage "${PO_FILE}" --as-deleting-line \
             && rm ${PO_FILE}
 
-        local MO_FILE=${LOCALE_MO[${LOCALE_FROM_COUNT}]}
+        local MO_FILE=${RENDER_FROM_MO[${RENDER_FROM_PO_COUNT}]}
         [[ -f ${MO_FILE} ]] \
             && idforge_printMessage "${MO_FILE}" --as-deleting-line \
             && rm ${MO_FILE}
 
-        LOCALE_FROM_COUNT=$(( ++LOCALE_FROM_COUNT ))
+        RENDER_FROM_PO_COUNT=$(( ++RENDER_FROM_PO_COUNT ))
 
     done
 
