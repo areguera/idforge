@@ -1,7 +1,7 @@
-./QaTests/idforge-render/qatest-20150211182206285536962/Final/640x480-indexed.png:     image/png; charset=binary
-./QaTests/idforge-render/qatest-20150211182206285536962/Final/640x480-indexed.png.log: text/plain; charset=us-ascii
-./QaTests/idforge-render/qatest-20150211182206285536962/Final/640x480.lss:             application/octet-stream; charset=binary
-./QaTests/idforge-render/qatest-20150211182206285536962/Final/640x480.lss.log:         text/plain; charset=us-ascii
-./QaTests/idforge-render/qatest-20150211182206285536962/Final/640x480.lss.ppm:         image/x-portable-pixmap; charset=binary
-./QaTests/idforge-render/qatest-20150211182206285536962/Final/640x480.png:             image/png; charset=binary
+./QaTests/idforge-render/qatest-20150211182206285536962/Final/640x300-indexed.png:     image/png; charset=binary
+./QaTests/idforge-render/qatest-20150211182206285536962/Final/640x300-indexed.png.log: text/plain; charset=us-ascii
+./QaTests/idforge-render/qatest-20150211182206285536962/Final/640x300.lss:             application/octet-stream; charset=binary
+./QaTests/idforge-render/qatest-20150211182206285536962/Final/640x300.lss.log:         text/plain; charset=us-ascii
+./QaTests/idforge-render/qatest-20150211182206285536962/Final/640x300.lss.ppm:         image/x-portable-pixmap; charset=binary
+./QaTests/idforge-render/qatest-20150211182206285536962/Final/640x300.png:             image/png; charset=binary
 ./QaTests/idforge-render/qatest-20150211182206285536962/Final/splashtolss.sh:          text/x-shellscript; charset=us-ascii
