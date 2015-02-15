@@ -23,11 +23,11 @@
 #
 ######################################################################
 
-# Initialize files processing based on the information provided by the
-# configuration files passed in the command-line.
 function render_setConfigSections {
 
     idforge_checkFiles -efm '\.conf$' "${CONFIG_FILE}"
+
+    idforge_printMessage "${CONFIG_FILE}" --as-processing-line
 
     local CONFIG_SECTIONS=$(render_printConfigSections)
 
@@ -39,32 +39,26 @@ function render_setConfigSections {
         # Initialize the configuration options. CAUTION! The order in
         # which these variables are defined is relevant because some
         # of them are dependent one another.
-        local -a LOCALE_FROM    ; render_setConfigOption 'locale-from'
-        local RENDER_DIR=''     ; render_setConfigOption 'render-dir'
-        local RENDER_FILE=''    ; render_setConfigOption 'render-file'
-        local -a RENDER_FROM    ; render_setConfigOption 'render-from'
-        local RENDER_TYPE=''    ; render_setConfigOption 'render-type'
-        local RENDER_LOGIC=''   ; render_setConfigOption 'render-logic'
-        local RELEASE=''        ; render_setConfigOption 'release'
-        local MAJOR_RELEASE=''  ; render_setConfigOption 'release-major'
-
-        idforge_setParentDir "${RENDER_FILE}"
+        local -a RENDER_FROM_PO     ; render_setConfigOption 'render-from-po'
+        local RENDER_DIRECTORY=''   ; render_setConfigOption 'render-directory'
+        local RENDER_FILE=''        ; render_setConfigOption 'render-file'
+        local -a RENDER_FROM        ; render_setConfigOption 'render-from'
+        local RENDER_TYPE=''        ; render_setConfigOption 'render-type'
+        local RENDER_LOGIC=''       ; render_setConfigOption 'render-logic'
 
         idforge_setModuleEnvironment -m ${RENDER_TYPE} -t 'child'
 
-        COUNT=$(( ++COUNT ))
-
-        # Reset array variable related to section content to avoid
-        # undesired concatenations of their values between different
-        # sections blocks.
+        # Reset array variables to avoid undesired concatenations of
+        # their values between different sections blocks in the same
+        # configuration file.
+        unset RENDER_FROM_PO
         unset RENDER_FROM
-        unset LOCALE_FROM
 
     done
 
     # Reset array variables to avoid undesired concatenations between
     # configuration files.
-    unset SECTIONS
+    unset CONFIG_SECTIONS
 
     # Execute make files to final files produced.
     idforge_setModuleEnvironment -m 'make' -t 'child'

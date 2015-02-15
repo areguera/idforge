@@ -23,21 +23,19 @@
 #
 ######################################################################
 
-# Interpret option arguments passed to `render' module and calls
-# actions accordingly.
 function render_setOptions {
 
     # Define short options we want to support.
     local ARGSS="h,v,s"
 
     # Define long options we want to support.
-    local ARGSL="help,version,description,no-locale"
+    local ARGSL="help,version,description"
 
     # Redefine arguments using getopt(1) command parser and reset
     # positional parameters on this function, using output produced
     # from (getopt) arguments parser.
     ARGUMENTS=$(idforge_setArguments "${@}")
-    [[ ${?} -ne 0 ]] && idforge_printMessage "`gettext "The argument verification failed"`" --as-error-line
+    [[ ${?} -ne 0 ]] && idforge_printMessage "`gettext "The argument verification failed."`" --as-error-line
     eval set -- "${ARGUMENTS}"
 
     # Look for options passed through command-line.
@@ -47,19 +45,16 @@ function render_setOptions {
             -h | --help )
                 idforge_printHelp
                 shift 1
-                IDFORGE_MODULE_FLAG_HELP='true'
                 ;;
 
             -v | --version )
                 idforge_setModuleEnvironment -t 'parent' -m 'version' -g ${IDFORGE_MODULE_NAME}
                 shift 1
-                IDFORGE_MODULE_FLAG_VERSION='true'
                 ;;
 
             -s | --description )
-                idforge_printMessage "`gettext "Render content based on configuration files"`" --as-stdout-line
+                idforge_printMessage "`gettext "Render content based on configuration files."`" --as-stdout-line
                 shift 1
-                IDFORGE_MODULE_FLAG_DESCRIPTION='true'
                 ;;
 
             -- )

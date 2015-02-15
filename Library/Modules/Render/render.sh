@@ -26,30 +26,25 @@
 # Standardize content rendition.
 function render {
 
+    # Initialize module's flags.
+    # ...
+
     # Initialize command-line arguments and interpret arguments and
     # options passed through command-line.
-    local ARGUMENTS=''; render_setOptions "${@}"
+    local ARGUMENT='' ARGUMENTS=''; render_setOptions "${@}"
 
-    # Verify common-options that we expect to terminate the script
-    # execution successfully.
-    [[ ${IDFORGE_MODULE_FLAG_HELP} == 'true' ]] \
-        || [[ ${IDFORGE_MODULE_FLAG_VERSION} == 'true' ]] \
-        || [[ ${IDFORGE_MODULE_FLAG_DESCRIPTION} == 'true' ]] \
-        && return
+    # Verify existence of command-line arguments. When they don't
+    # exist, just return to caller. This is necessary to print the
+    # module's usage information cleanly.
+    [[ -z ${ARGUMENTS} ]] && return
 
-    # Initialize configuration files processing.
+    # Initialize list of configuration files based on arguments
+    # provided in the command-line.
     local CONFIG_FILE='' CONFIG_FILES=$(render_printConfigFiles "${ARGUMENTS}")
 
-    # Verify configuration files.
-    idforge_checkFiles -e ${CONFIG_FILES}
-
-    # Process configuration files.
+    # Process list of configuration files.
     for CONFIG_FILE in "${CONFIG_FILES}"; do
-
-        idforge_printMessage "${CONFIG_FILE}" --as-processing-line
-
         render_setConfigSections
-
     done
 
 }

@@ -29,30 +29,30 @@ function render_setConfigOption {
 
     case ${CONFIG_OPTION} in
 
-        locale-from )
-            # Define value to "locale-from" option. This information
-            # is used to retrieve the translation file -in PO format-
-            # associated to the source files provided through
-            # "render-from" option. This option can be empty -to
-            # specify no translation available- or receive one or more
-            # values. The order in which translation files are
-            # provided here must be the same provided in render-from
-            # to specify source files. So, the relation source
-            # file-translation file can be accurate.
+        render-from-po )
+            # Define value to "render-from-po" option. This
+            # information is used to retrieve the translation file -in
+            # PO format- associated to the source files provided
+            # through "render-from" option. This option can be empty
+            # -to specify no translation available- or receive one or
+            # more values.  The order in which translation files are
+            # provided here must be the same provided by render-from
+            # to specify source files. So, the file relation between
+            # source files and translation file can be the same.
             local FILE=''
             local FILES=$(render_printConfigValues)
 
             local COUNT=0
 
             [[ -z ${FILES} ]] \
-                && LOCALE_FROM[${COUNT}]=${FILE} \
+                && RENDER_FROM_PO[${COUNT}]=${FILE} \
                 && return
 
             for FILE in ${FILES};do
                 if [[ ${FILE} =~ ^/ ]];then
-                    LOCALE_FROM[${COUNT}]=${FILE}
+                    RENDER_FROM_PO[${COUNT}]=${FILE}
                 else
-                    LOCALE_FROM[${COUNT}]=${RENDER_DIR}/${FILE}
+                    RENDER_FROM_PO[${COUNT}]=${RENDER_DIRECTORY}/${FILE}
                 fi
                 COUNT=$(( ++COUNT ))
             done
@@ -61,17 +61,17 @@ function render_setConfigOption {
             # are optional.
             ;;
 
-        render-dir )
-            # Define value of "render-dir" option. This information is
-            # used to customize the directory where final files are
-            # stored in.
-            RENDER_DIR=$(render_printConfigValues "${CONFIG_FILE%/*}/Final")
+        render-directory )
+            # Define value of "render-directory" option. This
+            # information is used to customize the directory where
+            # final files are stored in.
+            RENDER_DIRECTORY=$(render_printConfigValues "${CONFIG_FILE%/*}/Final")
 
             # Verify whether the design model has a related
             # translation file assigned or not and, redefine the
             # target directory based on it.
-            if [[ -n ${LOCALE_FROM[0]} ]];then
-                RENDER_DIR="${RENDER_DIR}/${IDFORGE_LANG_LC}"
+            if [[ -n ${RENDER_FROM_PO[0]} ]];then
+                RENDER_DIRECTORY="${RENDER_DIRECTORY}/${IDFORGE_LANG_LC}"
             fi
             ;;
 
@@ -83,7 +83,7 @@ function render_setConfigOption {
             if [[ ${RENDER_FILE} =~ ^/ ]];then
                 RENDER_FILE=${RENDER_FILE}
             else
-                RENDER_FILE=${RENDER_DIR}/${RENDER_FILE}
+                RENDER_FILE=${RENDER_DIRECTORY}/${RENDER_FILE}
             fi
             ;;
 
@@ -107,7 +107,7 @@ function render_setConfigOption {
                 if [[ ${FILE} =~ ^/ ]];then
                     RENDER_FROM[${COUNT}]=${FILE}
                 else
-                    RENDER_FROM[${COUNT}]=${RENDER_DIR}/${FILE}
+                    RENDER_FROM[${COUNT}]=${RENDER_DIRECTORY}/${FILE}
                 fi
                 COUNT=$(( ++COUNT ))
             done
@@ -133,40 +133,12 @@ function render_setConfigOption {
             # content be put inside it.
             RENDER_LOGIC=$(render_printConfigValues 'overwrite')
             if [[ ${RENDER_LOGIC} == 'remove-first' ]];then
-                if [[ -d ${RENDER_DIR} ]];then
-                    idforge_printMessage "${RENDER_DIR}" --as-deleting-line
-                    rm -r ${RENDER_DIR}
+                if [[ -d ${RENDER_DIRECTORY} ]];then
+                    idforge_printMessage "${RENDER_DIRECTORY}" --as-deleting-line
+                    rm -r ${RENDER_DIRECTORY}
                     idforge_setParentDir "${RENDER_FILE}"
                 fi
             fi
-            ;;
-
-        render-mark )
-            # Define value to "render-mark" option. This option can be
-            # provided several times in the same configuration section
-            # and is useful to expand customized translation markers
-            # inside source files' instances. When this option is not
-            # provided only default translation markers expansion is
-            # performed.
-            RENDER_MARK="$(render_printConfigValues)"
-            ;;
-
-        release )
-            # Define value to "release" option. This information is
-            # used by translation markers when source files are
-            # processed.
-            RELEASE=$(render_printConfigValues $(idforge_printSystemRelease))
-            ;;
-
-        release-major )
-            # Define value to "release-major" option. This information
-            # is used by translation markers when source files are
-            # processed.
-            MAJOR_RELEASE=$(render_printConfigValues $(echo ${RELEASE%.*}))
-            ;;
-
-        command )
-            COMMAND=$(render_printConfigValues "/bin/cp")
             ;;
 
         * )

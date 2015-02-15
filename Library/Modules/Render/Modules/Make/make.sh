@@ -27,7 +27,7 @@ function make {
 
     local MAKEFILE=''
     local MAKEFILES=$(idforge_printFileList -a 1 -i 1 -t 'f' \
-        -p '.+/(GNUmakefile|(m|M)akefile)$' ${RENDER_DIR})
+        -p '.+/(GNUmakefile|(m|M)akefile)$' ${RENDER_DIRECTORY})
 
     for MAKEFILE in ${MAKEFILES};do
 
@@ -43,7 +43,7 @@ function make {
         render_setTmarkers "${MAKEFILE_INSTANCE}"
 
         # Get in the directory where all render action take place.
-        pushd ${RENDER_DIR} &> /dev/null
+        pushd ${RENDER_DIRECTORY} &> /dev/null
 
         # Execute make file.
         /usr/bin/make -s -f ${MAKEFILE_INSTANCE}
