@@ -273,6 +273,20 @@ function idforge_printMessage {
             idforge_printMessage "`gettext "Editing"`: ${MESSAGE}" --as-stdout-line
             ;;
 
+        --as-indexing-line* )
+            local COLORS=$(echo ${FORMAT} | cut -d'=' -f2)
+            idforge_checkFiles -m '[[:digit:]]+' ${COLORS}
+            idforge_printMessage "`eval_gettext "Indexing (${COLORS})"`: ${MESSAGE}" --as-stdout-line
+            ;;
+
+        --as-composing-line )
+            idforge_printMessage "`gettext "Composing"`: ${MESSAGE}" --as-stdout-line
+            ;;
+
+        --as-commenting-line )
+            idforge_printMessage "`gettext "Commenting"`: ${MESSAGE}" --as-stdout-line
+            ;;
+
         --as-creating-line | --as-updating-line )
             if [[ -a "${MESSAGE}" ]];then
                 idforge_printMessage "`gettext "Updating"`: ${MESSAGE}" --as-stdout-line
