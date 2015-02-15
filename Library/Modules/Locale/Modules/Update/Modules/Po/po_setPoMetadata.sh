@@ -49,7 +49,7 @@ function po_setPoMetadata {
     DST[0]="\"Project-Id-Version: ${CONFIG_SECTION}\\\n\""
     DST[1]="\"Last-Translator: The CentOS Documentation SIG <centos-docs@centos.org>\\\n\""
     DST[2]="\"Language-Team: ${IDFORGE_LANG_LL}\\\n\""
-    DST[3]="\"PO-Revision-Date: $(date '+%F %H%:M%z')\\\n\""
+    DST[3]="\"PO-Revision-Date: $(date '+%F %H:%M%z')\\\n\""
 
     # Change pattern lines with their replacement lines.
     while [[ ${COUNT} -lt ${#SRC[*]} ]];do
