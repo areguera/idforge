@@ -26,14 +26,18 @@
 # Standardize update actions related to localization.
 function update {
 
-    local RENDER_DIRECTORY=''       ; update_setConfigOption 'render-directory'
     local -a RENDER_FROM            ; update_setConfigOption 'render-from'
     local -a RENDER_FROM_INSTANCES
     local -a RENDER_FROM_MO         ; update_setConfigOption 'render-from-mo'
-    local -a LOCALE_PO_TEMPLATES
 
     local RENDER_TYPE=$(idforge_printFileExtension "${RENDER_FROM[0]}")
 
-    idforge_setModuleEnvironment -m ${RENDER_TYPE} -t 'child'
+    [[ -n ${RENDER_FROM_PO[0]} ]] && idforge_setModuleEnvironment -m ${RENDER_TYPE} -t 'child'
+
+    # Unset array variables to avoid undesired concatenations of their
+    # values between different sections blocks in the same
+    # configuration file.
+    unset RENDER_FROM
+    unset RENDER_FROM_MO
 
 }

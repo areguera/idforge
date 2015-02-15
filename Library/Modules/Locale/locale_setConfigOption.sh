@@ -29,6 +29,20 @@ function locale_setConfigOption {
 
     case ${CONFIG_OPTION} in
 
+        render-directory )
+            # Define value of "render-dir" option. This information is
+            # used to customize the directory where final files are
+            # stored in.
+            RENDER_DIRECTORY=$(locale_printConfigValues "${CONFIG_FILE%/*}/Final")
+
+            # Verify whether the design model has a related
+            # translation file assigned or not and, redefine the
+            # target directory based on it.
+            if [[ -n ${RENDER_FROM_PO[0]} ]];then
+                RENDER_DIRECTORY="${RENDER_DIRECTORY}/${IDFORGE_LANG_LC}"
+            fi
+            ;;
+
         render-from-po )
             # Define value to "render-from-po" option. This information
             # is used to retrieve the translation file -in PO format-
@@ -41,6 +55,8 @@ function locale_setConfigOption {
             # file-translation file can be accurate.
             local FILE=''
             local FILES=$(locale_printConfigValues)
+
+            [[ -z ${FILES} ]] && return
 
             local COUNT=0
 

@@ -25,19 +25,10 @@
 
 function xml_createInstance {
 
-    [[ ${#RENDER_FROM_INSTANCES[*]} -gt 0 ]] && return
-
-    local COUNT=0
-
-    while [[ ${COUNT} -lt ${#RENDER_FROM[*]} ]];do
-        RENDER_FROM_INSTANCES[${COUNT}]=$(idforge_printTemporalFile ${RENDER_FROM[${COUNT}]})
-        if (idforge_checkFiles -q -i 'application/x-gzip' ${RENDER_FROM[${COUNT}]});then
-            /bin/zcat ${RENDER_FROM[${COUNT}]} > ${RENDER_FROM_INSTANCES[${COUNT}]}
-        else
-            cp ${RENDER_FROM[${COUNT}]} ${RENDER_FROM_INSTANCES[${COUNT}]}
-        fi
-        COUNT=$(( ++COUNT ))
-    done
-
+    if (idforge_checkFiles -q -i 'application/x-gzip' ${RENDER_FROM[${COUNT}]});then
+        /bin/zcat ${RENDER_FROM[${COUNT}]} > ${RENDER_FROM_INSTANCES[${COUNT}]}
+    else
+        cp ${RENDER_FROM[${COUNT}]} ${RENDER_FROM_INSTANCES[${COUNT}]}
+    fi
 
 }

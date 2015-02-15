@@ -38,6 +38,7 @@ function locale_setConfigSections {
     # Process sections found in the configuration file.
     for CONFIG_SECTION in ${CONFIG_SECTIONS};do
 
+        local RENDER_DIRECTORY=''  ; locale_setConfigOption 'render-directory'
         local -a RENDER_FROM_PO    ; locale_setConfigOption 'render-from-po'
 
         if [[ ${LOCALE_FLAG_EDIT} == 'true' ]];then
@@ -47,6 +48,11 @@ function locale_setConfigSections {
         else
             idforge_setModuleEnvironment -m 'update' -t 'child'
         fi
+
+        # Unset array variables to avoid undesired concatenations of
+        # their values between different sections blocks in the same
+        # configuration file.
+        unset RENDER_FROM_PO
 
     done
 

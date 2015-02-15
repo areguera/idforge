@@ -25,6 +25,8 @@
 
 function xml_convertXmlToPot {
 
+    LOCALE_PO_TEMPLATES[${COUNT}]=$(idforge_printTemporalFile ${RENDER_FROM_INSTANCES[${COUNT}]})
+
     # Move to final location before processing source file in order
     # for relative calls (e.g., image files) inside the source files
     # can be found by xml2po and no warning is printed from it.
