@@ -40,31 +40,23 @@
      inkscape:window-height="692"
      id="namedview3370"
      showgrid="false"
-     inkscape:zoom="1"
-     inkscape:cx="303.28197"
-     inkscape:cy="787.30127"
+     inkscape:zoom="0.87115385"
+     inkscape:cx="441.91177"
+     inkscape:cy="684.18393"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
   <defs
-     id="defs4">
-    <inkscape:perspective
-       sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 495 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="765 : 495 : 1"
-       inkscape:persp3d-origin="382.5 : 330 : 1"
-       id="perspective3398" />
-  </defs>
+     id="defs4" />
   <image
      sodipodi:absref="/home/al/Projects/Frameworks/idforge.git/QaTests/idforge-render/qatest-commons/Models/Images/=BACKGROUND_IMAGE="
      xlink:href="=BACKGROUND_IMAGE="
-     id="image5504"
-     height="990"
-     width="765"
+     x="0"
      y="-3.8281252e-07"
-     x="0" />
+     width="765"
+     height="990"
+     id="image5504" />
   <flowRoot
      transform="translate(0,230.76762)"
      id="flowRoot4954"
@@ -104,30 +96,21 @@
            y="230.54794"
            id="rect5050"
            style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans" /></flowRegion><flowPara
-         id="flowPara2907">This file provides a predictable SVG input for <flowSpan
+         id="flowPara3167">This file provides a predictable SVG input for <flowSpan
    id="flowSpan2877"
-   style="font-weight:bold;text-align:start;text-anchor:start;fill:#000000;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono">idforge-qatest(1)</flowSpan> command to validate production processes implemented by <flowSpan
+   style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans">idforge-qatest(1)</flowSpan> command to validate production processes implemented by <flowSpan
    id="flowSpan2881"
-   style="font-weight:bold;text-align:start;text-anchor:start;fill:#000000;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono">idforge-render(1)</flowSpan> and <flowSpan
+   style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans">idforge-render(1)</flowSpan> and <flowSpan
    id="flowSpan3074"
-   style="font-weight:bold;text-align:start;text-anchor:start;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono;fill:#000000">idforge-locale(1)</flowSpan> commands.</flowPara><flowPara
-         id="flowPara3165" /><flowPara
-         id="flowPara3167">This file helps to implement the following validations:</flowPara><flowPara
-         id="flowPara3169" /><flowPara
-         id="flowPara3171">• Create PNG files for different sizes, colors and locales, based on SVG and PO files.</flowPara><flowPara
-         id="flowPara3173">• Create PNG files with dynamic information based on translation markers expansion.</flowPara><flowPara
-         id="flowPara3175">• Create PNG files combining several PNG images on other PNG images.</flowPara><flowPara
-         id="flowPara3177">• Convert PNG files to other image formats (e.g., JPG, TIF).</flowPara><flowPara
+   style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans">idforge-locale(1)</flowSpan> commands. This file is specially conceived to validate <flowSpan
+   style="font-weight:bold"
+   id="flowSpan3479">idforge(1)</flowSpan> environments related to image rendition.</flowPara><flowPara
          id="flowPara3179" /><flowPara
-         id="flowPara3181">As result of processing the <flowSpan
+         id="flowPara3189">As result of processing the <flowSpan
    id="flowSpan3205"
-   style="font-weight:bold;text-align:start;text-anchor:start;fill:#000000">=CONFIG_SECTIONS=</flowSpan> configuration sections, using the production standards implemented by <flowSpan
+   style="font-size:14px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans">=CONFIG_SECTIONS=</flowSpan> configuration sections, using the production standards implemented by <flowSpan
    id="flowSpan3207"
-   style="font-weight:bold;text-align:start;text-anchor:start;font-family:DejaVu Sans mono;-inkscape-font-specification:DejaVu Sans mono;fill:#000000">idforge-render(1)</flowSpan> command, you must see a composition made of the following elements: </flowPara><flowPara
-         id="flowPara3183" /><flowPara
-         id="flowPara3185">• Full opacity idFORGE logotype on document header.</flowPara><flowPara
-         id="flowPara3187">• Semi-transparent idFORGE symbol on document background.</flowPara><flowPara
-         id="flowPara3189">• Full opacity idFORGE symbols in different colors and sizes on document footer.</flowPara></flowRoot>  </g>
+   style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans">idforge-render(1)</flowSpan> command, you must see a composition with idFORGE brand on document's header, document's background and document's footer.</flowPara></flowRoot>  </g>
   <flowRoot
      transform="translate(-0.6171875,258.09822)"
      id="flowRoot4213"

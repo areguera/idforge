@@ -1,21 +1,21 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: 2015-02-03 23:15-0500\n"
-"PO-Revision-Date: 2015-02-03 23:15-0500\n"
-"Last-Translator: CentOS Documentation SIG <centos-docs@centos.org>\n"
-"Language-Team: Spanish\n"
+"Project-Id-Version: document.png\n"
+"POT-Creation-Date: 2015-02-15 23:17-0500\n"
+"PO-Revision-Date: 2015-02-15 23:17-0500\n"
+"Last-Translator: The CentOS Documentation SIG <centos-docs@centos.org>\n"
+"Language-Team: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: textplain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "imagesvg+xml"
+msgid "image/svg+xml"
 msgstr ""
 
 #, no-wrap
-msgid "=RENDER_FILE_BASENAME="
-msgstr ""
+msgid "What Is This File For?"
+msgstr "¿Para qué es este fichero?"
 
 #, no-wrap
 msgid "idforge-qatest(1)"
@@ -30,65 +30,20 @@ msgid "idforge-locale(1)"
 msgstr ""
 
 #, no-wrap
-msgid "This file provides a predictable SVG input for <placeholder-1> command to validate production processes implemented by <placeholder-2> and <placeholder-3> commands."
+msgid "idforge(1)"
 msgstr ""
-"Este fichero brinda una entrada de tipo SVG predecible para que el "
-"comando <placeholder-1> pueda validar el proceso de producción "
-"implementado por los comandos <placeholder-2> y <placeholder-3>."
 
 #, no-wrap
-msgid "This file helps to implement the following validations:"
-msgstr "Este fichero ayuda a implementar las siguientes validaciones:"
-
-#, no-wrap
-msgid "• Create PNG files for different sizes, colors and locales, based on SVG and PO files."
-msgstr ""
-"• Creación de ficheros PNG para diferentes tamaños, colores y "
-"ubicaciones, basado en ficheros SVG y PO."
-
-#, no-wrap
-msgid "• Create PNG files with dynamic information based on translation markers expansion."
-msgstr ""
-"• Creación de ficheros PNG con información dinámica basado en la "
-"expansión de marcadores de traducción."
-
-#, no-wrap
-msgid "• Create PNG files combining several PNG images on other PNG images."
-msgstr ""
-"• Creación de ficheros PNG como resultado de la combinación de varias imágenes PNG entre sí."
-
-#, no-wrap
-msgid "• Convert PNG files to other image formats (e.g., JPG, TIF)."
-msgstr ""
-"• Conversión de ficheros PNG a otros formatos de imagen (ej. JPG, TIF)."
+msgid "This file provides a predictable SVG input for <placeholder-1/> command to validate production processes implemented by <placeholder-2/> and <placeholder-3/> commands. This file is specially conceived to validate <placeholder-4/> environments related to image rendition."
+msgstr "Este fichero brinda una entrada de tipo SVG predecible para que el comando <placeholder-1/> pueda validar el proceso de producción implementado por los comandos <placeholder-2/> y <placeholder-3/>. Este fichero es especialmente concevido para validar los entornos <placeholder-4/> relacionados a la creación de imágens."
 
 #, no-wrap
 msgid "=CONFIG_SECTIONS="
 msgstr ""
 
 #, no-wrap
-msgid "As result of processing the <placeholder-1> configuration sections, using the production standards implemented by <placeholder-2> command, you must see a composition made of the following elements: "
-msgstr ""
-"Como resultado de procesar las secciones de configuración "
-"<placeholder-1>, utilizando los procedimientos estándares que "
-"implementa el comando <placeholder-2>, usted puede ver una composición "
-"hecha de los siguientes elementos: "
-
-#, no-wrap
-msgid "• Full opacity idFORGE logotype on document header."
-msgstr ""
-"• Logotipo idFORGE completamente opaco en el encabezado del documento."
-
-#, no-wrap
-msgid "• Semi-transparent idFORGE symbol on document background."
-msgstr ""
-"• Logotipo idFORGE semi transparente en el fondo del documento."
-
-#, no-wrap
-msgid "• Full opacity idFORGE symbols in different colors and sizes on document footer."
-msgstr ""
-"• Logotipo idFORGE completamente opaco en diferentes colors y tamaños "
-"al pie del documento."
+msgid "As result of processing the <placeholder-1/> configuration sections, using the production standards implemented by <placeholder-2/> command, you must see a composition with idFORGE brand on document's header, document's background and document's footer."
+msgstr "Como resultado de procesar las secciones de configuración <placeholder-1/>, utilizando los procedimientos estándares que implementa el comando <placeholder-2/>, usted puede ver una composición con las marcas idFORGE en el encabezado, pie y fondo del documento."
 
 #, no-wrap
 msgid "x192"
@@ -115,9 +70,25 @@ msgid "Y=172.335"
 msgstr ""
 
 #, no-wrap
-msgid "Y= 86.530"
+msgid "Y=86.530"
 msgstr ""
 
 #, no-wrap
-msgid "© =COPYRIGHT_YEAR= =COPYRIGHT_HOLDER="
+msgid "X=125.009"
+msgstr ""
+
+#, no-wrap
+msgid "X=326.209"
+msgstr ""
+
+#, no-wrap
+msgid "X=527.409"
+msgstr ""
+
+#, no-wrap
+msgid "X=180.000"
+msgstr ""
+
+#, no-wrap
+msgid "Y=706.476"
 msgstr ""

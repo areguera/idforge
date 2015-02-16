@@ -1,0 +1,86 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: document-media.png\n"
+"POT-Creation-Date: 2015-02-15 23:17-0500\n"
+"PO-Revision-Date: 2015-02-15 23:17-0500\n"
+"Last-Translator: The CentOS Documentation SIG <centos-docs@centos.org>\n"
+"Language-Team: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "image/svg+xml"
+msgstr ""
+
+#, no-wrap
+msgid "=MEDIA_TYPE= Labels"
+msgstr "Etiquetas de =MEDIA_TYPE="
+
+#, no-wrap
+msgid "Installation media for =PRODUCT_NAME= =MEDIA_VERSION= on =MEDIA_ARCHITECTURE= architectures."
+msgstr "Medios de instalación para =PRODUCT_NAME= =MEDIA_VERSION= en arquitecturas =MEDIA_ARCHITECTURE=."
+
+#, no-wrap
+msgid "Install =MEDIA_TYPE= =MEDIA_NUMBER_CURRENT= of =MEDIA_NUMBER_LAST="
+msgstr "=MEDIA_TYPE= de instalación =MEDIA_NUMBER_CURRENT= de =MEDIA_NUMBER_LAST="
+
+#, no-wrap
+msgid "for =MEDIA_ARCHITECTURE= architectures"
+msgstr "para arquitecturas =MEDIA_ARCHITECTURE="
+
+#, no-wrap
+msgid "120mm"
+msgstr ""
+
+#, no-wrap
+msgid "=MEDIA_VERSION="
+msgstr ""
+
+#, no-wrap
+msgid "99.336mm"
+msgstr ""
+
+#, no-wrap
+msgid "64.943mm"
+msgstr ""
+
+#, no-wrap
+msgid "13.547mm"
+msgstr ""
+
+#, no-wrap
+msgid "10mm"
+msgstr ""
+
+#, no-wrap
+msgid "5.141mm"
+msgstr ""
+
+#, no-wrap
+msgid "14.877mm"
+msgstr ""
+
+#, no-wrap
+msgid "20.826mm"
+msgstr ""
+
+#, no-wrap
+msgid "7.618mm"
+msgstr ""
+
+#, no-wrap
+msgid "94.403mm"
+msgstr ""
+
+#, no-wrap
+msgid "2.355mm"
+msgstr ""
+
+#, no-wrap
+msgid "3.113mm"
+msgstr ""
+
+#, no-wrap
+msgid "21.130mm"
+msgstr ""
