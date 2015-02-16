@@ -27,14 +27,21 @@ function xml_convertXmlToPot {
 
     LOCALE_PO_TEMPLATES[${COUNT}]=$(idforge_printTemporalFile ${RENDER_FROM_INSTANCES[${COUNT}]})
 
-    # Move to final location before processing source file in order
-    # for relative calls (e.g., image files) inside the source files
-    # can be found by xml2po and no warning is printed from it.
-    [[ -d ${RENDER_DIRECTORY} ]] && pushd ${RENDER_DIRECTORY} > /dev/null
+    # Move the current working directory in the stack to the final
+    # render directory before processing source file in order for
+    # relative calls (e.g., image files) inside the source files to be
+    # found by xml2po and no warning is printed from it. Notice that
+    # relative paths may be provided as render directory so, a way to
+    # go forward and backward in the directory stack without
+    # inconsistencies is necessary here.
+
+    local PUSHD_EXIT=''
+
+    [[ -d ${RENDER_DIRECTORY} ]] && pushd ${RENDER_DIRECTORY} > /dev/null && PUSHD_EXIT=${?}
 
     xml2po -a -l ${IDFORGE_LANG_LC} ${RENDER_FROM_INSTANCES[${COUNT}]} \
         | msgcat --output-file=${LOCALE_PO_TEMPLATES[${COUNT}]} --width=70 --no-location -
 
-    [[ -d ${RENDER_DIRECTORY} ]] && popd > /dev/null
+    [[ ${PUSHD_EXIT} -eq 0 ]] && popd > /dev/null
 
 }
