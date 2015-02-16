@@ -8,96 +8,99 @@ msgid ""
 msgstr ""
 "Project-Id-Version: idforge-render\n"
 "Report-Msgid-Bugs-To: centos-docs@centos.org\n"
-"POT-Creation-Date: 2014-11-11 11:52-0500\n"
-"PO-Revision-Date: 2014-11-11 11:52-0500\n"
-"Last-Translator: CentOS Documentation SIG <centos-docs@centos.org>\n"
-"Language-Team: Español\n"
+"POT-Creation-Date: 2015-02-15 23:53-0500\n"
+"PO-Revision-Date: 2015-02-15 23:53-0500\n"
+"Last-Translator: The CentOS Documentation SIG <centos-docs@centos.org>\n"
+"Language-Team: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Archive/archive_setConfigOption.sh:38
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Asciidoc/Modules/Manpage/manpage_setConfigOption.sh:39
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Asciidoc/asciidoc_setConfigOption.sh:50
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Compress/compress_setConfigOption.sh:38
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Image/Modules/Raw/Modules/Indexed/indexed_setConfigOption.sh:40
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Image/Modules/Raw/raw_setConfigOption.sh:38
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Image/Modules/Svg/Modules/Extended/extended_setConfigOption.sh:62
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Image/Modules/Svg/Modules/Media/media_setConfigOption.sh:48
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Image/Modules/Svg/svg_setConfigOption.sh:92
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Image/image_setConfigOption.sh:51
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Symlink/symlink_setConfigOption.sh:51
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/files_setConfigOption.sh:166
 #, sh-format
-msgid "The \"$OPTION\" option isn't supported."
-msgstr "La opción \"$OPTION\" no está soportada."
+msgid "The \"$CONFIG_OPTION\" option isn't supported."
+msgstr "La opción \"$CONFIG_OPTION\" no está soportada."
 
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Asciidoc/Modules/Manpage/manpage.sh:48
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Asciidoc/asciidoc_setRenditionFormats.sh:42
-#, sh-format
-msgid "The \"$FORMAT\" format isn't supported."
-msgstr "El formato \"$FORMAT\" no está soportado."
-
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Asciidoc/Modules/Manpage/manpage_getSectionTitle.sh:36
 msgid "User Commands"
 msgstr "Comandos de usuario"
 
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Asciidoc/Modules/Manpage/manpage_getSectionTitle.sh:39
 msgid "System Calls"
 msgstr "Llamadas del sistema"
 
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Asciidoc/Modules/Manpage/manpage_getSectionTitle.sh:42
 msgid "C Library Functions"
 msgstr "Funciones de la biblioteca C"
 
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Asciidoc/Modules/Manpage/manpage_getSectionTitle.sh:45
 msgid "Devices and Special Files"
 msgstr "Dispositivos y ficheros especiales"
 
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Asciidoc/Modules/Manpage/manpage_getSectionTitle.sh:48
 msgid "File Formats and Conventions"
 msgstr "Formato de ficheros y convenciones"
 
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Asciidoc/Modules/Manpage/manpage_getSectionTitle.sh:51
 msgid "Games et. Al."
 msgstr "Juegos y otros"
 
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Asciidoc/Modules/Manpage/manpage_getSectionTitle.sh:54
 msgid "Miscellanea"
 msgstr "Miscelanea"
 
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Asciidoc/Modules/Manpage/manpage_getSectionTitle.sh:57
 msgid "System Administration tools and Deamons"
 msgstr "Herramientas de administración del sistema y demonios"
 
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Asciidoc/Modules/Manpage/manpage_setOptionSource.sh:32
-msgid "The CentOS Artwork Repository"
-msgstr "El repositorio de los trabajos artístico de CentOS"
-
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Asciidoc/asciidoc.sh:36
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Image/Modules/Svg/svg.sh:39
 msgid "Unsupported relationship between models and locales."
 msgstr "Relación no soportada entre modelos y localidades."
 
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Image/Modules/Svg/svg_checkModelExportId.sh:42
-msgid "The design model doesn't contain the export-id you specified."
-msgstr "El modelo de diseño no contiene el id de exportación suministrado."
+msgid "Incorrect relation between source files and translation files."
+msgstr "Relación incorrecta entre ficheros fuentes y ficheros de traducciones."
 
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/Modules/Image/Modules/Svg/svg_setConfigOption.sh:57
 #, sh-format
-msgid "The \"$OPTION\" option must be provided."
-msgstr "La opción \"$OPTION\" debe ser suministrada."
+msgid "The \"$CONFIG_OPTION\" option must be provided."
+msgstr "La opción \"$CONFIG_OPTION\" debe ser suministrada."
 
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/Modules/Files/files_setConfigOption.sh:42
+#
 #, sh-format
-msgid "The \"$OPTION\" option cannot be empty."
-msgstr "La opción \"$OPTION\" no puede estar vacía."
+msgid "The \"$SVG_EXPORT_ID\" export id isn't found in the source file:"
+msgstr "El identificador de exportación \"$SVG_EXPORT_ID\" no fue encontrado en el fichero fuente:"
 
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/render.sh:58
-msgid "isn't supported."
-msgstr "no tiene soporte."
+msgid "The flow options were not provided."
+msgstr "Las opciones del flujo no fueron suministradas."
 
-#: /home/al/Projects/idforge-render.git/Scripts/Libexec/idforge-render/render_printDescription.sh:28
-msgid "Render content from configuration files."
+#
+msgid "The png-base-comment failed."
+msgstr "La opción png-base-comment falló."
+
+#
+msgid "The png-base-command failed:"
+msgstr "La opción png-base-command fallo:"
+
+#
+msgid "The png-base-composition failed."
+msgstr "La opción png-base-composition falló."
+
+#
+msgid "The png-base-exports failed."
+msgstr "La opción png-base-exports falló."
+
+#
+msgid "The argument verification failed."
+msgstr "La verifiacción del argument falló."
+
+msgid "Render content based on configuration files."
 msgstr "Genera contenido desde ficheros de configuración."
+
+#, sh-format
+msgid "The \"$CONFIG_OPTION\" option is required."
+msgstr "La opción \"$CONFIG_OPTION\" es obligatoria."
+
+#~ msgid "The \"$FORMAT\" format isn't supported."
+#~ msgstr "El formato \"$FORMAT\" no está soportado."
+
+#~ msgid "The CentOS Artwork Repository"
+#~ msgstr "El repositorio de los trabajos artístico de CentOS"
+
+#~ msgid "The design model doesn't contain the export-id you specified."
+#~ msgstr "El modelo de diseño no contiene el id de exportación suministrado."
+
+#~ msgid "The \"$OPTION\" option cannot be empty."
+#~ msgstr "La opción \"$OPTION\" no puede estar vacía."
+
+#~ msgid "isn't supported."
+#~ msgstr "no tiene soporte."

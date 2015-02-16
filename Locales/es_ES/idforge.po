@@ -8,257 +8,198 @@ msgid ""
 msgstr ""
 "Project-Id-Version: idforge\n"
 "Report-Msgid-Bugs-To: centos-docs@centos.org\n"
-"POT-Creation-Date: 2014-10-01 21:49-0400\n"
-"PO-Revision-Date: 2014-10-20 00:27-0400\n"
-"Last-Translator: CentOS Documentation SIG <centos-docs@centos.org>\n"
-"Language-Team: Español\n"
+"POT-Creation-Date: 2015-02-15 23:53-0500\n"
+"PO-Revision-Date: 2015-02-15 23:53-0500\n"
+"Last-Translator: The CentOS Documentation SIG <centos-docs@centos.org>\n"
+"Language-Team: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge.sh:117
-msgid "is not executable."
-msgstr "no es ejecutable."
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_checkFiles.sh:68
 msgid "isn't a directory."
 msgstr "no es un directorio."
 
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_checkFiles.sh:74
 msgid "doesn't exist."
 msgstr "no existe."
 
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_checkFiles.sh:80
 msgid "isn't a regular file."
 msgstr "no es un fichero regular."
 
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_checkFiles.sh:86
 msgid "isn't a symbolic link."
 msgstr "no es un enlace simbólico."
 
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_checkFiles.sh:92
 msgid "isn't executable."
 msgstr "no es ejecutable."
 
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_checkFiles.sh:98
 msgid "isn't readable."
 msgstr "no es legible."
 
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_checkFiles.sh:104
 msgid "isn't writable."
 msgstr "no es escribible."
 
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_checkFiles.sh:111
 #, sh-format
 msgid "isn't a \"$MIME\" file."
 msgstr "no es un fichero de tipo \"$MIME\"."
 
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_checkFiles.sh:117
 msgid "doesn't match its pattern."
 msgstr "no coincide con su patrón."
 
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_checkFiles.sh:123
 msgid "isn't installed in the system."
 msgstr "no está instalado en el sistema."
 
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_checkFiles.sh:147
 msgid "No file for processing found."
 msgstr "No fichero fue encotrado para procesar."
 
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_checkFiles.sh:188
 msgid "The condition command provided isn't supported."
 msgstr "El comando condicional no está soportado."
 
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_checkWorkdir.sh:35
-msgid "Not a valid working directory."
-msgstr "No es un directorio de trabajo válido."
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_getTemporalFile.sh:43
-msgid "The first argument cannot be empty."
-msgstr "El primer argumento no puede estar vacío."
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printCopyright.sh:49
-#, sh-format
-msgid ""
-"$SCRIPT_NAME comes with NO WARRANTY, to the extent permitted by law. You may "
-"redistribute copies of $SCRIPT_NAME under the terms of the GNU General "
-"Public License. For more information about these matters, see the file named "
-"LICENSE."
-msgstr ""
-"$SCRIPT_NAME viene SIN GARANTÍAS, hasta donde lo permita la ley. Usted puede "
-"redistribuir copias de $SCRIPT_NAME bajo los términos de la Licencia Pública "
-"General de GNU. Para más información sobre estos asuntos, vea el fichero "
-"nombrado LICENSE."
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printCopyright.sh:104
-msgid "CentOS Artwork SIG"
-msgstr ""
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printCopyright.sh:110
-msgid "All rights reserved."
-msgstr "Todos los derechos reservados."
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:37
-msgid "The message cannot be empty."
-msgstr "El mensaje no puede estar vacío."
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:127
-msgid "To know more, run"
-msgstr "Para conocer más, corre"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:133
-msgid "yes"
-msgstr "sí"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:136
-msgid "no"
-msgstr ""
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:225
-msgid "Processing"
-msgstr "Procesando"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:229
-msgid "Cropping from"
-msgstr "Cortando de"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:233
-msgid "Tuning-up"
-msgstr "Optimizando"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:237
-msgid "Checking"
-msgstr "Comprobando"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:241
-msgid "Combining"
-msgstr "Combinando"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:245
-msgid "Editing"
-msgstr "Editando"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:250
-msgid "Updating"
-msgstr "Actualizando"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:252
-msgid "Creating"
-msgstr "Creando"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:257
-msgid "Deleting"
-msgstr "Borrando"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:261
-msgid "Reading"
-msgstr "Leyendo"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:265
-msgid "Saved as"
-msgstr "Salvado como"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:269
-msgid "Linked to"
-msgstr "Enlazado a"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:273
-msgid "Moved to"
-msgstr "Movido a"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:277
-msgid "Translation"
-msgstr "Traducción"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:281
-msgid "Translating"
-msgstr "Traduciendo"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:285
-msgid "Validating"
-msgstr "Validando"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:289
-msgid "Template"
-msgstr "Plantilla"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:293
-msgid "Configuration"
-msgstr "Configuración"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printMessage.sh:297
-msgid "Palette"
-msgstr "Paleta"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printUsageModule.sh:33
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printUsageScript.sh:33
-#, sh-format
-msgid "Usage"
-msgstr "Uso"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printUsageMore.sh:35
-#, sh-format
-msgid "See '$SCRIPT_NAME $COMMAND --help' for more information."
-msgstr "Para más información, vea '$SCRIPT_NAME $COMMAND --help'"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printUsageScriptModules.sh:34
-#, sh-format
-msgid "The following $SCRIPT_NAME commands are available:"
-msgstr "Los siguientes comandos $SCRIPT_NAME están disponibles:"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printVersion.sh:33
-#, sh-format
-msgid "$SCRIPT_NAME version $SCRIPT_VERSION"
-msgstr "$SCRIPT_NAME versión $SCRIPT_VERSION"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printVersion.sh:35
-#, sh-format
-msgid "$SCRIPT_NAME ($SCRIPT_MODULE_NAME) version $SCRIPT_VERSION"
-msgstr "$SCRIPT_NAME ($SCRIPT_MODULE_NAME) versión $SCRIPT_VERSION"
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_setArguments.sh:40
-msgid "The argument verification failed."
-msgstr "La verificación del argumento falló."
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_setConfigOption.sh:94
-#, sh-format
-msgid "The \"$OPTION\" option isn't supported."
-msgstr "La opción \"$OPTION\" no está soportada."
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_setConfigSections.sh:36
-msgid "No section definition was found."
-msgstr "La definición de la sección no fue encontrada."
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_setModuleEnvironmentScripts.sh:52
-msgid "No function file was found."
-msgstr "No se encontró fichero de función alguno."
-
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_setModuleEnvironmentScripts.sh:67
 msgid "No function definition found."
 msgstr "No se encontró definición de función alguna."
 
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_unsetModuleEnvironment.sh:34
-msgid "The export id was not provided."
-msgstr "El identificador de exportación no fue suministrado."
+msgid "Not a valid working directory."
+msgstr "No es un directorio de trabajo válido."
 
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printUsageMore.sh:31
-msgid "command"
-msgstr "comando"
+#
+msgid "The documentation manual is not available."
+msgstr "El manual de documentación no está disponible."
 
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printUsageScriptModules.sh:38
-#, sh-format
-msgid "The following $SCRIPT_NAME command is available:"
-msgid_plural "The following $SCRIPT_NAME commands are available:"
-msgstr[0] "El comando $SCRIPT_NAME siguiente está disponible:"
-msgstr[1] "Los comandos $SCRIPT_NAME siguientes están disponibles:"
+msgid "The message cannot be empty."
+msgstr "El mensaje no puede estar vacío."
 
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printUsageScriptModules.sh:44
-#, sh-format
-msgid "It looks like no module has been install so far."
-msgstr "Al parecer no se ha instalado módulo alguno aún."
+msgid "To know more, run"
+msgstr "Para conocer más, corre"
 
-#: /home/al/Projects/idforge.git/Scripts/Libexec/idforge/idforge_printUsageScriptModules.sh:45
-#, sh-format
-msgid "See '$SCRIPT_NAME --help' for more information."
-msgstr "Para más información vea '$SCRIPT_NAME --help'."
+msgid "yes"
+msgstr "sí"
+
+#
+msgid "no"
+msgstr ""
+
+msgid "Processing"
+msgstr "Procesando"
+
+msgid "Cropping from"
+msgstr "Cortando de"
+
+msgid "Tuning-up"
+msgstr "Optimizando"
+
+msgid "Checking"
+msgstr "Comprobando"
+
+msgid "Combining"
+msgstr "Combinando"
+
+msgid "Editing"
+msgstr "Editando"
+
+msgid "Composing"
+msgstr "Compiniendo"
+
+msgid "Commenting"
+msgstr "Comentando"
+
+msgid "Updating"
+msgstr "Actualizando"
+
+msgid "Creating"
+msgstr "Creando"
+
+msgid "Deleting"
+msgstr "Borrando"
+
+msgid "Reading"
+msgstr "Leyendo"
+
+msgid "Saved as"
+msgstr "Salvado como"
+
+msgid "Linked to"
+msgstr "Enlazado a"
+
+msgid "Moved to"
+msgstr "Movido a"
+
+msgid "Translation"
+msgstr "Traducción"
+
+msgid "Translating"
+msgstr "Traduciendo"
+
+msgid "Validating"
+msgstr "Validando"
+
+msgid "Template"
+msgstr "Plantilla"
+
+msgid "Configuration"
+msgstr "Configuración"
+
+msgid "Palette"
+msgstr "Paleta"
+
+msgid "The first argument cannot be empty."
+msgstr "El primer argumento no puede estar vacío."
+
+msgid "The argument verification failed"
+msgstr "La verificación del argumento falló."
+
+msgid "is not executable."
+msgstr "no es ejecutable."
+
+msgid "The module name was not provided."
+msgstr "El nombre del módulo no fue suministrado."
+
+#~ msgid ""
+#~ "$SCRIPT_NAME comes with NO WARRANTY, to the extent permitted by law. You "
+#~ "may redistribute copies of $SCRIPT_NAME under the terms of the GNU "
+#~ "General Public License. For more information about these matters, see the "
+#~ "file named LICENSE."
+#~ msgstr ""
+#~ "$SCRIPT_NAME viene SIN GARANTÍAS, hasta donde lo permita la ley. Usted "
+#~ "puede redistribuir copias de $SCRIPT_NAME bajo los términos de la "
+#~ "Licencia Pública General de GNU. Para más información sobre estos "
+#~ "asuntos, vea el fichero nombrado LICENSE."
+
+#~ msgid "All rights reserved."
+#~ msgstr "Todos los derechos reservados."
+
+#~ msgid "Usage"
+#~ msgstr "Uso"
+
+#~ msgid "See '$SCRIPT_NAME $COMMAND --help' for more information."
+#~ msgstr "Para más información, vea '$SCRIPT_NAME $COMMAND --help'"
+
+#~ msgid "The following $SCRIPT_NAME commands are available:"
+#~ msgstr "Los siguientes comandos $SCRIPT_NAME están disponibles:"
+
+#~ msgid "$SCRIPT_NAME version $SCRIPT_VERSION"
+#~ msgstr "$SCRIPT_NAME versión $SCRIPT_VERSION"
+
+#~ msgid "$SCRIPT_NAME ($SCRIPT_MODULE_NAME) version $SCRIPT_VERSION"
+#~ msgstr "$SCRIPT_NAME ($SCRIPT_MODULE_NAME) versión $SCRIPT_VERSION"
+
+#~ msgid "The \"$OPTION\" option isn't supported."
+#~ msgstr "La opción \"$OPTION\" no está soportada."
+
+#~ msgid "No section definition was found."
+#~ msgstr "La definición de la sección no fue encontrada."
+
+#~ msgid "No function file was found."
+#~ msgstr "No se encontró fichero de función alguno."
+
+#~ msgid "command"
+#~ msgstr "comando"
+
+#~ msgid "The following $SCRIPT_NAME command is available:"
+#~ msgid_plural "The following $SCRIPT_NAME commands are available:"
+#~ msgstr[0] "El comando $SCRIPT_NAME siguiente está disponible:"
+#~ msgstr[1] "Los comandos $SCRIPT_NAME siguientes están disponibles:"
+
+#~ msgid "It looks like no module has been install so far."
+#~ msgstr "Al parecer no se ha instalado módulo alguno aún."
+
+#~ msgid "See '$SCRIPT_NAME --help' for more information."
+#~ msgstr "Para más información vea '$SCRIPT_NAME --help'."

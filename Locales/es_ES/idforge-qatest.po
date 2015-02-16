@@ -1,0 +1,93 @@
+# Spanish translations for idforge-qatest package
+# Traducciones al español para el paquete idforge-qatest.
+# Copyright (C) 2015 The CentOS Artwork SIG
+# This file is distributed under the same license as the idforge-qatest package.
+# Automatically generated, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: idforge-qatest\n"
+"Report-Msgid-Bugs-To: centos-docs@centos.org\n"
+"POT-Creation-Date: 2015-02-15 23:53-0500\n"
+"PO-Revision-Date: 2015-02-15 23:53-0500\n"
+"Last-Translator: The CentOS Documentation SIG <centos-docs@centos.org>\n"
+"Language-Team: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#
+msgid "Enter integrity checks target arguments:"
+msgstr "Entre los argumentos objeto de chequeos de integridad:"
+
+#
+msgid ""
+"Content validation isn't supported while a new test is being added."
+msgstr ""
+"La validación de contenidos no está soportada mientras una prueba "
+"nueva está siendo añadida."
+
+#
+msgid "Enter integrity checks target command:"
+msgstr "Entre el comando objeto de chequeos de integridad:"
+
+#
+msgid "The test already exists."
+msgstr "La prueba ya existe."
+
+#
+#, sh-format
+msgid "in $COMMAND_TIMESTAMP seconds"
+msgstr "en $COMMAND_TIMESTAMP segundos"
+
+#
+msgid "PASSED"
+msgstr "PASÓ"
+
+#
+msgid "FAILED"
+msgstr "FALLÓ"
+
+#
+msgid "You can commit your changes now. Good work!"
+msgstr "Puedes enviar tus cambios ahora. ¡Buen trabajo!"
+
+#
+msgid "Don't commit your changes yet. Fix what you broke first."
+msgstr "No envíes tus cambios aún. Arregla lo que rompistes primero."
+
+#
+msgid "failed"
+msgid_plural "failed"
+msgstr[0] "falló"
+msgstr[1] "fallaron"
+
+#
+msgid "test was executed "
+msgid_plural "tests were executed "
+msgstr[0] "prueba fue ejecutada"
+msgstr[1] "pruebas fueron ejecutadas"
+
+#
+#, sh-format
+msgid "in $QATEST_TIMESTAMP seconds | "
+msgstr "en $QATEST_TIMESTAMP segundos | "
+
+#
+msgid "passed"
+msgid_plural "passed"
+msgstr[0] "pasó"
+msgstr[1] "pasaron"
+
+#
+msgid "No test found in the location you provided."
+msgstr "No se encontraron pruebas en la ubicación que suministró."
+
+#
+msgid "The argument verification failed"
+msgstr "La verificación del argumento falló"
+
+#
+msgid "Run quality assurance tests"
+msgstr "Ejecuta pruebas de aseguramiento de calidad."
