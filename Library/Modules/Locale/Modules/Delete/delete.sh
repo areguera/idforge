@@ -26,7 +26,7 @@
 # Standardize elimination of localization files.
 function delete {
 
-    local -a RENDER_FROM_MO      ; delete_setConfigOption 'locale-mo'
+    local -a RENDER_FROM_MO      ; delete_setConfigOption 'render-from-mo'
 
     local RENDER_FROM_PO_COUNT=0
 

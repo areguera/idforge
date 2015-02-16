@@ -29,11 +29,11 @@ function delete_setConfigOption {
 
     case ${CONFIG_OPTION} in
 
-        locale-mo )
-            # Define value to "locale-mo" option. This information is
-            # used to retrieve the translation file -in MO format-
-            # associated to the source files provided through
-            # "locale-from" option.
+        render-from-mo )
+            # Define value to "render-from-mo" option. This
+            # information is used to retrieve the translation file -in
+            # MO format- associated to the source files provided
+            # through "render-from" option.
             local FILE=''
             local FILES=$(locale_printConfigValues)
 
