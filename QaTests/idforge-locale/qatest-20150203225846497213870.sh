@@ -6,15 +6,24 @@
 #   localization files.
 #
 #   ------------------------------------------------------------------
-#   ${QATEST_UNIT_DIR}/
-#   `-- Locales/
-#       `-- es_ES/
-#           |-- asciidoc.po
-#           |-- asciidoc.mo
-#           |-- svg.po
-#           |-- svg.mo
-#           |-- html.po
-#           `-- html.mo
+#   QaTests/idforge-locale/qatest-20150203225846497213870/Locales/
+#   `-- es_ES
+#       |-- file.asciidoc.mo
+#       |-- file.asciidoc.po
+#       |-- file.html.mo
+#       |-- file.html.po
+#       |-- file.svg.mo
+#       |-- file.svg.po
+#       |-- hello.svg.mo
+#       |-- hello.svg.po
+#       |-- hello_world.svg.mo
+#       |-- hello_world.svg.po
+#       |-- idforge-locale.sh.po
+#       |-- idforge.sh.po
+#       |-- world.svg.mo
+#       `-- world.svg.po
+#
+#   1 directory, 14 files
 #   ------------------------------------------------------------------
 #
 ######################################################################
@@ -32,7 +41,13 @@ QATEST_FLAG_COMMAND="./idforge.sh"
 LANG=es_ES.UTF-8;
 
 # Create both PO and MO files from configuration file.
-command_line "locale ${QATEST_UNIT_DIR}/${QATEST_UNIT_NAME}.conf"
+command_line "--filter='file.asciidoc' locale ${QATEST_UNIT_DIR}/${QATEST_UNIT_NAME}.conf"
+command_line "--filter='file.html' locale ${QATEST_UNIT_DIR}/${QATEST_UNIT_NAME}.conf"
+command_line "--filter='file.svg' locale ${QATEST_UNIT_DIR}/${QATEST_UNIT_NAME}.conf"
+command_line "--filter='hello_world.svg' locale ${QATEST_UNIT_DIR}/${QATEST_UNIT_NAME}.conf"
+command_line "--filter='hello_world-2.svg' locale ${QATEST_UNIT_DIR}/${QATEST_UNIT_NAME}.conf"
+command_line "--filter='idforge\$' locale ${QATEST_UNIT_DIR}/${QATEST_UNIT_NAME}.conf"
+command_line "--filter='idforge-locale' locale ${QATEST_UNIT_DIR}/${QATEST_UNIT_NAME}.conf"
 
 # Edit the PO file generated from the SVG file. CAUTION: This
 # validation must not be performed here. Instead, the command must be
