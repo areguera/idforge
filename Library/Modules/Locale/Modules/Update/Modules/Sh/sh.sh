@@ -26,9 +26,9 @@
 function sh {
 
     [[ ${#RENDER_FROM_PO[*]} -gt 1 ]] \
-        && idforge_printMessage "`gettext "Incorrect relation between source files and translation files."`" --as-error-line
+        && idforge_printMessage "`gettext "Only one PO file must be provided."`" --as-error-line
     [[ ${#RENDER_FROM_MO[*]} -gt 1 ]] \
-        && idforge_printMessage "`gettext "Incorrect relation between source files and translation files."`" --as-error-line
+        && idforge_printMessage "`gettext "Only one MO file must be provided."`" --as-error-line
 
     idforge_checkFiles -efi 'text/x-shellscript' "${RENDER_FROM[*]}"
 
@@ -43,6 +43,10 @@ function sh {
         --width=70 --no-location \
         ${RENDER_FROM[*]}
 
-    [[ -f ${LOCALE_PO_TEMPLATES[0]} ]] && idforge_setModuleEnvironment -m 'po' -t 'sibling'
+    [[ -f ${LOCALE_PO_TEMPLATES[0]} ]] \
+        && idforge_setModuleEnvironment -m 'po' -t 'sibling'
+
+    [[ -f ${LOCALE_PO_TEMPLATES[0]} ]] \
+        && idforge_setModuleEnvironment -m 'mo' -t 'sibling'
 
 }
