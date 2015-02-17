@@ -25,10 +25,24 @@
 
 function xml_createInstance {
 
-    if (idforge_checkFiles -q -i 'application/x-gzip' ${RENDER_FROM[${COUNT}]});then
-        /bin/zcat ${RENDER_FROM[${COUNT}]} > ${RENDER_FROM_INSTANCES[${COUNT}]}
+    if [[ ${RENDER_FROM[${COUNT}]} =~ ^${IDFORGE_TEMPDIR} ]];then
+        # Don't create source files instances for source files that
+        # are instances already (e.g., source files which path begins
+        # with /tmp).  This happens to source files that cannot be
+        # localized directly through xml2po (e.g., asciidoc.) and
+        # localized instances for them are created outside the xml
+        # module.
+        XML=${RENDER_FROM[${COUNT}]}
     else
-        cp ${RENDER_FROM[${COUNT}]} ${RENDER_FROM_INSTANCES[${COUNT}]}
+        # Create source file instance.
+        XML=$(idforge_printTemporalFile ${RENDER_FROM[${COUNT}]})
+        if (idforge_checkFiles -q -i 'application/x-gzip' ${RENDER_FROM[${COUNT}]});then
+            /bin/zcat ${RENDER_FROM[${COUNT}]} > ${XML}
+        elif (idforge_checkFiles -q -i 'application/x-bzip2' ${RENDER_FROM[${COUNT}]});then
+            /usr/bin/bzcat ${RENDER_FROM[${COUNT}]} > ${XML}
+        else
+            /bin/cp ${RENDER_FROM[${COUNT}]} ${XML}
+        fi
     fi
 
 }

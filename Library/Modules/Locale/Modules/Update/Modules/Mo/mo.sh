@@ -25,12 +25,26 @@
 
 function mo {
 
-    idforge_printMessage "${RENDER_FROM_MO[${COUNT}]}" --as-creating-line
+    local COUNT=0
 
-    idforge_setParentDir ${RENDER_FROM_MO[${COUNT}]}
+    while [[ ${COUNT} -lt ${#RENDER_FROM_MO[*]} ]];do
 
-    msgfmt --check ${PO} --output-file=${RENDER_FROM_MO[${COUNT}]}
+        local PO=${RENDER_FROM_PO[${COUNT}]}
 
-    idforge_checkFiles -i 'application/octet-stream' ${RENDER_FROM_MO[${COUNT}]}
+        idforge_checkFiles ${PO}
+
+        local MO=${RENDER_FROM_MO[${COUNT}]}
+
+        idforge_printMessage "${MO}" --as-creating-line
+
+        idforge_setParentDir ${MO}
+
+        msgfmt --check ${PO} --output-file=${MO}
+
+        idforge_checkFiles -i 'application/octet-stream' ${MO}
+
+        COUNT=$(( ++COUNT ))
+
+    done
 
 }

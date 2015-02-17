@@ -25,34 +25,18 @@
 
 function xml {
 
-    [[ ${#RENDER_FROM_INSTANCES[*]} -gt 0 ]] && return
-
     local -a LOCALE_PO_TEMPLATES
 
-    # In an xml-based rendition, translation and source files should
-    # be in a one-to-one relation. No translation file is acceptable
-    # to prevent that source file from being localized.
-    [[ ${#RENDER_FROM_PO[*]} -gt ${#RENDER_FROM[*]} ]] \
-        && idforge_printMessage "`gettext "Incorrect relation between translation and source files."`" --as-error-line
+    xml_verifySources
 
-    local COUNT=0
+    xml_createPoTemplates
 
-    while [[ ${COUNT} -lt ${#RENDER_FROM[*]} ]];do
-
-        RENDER_FROM_INSTANCES[${COUNT}]=$(idforge_printTemporalFile ${RENDER_FROM[${COUNT}]})
-
-        xml_createInstance
-
-        xml_verifyInstance
-
-        xml_convertXmlToPot
-
-        COUNT=$(( ++COUNT ))
-
-    done
-
-    [[ ${#LOCALE_PO_TEMPLATES[*]} -gt 0 ]] && idforge_setModuleEnvironment -m 'po' -t 'sibling'
+    [[ ${#LOCALE_PO_TEMPLATES[*]} -gt 0 ]] \
+        && idforge_setModuleEnvironment -m 'po' -t 'sibling'
 
     unset LOCALE_PO_TEMPLATES
+
+    [[ ${#RENDER_FROM_MO[*]} -gt 0 ]] \
+        && idforge_setModuleEnvironment -m 'mo' -t 'sibling'
 
 }

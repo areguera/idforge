@@ -25,7 +25,7 @@
 
 function xml_convertXmlToPot {
 
-    LOCALE_PO_TEMPLATES[${COUNT}]=$(idforge_printTemporalFile ${RENDER_FROM_INSTANCES[${COUNT}]}).pot
+    LOCALE_PO_TEMPLATES[${COUNT}]=$(idforge_printTemporalFile ${XML}).pot
 
     # Move the current working directory in the stack to the final
     # render directory before processing source file in order for
@@ -39,7 +39,7 @@ function xml_convertXmlToPot {
 
     [[ -d ${RENDER_DIRECTORY} ]] && pushd ${RENDER_DIRECTORY} && PUSHD_EXIT=${?} > /dev/null
 
-    xml2po -a -l ${IDFORGE_LANG_LC} ${RENDER_FROM_INSTANCES[${COUNT}]} \
+    xml2po -a -l ${IDFORGE_LANG_LC} ${XML} \
         | msgcat --output-file=${LOCALE_PO_TEMPLATES[${COUNT}]} --width=70 --no-location -
 
     [[ ${PUSHD_EXIT} -eq 0 ]] && popd > /dev/null

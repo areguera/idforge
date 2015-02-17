@@ -23,10 +23,21 @@
 #
 ######################################################################
 
-function xml_verifyInstance {
+function xml_createPoTemplates {
 
-    xmllint --noout ${XML}
+    local COUNT=0
+    local XML=''
 
-    [[ ${?} -ne 0 ]] && idforge_printMessage "`gettext "Invalid XML file:"` ${XML}" --as-error-line
+    while [[ ${COUNT} -lt ${#RENDER_FROM[*]} ]];do
+
+        xml_createInstance
+
+        xml_verifyInstance
+
+        xml_convertXmlToPot
+
+        COUNT=$(( ++COUNT ))
+
+    done
 
 }

@@ -23,10 +23,26 @@
 #
 ######################################################################
 
-function xml_verifyInstance {
+function extended {
 
-    xmllint --noout ${XML}
+    local COUNT=0
 
-    [[ ${?} -ne 0 ]] && idforge_printMessage "`gettext "Invalid XML file:"` ${XML}" --as-error-line
+    local PO=${RENDER_FROM_PO[${COUNT}]}
+
+    while [[ ${COUNT} -lt ${#LOCALE_PO_TEMPLATES[*]} ]];do
+
+        local POT=${LOCALE_PO_TEMPLATES[${COUNT}]}
+
+        idforge_printMessage "${PO}" --as-creating-line
+
+        po_setPotMetadata
+
+        po_convertPotToPo
+
+        po_setPoMetadata
+
+        COUNT=$(( ++COUNT ))
+
+    done
 
 }

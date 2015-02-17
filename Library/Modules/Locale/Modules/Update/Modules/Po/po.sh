@@ -25,25 +25,12 @@
 
 function po {
 
-    local COUNT=0
-
-    while [[ ${COUNT} -lt ${#LOCALE_PO_TEMPLATES[*]} ]];do
-
-        local POT=${LOCALE_PO_TEMPLATES[${COUNT}]}
-        local PO=${RENDER_FROM_PO[${COUNT}]}
-
-        idforge_printMessage "${PO}" --as-creating-line
-
-        po_setPotMetadata
-
-        po_convertPotToPo
-
-        po_setPoMetadata
-
-        [[ -n ${RENDER_FROM_MO[${COUNT}]} ]] && idforge_setModuleEnvironment -m 'mo' -t 'sibling'
-
-        COUNT=$(( ++COUNT ))
-
-    done
+    if [[ ${#RENDER_FROM[*]} -eq ${#RENDER_FROM_PO[*]} ]];then
+        idforge_setModuleEnvironment -m 'base' -t 'child'
+    elif [[ ${#RENDER_FROM[*]} -gt ${#RENDER_FROM_PO[*]} ]];then
+        idforge_setModuleEnvironment -m 'extended' -t 'child'
+    else
+        idforge_printMessage "`gettext "Incorrect relation between source files and their translations."`" --as-error-line
+    fi
 
 }

@@ -23,10 +23,28 @@
 #
 ######################################################################
 
-function xml_verifyInstance {
+function xml_verifySources {
 
-    xmllint --noout ${XML}
+    [[ ${#RENDER_FROM_INSTANCES[*]} -eq 0 ]] && return
 
-    [[ ${?} -ne 0 ]] && idforge_printMessage "`gettext "Invalid XML file:"` ${XML}" --as-error-line
+    # Verify the number of instances produced is exactly the same of
+    # source files available.
+    [[ ${#RENDER_FROM_INSTANCES[*]} -ne ${#RENDER_FROM[*]} ]] \
+        && idforge_printMessage "`gettext "Incorrect relation between source files and their instances."`" --as-error-line
+
+    # Verify relation between source files and translation files.
+    [[ ${#RENDER_FROM_PO[*]} -gt ${#RENDER_FROM[*]} ]] \
+        && idforge_printMessage "`gettext "Incorrect relation between source files and their translations."`" --as-error-line
+
+    local COUNT=0
+
+    # Redefine localization source files based on whether there are
+    # instances of them or not. This is necessary to implement
+    # localization of file formats that cannot be localized directly
+    # through xml2po (e.g., asciidoc).
+    while [[ ${COUNT} -lt ${#RENDER_FROM[*]} ]];do
+        RENDER_FROM[${COUNT}]=${RENDER_FROM_INSTANCES[${COUNT}]}
+        COUNT=$(( ++COUNT ))
+    done
 
 }
