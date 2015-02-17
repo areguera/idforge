@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: idforge-locale\n"
 "Report-Msgid-Bugs-To: centos-docs@centos.org\n"
-"POT-Creation-Date: 2015-02-15 23:53-0500\n"
-"PO-Revision-Date: 2015-02-15 23:53-0500\n"
+"POT-Creation-Date: 2015-02-16 22:58-0500\n"
+"PO-Revision-Date: 2015-02-16 22:58-0500\n"
 "Last-Translator: The CentOS Documentation SIG <centos-docs@centos.org>\n"
 "Language-Team: es\n"
 "MIME-Version: 1.0\n"
@@ -36,13 +36,25 @@ msgid "The \"$CONFIG_OPTION\" option isn't supported."
 msgstr "La opción \"$CONFIG_OPTION\" no está soportada."
 
 #
-msgid "Incorrect relation between source files and translation files."
-msgstr "Relación incorrecta entre ficheros fuentes y ficheros de traducción."
+msgid "Only one PO file must be provided."
+msgstr "Solo un fichero PO debe ser suministrado."
 
 #
-msgid "Incorrect relation between translation and source files."
-msgstr "Relación incorrecta entre traducciones y ficheros fuentes."
+msgid "Only one MO file must be provided."
+msgstr "Solo un fichero MO debe ser suministrado."
+
+#
+msgid "Incorrect relation between source files and their translations."
+msgstr "Relación incorrecta entre los ficheros fuentes y sus traducciones."
+
+#
+msgid "Incorrect relation between source files and their instances."
+msgstr "Relación incorrecta entre los ficheros fuentes y sus instancias."
 
 #
 msgid "Invalid XML file:"
 msgstr "El fichero XML no es válido:"
+
+#
+#~ msgid "Incorrect relation between translation and source files."
+#~ msgstr "Relación incorrecta entre traducciones y ficheros fuentes."
