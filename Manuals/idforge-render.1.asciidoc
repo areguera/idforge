@@ -48,8 +48,17 @@ render-type::
     the rendition processed. When this option is not provided, the
     file extension of the first source file provided to *render-from*
     configuration option is used as default value.  Possible values to
-    this option include "svg" to process vectorial images, "png" to
-    process raster images and "asciidoc" to process documentation.
+    this option are the following:
++   
+- "svg" -- Transforms source files in SVG format to PNG format in
+  several ways using Inkscape.
+- "png" -- Transforms PNG images in several ways using ImageMagick
+  tools suite.
+- "asciidoc" -- Transforms source files in asciidoc format to manpage, xhtml and
+  pdf formats.
+- "docbook" -- Transforms source files docbook format to manpage, xhtml and
+  pdf formats.
+- "gz" -- Compresses source files.
 
 render-from::
     Specifies one or more source files. The source files are generally
@@ -349,6 +358,20 @@ manpage-sectdesc::
     determined automatically based on the manpage volume number set
     inside the modified docbook instance.
 
+=== File Compression
+
+The *idforge-render(1)* command initiates file compression when
+*render-type* is set to "gz" and one or more files are provided as
+value to *render-form* configuration option. 
+
+When *render-type* is set to "gz", the *render* module calls the *gz*
+module which passes all the source files provided as value to
+render-from as argument to /bin/gzip for their compression. In case
+you want to provide options to this command (none is provided by
+default), or set a different compression command (e.g.,
+/usr/bin/bzip2, /usr/bin/zip, etc.), you can do so through the
+*gz-command* configuration option.
+
 ////
 [[packages]]
 === Packages Construction
@@ -624,6 +647,15 @@ xml-expand          = "=\MANPAGE_YEAR=$(date '+%Y')"
 xml-expand          = "=\MANPAGE_OTHERS=$(cd ./Manuals; OTHERS=$(ls *.asciidoc | grep -v ${CONFIG_SECTION} | sed -r 's/\.([[:digit:]])\.asciidoc/(\1),/'); echo ${OTHERS} | sed 's/,$//')"
 manpage-software    = "idFORGE Framework"
 manpage-version     = "${IDFORGE_VERSION}"
+----------------------------------------------------------------------
+
+[[file-compression]]
+.Compressing file already produced
+----------------------------------------------------------------------
+[idforge-render.1.gz]
+render-type         = "gz"
+render-from         = "${PWD}/Manuals/Final/${IDFORGE_LANG_LC}/idforge-render.1"
+render-directory    = "${PWD}/Manuals/Final/${IDFORGE_LANG_LC}"
 ----------------------------------------------------------------------
 
 [[images-svg-flow-media]]
