@@ -23,16 +23,23 @@
 #
 ######################################################################
 
-# Standardize rendition of asciidoc files inside the idforge.sh script.
 function asciidoc {
 
-    local RENDER_FLOW=''        ; asciidoc_setConfigOption 'render-flow'
-    local RENDER_FROM_XSL=''    ; asciidoc_setConfigOption 'render-from-xsl'
+    idforge_checkFiles -efm "\.asciidoc$" "${RENDER_FROM[*]}"
 
-    if [[ ${#RENDER_FROM[*]} -eq ${#LOCALE_FROM[*]} ]];then
-        asciidoc_setRenditionOneToOne
-    else
-        idforge_printMessage "`gettext "Unsupported relationship between models and locales."`" --as-error-line
-    fi
+    local RENDER_FLOW=''            ; asciidoc_setConfigOption 'render-flow'
+    local RENDER_FLOW_OPTIONS=''    ; asciidoc_setConfigOption 'render-flow-options'
+
+    local COUNT=0
+
+    while [[ ${COUNT} -lt ${#RENDER_FROM[*]} ]];do
+
+        asciidoc_setDocbook
+
+        COUNT=$(( ++COUNT ))
+
+    done
+
+    idforge_setModuleEnvironment -m 'docbook' -t 'sibling'
 
 }

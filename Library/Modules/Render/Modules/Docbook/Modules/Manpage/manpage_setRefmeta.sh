@@ -23,22 +23,27 @@
 #
 ######################################################################
 
-# Standardize the way docbook files are transformed in XHTML format.
-function xhtml {
+function manpage_setRefmeta {
 
-    local HTML=${RENDER_FILE}.html
+    # Define the manpage product name.
+    local MANPAGE_SOFTWARE=''   ; manpage_setConfigOption 'manpage-software'
+    local MANPAGE_VERSION=''    ; manpage_setConfigOption 'manpage-version'
+    local MANPAGE_SECTDESC=''   ; manpage_setConfigOption 'manpage-sectdesc'
 
-    local HTML_XSL_DEFAULT=/usr/share/sgml/docbook/xsl-stylesheets/xhtml/docbook.xsl
+    # Define the section title of the reference page (e.g., User
+    # Commands) based on the section number.
+    manpage_setRefmetaMisc
 
-    if [[ ! -f ${RENDER_FROM_XSL} ]];then
-        local RENDER_FROM_XSL=${HTML_XSL_DEFAULT}
-    fi
+    # Define refmiscinfo entries to remove notes and warning about
+    # them missing when the manpage is produced.
+    local MANPAGE_REFMISCINFO="\
+<refmiscinfo class=\"source\">${MANPAGE_SOFTWARE}</refmiscinfo>
+<refmiscinfo class=\"software\">${MANPAGE_SOFTWARE}</refmiscinfo>
+<refmiscinfo class=\"version\">${MANPAGE_VERSION}</refmiscinfo>
+<refmiscinfo class=\"manual\">${MANPAGE_SECTDESC}</refmiscinfo>
+<refmiscinfo class=\"sectdesc\">${MANPAGE_SECTDESC}</refmiscinfo>"
 
-    idforge_checkFiles -e "${RENDER_FROM_XSL}"
-
-    idforge_printMessage "${HTML}" --as-creating-line
-
-    /usr/bin/xsltproc -o ${HTML} --nonet \
-        ${RENDER_FROM_XSL} ${RENDER_FROM_XML}
+    # Apply replacements in the man page file.
+    sed -r -i "/<\/refmeta>/i$(echo ${MANPAGE_REFMISCINFO})" ${RENDER_FROM_FILE}
 
 }

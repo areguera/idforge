@@ -23,26 +23,20 @@
 #
 ######################################################################
 
-function extended {
+function docbook_setConfigOption {
 
-    local OPTION=0
+    local CONFIG_OPTION="${1}"
 
-    local RENDER_FROM_PO_FILE=${RENDER_FROM_PO[0]}
+    case ${CONFIG_OPTION} in
 
-    while [[ ${OPTION} -lt ${#RENDER_FROM[*]} ]];do
+        render-formats )
+            RENDER_FORMATS="$(render_printConfigValues "xhtml")"
+            ;;
 
-        local RENDER_FROM_FILE=${RENDER_FROM[${OPTION}]}
+        * )
+            idforge_printMessage "`eval_gettext "The \\\"\\\$CONFIG_OPTION\\\" option isn't supported."`" --as-error-line
+            ;;
 
-        idforge_printMessage "${RENDER_FROM_FILE}" --as-processing-line
-
-        RENDER_FROM_INSTANCES[${OPTION}]=$(idforge_printTemporalFile "${RENDER_FROM[${OPTION}]}")
-
-        xml_setInstance
-        xml_setInstanceLocalized
-        xml_setInstanceExpanded
-
-        OPTION=$(( ++OPTION ))
-
-    done
+    esac
 
 }

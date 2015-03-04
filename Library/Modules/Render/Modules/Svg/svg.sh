@@ -25,8 +25,6 @@
 
 function svg {
 
-    local -a RENDER_FROM_INSTANCES
-
     # Create the localized instances based on the relation between
     # source files and translation files.
     idforge_setModuleEnvironment -m 'xml' -t 'sibling'

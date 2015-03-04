@@ -43,7 +43,7 @@ function render {
     local CONFIG_FILE='' CONFIG_FILES=$(render_printConfigFiles "${ARGUMENTS}")
 
     # Process list of configuration files.
-    for CONFIG_FILE in "${CONFIG_FILES}"; do
+    for CONFIG_FILE in ${CONFIG_FILES}; do
         render_setConfigSections
     done
 

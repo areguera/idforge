@@ -45,6 +45,10 @@ function idforge_printMessage {
     # Remove empty spaces from message.
     #MESSAGE=$(printf %s "${MESSAGE}" | sed -r -e 's!^[[:space:]]+!!')
 
+    # Remove current working directory from message to print smaller
+    # messages.
+    MESSAGE=$(printf %s "${MESSAGE}" | sed -r "s,${PWD}/?,,")
+
     # Print messages that will always be printed no matter what value
     # the IDFORGE_FLAG_QUIET variable has.
     case "${FORMAT}" in

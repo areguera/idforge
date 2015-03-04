@@ -23,26 +23,13 @@
 #
 ######################################################################
 
-function extended {
+function asciidoc_setDocbook {
 
-    local OPTION=0
+    idforge_printMessage "${RENDER_FROM[${COUNT}]}" --as-processing-line
 
-    local RENDER_FROM_PO_FILE=${RENDER_FROM_PO[0]}
+    RENDER_FROM_INSTANCES[${COUNT}]=$(idforge_printTemporalFile ${RENDER_FROM[${COUNT}]}).docbook
 
-    while [[ ${OPTION} -lt ${#RENDER_FROM[*]} ]];do
-
-        local RENDER_FROM_FILE=${RENDER_FROM[${OPTION}]}
-
-        idforge_printMessage "${RENDER_FROM_FILE}" --as-processing-line
-
-        RENDER_FROM_INSTANCES[${OPTION}]=$(idforge_printTemporalFile "${RENDER_FROM[${OPTION}]}")
-
-        xml_setInstance
-        xml_setInstanceLocalized
-        xml_setInstanceExpanded
-
-        OPTION=$(( ++OPTION ))
-
-    done
+    /usr/bin/asciidoc ${RENDER_FLOW_OPTIONS} --backend="docbook" --doctype="${RENDER_FLOW}" \
+        --out-file="${RENDER_FROM_INSTANCES[${COUNT}]}" ${RENDER_FROM[${COUNT}]}
 
 }

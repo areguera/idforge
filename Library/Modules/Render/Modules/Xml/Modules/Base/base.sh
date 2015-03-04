@@ -30,7 +30,11 @@ function base {
     while [[ ${OPTION} -lt ${#RENDER_FROM[*]} ]];do
 
         local RENDER_FROM_FILE=${RENDER_FROM[${OPTION}]}
+
+        idforge_printMessage "${RENDER_FROM_FILE}" --as-processing-line
+
         local RENDER_FROM_PO_FILE=${RENDER_FROM_PO[${OPTION}]}
+
         RENDER_FROM_INSTANCES[${OPTION}]=$(idforge_printTemporalFile "${RENDER_FROM[${OPTION}]}")
 
         xml_setInstance

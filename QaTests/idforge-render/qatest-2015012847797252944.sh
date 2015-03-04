@@ -25,6 +25,7 @@ LANG=en_US.UTF-8
 command_line "--filter="document-copyright.png" render ${QATEST_UNIT_DIR}/${QATEST_UNIT_NAME}.conf"
 command_line "--filter="765x990.png" render ${QATEST_UNIT_DIR}/${QATEST_UNIT_NAME}.conf"
 command_line "--filter="443x443.png" render ${QATEST_UNIT_DIR}/${QATEST_UNIT_NAME}.conf"
+command_line "--filter="443x443-symlink.png" render ${QATEST_UNIT_DIR}/${QATEST_UNIT_NAME}.conf"
 command_line "--filter="443x443-branded.png" render ${QATEST_UNIT_DIR}/${QATEST_UNIT_NAME}.conf"
 LANG=es_ES.UTF-8
 command_line "--filter="document-media.png" render ${QATEST_UNIT_DIR}/${QATEST_UNIT_NAME}.conf"

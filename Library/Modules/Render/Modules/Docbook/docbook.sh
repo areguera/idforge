@@ -23,8 +23,23 @@
 #
 ######################################################################
 
-function book {
+function docbook {
 
-    RENDER_FORMATS=''  ; book_setConfigOption 'render-formats'
+    # Verify content of array of instances and redefine list of source
+    # files to process based on them.
+    docbook_verifyInstances
+
+    # Redefine array of instances so they hold content localization.
+    idforge_setModuleEnvironment -m 'xml' -t 'sibling'
+
+    # Retrieve docbook-specific configuration options.
+    local RENDER_FORMATS=''        ; docbook_setConfigOption 'render-formats'
+
+    # Export array of instances from docbook to final formats.
+    for RENDER_FROM_FILE in ${RENDER_FROM_INSTANCES[*]};do
+        for RENDER_FORMAT in ${RENDER_FORMATS};do
+            idforge_setModuleEnvironment -m "${RENDER_FORMAT}" -t 'child'
+        done
+    done
 
 }

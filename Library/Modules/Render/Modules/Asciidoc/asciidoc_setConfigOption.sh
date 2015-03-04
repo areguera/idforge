@@ -29,17 +29,13 @@ function asciidoc_setConfigOption {
 
     case ${CONFIG_OPTION} in
 
-        render-from-xsl )
-            RENDER_FROM_XSL=$(render_printConfigValues)
-            ;;
-
         render-flow )
             RENDER_FLOW=$(render_printConfigValues "article")
             idforge_checkFiles -m '^(article|book|manpage)$' "${RENDER_FLOW}"
             ;;
 
-        asciidoc-opts )
-            ASCIIDOC_OPTS=$(render_printConfigValues "--attribute=lang=${IDFORGE_LANG_LL}")
+        render-flow-options )
+            RENDER_FLOW_OPTIONS=$(render_printConfigValues "--attribute=lang=${IDFORGE_LANG_LL}")
             ;;
 
         * )

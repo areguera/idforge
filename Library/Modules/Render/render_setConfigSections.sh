@@ -36,6 +36,8 @@ function render_setConfigSections {
     # Process sections found in the configuration file.
     for CONFIG_SECTION in ${CONFIG_SECTIONS};do
 
+        local -a RENDER_FROM_INSTANCES
+
         # Initialize the configuration options. CAUTION! The order in
         # which these variables are defined is relevant because some
         # of them are dependent one another.
@@ -52,6 +54,7 @@ function render_setConfigSections {
         # their values between different sections blocks in the same
         # configuration file.
         unset RENDER_FROM_PO
+        unset RENDER_FROM_INSTANCES
         unset RENDER_FROM
 
     done

@@ -14,74 +14,110 @@ idforge-render - =MANPAGE_DESCRIPTION=
 
 == Description
 
-*idforge-render* creates the documentation and packages your
-organization needs to describe and implement its own visual identity
-on top of CentOS GNU/Linux distribution. Initially, the documentation
-is organized in several chapters with examples you must change based
-on your own organization visual identity. The packages, on the other
-hand, don't need you to make any changes because they are based on
-already customized models ready to build. To make this possible, you
-need to provide a PNG image describing your organization visual style
-and your organization brads as well. See <<files>>, for more
-information about where you must put this information.
+////
+The *idforge-render(1)* command produces images, documents and
+packages as specified in configuration files.
+////
+
+The *idforge-render(1)* command produces images and documents as
+specified in configuration files.
 
 == Options
 
-*idforge-render* accepts the following options:
+The *idforge-render(1)* command accepts the following command-line
+options:
 
 include::Commons/options.inc[]
 
+The *idforge-render(1)* command reads configuration from directories
+or files provided as argument in its command-line. When the arguments
+are files, they are processed in the order provided, one by one. When
+the arguments are directories, a recursive search is performed inside
+them looking for configuration files and processed one by one in the
+order they were found.
+
 == Configuration
 
-*idforge-render* reads configuration files provided as argument in the
-command-line to produce content in different ways, based on the
-following configuration options:
-
-render-from::
-    Specifies the source file that will be used as input. This file is
-    generally in SVG format when you want to produce PNG images, and
-    in Asciidoc format when you want to produce documentation.  This
-    option accepts absolute, relative paths, and path expansion.
-    Several option definitions are possible in one configuration
-    section.
-
-render-from-po::
-    Specifies the source file translation in PO format. Two possible
-    file relation are possible here. The first file relation is when
-    the same number of source files and translation files are
-    provided. In this case, the translation files are applied to to
-    source files in the same order they are provided. The second file
-    relation is when there are more source files than translation
-    files. In this case, all the source files are affected by the
-    first translation file provided and other translation files
-    aren't considered.
-+
-When *render-from-po* isn't provided, it set to an empty value, or it
-points to malformed PO file, the final content will not be localized.
-To create, edit, or remove the translation file specified by this
-option, use *idforge-locale(1)* command.
-
-render-directory::
-    Specifies the directory where final content will be stored in.
-    When this option is not provided, *idforge-render* stores final
-    content in a directory named Final. The Final directory is created
-    in the same location where the configuration file being currently
-    executed is stored in.
-
-render-file::
-    Specifies the path of the final file. When this option is not
-    provided, the section name and the render-directory are used as
-    base to create the final path, being the section name the name of
-    the file and the value of render-directory the directory where the
-    file will be stored.
+The *idforge-render(1)* command processes configuration sections from
+top to bottom, using the *render-type*, *render-from*, *render-flow*
+and *render-from-po* configuration options as reference to control the
+initialization of content production.
 
 render-type::
     Specifies the name of the module that will be called to initiate
     the rendition processed. When this option is not provided, the
-    file extension of the first source file is used as default value.
-    Some of the possible values to this option include "svg" to
-    process vectorial images, "png" to process raster images, and
-    "asciidoc" to process documentation.
+    file extension of the first source file provided to *render-from*
+    configuration option is used as default value.  Possible values to
+    this option include "svg" to process vectorial images, "png" to
+    process raster images and "asciidoc" to process documentation.
+
+render-from::
+    Specifies one or more source files. The source files are generally
+    in SVG format when you want to produce PNG images; in PNG format
+    when you want to produce image compositions and image formats
+    transformation; and in Asciidoc or Docbook format when you want to
+    produce documentation.  This option accepts absolute, relative
+    paths, and shell expansion as value.
+
+render-flow::
+    Specifies the rendition flow used to process the source files
+    provided as value to *render-from* configuration option. The value
+    of this option varies based on the type of source file being
+    processed. For example, when you are processing SVG files,
+    possible values to this option include "base", "extended", and
+    "media"; when you are processing Asciidoc files, possible values
+    to this option include "manpage", "article", "book"; when you are
+    processing PNG files, possible values to this option include
+    "base" and "indexed".
+
+render-from-po::
+    Specifies one or more translation files in PO format. This option
+    accepts absolute, relative paths, and shell expansions as value.
+
+The *idforge-render(1)* command controls content localization based on
+the number of files provided to both *render-from* and
+*render-from-po* configuration options. Based on the number of files
+provided to these options, one of the following localization routes is
+taken:
+
+- Process source files without localization -- When *render-from* is
+  provided but *render-from-po* is not, the source files are not
+  subject to localization. Only source file instance expansions
+  performed by the xml module take place.
+
+- Process source files with localization in one-to-one relation --
+  When the same number of files are provided both in *render-from* and
+  *render-from-po* configuration options, this command processes them
+  in an one-to-one relation. In this case the first translation file
+  holds the translatable strings retrieved from the first source file,
+  the second translation file holds translatable strings retrieved
+  from the second source file, and so on for each source and
+  translation file provided in the same configuration section.
+
+- Process source files with localization in many-to-one relation --
+  When the number of files provided to *render-from* is greater than
+  the number of files provided to *render-from-po* option, this
+  command processes them in a many-to-one relation. In this case the
+  first translation file contains the translatable strings retrieved
+  from all the source files provided in the same configuration
+  section.
+
+The *idforge-render(1)* command controls the final output location
+based on the following configuration options:
+
+render-directory::
+    Specifies the directory where final content will be stored in.
+    When this option is not provided, this command stores final
+    content in a directory named "Final". The Final directory is
+    created in the same location where the configuration file being
+    currently processed is stored in.
+
+render-file::
+    Specifies the path of the final file. When this option is not
+    provided, the section name and the *render-directory*
+    configuration option are used as base to create the final file
+    path, being the section name the name of the file and the value of
+    *render-directory* the directory where the file will be stored.
 
 render-logic::
     Specifies the action taken against the final directory before
@@ -91,119 +127,158 @@ render-logic::
     When this option is not provided, "overwrite" is used as default
     value.
 
-[[rendering-images]]
-=== Processing configuration files for producing images
+[[images]]
+=== Images Construction
 
-When *render-type* is set to "svg", *iforge-render* reads the value of
-*render-from*, *render-from-po* and enters in xml rendition to create
-the source files' instances that will be used to render the final
-files. These instances are then target for content localization and
-translation marker expansions. Content localization take place when a
-PO file is provided as value to *render-from-po* configuration option.
-Translation marker expansions take place when one of the following
-configuration options are provided:
+The *idforge-render(1)* command initiates image construction when
+*render-type* is set either to "svg" or "png".
+
+When *render-type* is set to "svg", the *render* module executes the
+"svg" module which gives immediate control to *xml* module. The xml
+module firstly evaluates whether the *render-from-po* configuration
+option was provided or not in the configuration section and creates
+the source file instance based on it. Later, it expands translation
+markers inside the source file instance, as specified by the following
+configuration options:
 
 xml-expand::
     Specifies the translation marker and the associated value that
-    will be expanded in the source file's instance. The value of this
-    option must be in the "=\MARKER=VALUE" format.  Where "=\MARKER="
-    is the translation marker you want to expand and "VALUE" the
-    associated information that replaces the marker string.  To
-    perform several expansions, you can provide this option several
-    times in the same configuration section or you can provide a
-    single option with several translation markers definitions on it.
-    When you provide several translation markers as value to a single
-    option, translation markers should be set using one or more spaces
-    as separator.
+    will be expanded in the source file instance. The value of this
+    option must be provided using the "=\MARKER=VALUE" format.  Where
+    "=\MARKER=" is the translation marker you want to expand and
+    "VALUE" the associated information that replaces the marker string
+    in the moment of the expansion.  To perform several expansions,
+    you can provide this option several times in the same
+    configuration section or you can provide a single option with
+    several translation markers definitions on it.  When you provide
+    several translation markers as value to a single option,
+    translation markers should be set using one or more spaces as
+    separator.
 +
-You can use this option to introduce dynamic information to source
-file instances. For example, you can use the shell command expansion
-construction here to pass the current time information, or do more
-elaborated things.
+You can use the *xml-expand* configuration option to introduce dynamic
+information in the source file instances. For example, you can run the
+date command through a shell command expansion construction here to
+pass the current time information, or do more elaborated things. See
+<<example-rendering-documentation>>.
 
 xml-expand-background::
-    Specifies the background image path that will be expanded when the
-    =\BACKGROUND_IMAGE= translation marker is found in the source file
-    instance.  This must be an image file (PNG preferably) with
-    exactly the same dimensions used to produce the source file in SVG
-    format. When you specify this option but the background image is
-    not found in where you specified, this option tries to find the
-    closest candidate available in the same directory of the image you
-    provided and creates a cropped version of it using the image
-    dimensions specified in this option.  If no background image is
-    available for cropping, a plain color image is used instead.
+    Specifies the path of the background image (in PNG format
+    preferably) that will be expanded in place of =\BACKGROUND_IMAGE=
+    translation marker in the source file instance.  This option is
+    only useful when you've set such a marker in the SVG files.
 
-When the list of source file instances have been localized and
-translation markers expanded, *idforge-render* returns to svg
-rendition to build the command-line that will be used to export the
-source file instances into PNG format, using Inkscape for that. This
-process can be controlled by the following configuration options:
+Once all modifications have been applied to the source file instance,
+the *svg* module takes control and verifies the absolute paths set
+inside the source file instance through (e.g., xml-expand-background
+configuration option). These paths are normally expanded dynamically
+as value of "<image xlink:href" definitions in the source file
+instance once it has been created by *xml* module. These paths must
+point to valid images and be named in the "${WDIGHT}x${HEIGHT}" form
+(e.g., "1600x1200.png").
 
-svg-export-id::
-    Specifies what area to export. When this option is not provided,
-    the entire drawing area is considered for exportation. Otherwise,
-    only the object (and all objects inside it) which id coincides
-    with the one specified as value to this option will be considered
-    for exportation.
+When the *xml-expand-background* configuration option is specified but
+the file it points to doesn't exists, the *svg* module tries to find
+the closest candidate available in the same directory of the image you
+specified in the configuration option and creates a cropped version of
+it using the image dimensions specified in this option (that's why the
+image file name must be in the form ${WDIGHT}x${HEIGHT}).  If no
+background image is available for cropping either, a plain color image
+is created and used instead.
+
+Once file paths verification has been done, the *svg* module evaluates
+the value provided to *svg-flow* configuration option to determine the
+kind of rendition it will perform to produce the final PNG files from
+the source file instance.
 
 svg-flow::
-    Specify whether the svg rendition enters in "base" (default),
-    "extended", or "media" mode.  In base mode, each source file
-    instance produces only one PNG file. In extended and media mode,
-    each source file instance can produce one or more PNG images based
-    on the information provided by *svg-flow-options*.
+    Specify svg rendition flow used to produce final PNG files from
+    source file instances in SVG format.  Possible values to this
+    option include "base" (default), "extended", or "media".  When the
+    base rendition flow is used, each source file instance produces
+    only one PNG file. In extended and media rendition flows, each
+    source file instance can produce one or more PNG images based on
+    the information provided to *svg-flow-options* configuration
+    option. See <<images-svg-flow-extended>> and
+    <<images-svg-flow-media>> for more information about extended and
+    media rendition flows, respectively.
 
-Once all source file instances have been exported to PNG files, the
-svg module verifies the value of *svg-enable-siblings* configuration
-option to determine whether to give control to png module or not. By
-default this option is set to an empty value and svg doesn't give
-control to png module. So, if you want modify the PNG files already
-produced in some way, you need to set this option to "png" in the
-configuration section of the associated image.  If you do so, you can
-control the png module based on the following configuration options:
+svg-flow-options::
+    Specifies options for svg rendition flow. The format of the value
+    provided to this option depends on the value specified to
+    *svg-flow* configuration option. When the rendition flow is set to
+    "extended", the format of svg-flow-option is
+    "HEIGHTS:FGCOLORS:BGCOLORS" (see description at
+    <<images-svg-flow-extended>>). When the rendition flow is set to
+    "media", the format of svg-flow-option is
+    "RELEASES:ARCHITECTURES:MEDIA*NUMBER" (see description at
+    <<images-svg-flow-media>>).
+
+Once the SVG source file instances were exported to PNG files, the
+*svg* module verifies the value of *svg-enable-siblings* configuration
+option to determine whether to give control to other module or not.
+Normally, *svg-enable-siblings* is set to an empty value, so *svg*
+doesn't give control to any module.
+
+In case you want to modify the PNG files already produced in some way
+(e.g., create copies in other image formats, branding the final image,
+etc.), you can create a new configuration section for it, or you can
+set the *svg-enable-siblings* configuration option to "png" in order
+to call the *png* module directly from *svg* module once it has
+completed its job.  In either case, you can control the *png* module
+through the following configuration options:
 
 png-flow::
-    Specify the rendition flow of png module. By default this value is
-    set to "base" which process every PNG images found in the output
-    directory one by one. Other values to this option include
-    "indexed" in case you want to produce images with reduced number
-    of colors. The "indexed" flow requires you to specify a palette of
-    colors as produced by GIMP in the *png-indexed-gpl* configuration
-    option.
+    Specify png rendition flow. By default this value is set to "base"
+    which process every PNG images found in the output directory one
+    by one. Other values this option can take include "indexed" in
+    case you want to produce images with reduced number of colors. The
+    "indexed" flow requires you to specify a palette of colors as
+    produced by GIMP in the *png-indexed-gpl* configuration option.
+    See <<images-png-reduce-colors>>.
+
+png-indexed-gpl::
+    Specifies the file holding the palette of colors that will be used
+    to reduce the image colors. This file uses the palette's comment
+    field to set the color information in hexadecimal representation.
+    See <<palette-of-colors>>. If the palette you provide doesn't
+    include the hexadecimal representation of colors in the comment
+    field, the color transformation will fail and *png* module will
+    terminate *idforge(1)* execution with an error message.
 
 png-base-command::
     Specifies a command-line that will be applied in the configuration
-    section context. Through this option you can execute arbitrary
-    commands to RENDER_FROM_FILE and RENDER_FILE configuration section
-    environment variables. These variables point to input files set as
-    value to *render-from* option and the final file, respectively.
-    You can provide several command-lines in a single section whenever
-    they are correctly separated with a semi-colon (";") after each
-    command-line you enter.
+    section context. Normally, in this context, you need to specify
+    either RENDER_FROM_FILE or RENDER_FILE environment variables in
+    the command-line in order to make reference to the source file
+    provided as value to *render-from* configuration option or the
+    final image file the configuration section will produce,
+    respectively. When several source files are provided as value to
+    render-from configuration option, the command you provide as value
+    to *png-base-command* will be applied to each single source file
+    provided, one by one.
 
 png-base-composition::
-    Specifies the branding image you want to apply on files provided
-    as value to render-from option.  The value of this option has the
-    form "FILENAME:GEOMETRY", where "FILENAME" is the absolute path to
-    the PNG image you want to apply as brand and, "GEOMETRY" takes the
-    form "xHEIGHT+X+Y". In order to apply brand information to final
-    images correctly, the brand images you want to apply must be
-    available. In case they don't exist, *idforge-render* ends its
-    execution with an error message.
+    Specifies image branding on source files provided as value to
+    *render-from* configuration option.  The value of this option has
+    the form "FILENAME:GEOMETRY", where "FILENAME" is the absolute
+    path to the PNG image you want to apply as brand and, "GEOMETRY"
+    takes the form "xHEIGHT+X+Y". In order to apply any brand
+    information to final images correctly, the brand image you want to
+    apply must be available somewhere. In case they don't exist, the
+    *png* module will end *idforge(1)* execution with an error
+    message.
 
 png-base-comment::
-    Specifies the comment you want to apply on files provided as value
-    to render-from option.  This information is written internally on
-    the image properties and is only visible on formats like PNG that
-    support comments internally.
+    Specifies image commenting on source files provided as value to
+    *render-from* configuration option.
 
 png-base-exports::
-    Specifies the image formats you want to create copies for using
-    the files provided as value to render-from option. The values
-    specified in this option are separated by white space and must be
-    supported by ImageMagick tool set.  When this variable is not
-    provided or set in the configuration file, the *idforge-render*
-    command will not create copies of the final PNG image in different
+    Specifies image formats you want to create for the source files
+    provided as value to *render-from* configuration option. The
+    values specified in this option are separated by white space and
+    must be supported by ImageMagick tool set.  When this variable is
+    not provided or set in the configuration file, the *png* module
+    will not create any copies of the final PNG image in different
     formats.
 +
 [TIP]
@@ -212,144 +287,97 @@ To see the list of possible image formats supported by ImageMagick
 tool set, you can run the following command: _identify -list format_.
 ======================================================================
 
-[[different-heights-colors-and-opacity]]
-==== Changing heights, colors and opacity
+[[documents]]
+=== Documents Construction
 
-When *render-type* points to "svg" and *svg-flow* is set to
-"extended", *idforge-render* enters in svg extended rendition mode.
-In this mode, each file provided as value to render-from can be
-produced with different heights, foreground color, background color
-and opacity information. These parameters are controlled by
-the *svg-flow-options* option. In svg extended mode, the value of this
-option must be "HEIGHTS:FGCOLOR:BGCOLOR", where:
+The *idforge-render(1)* command initiates document construction when
+*render-type* is set either to "asciidoc" or "docbook".
 
-HEIGHTS::
-    Can be one or more number specifying the export heights in pixels
-    you want to create copies of the final image. The values specified
-    in this option are separated by white space. When no value is
-    provided to this option, only one image of 48 pixels will be
-    produced.
+When *render-type* is set to "asciidoc", the *render* module executes
+the *asciidoc* module. The asciidoc module expects you to provide an
+asciidoc file as value to *render-from* in order to transform it to a
+source file instance in docbook format based on the type of document
+specified to *render-flow* configuration option (e.g., "manpage",
+"article" or "book").
 
-FGCOLOR::
-    Can be one or more foreground colors and the related opacities you
-    want to produce copies of the final PNG image for. For this option
-    to take effect objects must be filled with black color (e.g.,
-    000000), otherwise no color replacement will take place. Possible
-    values to this variable take the form "XXXXXX-Y", where "XXXXXX"
-    represent a color in hexadecimal format and the final "Y" must be
-    1 for full opacity, 0 for full transparency, or any intermediate
-    value. When this variable is not provided, final images are
-    rendered using black foreground and full transparency (e.g.,
-    000000-1).
+When the source file instance in docbook format is available, the
+asciidoc module calls the *xml* module to perform content localization
+as specified by *render-from-po* configuration option and expand the
+translation markers as specified by *xml-expand* configuration option.
+Once the modifications has been applied to asciidoc source file in
+docbook format, the asciidoc module takes control again and calls the
+docbook module to perform the final transformation as specified by
+*render-formats* configuration option (e.g., "manpage", "xhtml",
+"pdf").
 
-BGCOLOR::
-    Can be one or more background colors and the related opacity you
-    want to render copies of the final PNG image for.  Possible values
-    to this variable take the form "XXXXXX-Y", where "XXXXXX"
-    represent a color in hexadecimal format and the final "Y" must be
-    1 for full opacity, 0 for full transparency, or any intermediate
-    value. When this variable is not provided, final images are
-    rendered using black foreground and full transparency (e.g.,
-    000000-1).
+[NOTE]
+======================================================================
+The render-formats must be provided consequently with the render-flow
+specified in the configuration section.  For example, the article and
+book document types can be produced in both xhtml and pdf formats but
+not in manpage format.  However, manpage document types can be
+produced in manpage, xhtml and pdf formats.
+======================================================================
 
-[[reduced-number-of-colors]]
-=== Reducing number of colors
+When several formats for final document transformations are provided
+as value to *render-formats* the docbook module uses the system's
+default xsl style sheets stored in the directory
+/usr/share/sgml/docbook/xsl-stylesheets to process them accordingly.
+In case you want to customize the final output using your own xsl
+style sheet, you can use the *render-from-xsl* configuration options.
+The value of this option is applied without any sort of distinction to
+all render-formats and render-flow values provided in the
+configuration section.
 
-When *render-from* points to a PNG image and *png-flow* is set to
-"indexed", *idforge-render* enters in indexed rendition mode.  In this
-mode, the final image is produced with reduced number colors based on
-the palette of colors provided as value *png-indexed-gpl* option.
+In the very specific case of processing modified docbook instances
+with manpage document structure (i.e., render-flow = "manpage"), the
+following configuration options are available for you to customize:
 
-png-indexed-gpl::
-    Specifies the file holding the palette of colors that will be used
-    to reduce the image colors. This file uses the comment field to
-    set the color information in hexadecimal representation. See
-    <<palette-of-colors>>. If the palette you provide doesn't include
-    the hexadecimal representation in the comment field, the color
-    transformation will fail and *idforge-render* will terminate its
-    execution with an error message.
+manpage-software::
+    Specifies the name of the software product or component to which
+    this topic applies. When this option is not specified in the
+    configuration section, the value of IDFORGE environment variable
+    is used as default value.
+manpage-version::
+    Specifies the version of the software product or component to
+    which this topic applies. When this option is not specified in the
+    configuration section, the value of IDFORGE_VERSION environment
+    variable is used as default value.
+manpage-sectdesc::
+    Specifies the section title of the reference page. When this
+    option is not specified in the configuration section, its value is
+    determined automatically based on the manpage volume number set
+    inside the modified docbook instance.
 
-To find the optimized set of colors for your images, you can open the
-image you provided in the *render-from* option using GIMP and reduce
-its colors using GIMP's Indexed feature. Later, create a new palette
-importing it from the indexed image you already have. Once you have
-the palette of colors this way, you need to edit it using the Palettes
-dialog to add each color hexadecimal value in the comment field,
-respectively and save it to disk.  When you have the palette of colors
-available in your personal GIMP's directory, you are ready to write
-its location as value to *png-indexed-gpl* option and run
-*idforge-render* command to get final images with the exact number of
-colors you set in the palette.
-
-When there are images with reduced number of colors with your
-project's logotype, the palette of colors used to produce them must
-include the exact color information needed to produce it. For example,
-in the case of CentOS Projet logotype, the following colors +#262577+,
-+#932279+, +#efa724+, +#9ccd2a+, +#ffffff+ must be present in the
-palette you create. You must be absolutely sure about the color
-information to avoide incosistencies in your project's visual
-identity.
-
-When there are images with reduced number of colors, it is possible
-for you to realize that it doesn't look the way it should (e.g., there
-is a noise all over it). To work around this issue you can open the
-indexed image with GIMP and, retouch it with care and attention until
-the noise is entirely removed from it.  The easiest and preferable way
-of doing this, is using GIMP brushes specially conceived for that
-purpose. For example, the CentOS Artwork SIG produces the
-idforge-centos package with brushes related to CentOS Logotype and
-CentOS Symbol for different sizes.
-
-[[installation-media]]
-=== Installation media
-
-When the *render-type* option is set to "svg" and *svg-flow* is set to
-"media", *idforge-render* enters in installation media rendition mode.
-In this mode, it produces several PNG images based on release numbers,
-architectures, type of media and the number needed to cover an
-specific distribution. To specify this information, you need to
-provide the following value "RELEASES:ARCHITECTURES:MEIDA*NUMBER",
-where the color is a field separator and the values have the following
-meaning:
-
-RELEASES::
-    Specifies the release numbers you want to produce installation
-    media for (e.g., "5.10 6.5 7.1").
-ARCHITECTURES::
-    Specifies the architectures you want to produce installation media
-    for (e.g., "i686 x86_64").
-MEDIA\*NUMBER::
-    Specifies the type of media (e.g., CD, DVD) and the number of them
-    you want to produce image for.
-
-All these options are nested so the number of images produced as
-result of processing svg media flow is exponential to the number of
-releases, architectures and media-number relation. See
-<<example-managing-dependencies-to-produce-installation-media>>.
-
-[[documentation]]
-==== Documentation
+////
+[[packages]]
+=== Packages Construction
 ...
+////
 
-[[managing-content-relation]]
-== Managing Content Relation
+[[dependencies]]
+== Dependencies
 
-Managing content relation is present when you need to produce one or
-more specific images first in order to be able of producing another
-one based on them later. In theses cases, you should grant a
-production order consequent with the base components of the final
-image you want to build.  In this context, graphic designers get
-focused on one component at a time and in producing it well, and let
-people writing configuration file to gear the pieces.
+Dependencies are present when you need to produce one or more specific
+files first in order to be able of producing another one based on them
+later (e.g., when you are branding an image, the image holding the
+brand itself must be produced before you creating the image you want
+to put the brand on).  In theses cases, you should grant a production
+order consequent with the components of the final image you want to
+build.  In this context, graphic designers get focused on one
+component at a time and in producing it well, and let people writing
+configuration file to gear the pieces all together. See
+<<images-svg-flow-media>>.
 
-By managing content relation you can improve maintainability of
-certain components like branded images. It let you concentrate design
-models in a single location and make references to them from different
-visual manifestation's configuration file.  This way it is possible to
-introduce changes to design models and propagate them quickly to all
-visual manifestations' images by running a single command.
+When you manage content dependencies this way you are improving the
+maintainability and consistency of the final work. It allows to
+concentrate design models in a single location and make references to
+them from different visual manifestation's configuration file.  This
+way it is possible to introduce changes to design models and propagate
+them quickly to all visual manifestations' images by running a single
+command.
 
-The process of managing content relation was initially conceived
+The process of managing content dependencies was initially conceived
 inside the *idforge-prepare(1)* command but it made the preparation
 process too long, resource expensive and not all rendered images were
 always used in each single interaction of *idforge-render* command.
@@ -361,7 +389,7 @@ configuration files.
 [[files]]
 == Files
 
-*idforge-render* needs you to create a working directory using the
+*idforge-render(1)* needs you to create a working directory using the
 *idforge-prepare(1)* command and update the following files based on
 the visual style and branding information you want to set for your
 organization:
@@ -389,17 +417,34 @@ organization:
     from its SVG version and later indexed using GIMP.
 ./Models/Brands/168/logo.gpl::
     The color information of your project logo. This is the palette of
-    color you have as result of indexing the PNG version of your logo
-    to the minimum number of colors.
+    color you have as result of indexing the PNG version of your
+    project's logo to its minimum number of colors.
+./Models/Brands/168/symbol.svg::
+    The symbol design of your organization in SVG format, 168 pixels
+    of height and the appropriate white space for content protection
+    from borders.
+./Models/Brands/168/symbol.png::
+    The symbol design of your organization in PNG format, indexed to
+    the minimum number of color possible. This image is normally
+    produced from its SVG version and later indexed using GIMP.
+./Models/Brands/168/symbol.gpl::
+    The color information of your project symbol. This is the palette
+    of color you have as result of indexing the PNG version of your
+    project's symbol to its minimum number of colors.
+./Fonts/::
+    This directory contains your project's typographies. This is the
+    font used to build your project's logotype and any other font your
+    project is using in its graphic designs. Files in this directory
+    must be in TrueType Font (ttf) format.
 
 The working directory provides a directory structure to organize your
 entire project as well as the models that will be reused while
 building your own organization documentation and packages. The models
 are copied in the working directory with the intention of being
 customized by you. They give you access to documentation sources in
-Asciidoc format, images sources in SVG format, configuration files
-used to gear everything up, and descriptions to help you extend the
-basic layout for your particular situation.
+Asciidoc format, image sources in SVG format, configuration files used
+to gear everything up, and descriptions to help you extend the basic
+layout for your particular situation.
 
 See *idforge-prepare(1)* for more information about the working
 directory layout.
@@ -410,41 +455,79 @@ directory layout.
 .Palette of colors
 ----------------------------------------------------------------------
 GIMP Palette
-Name: 1920x1600.png-16colors
+Name: 640x480.png-16colors
 Columns: 16
 #
-  2   4  14	02040e
-  0   6  24	000618
+  1   4  14	01040e
+  1   6  22	010616
+  0   7  27	00071b
   0   8  32	000820
   0   9  36	000924
   1   9  42	01092a
   0  11  47	000b2f
-  1  11  53	010b35
-  0  13  59	000d3b
-  4  12  60	040c3c
-  0  14  66	000e42
-  0  16  73	001049
+  0  11  53	000b35
+  0  13  59	000b35
+  2  13  63	020d3f
+  0  16  73	020d3f
   0  18  82	001252
   1  20  90	01145a
   0  23  99	001763
   0  27 113	001b71
-  0  35 136	002388
+  0  27 113	001b71
 ----------------------------------------------------------------------
 
 .Rendering PNG images (base)
 ----------------------------------------------------------------------
+[715x940.png]
 render-from          = "${PWD}/QaTests/idforge-render/qatest-commons/Models/Images/document-background.svg"
 render-directory     = "${PWD}/QaTests/idforge-render/qatest-2015012847797252944/Final"
 svg-flow             = "base"
 ----------------------------------------------------------------------
 
+[[images-svg-flow-extended]]
 .Rendering PNG images (extended)
 ----------------------------------------------------------------------
 [idforge-symbol.png]
 render-from          = "${PWD}/QaTests/idforge-render/qatest-commons/Models/Images/idforge-symbol.svg"
+render-directory     = "${PWD}/QaTests/idforge-render/qatest-2015012847797252944/Final"
 svg-flow             = "extended"
-svg-flow-options     = "48:24221c-1 d4aa00-1 88aa00-1 d45500-1 a02c2c-1 2c5aa0-1:ffffff-0"
+svg-flow-options     = "48 724:ffffff-0.3 24221c-1 d4aa00-1 88aa00-1 d45500-1 a02c2c-1 2c5aa0-1:ffffff-0"
 ----------------------------------------------------------------------
+
+When *render-type* points to "svg" and *svg-flow* is set to
+"extended", the *svg* module calls the *extended* module which exports
+PNG images with different heights, foreground color, background color
+and opacity information from each source file instance provided as
+value to *render-from* configuration option. These parameters are
+controlled by the *svg-flow-options* configuration option. The value
+passed to this option must have the "HEIGHTS:FGCOLORS:BGCOLORS"
+format, where:
+
+HEIGHTS::
+    Specifies one or more image heights (in pixels) to export the
+    source file instances from SVG to PNG format. When no height is
+    provided to this option, only one image with 48 pixels of height
+    is be produced.
+FGCOLORS::
+    Specifies one or more foreground colors and the related opacities
+    you want to use to export the source file instances from SVG to
+    PNG format. For this option to take effect objects must be filled
+    with black color (e.g., 000000), otherwise no color replacement
+    will take place.  Possible values to this variable take the form
+    "XXXXXX-Y", where "XXXXXX" represent a color in hexadecimal format
+    and the final "Y" must be 1 for full opacity, 0 for full
+    transparency, or any intermediate value. When this variable is not
+    provided, final images are rendered using black foreground and
+    full transparency (e.g., 000000-1).
+BGCOLORS::
+    Specifies one or more background colors and the related opacity
+    you want to use to export the source file instances from SVG to
+    PNG format.  Possible values to this variable take the form
+    "XXXXXX-Y", where "XXXXXX" represent a color in hexadecimal format
+    and the final "Y" must be 1 for full opacity, 0 for full
+    transparency, or any intermediate value. When this variable is not
+    provided, final images are rendered using black foreground and
+    full transparency (e.g., 000000-1).
 
 .Rendering PNG images (indexed)
 ----------------------------------------------------------------------
@@ -455,6 +538,7 @@ png-flow             = "indexed"
 png-indexed-gpl      = "${PWD}/QaTests/idforge-render/qatest-commons/Backgrounds/1600x1200.png-16colors.gpl"
 ----------------------------------------------------------------------
 
+[[images-png-reduce-colors]]
 .Rendering LSS16 images (indexed)
 ----------------------------------------------------------------------
 [640x480.lss]
@@ -464,36 +548,143 @@ png-flow             = "indexed"
 png-indexed-gpl      = "${PWD}/QaTests/idforge-render/qatest-commons/Backgrounds/1600x1200.png-16colors.gpl"
 ----------------------------------------------------------------------
 
-To produce images in LSS16 format, the configuration section must
-terminate with the .lss string.
+When *render-from* points to a PNG image and *png-flow* is set to
+"indexed", the *png* module uses the palette of colors provided as
+value to *png-indexed-gpl* configuration option and reduces de number
+of colors of the image provided as value to *render-from* based on it.
+The format of the palette of colors file must be as specified in
+<<palette-of-colors>>.
 
+Once the indexed image has been produced, the *indexed* module
+evaluates the section name. If the section name ends with *.lss*, the
+*indexed* module calls the *lss* module to create a copy of the
+indexed image in LSS16 format and the respective splashtolss.sh shell
+script. Otherwise, the *png* module gives control to the module that
+did call it.
+
+Getting good quality images with reduced number of colors may be a
+challenging endeavour, specially if the original image you are working
+with has colors with too distant chromatic levels. When you are
+creating images with reduced number of colors, the following
+recommendations may result useful:
+
+- Create monochromatic PNG images whenever you want to create images
+  with reduced number of colors. This increases the number of colors
+  that can be reused in a restricted map of colors which allows to
+  achieve more details. This is very useful when the images you are
+  producing with reduced number of colors are already limited by the
+  number of colors of another image (e.g., your organization's brand).
+
+- Use GIMP Indexed feature to reduce the number of colors of the image
+  you want to produce and create the palette of colors you need to
+  provide as value to *png-indexed-gpl* configuration option in order
+  to reduce the image color information.
+
+- When you cannot create monochromatic PNG images, you could pick a
+  big resolution image from the artistic motif you need to base the
+  indexed image and crop a portion of it to the dimensions you need.
+  When you do this, you keep the graphic design pattern and reduce the
+  number of colors to a specific area of it with closer number colors
+  than the entire design.  With less different chromatic values in the
+  image subject to color reduction, the final result should show more
+  details than otherwise.
+
+When images with reduced number of colors are branded with other
+image, you must be sure that the color information of the image used
+for branding is also considered in the final palette of colors you
+provided as value to *png-indexed-gpl* configuration option. This is
+necessary in order for the final indexed images to print the brand
+color information correctly. In these cases, however, you may notice
+an undesirable noise made of pixels with different colors over the
+branding image area.  Certainly, these pixels shouldn't be there. They
+affects the brand information you transmit with your final images.
+
+When pixels of different colors are spread over the branding image
+area, you must retouch the final indexed image using GIMP until the
+noise is entirely removed from it.  The easiest and preferable way of
+doing brand retouching is using GIMP brushes specially conceived for
+that purpose (e.g., the branding brushes are indexed images as well).
+In this sake, organizations interested in making their brand
+propagation a community effort distribute branding brushes in several
+sizes so graphic designers can implement more precise image
+corrections based on them.
+
+[[example-rendering-documentation]]
 .Rendering documentation
 ----------------------------------------------------------------------
+[idforge-render.1]
+render-type         = "asciidoc"
+render-flow         = "manpage"
+render-from         = "${PWD}/Manuals/${CONFIG_SECTION}.asciidoc"
+render-from-po      = "${PWD}/Manuals/Locales/${IDFORGE_LANG_LC}/${CONFIG_SECTION}.po"
+render-formats      = "manpage"
+xml-expand          = "=\MANPAGE_SYNOPSIS=$(${0} render | head -n 1 | sed -r 's,^.+(idforge),\1,')"
+xml-expand          = "=\MANPAGE_DESCRIPTION=$(${0} render --description)"
+xml-expand          = "=\MANPAGE_YEAR=$(date '+%Y')"
+xml-expand          = "=\MANPAGE_OTHERS=$(cd ./Manuals; OTHERS=$(ls *.asciidoc | grep -v ${CONFIG_SECTION} | sed -r 's/\.([[:digit:]])\.asciidoc/(\1),/'); echo ${OTHERS} | sed 's/,$//')"
+manpage-software    = "idFORGE Framework"
+manpage-version     = "${IDFORGE_VERSION}"
 ----------------------------------------------------------------------
 
-[[example-managing-dependencies-to-produce-installation-media]]
-.Managing dependencies to produce installation media
+[[images-svg-flow-media]]
+.Managing dependencies to produce installation media images
 ----------------------------------------------------------------------
+[idforge-logo.png]
+render-from             = "${PWD}/QaTests/idforge-render/qatest-commons/Models/Images/idforge-logo.svg"
+render-logic            = "remove-first"
+svg-flow                = "extended"
+svg-flow-options        = "48:ffffff-1:ffffff-0"
+
+[idforge-symbol-bg.png]
+render-from             = "${PWD}/QaTests/idforge-render/qatest-commons/Models/Images/idforge-symbol.svg"
+svg-flow                = "extended"
+svg-flow-options        = "724:ffffff-0.3:ffffff-0"
+
+[715x940.png]
+render-from             = "${PWD}/QaTests/idforge-render/qatest-commons/Models/Images/document-background-inner.svg"
+svg-flow                = "extended"
+svg-flow-options        = "940:e3e2db-1:ffffff-0"
+svg-enable-siblings     = "png"
+png-flow                = "base"
+png-base-composition    = "ffffff-0/ffffff-0.3/724/idforge-symbol-bg.png:x724+275+166"
+
+[document-copyright.png]
+render-from             = "${PWD}/QaTests/idforge-render/qatest-commons/Models/Images/document-copyright.svg"
+render-from-po          = "${PWD}/QaTests/idforge-render/qatest-commons/Models/Images/Locales/${IDFORGE_LANG_LC}/document-copyright.po"
+svg-flow                = "extended"
+svg-flow-options        = "990:24221c-1:ffffff-0"
+xml-expand              = "=PRODUCT_NAME=idFORGE"
+xml-expand              = "=COPYRIGHT_YEAR=$(date +%Y)"
+xml-expand              = "=COPYRIGHT_HOLDER=The CentOS Artwork SIG"
+xml-expand              = "=IDFORGE_VERSION=${IDFORGE_VERSION}"
+xml-expand              = "=LICENSE=Free Art 1.3 License"
+
+[765x990.png]
+render-from             = "${PWD}/QaTests/idforge-render/qatest-commons/Models/Images/document-background.svg"
+svg-flow                = "base"
+svg-enable-siblings     = "png"
+png-flow                = "base"
+png-base-composition    = "ffffff-0/e3e2db-1/940/715x940.png:x940+25+25"
+png-base-composition    = "${IDFORGE_LANG_LC}/ffffff-0/24221c-1/990/document-copyright.png:x990+0+0"
+
 [443x443.png]
-render-from          = "${PWD}/QaTests/idforge-render/qatest-commons/Backgrounds/1600x1200.png"
-render-directory     = "${PWD}/QaTests/idforge-render/qatest-20150210165843695450094/Final/"
-png-flow             = "base"
-png-base-command     = "convert -extract 443x443+0+0 +repage ${PNG_FILE} ${RENDER_FILE}"
+render-from             = "${PWD}/QaTests/idforge-render/qatest-commons/Backgrounds/640x480.png"
+png-flow                = "base"
+png-base-command        = "convert -extract 443x443+0+0 +repage ${RENDER_FROM_FILE} ${RENDER_FILE}"
 
-[443x443-brand.png]
-render-from          = "${PWD}/QaTests/idforge-render/qatest-20150210165843695450094/Final/443x443.png"
-png-flow             = "base"
-png-base-composition = "${PWD}/QaTests/idforge-render/qatest-20150210165843695450094/Final/ffffff-0/ffffff-1/48/idforge-logo.png:x48+96+80"
+[443x443-branded.png]
+render-from             = "443x443.png"
+png-flow                = "base"
+png-base-composition    = "ffffff-0/ffffff-1/48/idforge-logo.png:x48+96+80"
 
-[idforge.png]
-render-from         = "${PWD}/QaTests/idforge-render/qatest-commons/Models/Images/document-cd-label.svg"
-render-from-po      = "${PWD}/QaTests/idforge-render/qatest-commons/Locales/${IDFORGE_LANG_LC}/document-cd-label.po"
-render-directory    = "${PWD}/QaTests/idforge-render/qatest-20150210165843695450094/Final"
-xml-expand-background = "${PWD}/QaTests/idforge-render/qatest-20150210165843695450094/Final/765x990.png"
-xml-expand          = "=PRODUCT_NAME=idFORGE"
-xml-expand          = "=BACKGROUND_IMAGE_CD=${PWD}/QaTests/idforge-render/qatest-20150210165843695450094/Final/443x443.png"
-svg-flow            = "media"
-svg-flow-options    = "0.1 0.1.2:i686 x86_64:DVD*2 CD*4"
+[document-media.png]
+render-from             = "${PWD}/QaTests/idforge-render/qatest-commons/Models/Images/document-cd-label.svg"
+render-from-po          = "${PWD}/QaTests/idforge-render/qatest-commons/Models/Images/Locales/${IDFORGE_LANG_LC}/document-cd-label.po"
+xml-expand-background   = "${PWD}/QaTests/idforge-render/qatest-2015012847797252944/Final/765x990.png"
+xml-expand              = "=PRODUCT_NAME=idFORGE"
+xml-expand              = "=BACKGROUND_IMAGE_CD=${PWD}/QaTests/idforge-render/qatest-2015012847797252944/Final/443x443.png"
+svg-flow                = "media"
+svg-flow-options        = "0.1 0.1.2:i686 x86_64:DVD*2 CD*4"
 ----------------------------------------------------------------------
 
 This example describes how to manage the image dependencies needed to
@@ -502,14 +693,24 @@ then used as background to produce installation media images. This is
 a fundamental construction in order to build branded background images
 for different visual manifestations based on the same artistic motif.
 
-In this example, the first section creates a new image image from
-cropping a higher one.  The second section brands the cropped image
-and illustrates that the name of the section doesn't affects the final
-file name because the changes are all applied directly in the image
-provided as value to render-from option.  Finally, the last section,
-gears images produced so far and calls svg media flow to initiate the
-construction of 2 DVDs and 4 CDs for releases 0.1 and 0.1.2 and
-architectures i686 and x86_64.
+When the *render-type* option is set to "svg" and *svg-flow* is set to
+"media", *idforge-render* enters in installation media rendition mode.
+In this mode, it produces several PNG images based on release numbers,
+architectures, type of media and the number needed to cover an
+specific distribution. To specify this information, you need to
+provide the following value "RELEASES:ARCHITECTURES:MEIDA*NUMBER",
+where the colon character (:) is a field separator and the individual
+fields have the following meaning:
+
+RELEASES::
+    Specifies the release numbers you want to produce installation
+    media for (e.g., "5.10 6.5 7.1").
+ARCHITECTURES::
+    Specifies the architectures you want to produce installation media
+    for (e.g., "i686 x86_64").
+MEDIA*NUMBER::
+    Specifies the type of media and the number of them you want to
+    produce image for (e.g., "DVD*2 CD*6").
 
 == Author
 

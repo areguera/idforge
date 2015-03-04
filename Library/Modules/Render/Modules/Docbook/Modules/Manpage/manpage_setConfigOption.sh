@@ -23,26 +23,33 @@
 #
 ######################################################################
 
-function extended {
+function manpage_setConfigOption {
 
-    local OPTION=0
+    local CONFIG_OPTION="${1}"
 
-    local RENDER_FROM_PO_FILE=${RENDER_FROM_PO[0]}
+    case ${CONFIG_OPTION} in
 
-    while [[ ${OPTION} -lt ${#RENDER_FROM[*]} ]];do
+        render-from-xsl )
+            RENDER_FROM_XSL=$(render_printConfigValues "/usr/share/sgml/docbook/xsl-stylesheets/manpages/docbook.xsl")
+            idforge_checkFiles -ef ${RENDER_FROM_XSL}
+            ;;
 
-        local RENDER_FROM_FILE=${RENDER_FROM[${OPTION}]}
+        manpage-software )
+            MANPAGE_SOFTWARE="$(render_printConfigValues "${IDFORGE}")"
+            ;;
 
-        idforge_printMessage "${RENDER_FROM_FILE}" --as-processing-line
+        manpage-version)
+            MANPAGE_VERSION="$(render_printConfigValues "${IDFORGE_VERSION}")"
+            ;;
 
-        RENDER_FROM_INSTANCES[${OPTION}]=$(idforge_printTemporalFile "${RENDER_FROM[${OPTION}]}")
+        manpage-sectdesc)
+            MANPAGE_SECTDESC="$(render_printConfigValues)"
+            ;;
 
-        xml_setInstance
-        xml_setInstanceLocalized
-        xml_setInstanceExpanded
+        * )
+            idforge_printMessage "`eval_gettext "The \\\"\\\$CONFIG_OPTION\\\" option isn't supported."`" --as-error-line
+            ;;
 
-        OPTION=$(( ++OPTION ))
-
-    done
+    esac
 
 }

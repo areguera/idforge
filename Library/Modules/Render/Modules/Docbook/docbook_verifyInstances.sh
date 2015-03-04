@@ -23,20 +23,28 @@
 #
 ######################################################################
 
-function manpage_setConfigOption {
+function docbook_verifyInstances {
 
-    local CONFIG_OPTION="${1}"
+    if [[ ${#RENDER_FROM_INSTANCES[*]} -eq 0 ]];then
+        return
+    fi
 
-    case ${CONFIG_OPTION} in
+    if [[ ${#RENDER_FROM_INSTANCES[*]} -ne ${#RENDER_FROM[*]} ]];then
+        idforge_printMessage "`gettext "The number of source files and their instances don't coincide."`" --as-error-line
+    fi
 
-        'manpage-product' )
-            MANPAGE_PRODUCT=$(render_printConfigValues "${IDFORGE}")
-            ;;
+    # Redefine source files based on whether there are instances of
+    # them or not. This is necessary to process formats that have been
+    # already transformed because they cannot be processed directly
+    # through (e.g., asciidoc files must be transformed into docbook
+    # first in order to be localized through xml2po and then exported
+    # to final formats).
 
-        * )
-            idforge_printMessage "`eval_gettext "The \\\"\\\$CONFIG_OPTION\\\" option isn't supported."`" --as-error-line
-            ;;
+    local COUNT=0
 
-    esac
+    while [[ ${COUNT} -lt ${#RENDER_FROM[*]} ]];do
+        RENDER_FROM[${COUNT}]=${RENDER_FROM_INSTANCES[${COUNT}]}
+        COUNT=$(( ++COUNT ))
+    done
 
 }

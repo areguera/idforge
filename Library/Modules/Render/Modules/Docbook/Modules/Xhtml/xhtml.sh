@@ -23,42 +23,15 @@
 #
 ######################################################################
 
-# Standardize man page section titles based on the section number. The
-# relation between section number ans section title was taken from
-# man(1).
-function manpage_printTitle {
+# Standardize the way docbook files are transformed in XHTML format.
+function xhtml {
 
-    local MANPAGE_SECTION=$(head -n 1 ${RENDER_FROM_ASCIIDOC} | sed -r 's,^.+\(([[:digit:]])\)[[:space:]]*$,\1,')
+    local RENDER_FROM_XSL=''    ; xhtml_setConfigOption 'render-from-xsl'
 
-    idforge_checkFiles -m '[1-8]' "${MANPAGE_SECTION}"
+    local XHTML=${RENDER_FILE}.html
 
-    case ${MANPAGE_SECTION} in
+    idforge_printMessage "${XHTML}" --as-creating-line
 
-        1 )
-            echo `gettext "User Commands"`
-            ;;
-        2 )
-            echo `gettext "System Calls"`
-            ;;
-        3 )
-            echo `gettext "C Library Functions"`
-            ;;
-        4 )
-            echo `gettext "Devices and Special Files"`
-            ;;
-        5 )
-            echo `gettext "File Formats and Conventions"`
-            ;;
-        6 )
-            echo `gettext "Games et. Al."`
-            ;;
-        7 )
-            echo `gettext "Miscellanea"`
-            ;;
-        8 )
-            echo `gettext "System Administration tools and Deamons"`
-            ;;
-
-    esac
+    /usr/bin/xsltproc -o ${XHTML} --nonet ${RENDER_FROM_XSL} ${RENDER_FROM_FILE}
 
 }

@@ -26,17 +26,15 @@
 # Standardize the way docbook files are transformed in PDF format.
 function pdf {
 
+    local RENDER_FROM_XSL=''    ; pdf_setConfigOption 'render-from-xsl'
+
     local PDF="${RENDER_FILE}.pdf"
 
     idforge_printMessage "${PDF}" --as-creating-line
 
     local FOP=$(idforge_printTemporalFile ${PDF}.fo)
 
-    [[ ! -f ${RENDER_FROM_XSL} ]] \
-        && local RENDER_FROM_XSL=/usr/share/sgml/docbook/xsl-stylesheets/fo/docbook.xsl
-
-    /usr/bin/xsltproc -o ${FOP} --nonet \
-        ${RENDER_FROM_XSL} ${RENDER_FROM_XML}
+    /usr/bin/xsltproc -o ${FOP} --nonet ${RENDER_FROM_XSL} ${RENDER_FROM_FILE}
 
     idforge_checkFiles -efi '^application/xml;' ${FOP}
 
