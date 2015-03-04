@@ -23,15 +23,21 @@
 #
 ######################################################################
 
-# Standardize file compression inside the idforge.sh script.
-function compress {
+function gz_setConfigOption {
 
-    idforge_printMessage "${RENDER_FILE}" --as-creating-line
+    local CONFIG_OPTION="${1}"
 
-    local COMMAND=''; compress_setConfigOption 'command'
+    case ${CONFIG_OPTION} in
 
-    idforge_checkFiles -ef ${RENDER_FROM[*]}
+        gz-command )
+            GZ_COMMAND=$(render_printConfigValues "/bin/gzip")
+            idforge_checkFiles -ex ${GZ_COMMAND}
+            ;;
 
-    ${COMMAND} ${RENDER_FROM[*]}
+        * )
+            idforge_printMessage "`eval_gettext "The \\\"\\\$CONFIG_OPTION\\\" option isn't supported."`" --as-error-line
+            ;;
+
+    esac
 
 }

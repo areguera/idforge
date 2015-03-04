@@ -23,20 +23,14 @@
 #
 ######################################################################
 
-function compress_setConfigOption {
+function gz {
 
-    local OPTION="${1}"
+    local GZ_COMMAND=''; gz_setConfigOption 'gz-command'
 
-    case ${OPTION} in
+    idforge_checkFiles -ef ${RENDER_FROM[*]}
 
-        command )
-            COMMAND=$(idforge_printConfValue "/bin/gzip")
-            ;;
+    idforge_printMessage "${RENDER_FILE}" --as-creating-line
 
-        * )
-            idforge_printMessage "`eval_gettext "The \\\"\\\$OPTION\\\" option isn't supported."`" --as-error-line
-            ;;
-
-    esac
+    ${GZ_COMMAND} ${RENDER_FROM[*]}
 
 }
