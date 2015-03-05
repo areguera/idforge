@@ -59,6 +59,7 @@ render-type::
 - "docbook" -- Transforms source files docbook format to manpage, xhtml and
   pdf formats.
 - "gz" -- Compresses source files.
+- "tar" -- Archives source files.
 
 render-from::
     Specifies one or more source files. The source files are generally
@@ -358,7 +359,7 @@ manpage-sectdesc::
     determined automatically based on the manpage volume number set
     inside the modified docbook instance.
 
-=== File Compression
+=== Compressing Files
 
 The *idforge-render(1)* command initiates file compression when
 *render-type* is set to "gz" and one or more files are provided as
@@ -372,9 +373,51 @@ default), or set a different compression command (e.g.,
 /usr/bin/bzip2, /usr/bin/zip, etc.), you can do so through the
 *gz-command* configuration option.
 
+=== Archiving Files
+
+The *idforge-render(1)* command initiates files archiving when
+*render-type* is set to "tar" and one or more files are provided as
+value to *render-form* configuration option.
+
+When *render-type* is set to "tar", the *render* module calls the
+*tar* module which builds a list of all source files provided as value
+to *render-from* configuration option and copies them to a temporal
+directory in order to create an archive it and all its content.
+Normally, the name of the archive and the directory inside it are
+defined by the configuration section name. The archiving command and
+its command-line options are controlled through the following
+configuration options:
+
+tar-command::
+    Specifies the command that will be used to create the archive.
+    When this option is no provided, the /usr/bin/tar command is used
+    as default.
+tar-options::
+    Specifies options that will be pass to the archiving command. When
+    this option is not provided it assumes the archiving command is
+    /usr/bin/tar and the options it provides are "--remove-files
+    -capf". Note here how the *-f* option has been put at the end of
+    the options list. This is intensional so the file name of the
+    final archive file could be provided just after it. If you change
+    the options, you need to be sure that the last option provided in
+    the list of options is the one introducing the final archive file
+    name or path.  This is necessary in order for the final
+    command-line to work as expected.
+
+The final archive is created in the same directory of the
+configuration file being processed and using the configuration section
+name as archive file name, or in a customized location if either
+*render-directory* or *render-file* configuration option is provided.
+In either case, if you didn't changed the default archiving
+command-line, you can compress the final archive file by adding the
+*.tar.gz* or *.tar.bz2* prefix to it (note the presence of tar's *-a*
+option in the default list of options).  Compressing the final archive
+this way is much more efficient than opening a new configuration
+section just for that purpose.
+
 ////
 [[packages]]
-=== Packages Construction
+=== Packaging Files
 ...
 ////
 
@@ -656,6 +699,15 @@ manpage-version     = "${IDFORGE_VERSION}"
 render-type         = "gz"
 render-from         = "${PWD}/Manuals/Final/${IDFORGE_LANG_LC}/idforge-render.1"
 render-directory    = "${PWD}/Manuals/Final/${IDFORGE_LANG_LC}"
+----------------------------------------------------------------------
+
+[[file-archiving]]
+.Archiving files already produced
+----------------------------------------------------------------------
+[archive-1.0]
+render-type     = "tar"
+render-from     = "$(find ${PWD}/QaTests/idforge-render/qatest-2015011135476500711/Final/Customized -type f)"
+render-file     = "${PWD}/QaTests/idforge-render/qatest-2015011135476500711/Final/${CONFIG_SECTION}.tar.gz"
 ----------------------------------------------------------------------
 
 [[images-svg-flow-media]]
