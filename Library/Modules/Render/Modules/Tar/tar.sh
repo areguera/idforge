@@ -23,19 +23,22 @@
 #
 ######################################################################
 
-# Standardize file archiving inside the idforge.sh script.
-function archive {
+function tar {
 
     idforge_printMessage "${RENDER_FILE}" --as-creating-line
 
-    local COMMAND=''; archive_setConfigOption 'command'
+    local TAR_COMMAND=''    ; tar_setConfigOption 'tar-command'
+    local TAR_OPTIONS=''    ; tar_setConfigOption 'tar-options'
+    local TAR_DIRECTORY=${IDFORGE_TEMPDIR}/${RANDOM}/${CONFIG_SECTION}
 
-    local ARCHIVE_ID=$(echo ${SECTION} | cut -d. -f1)
+    tar_setInstance
 
-    local ARCHIVE_DIR=${IDFORGE_TEMPDIR}/${SECTION}/${ARCHIVE_ID}
+    idforge_setParentDir ${RENDER_FILE}
 
-    [[ ! -d ${ARCHIVE_DIR} ]] && mkdir -p ${ARCHIVE_DIR}
+    pushd $(dirname ${TAR_DIRECTORY}) > /dev/null
 
-    archive_setArchive
+    ${TAR_COMMAND} ${TAR_OPTIONS} ${RENDER_FILE} *
+
+    popd > /dev/null
 
 }

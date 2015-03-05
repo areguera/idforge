@@ -23,28 +23,15 @@
 #
 ######################################################################
 
-function archive_setArchiveInstance {
+function tar_setInstance {
 
-    local FILE=''
+    local RENDER_FROM_FILE=''
+    local COMMAND='/bin/cp -p'
 
-    # Let file names to be renamed before being compressed.
-    for FILE in ${RENDER_FROM[*]};do
+    [[ ! -d ${TAR_DIRECTORY} ]] && mkdir -p ${TAR_DIRECTORY}
 
-        local ARCHIVE_COMMAND='cp'
-
-        local FILE_LH=$(echo ${FILE} | gawk -F: '{ print $1 }')
-
-        idforge_checkFiles -ef ${FILE_LH}
-
-        local FILE_RH=$(echo ${FILE} | gawk -F: '{ print $2 }')
-
-        if [[ -n ${FILE_RH} ]];then
-            idforge_checkFiles -m '^[[:alnum:].-]+$' ${FILE_RH}
-            ${ARCHIVE_COMMAND} ${FILE_LH} ${ARCHIVE_DIR}/${FILE_RH}
-        else
-            ${ARCHIVE_COMMAND} ${FILE_LH} ${ARCHIVE_DIR}/$(basename ${FILE_LH})
-        fi
-
+    for RENDER_FROM_FILE in ${RENDER_FROM[*]};do
+        ${COMMAND} ${RENDER_FROM_FILE} ${TAR_DIRECTORY}/$(basename ${RENDER_FROM_FILE})
     done
 
 }

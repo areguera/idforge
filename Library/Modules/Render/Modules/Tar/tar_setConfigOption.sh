@@ -23,16 +23,26 @@
 #
 ######################################################################
 
-function archive_setArchive {
+function tar_setConfigOption {
 
-    # Create directory with all the files you want to archive.
-    archive_setArchiveInstance
+    local CONFIG_OPTION="${1}"
 
-    # Tuneup files before archive them.
-    idforge_setModuleEnvironment -m 'tuneup' -t 'parent' -g ${ARCHIVE_DIR} > /dev/null
+    case ${CONFIG_OPTION} in
 
-    pushd $(dirname ${ARCHIVE_DIR}) > /dev/null
-    ${COMMAND} ${RENDER_FILE} *
-    popd > /dev/null
+        tar-command )
+            TAR_COMMAND=$(render_printConfigValues "/bin/tar")
+            ;;
+
+        tar-options )
+            TAR_OPTIONS=$(render_printConfigValues)
+            [[ -z ${TAR_OPTIONS} ]] && TAR_OPTIONS='--remove-files -capf'
+            ;;
+
+        * )
+            idforge_printMessage "`eval_gettext "The \\\"\\\$CONFIG_OPTION\\\" option isn't supported."`" --as-error-line
+            ;;
+
+    esac
 
 }
+
