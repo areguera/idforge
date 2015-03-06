@@ -47,19 +47,24 @@ render-type::
     Specifies the name of the module that will be called to initiate
     the rendition processed. When this option is not provided, the
     file extension of the first source file provided to *render-from*
-    configuration option is used as default value.  Possible values to
-    this option are the following:
+    configuration option is used as default value.  When no valid
+    module is found, the render module ends *idforge(1)* script
+    execution with an error message. Possible values to render-type
+    configuration option are the following:
 +   
 - "svg" -- Transforms source files in SVG format to PNG format in
   several ways using Inkscape.
-- "png" -- Transforms PNG images in several ways using ImageMagick
-  tools suite.
-- "asciidoc" -- Transforms source files in asciidoc format to manpage, xhtml and
-  pdf formats.
-- "docbook" -- Transforms source files docbook format to manpage, xhtml and
-  pdf formats.
+- "png" -- Transforms source files in PNG format in several ways,
+  using ImageMagick tools suite.
+- "asciidoc" -- Transforms source files in asciidoc format to manpage,
+  xhtml and pdf formats.
+- "docbook" -- Transforms source files docbook format to manpage,
+  xhtml and pdf formats.
 - "gz" -- Compresses source files.
 - "tar" -- Archives source files.
+- "email" -- Sends one email for each source file provided.  The email
+  messages can contain attachments and be sent either in plain, signed
+  or encrypted using a combination of *gpg* and *mailx* programs.
 
 render-from::
     Specifies one or more source files. The source files are generally
@@ -78,7 +83,8 @@ render-flow::
     "media"; when you are processing Asciidoc files, possible values
     to this option include "manpage", "article", "book"; when you are
     processing PNG files, possible values to this option include
-    "base" and "indexed".
+    "base" and "indexed"; when you are processing emails, possible
+    values to this option include "plain", "sign", and "cryptic".
 
 render-from-po::
     Specifies one or more translation files in PO format. This option
@@ -415,6 +421,84 @@ option in the default list of options).  Compressing the final archive
 this way is much more efficient than opening a new configuration
 section just for that purpose.
 
+=== Sending Electronic Mails
+
+The *idforge-render(1)* command sends electronic mails when
+*render-type* is set to "email" and one or more files are provided as
+value to *render-form* configuration option. In this context, the
+*render* module calls the *email* module to build an email message for
+each source file provided as value *render-from* configuration option
+using the source file content as message body and the following
+configuration options to control the way such messages are delivered:
+
+render-flow::
+    Specifies how to send the emails. Possible values to this option
+    are the following:
+    +
+- "plain" -- Sends both email body and its attachments as they were
+  provided. When *render-flow* is not provided, it takes plain as
+  default value.
+- "sign" -- Sends both email body and its attachments signed using the
+  first key found in the secret keyring before sending them to the
+  SMTP server. Here, the body is signed using an ASCII armored output
+  while attachments are signed individually, using detached
+  signatures.
+- "cryptic" -- Sends both email body and its attachments encrypted
+  using the first key found in the secret keyring before sending them
+  to the SMTP server. Here, the body is encrypted using an ASCII
+  armored output while attachments are encrypted individually, using
+  the binary OpenPGP format.
+
+email-host::
+    Specifies the SMTP server where the email message will be sent to.
+    When this configuration option is not provided, the "localhost" is
+    used as default SMTP server.
+email-auth::
+    Sets the SMTP authentication method.  If set to "login", or if
+    unset  and  *email-auth-user*  is  set,  AUTH LOGIN is used.  If
+    set to "cram-md5", AUTH CRAM-MD5 is used; if set to "plain", AUTH
+    PLAIN is used.  Otherwise, no SMTP authentication is performed
+    which is the default behaviour.
+email-auth-user::
+    Sets the SMTP authentication username. By default this option is
+    set to an empty value.
+email-auth-pass::
+    Sets the SMTP authentication password. By default this option is
+    set to an empty value.
+email-from::
+    Specifies the address to put into the "From:" field of the message
+    header. When this option is not provided, it takes the current
+    user name that *idforge(1)* was executed by and "localhost" as
+    reference to build an email address (e.g., if you are using "foo"
+    as username, the resultant email address would be "foo@localhost".
+email-rcpt::
+    Specifies the address (or a list of addresses) to put into the
+    "To:" field of the message header. When you enter several
+    addresses here, they must be separated by comma (,) and no space
+    must be present between them. When this option is not provided, it
+    takes the current user name that *idforge(1)* was executed by and
+    "localhost" as reference to build an email address (e.g., if you
+    are using "foo" as username, the resultant email address would be
+    "foo@localhost".
+email-subject::
+    Specifies the string to put into the "Subject:" field of the
+    message header. When this option is not provided, the name of the
+    configuration section being currently processed is used as default
+    value.
+email-attachment-limit::
+    Specifies the attachment maximum size in bytes. When this option
+    is not provided 30000 bytes are used as default value.
+email-attachment::
+    Specifies the file (or list of files) you want to attach to the
+    outgoing message. 
++   
+[CAUTION]
+======================================================================
+When several files are provided to *render-from* configuration option,
+a copy of the attachments you provide here are sent for each outgoing
+message, individually.
+======================================================================
+
 ////
 [[packages]]
 === Packaging Files
@@ -455,10 +539,10 @@ configuration files.
 [[files]]
 == Files
 
-*idforge-render(1)* needs you to create a working directory using the
-*idforge-prepare(1)* command and update the following files based on
-the visual style and branding information you want to set for your
-organization:
+The *idforge-render(1)* command needs you to create a working
+directory using the *idforge-prepare(1)* command and update the
+following files based on the visual style and branding information you
+want to set for your organization:
 
 ./Backgrounds/1920x1600.png::
     The artistic motif used as pattern to reinforce the visual
@@ -710,6 +794,31 @@ render-from     = "$(find ${PWD}/QaTests/idforge-render/qatest-20150111354765007
 render-file     = "${PWD}/QaTests/idforge-render/qatest-2015011135476500711/Final/${CONFIG_SECTION}.tar.gz"
 ----------------------------------------------------------------------
 
+[[example-sending-electronic-mail]]
+.Sending electronic mails
+----------------------------------------------------------------------
+[send_plain_mail_using_mailx]
+render-type      = "email"
+render-flow      = "plain"
+render-from      = "${PWD}/QaTests/idforge-render/qatest-2015011135476500711/Final/Customized/${IDFORGE_LANG_LC}/manpage.1.html"
+email-attachment = "${PWD}/QaTests/idforge-render/qatest-2015011135476500711/Final/Customized/${IDFORGE_LANG_LC}/manpage.1.pdf"
+email-attachment = "${PWD}/QaTests/idforge-render/qatest-2015011135476500711/Final/archive-1.0.tar.gz"
+
+[send_signed_mail_using_mailx_and_gpg]
+render-type      = "email"
+render-flow      = "sign"
+render-from      = "${PWD}/QaTests/idforge-render/qatest-2015011135476500711/Final/Customized/${IDFORGE_LANG_LC}/manpage.1.html"
+email-attachment = "${PWD}/QaTests/idforge-render/qatest-2015011135476500711/Final/Customized/${IDFORGE_LANG_LC}/manpage.1.pdf"
+email-attachment = "${PWD}/QaTests/idforge-render/qatest-2015011135476500711/Final/archive-1.0.tar.gz"
+
+[send_encrypted_mail_using_mailx_and_gpg]
+render-type      = "email"
+render-flow      = "cryptic"
+render-from      = "${PWD}/QaTests/idforge-render/qatest-2015011135476500711/Final/Customized/${IDFORGE_LANG_LC}/manpage.1.html"
+email-attachment = "${PWD}/QaTests/idforge-render/qatest-2015011135476500711/Final/Customized/${IDFORGE_LANG_LC}/manpage.1.pdf"
+email-attachment = "${PWD}/QaTests/idforge-render/qatest-2015011135476500711/Final/archive-1.0.tar.gz"
+----------------------------------------------------------------------
+
 [[images-svg-flow-media]]
 .Managing dependencies to produce installation media images
 ----------------------------------------------------------------------
@@ -796,16 +905,14 @@ MEDIA*NUMBER::
     Specifies the type of media and the number of them you want to
     produce image for (e.g., "DVD*2 CD*6").
 
-== Author
+include::Commons/environment.inc[]
 
 include::Commons/author.inc[]
 
-== Copyright
+include::Commons/bugs.inc[]
 
 include::Commons/copyright.inc[]
 
-== See also
-
-=MANPAGE_OTHERS=
+include::Commons/also.inc[]
 
 // vim: set syntax=asciidoc:
