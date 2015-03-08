@@ -1,3 +1,5 @@
+The *{doctitle}* command accepts the following options:
+
 *-h, --help*::
     Prints documentation (this page).
 

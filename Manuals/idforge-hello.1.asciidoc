@@ -1,0 +1,70 @@
+= idforge-hello(1)
+Alain Reguera Delgado <alain.reguera@gmail.com>
+idFORGE Framework =IDFORGE_VERSION=, =MANPAGE_YEAR=: =MANPAGE_DESCRIPTION=
+
+== Name
+
+idforge-hello - =MANPAGE_DESCRIPTION=
+
+== Synopsis
+
+----------------------------------------------------------------------
+=MANPAGE_SYNOPSIS=
+----------------------------------------------------------------------
+
+== Description
+
+The *{doctitle}* command prints the arguments you provide in the
+command-line to the standard output and exits successfully.  It
+provides several options to let you control how the output message is
+printed to standard output. Each of these options is intentionally
+written to illustrate specific ways of using modules inside the
+*idforge(1)* command.  See <<options>>.
+
+[[options]]
+== Options
+
+include::Commons/options.inc[]
+
+*-l, --lower*::
+    Shows message in lowercase. The final output is printed out all in
+    one line.
+*-u, --upper*::
+    Shows message in uppercase. The final output is printed out all in
+    one line.
+*-c, --camel*::
+    Shows messages in camel-case (e.g., "HeLlO").  The output is
+    printed one character per line to describe how execution of
+    sibling modules work inside idFORGE library.  Notice that, when
+    the final output is printed, punctuation marks doesn't count for
+    formating.
+*-r, --random*::
+    Shows message in a random order (e.g., "HHHel").  The final output
+    is printed one character per line to describe how recursive
+    execution of sibling modules work.
+
+The *{doctitle}* command is also affected by options passed to
+_idforge_ script. See, *idforge(1)* script documentation to know what
+these options are.
+
+== Examples
+
+.Debug execution environment of parent and child modules
+----------------------------------------------------------------------
+]$ idforge -d hello Welcome --lower
+----------------------------------------------------------------------
+
+.Debug execution environment of parent, child and sibling modules
+----------------------------------------------------------------------
+]$ idforge -d hello Welcome --camel
+----------------------------------------------------------------------
+
+include::Commons/author.inc[]
+
+include::Commons/bugs.inc[]
+
+include::Commons/copyright.inc[]
+
+include::Commons/also.inc[]
+
+// vim: set syntax=asciidoc:

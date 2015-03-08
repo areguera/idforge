@@ -27,8 +27,8 @@
 # provided in the command-line.
 function output {
 
-    for ACTION in ${ACTIONS:-lower};do
-        idforge_setModuleEnvironment -m "${ACTION}" -t 'child'
+    for HELLO_FLAG in ${HELLO_FLAGS:-lower};do
+        idforge_setModuleEnvironment -m "${HELLO_FLAG}" -t 'child'
     done
 
 }

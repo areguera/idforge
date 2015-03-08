@@ -23,8 +23,25 @@
 #
 ######################################################################
 
-function hello_printDescription {
+# Print greeting messages and exit successfully.
+function hello {
 
-    idforge_printMessage "`gettext "Print a greeting and exit successfully."`" --as-stdout-line
+    # Initialize module's flags.
+    local HELLO_FLAGS=''
+
+    # Initialize command-line arguments and interpret arguments and
+    # options passed through command-line.
+    local ARGUMENT='' ARGUMENTS=''; hello_setOptions "${@}"
+
+    # Verify existence of command-line arguments. When they don't
+    # exist, just return to caller. This is necessary to print the
+    # module's usage information cleanly.
+    [[ -z ${ARGUMENTS} ]] && return
+
+    # Execute output child module to process actions for each
+    # argument.
+    for ARGUMENT in ${ARGUMENTS};do
+        idforge_setModuleEnvironment -m 'output' -t 'child' -g "${ARGUMENT}"
+    done
 
 }

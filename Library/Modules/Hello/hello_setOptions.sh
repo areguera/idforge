@@ -45,6 +45,7 @@ function hello_setOptions {
 
             -h | --help )
                 idforge_printHelp
+                shift 1
                 ;;
 
             -v | --version )
@@ -53,27 +54,27 @@ function hello_setOptions {
                 ;;
 
             -s | --description )
-                idforge_setModuleEnvironment -t 'child' -m 'description' -g ${IDFORGE_MODULE_NAME}
+                idforge_printMessage "`gettext "Print a greeting and exit successfully."`" --as-stdout-line
                 shift 1
                 ;;
 
             -l | --lower )
-                ACTIONS="lower ${ACTIONS}"
+                HELLO_FLAGS="${HELLO_FLAGS} lower"
                 shift 1
                 ;;
 
             -u | --upper )
-                ACTIONS="upper ${ACTIONS}"
+                HELLO_FLAGS="${HELLO_FLAGS} upper"
                 shift 1
                 ;;
 
             -c | --camel )
-                ACTIONS="camel ${ACTIONS}"
+                HELLO_FLAGS="${HELLO_FLAGS} camel"
                 shift 1
                 ;;
 
             -r | --random )
-                ACTIONS="random ${ACTIONS}"
+                HELLO_FLAGS="${HELLO_FLAGS} random"
                 shift 1
                 ;;
 
