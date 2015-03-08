@@ -1,7 +1,3 @@
-The following command manuals:
+== See Also
 
-    idforge(1), idforge-render(1), idforge-config(1)
-
-The following convention manuals:
-
-    idforge-modules(5)
+=MANPAGE_OTHERS=

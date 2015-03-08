@@ -1,10 +1,10 @@
 = idforge(1)
 Alain Reguera Delgado <alain.reguera@gmail.com>
-=MANPAGE_YEAR=:
+idFORGE Framework =IDFORGE_VERSION=, =MANPAGE_YEAR=: =MANPAGE_DESCRIPTION=
 
 == Name
 
-idforge - Manage identity manuals in community.
+idforge - =MANPAGE_DESCRIPTION=
 
 == Synopsis
 
@@ -14,126 +14,128 @@ idforge - Manage identity manuals in community.
 
 == Description
 
-idforge is a framework to manage corporate identity manuals in
-community. It gears the work of graphic designers, translators,
-programmers and packagers using a modular design and standard
-procedures that can be reused by different organizations.
+The *{doctitle}* command is written in Bash using a modular design
+specially conceived to gear the work of graphic designers, translators
+and documentation writers in a way they can collaborate consistently
+one another in a decentralized environment ruled by the normative
+specifications of a particular community or organization that is very
+interested in making its visual identity manual and the files
+necessary for its implementation a community effort.
 
-idforge provides a publishing medium for organizations who want to
-distribute normative information needed to reproduce their corporate
-identity manual. Including the organization's brand, colors, visual
-manifestations, and configuration files describing how these
-components must be combined to achieve predictable results. For
-graphic designers, it provides a tool to reproduce corporate identity
-manuals consistently using customized artistic motif and the normative
-specifications the organizations have provided.
+The *{doctitle}* command may result useful for any kind of
+organization, specially those needing to:
 
-idforge results useful for communities who need to distribute the
-construction, maintenance and implementation of their own corporate
-identity manuals. And this way, in community, reducing the work load
-needed to renew it.
+- Consolidate an effective and efficient community enrolment in the
+  process of building the organization's own visual identity and its
+  further implementation.
+
+- Consolidate an effective and efficient procedure to propagate new
+  visual styles (a.k.a., artistic motifs) to all visual manifestations
+  the organization shows its existence on.  This, grants the visual
+  consistency which is necessary to implement a monolithic corporate
+  visual identity structure correctly.
+
+The organization interested in using the *{doctitle}* command to
+manage its visual identity publishes an easy to install package that
+contains all the source files necessary to build its brand, its visual
+identity manual and the related implementation files.  The information
+this package provides is normative and is installed in the
+"+/usr/share/idforge-$\{PROJECTNAME\}/+" directory.  This directory
+provides a read-only location where regular users cannot write and the
+*{doctitle}* command can predict where to retrieve
+organization-specific visual identity source files.  The name of the
+package also follows the "+idforge-$\{PROJECTNAME\}+" naming
+convention in order to keep them predictable and make their
+installation easier.
+
+The *{doctitle}* command cannot produce content directly inside the
+read-only directory where the normative information was installed in.
+Instead, it uses the *idforge-prepare(1)* command to create a
+writeable instance of it so you can study and change the source files
+used to build the organization's visual identity in your own
+workstation without affecting the official version of it. You can use
+the files in the instance as template to create a brand new visual
+identity package or contribute improvements to the visual identity of
+the organization who published the normative information in first
+place.
+
+[IMPORTANT]
+======================================================================
+Most organizations have restrictions about the way their brands are
+used. If you are creating a brand new corporate visual identity manual
+based on another organization's, be sure to make the appropriate
+changes in the one you are creating in order to be consequent with the
+branding restriction that organization specified.
+======================================================================
 
 == Options
 
-*idforge* interprets option arguments based in the position they are
-written in the command-line. When the option argument is written
-before the command argument, it is interpreted directly by *idforge*
-initialization script and it is considered a common option.  When the
-option argument is written after the command argument, it is
-interpreted by the related command and it is considered a specific
-options to that command instead.
+The *{doctitle}* command interprets option arguments based in the
+position they are written in the command-line. When the option
+argument is written before the command argument, it is interpreted
+directly by *{doctitle}* initialization script and it is considered a
+common option.  When the option argument is written after the command
+argument, it is interpreted by the related command and it is
+considered a specific options to that command instead.
 
-Common options affect the entire execution environment of *idforge*
+Common options affect the entire execution environment of *{doctitle}*
 script, while specific options affect only the execution environment
 of the command that interprets them. The specific options are
 described in the man page of the command they pertain to.
 
-*idforge* supports the following common options:
+The *{doctitle}* command supports the following options:
 
--h, --help::
-    Shows *idforge* documentation (this page).
+include::Commons/options.inc[]
 
--v, --version::
-    Shows *idforge* version and license information.
-
--d, --debug::
-    Runs *idforge* in debugging mode. This option is very useful if
-    you want to get a closer look to the way *idforge* modules are
+*-d, --debug*::
+    Runs *{doctitle}* in debugging mode. This option is very useful if
+    you want to get a closer look to the way *{doctitle}* modules are
     opened and closed at execution time. For more information about
-    *idforge* modules, see ``idforge-modules(5)'' manual.
+    *{doctitle}* modules, see *idforge-modules(5)* manual.
 
--q, --quiet::
+*-q, --quiet*::
     Runs the script quietly. This option reduces the amount of
-    information *idforge* prints on the screen.
+    information *{doctitle}* prints on the screen.
 
--y, --yes::
+*-y, --yes*::
     Runs the script in affirmative mode. This is answering positively
     to all boolean questions. This option is useful when you run the
-    *idforge* script with the *--quiet* option.
+    *{doctitle}* script with the *--quiet* option.
 
-When no argument is provided to *idforge*, it prints the usage
+When no argument is provided to *{doctitle}*, it prints the usage
 information including the list of all modules available. This is also
-true when the only argument provided to *idforge* is a valid module,
+true when the only argument provided to *{doctitle}* is a valid module,
 in which case the module's usage information is printed instead.
 
 Exit Status
 -----------
 
-*idforge* ends its execution with one of the following exit status:
+The *{doctitle}* command ends its execution with one of the following
+exit status:
 
 * 0 -- Exit successfully without errors.
 * 1 -- Exit with errors.
 
-Execution Environment
----------------------
-
-*idforge* execution environment can be customized by changing the
-following environment variables:
-
-IDFORGE_BINDIR::
-    Directory where *idforge* initialization script will be installed
-    in. By default this variable takes the `/usr/bin' value.
-IDFORGE_SHAREDIR::
-    Directory where the *idforge* directory will be stored in. By
-    default this variable takes the `/usr/share' value.
-IDFORGE_MANDIR::
-    Directory where the *idforge* man pages will be looked for. By
-    default this variable takes the `/usr/share/man' value.
-IDFORGE_LOCALEDIR::
-    Directory where *idforge* localization will be installed in. By
-    default this variable takes the `/usr/share/locale' value.
-IDFORGE_TEMPDIR::
-    Directory where *idforge* writes temporal files. By default this
-    variable takes the `/tmp' value.
-IDFORGE_ETCDIR::
-    Directory where *idforge* stores configuration files. By default
-    this variable takes the `/etc' value.
-IDFORGE_LIBEXECDIR::
-    Directory where *idforge* stores its library of shared functions
-    and modules. By default this variable takes the `/usr/libexec'
-    value.
-
-== Documentation
-
-*idforge* package comes with the following documentation manuals:
-
- * idforge(1) - Describes idforge command-line.
- * idforge-modules(5) - Describe modules used by idforge.
-
-See also the INSTALL, for more information about how to install other
-related packages. Each of these packages come with their respective
-documentation as well.
-
-== Author
+include::Commons/environment.inc[]
 
 include::Commons/author.inc[]
 
-== Copyright
+include::Commons/bugs.inc[]
 
 include::Commons/copyright.inc[]
 
-== See also
+include::Commons/also.inc[]
 
-=MANPAGE_OTHERS=
+== Reference
+
+The conceptual ideas about corporate identity are taken from:
+
+*Wikipedia*::
+    http://en.wikipedia.org/Corporate_identity[Corporate identity] and
+    related pages.
+
+*Wally Olins, Corporate Identity*::
+    Making business strategy visible through design
+    (ISBN 9780875842509)
 
 // vim: set syntax=asciidoc:

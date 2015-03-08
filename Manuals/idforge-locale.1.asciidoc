@@ -1,5 +1,6 @@
 = idforge-locale(1)
 Alain Reguera Delgado <alain.reguera@gmail.com>
+idFORGE Framework =IDFORGE_VERSION=, =MANPAGE_YEAR=: =MANPAGE_DESCRIPTION=
 
 == Name
 
@@ -13,31 +14,31 @@ idforge-locale - =MANPAGE_DESCRIPTION=
 
 == Description
 
-*idforge-locale* allows you to manage the creation, actualization,
-edition and elimination of translation files in PO and MO formats for
-a wide range of programming languages including shell scripts and
-XML-based file formats like SVG, HTML and DocBook.  This command
-stands on the procedures implemented by both *xml2po(1)* and
+The *{doctitle}* command allows you to manage the creation,
+actualization, edition and elimination of translation files in PO and
+MO formats for a wide range of programming languages including shell
+scripts and XML-based file formats like SVG, HTML and DocBook.  This
+command stands on the procedures implemented by both *xml2po(1)* and
 *gettext(1)* commands and is specially designed to reuse the
 configuration files the *idforge-render(1)* command employs to render
 content. So, it results very useful when you need a standard procedure
 to maintain localized images, documents, and shell scripts in a
 community environment.
 
-*idforge-locale* reads the configuration files provided as argument in
-the command-line in the same order they were provided, one by one.
-Inside each configuration file, the sections are processed in the same
-order they were found, from top to bottom, using the extension of the
-first source file provided to *render-from* option as reference to
-initiate the localization process.  When configuration sections are
-being processed, *idforge-locale* evaluates the number of times both
-*render-from* and *render-from-po* options have been provided in it.
-From this analysis the following two relations between files can be
-established for further processing:
+The *{doctitle}* command reads the configuration files provided as
+argument in the command-line in the same order they were provided, one
+by one.  Inside each configuration file, the sections are processed in
+the same order they were found, from top to bottom, using the
+extension of the first source file provided to *render-from* option as
+reference to initiate the localization process.  When configuration
+sections are being processed, *{doctitle}* evaluates the number of
+times both *render-from* and *render-from-po* options have been
+provided in it.  From this analysis the following two relations
+between files can be established for further processing:
 
 Processing files in one-to-one relation::
     When the same number of source and translation files are provided,
-    *idforge-locale* creates/updates translation files in one-to-one
+    *{doctitle}* creates/updates translation files in one-to-one
     relation with source files. This is, the first translation file
     holds the translatable strings for the first source file, the
     second translation file holds translatable strings for the second
@@ -48,7 +49,7 @@ Processing files in one-to-one relation::
 
 Processing files in many-to-one relation::
     When the number of source files is greater than the number of
-    translation files provided, *idforge-locale* only updates the
+    translation files provided, *{doctitle}* only updates the
     first translation file specified, based on the content of all the
     source files provided. This processing case is mostly used to
     manage shell script translation files.
@@ -59,7 +60,7 @@ script to exit with an error message.
 
 == Command-line Options
 
-*idforge-locale* accepts the following command-line options:
+The *{doctitle}* command accepts the following command-line options:
 
 include::Commons/options.inc[]
 
@@ -87,9 +88,10 @@ control what configuration section you want to apply actions to.
 
 == Configuration Options
 
-*idforge-locale* understands most options from *idforge-render(1)*
-configuration files. Specially, *render-from*, *render-from-po* and
-*render-from-mo*.
+The *{doctitle}* command understands most configuration options the
+*idforge-render(1)* uses to render content. Specially, *render-from*,
+*render-from-po* and *render-from-mo*. This is intensional so both
+commands can share the same configuration files.
 
 == Examples
 
@@ -105,7 +107,7 @@ render-from-po  = "${PWD}/Locales/${IDFORGE_LANG_LC}/hello_world.asciidoc.po"
 To enable content localization in a specific configuration section,
 add the *render-from-po* option to it. This option must point to a
 translation file in PO format, so the translator can use
-*idforge-locale* command to edit it. The PO file contains the
+*{doctitle}* command to edit it. The PO file contains the
 translatable strings extracted from the source file set in the
 *render-from* option. If you also need the related translation file in
 MO format, add the *render-from-mo* option.
@@ -115,7 +117,7 @@ MO format, add the *render-from-mo* option.
 When you edit a translation file in PO format, the related translation
 file in MO format isn't updated automatically. To propagate the
 changes you recently introduced in the PO file into the related MO
-file, you must run *idforge-locale* after editing the PO file.
+file, you must run *{doctitle}* after editing the PO file.
 ======================================================================
 
 .Configuring one-to-one relation to produce localized images
@@ -165,8 +167,6 @@ specify several source files in a single entry of *render-from*
 configuration option.  However, the same is not possible for
 translation files which need to be specified explicitly.
 
-== Environment
-
 include::Commons/environment.inc[]
 
 VISUAL::
@@ -178,16 +178,12 @@ EDITOR::
     Specifies the text editor used to modify translation files in PO
     format. By default, it is set to /usr/bin/vim.
 
-== Author
-
 include::Commons/author.inc[]
 
-== Copyright
+include::Commons/bugs.inc[]
 
 include::Commons/copyright.inc[]
 
-== See Also
-
-=MANPAGE_OTHERS=
+include::Commons/also.inc[]
 
 // vim: set syntax=asciidoc:

@@ -1,6 +1,6 @@
 = idforge-config(1)
 Alain Reguera Delgado <alain.reguera@gmail.com>
-=MANPAGE_YEAR=:
+idFORGE Framework =IDFORGE_VERSION=, =MANPAGE_YEAR=: =MANPAGE_DESCRIPTION=
 
 == Name
 
@@ -20,16 +20,12 @@ idforge-config - =MANPAGE_DESCRIPTION=
 
 include::Commons/options.inc[]
 
-== Author
-
 include::Commons/author.inc[]
 
-== Copyright
+include::Commons/bugs.inc[]
 
 include::Commons/copyright.inc[]
 
-== See also
-
-=MANPAGE_OTHERS=
+include::Commons/also.inc[]
 
 // vim: set syntax=asciidoc:

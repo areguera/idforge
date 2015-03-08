@@ -1,6 +1,6 @@
 = idforge-render(1)
 Alain Reguera Delgado <alain.reguera@gmail.com>
-=MANPAGE_YEAR=:
+idFORGE Framework =IDFORGE_VERSION=, =MANPAGE_YEAR=: =MANPAGE_DESCRIPTION=
 
 == Name
 
@@ -15,21 +15,24 @@ idforge-render - =MANPAGE_DESCRIPTION=
 == Description
 
 ////
-The *idforge-render(1)* command produces images, documents and
+The *{doctitle}* command produces images, documents and
 packages as specified in configuration files.
 ////
 
-The *idforge-render(1)* command produces images and documents as
-specified in configuration files.
+The *{doctitle}* command reads configuration files to produce images
+and documents in several formats and locales. Additionally, it
+provides post-production actions for compressing files, archiving
+files, and sending electronic mails for conclusive notifications about
+the work done.
 
 == Options
 
-The *idforge-render(1)* command accepts the following command-line
+The *{doctitle}* command accepts the following command-line
 options:
 
 include::Commons/options.inc[]
 
-The *idforge-render(1)* command reads configuration from directories
+The *{doctitle}* command reads configuration from directories
 or files provided as argument in its command-line. When the arguments
 are files, they are processed in the order provided, one by one. When
 the arguments are directories, a recursive search is performed inside
@@ -38,7 +41,7 @@ order they were found.
 
 == Configuration
 
-The *idforge-render(1)* command processes configuration sections from
+The *{doctitle}* command processes configuration sections from
 top to bottom, using the *render-type*, *render-from*, *render-flow*
 and *render-from-po* configuration options as reference to control the
 initialization of content production.
@@ -90,7 +93,7 @@ render-from-po::
     Specifies one or more translation files in PO format. This option
     accepts absolute, relative paths, and shell expansions as value.
 
-The *idforge-render(1)* command controls content localization based on
+The *{doctitle}* command controls content localization based on
 the number of files provided to both *render-from* and
 *render-from-po* configuration options. Based on the number of files
 provided to these options, one of the following localization routes is
@@ -118,7 +121,7 @@ taken:
   from all the source files provided in the same configuration
   section.
 
-The *idforge-render(1)* command controls the final output location
+The *{doctitle}* command controls the final output location
 based on the following configuration options:
 
 render-directory::
@@ -146,7 +149,7 @@ render-logic::
 [[images]]
 === Images Construction
 
-The *idforge-render(1)* command initiates image construction when
+The *{doctitle}* command initiates image construction when
 *render-type* is set either to "svg" or "png".
 
 When *render-type* is set to "svg", the *render* module executes the
@@ -306,7 +309,7 @@ tool set, you can run the following command: _identify -list format_.
 [[documents]]
 === Documents Construction
 
-The *idforge-render(1)* command initiates document construction when
+The *{doctitle}* command initiates document construction when
 *render-type* is set either to "asciidoc" or "docbook".
 
 When *render-type* is set to "asciidoc", the *render* module executes
@@ -367,7 +370,7 @@ manpage-sectdesc::
 
 === Compressing Files
 
-The *idforge-render(1)* command initiates file compression when
+The *{doctitle}* command initiates file compression when
 *render-type* is set to "gz" and one or more files are provided as
 value to *render-form* configuration option. 
 
@@ -381,7 +384,7 @@ default), or set a different compression command (e.g.,
 
 === Archiving Files
 
-The *idforge-render(1)* command initiates files archiving when
+The *{doctitle}* command initiates files archiving when
 *render-type* is set to "tar" and one or more files are provided as
 value to *render-form* configuration option.
 
@@ -423,7 +426,7 @@ section just for that purpose.
 
 === Sending Electronic Mails
 
-The *idforge-render(1)* command sends electronic mails when
+The *{doctitle}* command sends electronic mails when
 *render-type* is set to "email" and one or more files are provided as
 value to *render-form* configuration option. In this context, the
 *render* module calls the *email* module to build an email message for
@@ -535,69 +538,6 @@ So, these issues led to change the perspective about rendering
 dependencies inside *idforge(1)* automation scripts from the
 workstation preparation process up to the process of writing
 configuration files.
-
-[[files]]
-== Files
-
-The *idforge-render(1)* command needs you to create a working
-directory using the *idforge-prepare(1)* command and update the
-following files based on the visual style and branding information you
-want to set for your organization:
-
-./Backgrounds/1920x1600.png::
-    The artistic motif used as pattern to reinforce the visual
-    identity of your project. This image must be provided in PNG
-    format and must be created with the size (in pixels) specified in
-    the file name.
-./Backgrounds/1920x1600.png-14colors.gpl::
-    A 14 colors palette produced with GIMP holding the color
-    information indexed to 14 colors for the PNG image specified in
-    the file name.
-./Backgrounds/1920x1600.png-16colors.gpl::
-    A 16 colors palette produced with GIMP holding the color
-    information indexed to 16 colors for the PNG image specified in
-    the file name.
-./Models/Brands/168/logo.svg::
-    The logo design of your organization in SVG format, 168 pixels of
-    height and the appropriate white space for content protection from
-    borders.
-./Models/Brands/168/logo.png::
-    The logo design of your organization in PNG format, indexed to the
-    minimum number of color possible. This image is normally produced
-    from its SVG version and later indexed using GIMP.
-./Models/Brands/168/logo.gpl::
-    The color information of your project logo. This is the palette of
-    color you have as result of indexing the PNG version of your
-    project's logo to its minimum number of colors.
-./Models/Brands/168/symbol.svg::
-    The symbol design of your organization in SVG format, 168 pixels
-    of height and the appropriate white space for content protection
-    from borders.
-./Models/Brands/168/symbol.png::
-    The symbol design of your organization in PNG format, indexed to
-    the minimum number of color possible. This image is normally
-    produced from its SVG version and later indexed using GIMP.
-./Models/Brands/168/symbol.gpl::
-    The color information of your project symbol. This is the palette
-    of color you have as result of indexing the PNG version of your
-    project's symbol to its minimum number of colors.
-./Fonts/::
-    This directory contains your project's typographies. This is the
-    font used to build your project's logotype and any other font your
-    project is using in its graphic designs. Files in this directory
-    must be in TrueType Font (ttf) format.
-
-The working directory provides a directory structure to organize your
-entire project as well as the models that will be reused while
-building your own organization documentation and packages. The models
-are copied in the working directory with the intention of being
-customized by you. They give you access to documentation sources in
-Asciidoc format, image sources in SVG format, configuration files used
-to gear everything up, and descriptions to help you extend the basic
-layout for your particular situation.
-
-See *idforge-prepare(1)* for more information about the working
-directory layout.
 
 == Examples
 

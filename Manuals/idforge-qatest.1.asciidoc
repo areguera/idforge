@@ -1,6 +1,6 @@
 = idforge-qatest(1)
 Alain Reguera Delgado <alain.reguera@gmail.com>
-=MANPAGE_YEAR=:
+idFORGE Framework =IDFORGE_VERSION=, =MANPAGE_YEAR=: =MANPAGE_DESCRIPTION=
 
 == Name
 
@@ -14,20 +14,21 @@ idforge-qatest - =MANPAGE_DESCRIPTION=
 
 == Description
 
-*idforge-qatest* is the unit testing framework used by *idforge*
-developers to assure quality of idforge and its sub-commands.
+The *{doctitle}* command is the unit testing framework used by
+*idforge* developers to assure quality of idforge and its
+sub-commands.
 
-*idforge-qatest* is conceived to make easier for you to create and run
-automated quality assurance tests for *idforge* and its sub-commands
-quickly and consistently.  Normally, you run *idforge-qatest* several
-times a day, before committing changes up to public repositories. So,
-to be sure your local changes didn't break anything. Likewise, when
-you fix a bug, to reproduce the expected behaviour and refrain it from
-happening again.
+The *{doctitle}* command is conceived to make easier for you to create
+and run automated quality assurance tests for *idforge* and its
+sub-commands quickly and consistently.  Normally, you run *{doctitle}*
+several times a day, before committing changes up to public
+repositories. So, to be sure your local changes didn't break anything.
+Likewise, when you fix a bug, to reproduce the expected behaviour and
+refrain it from happening again.
 
-When you execute *idforge-qatest* it looks for shell scripts inside
-the first level of the directories you provided as argument in the
-command-line and executes them, one by one, in the order they were
+When you execute the *{doctitle}* command it looks for shell scripts
+inside the first level of the directories you provided as argument in
+the command-line and executes them, one by one, in the order they were
 found.  Each shell script is considered to be a test unit and is
 written to reproduce the specific features or behaviours you want to
 validate using integrity checks.
@@ -35,7 +36,7 @@ validate using integrity checks.
 [[options]]
 == Options
 
-*idforge-qatest* supports the following options:
+The *{doctitle}* command accepts the following command-line options:
 
 include::Commons/options.inc[]
 
@@ -78,7 +79,7 @@ whether a specific set of commands and, optionally, the output they
 produce are what they are expected to be --based on the concerted
 opinion of both users and developers.
 
-In *idforge-qatest*, the integrity checks are triggered whenever the
+In *{doctitle}*, the integrity checks are triggered whenever the
 *command_line* function is called inside the shell script. This
 function considers two methods of validation.  One is through
 command's exit status and other based on the content of the files
@@ -109,7 +110,7 @@ validation.
 
 This method looks for a file with the +.files+ extension in the shell
 script auxiliary directory.  When such a file is detected,
-*idforge-qatest* makes a list of all files inside the directory where
+*{doctitle}* makes a list of all files inside the directory where
 final output is stored in for that shell script and compares it with
 the one in the +.files+ file, so to determine whether they both are
 equal or not.  If the result is equal, it is a successful command,
@@ -123,7 +124,7 @@ that all files produced have the content they are expected to have.
 
 This method looks for files with the +.md5sum+, +.sha1sum+ and
 +.sha256sum+ extensions in the shell script auxiliary directory. When
-either of such files are detected, *idforge-qatest* makes a list of
+either of such files are detected, *{doctitle}* makes a list of
 all files inside the directory where final output is stored in for
 that shell script and compares it with the one in the file holding the
 related list of checksums. If everything matches, it is a successful
@@ -143,7 +144,7 @@ test is executed. In such cases, the MIME validation is preferred.
 
 == Exit Status
 
-The exit status of *idforge-qatest* command execution is the number of
+The exit status of *{doctitle}* command execution is the number of
 failed tests it found.
 
 == Examples
@@ -225,13 +226,13 @@ hasn't been built in the location the *man* expects it to be, so *man*
 command does send the "No Manual entry for idforge-qatest" message to
 the standard error, which is correct.
 
-After the last test has been executed, *idforge-qatest* displays a
+After the last test has been executed, *{doctitle}* displays a
 report telling the number of tests executed, the time in seconds all
 tests took to complete, how many failed and how many passed.  After
-the report line, *idforge-qatest* concludes its execution suggesting
+the report line, *{doctitle}* concludes its execution suggesting
 the action you should adopt, based on the results it found. 
 
-Normally, when one test fails, *idforge-qatest* considers the entire
+Normally, when one test fails, *{doctitle}* considers the entire
 testing process to be failed. Only when all tests have been passed
 successfully and message has been sent to standard error output, the
 entire testing process is considered to be successful. In such case,
@@ -265,21 +266,15 @@ $ idforge --filter="2014121344576579785" qatest ./Qatests/idforge-qatest
 <5> Command-specific shell script used to initiate integrity checks
 ======================================================================
 
-== Environment
-
 include::Commons/environment.inc[]
-
-== Author
 
 include::Commons/author.inc[]
 
-== Copyright
+include::Commons/bugs.inc[]
 
 include::Commons/copyright.inc[]
 
-== See also
-
-=MANPAGE_OTHERS=
+include::Commons/also.inc[]
 
 == Reference
 
@@ -301,7 +296,7 @@ and websites:
 
 These references are frequently consulted in the hope of revising and
 correcting *idforge* overall design and development process. In this
-sake, *idforge-qatest* plays a significant role. It is responsible of
+sake, *{doctitle}* plays a significant role. It is responsible of
 auditing and validating the implementation of the concepts mentioned
 in these references.
 
