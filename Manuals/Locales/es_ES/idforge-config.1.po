@@ -1,0 +1,124 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: idforge-config.1\n"
+"POT-Creation-Date: 2015-03-08 15:22-0400\n"
+"PO-Revision-Date: 2015-03-08 15:22-0400\n"
+"Last-Translator: The CentOS Documentation SIG <centos-docs@centos.org>\n"
+"Language-Team: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "idforge-config"
+msgstr ""
+
+msgid "1"
+msgstr ""
+
+msgid "=MANPAGE_DESCRIPTION="
+msgstr ""
+
+msgid "=MANPAGE_SYNOPSIS="
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "…"
+msgstr ""
+
+msgid "Options"
+msgstr ""
+
+msgid "idforge-config(1)"
+msgstr ""
+
+msgid "The <placeholder-1/> command accepts the following options:"
+msgstr ""
+
+msgid "-h, --help"
+msgstr ""
+
+msgid "Prints documentation (this page)."
+msgstr ""
+
+msgid "-v, --version"
+msgstr ""
+
+msgid "Prints version and legal status."
+msgstr ""
+
+msgid "-s, --description"
+msgstr ""
+
+msgid "Prints brief description in one line."
+msgstr ""
+
+msgid ""
+"In case no argument is provided after the command, a brief usage "
+"description will be displayed with the command-line structure."
+msgstr ""
+
+msgid "Author"
+msgstr "Autor"
+
+msgid "alain.reguera@gmail.com"
+msgstr ""
+
+msgid "Written by Alain Reguera Delgado &lt;<placeholder-1/>&gt;"
+msgstr "Escrito por Alain Reguera Delgado &lt;<placeholder-1/>&gt;"
+
+msgid "Reporting Bugs"
+msgstr "Reportando Errores"
+
+msgid "centos-devel@centos.org"
+msgstr ""
+
+msgid "Report bugs to CentOS developers mailing list &lt;<placeholder-1/>&gt;"
+msgstr ""
+"Reporte los problemas a la lista de correo de los desarrolladores de CentOS "
+"&lt;<placeholder-1/>&gt;"
+
+msgid "Copyright"
+msgstr "Restricciones para la distribución de copias"
+
+msgid "Copyright © =MANPAGE_YEAR= The CentOS Artwork SIG"
+msgstr ""
+
+msgid ""
+"idFORGE Framework is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
+msgstr ""
+"idFORGE Framework es software libre; usted puede redistribuirlo y/o "
+"modificarlo bajo los términos de la Licencia Pública General de GNU como se "
+"publicó por la Free Software Foundation; ya sea en la versión 2 de la "
+"Licencia, o (a su opinión) cualquier versión posterior."
+
+msgid ""
+"idFORGE Framework is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
+"or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for "
+"more details."
+msgstr ""
+"idFORGE Framework es distribuido en la expectativa de que será util, pero "
+"SIN NINGUNA GARANTÍA; incluso sin la garantía implicita de COMERCIALIZACIÓN "
+"o IDIONIDAD PARA UN PROPÓSIGO PARTICULAR. Vease la Licencia General Pública "
+"de GNU para los detalles."
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"idFORGE Framework; if not, write to the Free Software Foundation, Inc., 675 "
+"Mass Ave, Cambridge, MA 02139, USA."
+msgstr ""
+"Usted debe haber recibido una copia de la Licencia General Pública de GNU "
+"junto a idFORGE Framework; de lo contrario, escriba a la Free Software "
+"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
+
+msgid "See Also"
+msgstr "Vea Además"
+
+msgid "=MANPAGE_OTHERS="
+msgstr ""

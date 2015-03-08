@@ -1,0 +1,531 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: idforge-qatest.1\n"
+"POT-Creation-Date: 2015-03-08 15:22-0400\n"
+"PO-Revision-Date: 2015-03-08 15:22-0400\n"
+"Last-Translator: The CentOS Documentation SIG <centos-docs@centos.org>\n"
+"Language-Team: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "idforge-qatest"
+msgstr ""
+
+msgid "1"
+msgstr ""
+
+msgid "=MANPAGE_DESCRIPTION="
+msgstr ""
+
+msgid "=MANPAGE_SYNOPSIS="
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "idforge-qatest(1)"
+msgstr ""
+
+msgid "idforge"
+msgstr ""
+
+msgid ""
+"The <placeholder-1/> command is the unit testing framework used by "
+"<placeholder-2/> developers to assure quality of idforge and its "
+"sub-commands."
+msgstr ""
+
+msgid ""
+"The <placeholder-1/> command is conceived to make easier for you to "
+"create and run automated quality assurance tests for <placeholder-2/"
+"> and its sub-commands quickly and consistently. Normally, you run "
+"<placeholder-3/> several times a day, before committing changes up "
+"to public repositories. So, to be sure your local changes didn’t "
+"break anything. Likewise, when you fix a bug, to reproduce the "
+"expected behaviour and refrain it from happening again."
+msgstr ""
+
+msgid ""
+"When you execute the <placeholder-1/> command it looks for shell "
+"scripts inside the first level of the directories you provided as "
+"argument in the command-line and executes them, one by one, in the "
+"order they were found. Each shell script is considered to be a test "
+"unit and is written to reproduce the specific features or "
+"behaviours you want to validate using integrity checks."
+msgstr ""
+
+msgid "Options"
+msgstr ""
+
+msgid "The <placeholder-1/> command accepts the following options:"
+msgstr ""
+
+msgid "-h, --help"
+msgstr ""
+
+msgid "Prints documentation (this page)."
+msgstr ""
+
+msgid "-v, --version"
+msgstr ""
+
+msgid "Prints version and legal status."
+msgstr ""
+
+msgid "-s, --description"
+msgstr ""
+
+msgid "Prints brief description in one line."
+msgstr ""
+
+msgid ""
+"In case no argument is provided after the command, a brief usage "
+"description will be displayed with the command-line structure."
+msgstr ""
+
+msgid "-a, --add"
+msgstr ""
+
+msgid ""
+"Creates the shell script you need to implement a new assurance "
+"test. When you provide this option you are prompted to enter the "
+"command you want to validate and then its arguments. In this "
+"process you can only specify one command, but it is possible to "
+"provide several lines of arguments to it."
+msgstr ""
+
+msgid "-c COMMAND, --command=COMMAND"
+msgstr ""
+
+msgid "/usr/bin/idforge"
+msgstr ""
+
+msgid "-c"
+msgstr ""
+
+msgid ""
+"Specifies the command that is target to validation and arguments "
+"later requested will be concatenated to. When this option is not "
+"provided, <placeholder-1/> is used as default value. This option "
+"must be provided along <placeholder-2/> option."
+msgstr ""
+
+msgid "-u, --update"
+msgstr ""
+
+msgid "-m"
+msgstr ""
+
+msgid "-e"
+msgstr ""
+
+msgid ""
+"Enables the actualization of integrity files related to a specific "
+"commands' output. This option must be provided after you’ve "
+"rendered the content you want to validate and you are sure it is "
+"what you expect it to be. Only then use this option to re-create "
+"the validation files that will tell what the command output should "
+"be, the next time it is validated. This option must be provided "
+"along <placeholder-1/> or <placeholder-2/> option."
+msgstr ""
+
+msgid "-m, --mime"
+msgstr ""
+
+msgid ""
+"Executes actions related to MIME validation. This option is only "
+"useful when you are checking or updating quality assurance tests."
+msgstr ""
+
+msgid "-e, --checksum"
+msgstr ""
+
+msgid ""
+"Executes actions related to checksum validation. This option is "
+"only useful when you are checking or updating quality assurance "
+"tests and the files you are validating doesn’t vary their content "
+"each time they are rendered."
+msgstr ""
+
+msgid "Integrity checks"
+msgstr ""
+
+msgid ""
+"The integrity checks provide the information needed to determine "
+"whether a specific set of commands and, optionally, the output they "
+"produce are what they are expected to be --based on the concerted "
+"opinion of both users and developers."
+msgstr ""
+
+msgid "command_line"
+msgstr ""
+
+msgid ""
+"In <placeholder-1/>, the integrity checks are triggered whenever "
+"the <placeholder-2/> function is called inside the shell script. "
+"This function considers two methods of validation. One is through "
+"command’s exit status and other based on the content of the files "
+"produced. From these methods, the command’s exit status is always "
+"verified while the validations related to files' content are "
+"performed at demand, when either <placeholder-3/> or <placeholder-4/"
+"> option is provided in the command-line."
+msgstr ""
+
+msgid "Command’s exit status"
+msgstr ""
+
+msgid ""
+"The command’s exit status validates the execution of the command "
+"taken from concatenating the command provided as argument to "
+"<placeholder-1/> option and the arguments passed to <placeholder-2/"
+"> function, inside the shell script. When the command’s exit status "
+"is 0 it is considered to be a successful command, otherwise it is a "
+"failed command. This check is useful to know that commands were "
+"executed without errors (assuming those commands also agree that an "
+"exit status of 0 is a successful command). However, this check "
+"doesn’t validate the content produced by the executed command "
+"itself. To do so, it is necessary to extend the integrity check by "
+"applying content-related validation."
+msgstr ""
+
+msgid "Files' content validation"
+msgstr ""
+
+msgid ""
+"The files' content validation includes MIME validation and checksum "
+"validation."
+msgstr ""
+
+msgid "MIME validation"
+msgstr ""
+
+msgid ".files"
+msgstr ""
+
+msgid ""
+"This method looks for a file with the <placeholder-1/> extension in "
+"the shell script auxiliary directory. When such a file is detected, "
+"<placeholder-2/> makes a list of all files inside the directory "
+"where final output is stored in for that shell script and compares "
+"it with the one in the <placeholder-3/> file, so to determine "
+"whether they both are equal or not. If the result is equal, it is a "
+"successful command, otherwise it is a failed command."
+msgstr ""
+
+msgid ""
+"This method can be applied whenever you want to validate file "
+"formats and one specific layout of files. However, this method "
+"doesn’t assure that all files produced have the content they are "
+"expected to have."
+msgstr ""
+
+msgid "Checksum validation"
+msgstr ""
+
+msgid ".md5sum"
+msgstr ""
+
+msgid ".sha1sum"
+msgstr ""
+
+msgid ".sha256sum"
+msgstr ""
+
+msgid ""
+"This method looks for files with the <placeholder-1/>, <placeholder-"
+"2/> and <placeholder-3/> extensions in the shell script auxiliary "
+"directory. When either of such files are detected, <placeholder-4/> "
+"makes a list of all files inside the directory where final output "
+"is stored in for that shell script and compares it with the one in "
+"the file holding the related list of checksums. If everything "
+"matches, it is a successful command, otherwise it is a failed "
+"command."
+msgstr ""
+
+msgid ""
+"Apply this check whenever you want to validate the files' content "
+"integrity of one or more files bit-per-bit and also one specific "
+"layout of files."
+msgstr ""
+
+msgid ""
+"This method, however, isn’t appropriate for content that change "
+"from one rendering to another. For example, when you render HTML "
+"documents from Asciidoc sources, the id value of HTML anchors is "
+"reset each time the HTML document is rendered. This makes "
+"impossible to apply automated tests that validate such files using "
+"an specific checksum since the file will have a different digest "
+"each time the automated test is executed. In such cases, the MIME "
+"validation is preferred."
+msgstr ""
+
+msgid "Exit Status"
+msgstr ""
+
+msgid ""
+"The exit status of <placeholder-1/> command execution is the number "
+"of failed tests it found."
+msgstr ""
+
+msgid "Examples"
+msgstr ""
+
+msgid "Adding a new shell script"
+msgstr ""
+
+msgid ""
+"$ IDFORGE_LIBRARY=Library idforge qatest -a -c ./idforge.sh ./"
+"QaTests/idforge-qatest Creating ./QaTests/idforge-qatest/qatest-"
+"2015010849776781980.sh Enter integrity checks target arguments: ./"
+"idforge.sh ./idforge.sh --version ./idforge.sh --description ./"
+"idforge.sh --help ./idforge.sh $"
+msgstr ""
+
+msgid "The shell script content"
+msgstr ""
+
+msgid ""
+"#!/bin/bash "
+"###################################################################### "
+"# # ./QaTests/idforge-qatest/qatest-2015010849776781980.sh # "
+"###################################################################### "
+"#===================================================================== "
+"# Enter integrity checks target command: "
+"#===================================================================== "
+"QATEST_FLAG_COMMAND=\"./idforge.sh\" "
+"#===================================================================== "
+"# Enter integrity checks target arguments: "
+"#===================================================================== "
+"command_line \"qatest\" command_line \"qatest --version\" "
+"command_line \"qatest --description\" command_line \"qatest --help\""
+msgstr ""
+
+msgid "Running available shell scripts"
+msgstr ""
+
+msgid ""
+"$ IDFORGE_LIBRARY=Library idforge qatest ./QaTests/idforge-qatest "
+"================================================================== ./"
+"QaTests/idforge-qatest/qatest-2015010849776781980.sh "
+"================================================================== "
+"Processing ./idforge.sh qatest [ PASSED ] in 0.45621 seconds "
+"Processing ./idforge.sh qatest --version [ PASSED ] in 0.245414 "
+"seconds Processing ./idforge.sh qatest --description [ PASSED ] in "
+"0.133479 seconds Processing ./idforge.sh qatest --help No manual "
+"entry for idforge-qatest idforge (qatest): The documentation manual "
+"is not available. [ FAILED ] in 0.146272 seconds "
+"================================================================== "
+"4 tests were executed in 0.981375 seconds | 1 failed | 3 passed "
+"[ FAILED ] Don't commit your changes yet. Fix what you broke first. "
+"$"
+msgstr ""
+
+msgid ""
+"When a test passes successfully, idforge-qatest prints a PASSED "
+"string in green color just after the command’s processing line. "
+"When a test fails, a FAILED string in red color is displayed "
+"instead, along any message sent to standard error output. In both "
+"cases, on the right side of the status message, it is the number of "
+"seconds the related took to complete."
+msgstr ""
+
+msgid "man"
+msgstr ""
+
+msgid ""
+"In the specific example described above, the last test does fail "
+"because the related command (./idforge.sh qatest --help) is "
+"conceived to be executed in the build tree, once the documentation "
+"has been built and put in place the <placeholder-1/> command is "
+"aware of. Since this test was executed in the development tree and "
+"not in the build tree, it is of expecting that it is considered "
+"failed because the documentation hasn’t been built in the location "
+"the <placeholder-2/> expects it to be, so <placeholder-3/> command "
+"does send the \"No Manual entry for idforge-qatest\" message to the "
+"standard error, which is correct."
+msgstr ""
+
+msgid ""
+"After the last test has been executed, <placeholder-1/> displays a "
+"report telling the number of tests executed, the time in seconds "
+"all tests took to complete, how many failed and how many passed. "
+"After the report line, <placeholder-2/> concludes its execution "
+"suggesting the action you should adopt, based on the results it "
+"found."
+msgstr ""
+
+msgid ""
+"Normally, when one test fails, <placeholder-1/> considers the "
+"entire testing process to be failed. Only when all tests have been "
+"passed successfully and message has been sent to standard error "
+"output, the entire testing process is considered to be successful. "
+"In such case, instead, you should see a message like the following:"
+msgstr ""
+
+msgid "[ PASSED ] You can commit your changes now. Good work!"
+msgstr ""
+
+msgid "Running available shell scripts based on a pattern"
+msgstr ""
+
+msgid ""
+"$ idforge --filter=\"2014121344576579785\" qatest ./Qatests/idforge-"
+"qatest"
+msgstr ""
+
+msgid "Files"
+msgstr ""
+
+msgid ""
+"./QaTests/${COMMAND_NAME}/ <co id=\"CO1-1\"/> |-- qatest-"
+"${QATEST_TIMESTAMP}/ <co id=\"CO1-2\"/> | |-- qatest-"
+"${QATEST_TIMESTAMP}.mime <co id=\"CO1-3\"/> | |-- qatest-"
+"${QATEST_TIMESTAMP}.md5sum <co id=\"CO1-4\"/> | |-- qatest-"
+"${QATEST_TIMESTAMP}.sha1sum | `-- qatest-${QATEST_TIMESTAMP}."
+"sha256sum `--qatest-${QATEST_TIMESTAMP}.sh <co id=\"CO1-5\"/>"
+msgstr ""
+
+msgid "Command-specific directory"
+msgstr ""
+
+msgid "Command-specific auxiliary directory"
+msgstr ""
+
+msgid "Command-specific MIME integrity checks"
+msgstr ""
+
+msgid "Command-specific checksum integrity checks"
+msgstr ""
+
+msgid ""
+"Command-specific shell script used to initiate integrity checks"
+msgstr ""
+
+msgid "Environment"
+msgstr ""
+
+msgid "IDFORGE_LIBRARY"
+msgstr ""
+
+msgid "idforge(1)"
+msgstr ""
+
+msgid "/usr/libexec/idforge"
+msgstr ""
+
+msgid ""
+"Specifies the directory where <placeholder-1/> common functions and "
+"modules are stored in. When this variable isn’t defined in the "
+"command-line, it is set to <placeholder-2/> by default."
+msgstr ""
+
+msgid "Author"
+msgstr "Autor"
+
+msgid "alain.reguera@gmail.com"
+msgstr ""
+
+msgid "Written by Alain Reguera Delgado &lt;<placeholder-1/>&gt;"
+msgstr "Escrito por Alain Reguera Delgado &lt;<placeholder-1/>&gt;"
+
+msgid "Reporting Bugs"
+msgstr "Reportando Errores"
+
+msgid "centos-devel@centos.org"
+msgstr ""
+
+msgid "Report bugs to CentOS developers mailing list &lt;<placeholder-1/>&gt;"
+msgstr ""
+"Reporte los problemas a la lista de correo de los desarrolladores de CentOS "
+"&lt;<placeholder-1/>&gt;"
+
+msgid "Copyright"
+msgstr "Restricciones para la distribución de copias"
+
+msgid "Copyright © =MANPAGE_YEAR= The CentOS Artwork SIG"
+msgstr ""
+
+msgid ""
+"idFORGE Framework is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
+msgstr ""
+"idFORGE Framework es software libre; usted puede redistribuirlo y/o "
+"modificarlo bajo los términos de la Licencia Pública General de GNU como se "
+"publicó por la Free Software Foundation; ya sea en la versión 2 de la "
+"Licencia, o (a su opinión) cualquier versión posterior."
+
+msgid ""
+"idFORGE Framework is distributed in the hope that it will be useful, but "
+"WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY "
+"or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for "
+"more details."
+msgstr ""
+"idFORGE Framework es distribuido en la expectativa de que será util, pero "
+"SIN NINGUNA GARANTÍA; incluso sin la garantía implicita de COMERCIALIZACIÓN "
+"o IDIONIDAD PARA UN PROPÓSIGO PARTICULAR. Vease la Licencia General Pública "
+"de GNU para los detalles."
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"idFORGE Framework; if not, write to the Free Software Foundation, Inc., 675 "
+"Mass Ave, Cambridge, MA 02139, USA."
+msgstr ""
+"Usted debe haber recibido una copia de la Licencia General Pública de GNU "
+"junto a idFORGE Framework; de lo contrario, escriba a la Free Software "
+"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
+
+msgid "See Also"
+msgstr "Vea Además"
+
+msgid "=MANPAGE_OTHERS="
+msgstr ""
+
+msgid "Reference"
+msgstr ""
+
+msgid ""
+"The whole design and development process of <placeholder-1/> is "
+"driven by the conceptual ideas described in the following books:"
+msgstr ""
+
+msgid "Refactoring, Improving the Design of Existing"
+msgstr ""
+
+msgid "by Martin Fowler"
+msgstr ""
+
+msgid "Planning Extreme Programming"
+msgstr ""
+
+msgid "by Kent Beck and Martin Fowler"
+msgstr ""
+
+msgid "Extreme Programming Explained"
+msgstr ""
+
+msgid "by Kent Beck"
+msgstr ""
+
+msgid "and websites:"
+msgstr ""
+
+msgid "http://www.agile-process.org/"
+msgstr ""
+
+msgid "http://www.extremeprogramming.org/"
+msgstr ""
+
+msgid "http://martinfowler.com/"
+msgstr ""
+
+msgid ""
+"These references are frequently consulted in the hope of revising "
+"and correcting <placeholder-1/> overall design and development "
+"process. In this sake, <placeholder-2/> plays a significant role. "
+"It is responsible of auditing and validating the implementation of "
+"the concepts mentioned in these references."
+msgstr ""
