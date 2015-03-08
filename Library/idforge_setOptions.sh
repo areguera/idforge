@@ -28,10 +28,10 @@
 function idforge_setOptions {
 
     # Define short options we want to support.
-    local ARGSS="h,v,q,y,d,f:"
+    local ARGSS="h,v,s,q,y,d,f:"
 
     # Define long options we want to support.
-    local ARGSL="help,version,quiet,yes,debug,filter:"
+    local ARGSL="help,version,description,quiet,yes,debug,filter:"
 
     # Divide command-line arguments in order to process them. Here the
     # command-line is divided in "common arguments" and "specific
@@ -71,6 +71,11 @@ function idforge_setOptions {
 
             -v | --version )
                 idforge_setModuleEnvironment -t 'parent' -m 'version' -g ${IDFORGE}
+                shift 1
+                ;;
+
+            -s | --description )
+                idforge_printMessage "`gettext "Manage identity manuals in community"`" --as-stdout-line
                 shift 1
                 ;;
 
