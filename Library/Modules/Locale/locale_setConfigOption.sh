@@ -29,20 +29,6 @@ function locale_setConfigOption {
 
     case ${CONFIG_OPTION} in
 
-        render-directory )
-            # Define value of "render-dir" option. This information is
-            # used to customize the directory where final files are
-            # stored in.
-            RENDER_DIRECTORY=$(locale_printConfigValues "${CONFIG_FILE%/*}/Final")
-
-            # Verify whether the design model has a related
-            # translation file assigned or not and, redefine the
-            # target directory based on it.
-            if [[ -n ${RENDER_FROM_PO[0]} ]];then
-                RENDER_DIRECTORY="${RENDER_DIRECTORY}/${IDFORGE_LANG_LC}"
-            fi
-            ;;
-
         render-from-po )
             # Define value to "render-from-po" option. This information
             # is used to retrieve the translation file -in PO format-
@@ -60,10 +46,6 @@ function locale_setConfigOption {
 
             local COUNT=0
 
-            [[ -z ${FILES} ]] \
-                && RENDER_FROM_PO[${COUNT}]=${FILE} \
-                && return
-
             for FILE in ${FILES};do
                 if [[ ${FILE} =~ ^/ ]];then
                     RENDER_FROM_PO[${COUNT}]=${FILE}
@@ -73,8 +55,26 @@ function locale_setConfigOption {
                 COUNT=$(( ++COUNT ))
             done
 
-            # Don't verify existence of translation files here. They
-            # are optional.
+            # Don't validate the existence of translation files
+            # provided in PO format here. Remember that the locale
+            # module creates translation files. So, it is valid to
+            # have non-existent translation files specified as value
+            # to render-from-po configuration option in such
+            # situations.
+            ;;
+
+        render-directory )
+            # Define value of "render-dir" option. This information is
+            # used to customize the directory where final files are
+            # stored in.
+            RENDER_DIRECTORY=$(locale_printConfigValues "${CONFIG_FILE%/*}/Final")
+
+            # Verify whether the design model has a related
+            # translation file assigned or not and, redefine the
+            # target directory based on it.
+            if [[ ${#RENDER_FROM_PO[*]} -gt 0 ]];then
+                RENDER_DIRECTORY="${RENDER_DIRECTORY}/${IDFORGE_LANG_LC}"
+            fi
             ;;
 
         * )

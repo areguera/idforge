@@ -65,11 +65,9 @@ function update_setConfigOption {
             local FILE=''
             local FILES=$(locale_printConfigValues)
 
-            local COUNT=0
+            [[ -z ${FILES} ]] && return
 
-            [[ -z ${FILES} ]] \
-                && RENDER_FROM_MO[${COUNT}]=${FILE} \
-                && return
+            local COUNT=0
 
             for FILE in ${FILES};do
                 if [[ ${FILE} =~ ^/ ]];then
@@ -80,8 +78,12 @@ function update_setConfigOption {
                 COUNT=$(( ++COUNT ))
             done
 
-            # Don't verify existence of translation files here. They
-            # are optional.
+            # Don't validate the existence of translation files
+            # provided in MO format here. Remember that the locale
+            # module creates translation files. So, it is valid to
+            # have non-existent translation files specified as value
+            # to render-from-po configuration option in such
+            # situations.
             ;;
 
         * )

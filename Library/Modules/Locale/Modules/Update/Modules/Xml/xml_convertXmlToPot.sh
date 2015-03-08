@@ -37,7 +37,7 @@ function xml_convertXmlToPot {
 
     PUSHD_EXIT=1
 
-    [[ -d ${RENDER_DIRECTORY} ]] && pushd ${RENDER_DIRECTORY} && PUSHD_EXIT=${?} > /dev/null
+    [[ -d ${RENDER_DIRECTORY} ]] && pushd ${RENDER_DIRECTORY} > /dev/null && PUSHD_EXIT=${?}
 
     xml2po -a -l ${IDFORGE_LANG_LC} ${XML} \
         | msgcat --output-file=${LOCALE_PO_TEMPLATES[${COUNT}]} --width=70 --no-location -

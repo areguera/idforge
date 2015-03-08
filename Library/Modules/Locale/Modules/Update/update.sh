@@ -32,7 +32,7 @@ function update {
 
     local RENDER_TYPE=$(idforge_printFileExtension "${RENDER_FROM[0]}")
 
-    [[ -n ${RENDER_FROM_PO[0]} ]] && idforge_setModuleEnvironment -m ${RENDER_TYPE} -t 'child'
+    [[ ${#RENDER_FROM_PO[*]} -gt 0 ]] && idforge_setModuleEnvironment -m ${RENDER_TYPE} -t 'child'
 
     # Unset array variables to avoid undesired concatenations of their
     # values between different sections blocks in the same

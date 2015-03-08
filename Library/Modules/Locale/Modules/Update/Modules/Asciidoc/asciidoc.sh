@@ -29,9 +29,9 @@ function asciidoc {
 
     idforge_checkFiles -efm "\.asciidoc$" "${RENDER_FROM[*]}"
 
-    local RENDER_FLOW=''        ; asciidoc_setConfigOption 'render-flow'
-    local RENDER_FROM_XSL=''    ; asciidoc_setConfigOption 'render-from-xsl'
-    local ASCIIDOC_OPTS=''      ; asciidoc_setConfigOption 'asciidoc-opts'
+    local RENDER_FLOW=''            ; asciidoc_setConfigOption 'render-flow'
+    local RENDER_FLOW_OPTIONS=''    ; asciidoc_setConfigOption 'render-flow-options'
+    local RENDER_FROM_XSL=''        ; asciidoc_setConfigOption 'render-from-xsl'
 
     local COUNT=0
 

@@ -43,7 +43,7 @@ function asciidoc_convertAsciidocToDocbook {
 
     idforge_printMessage "${RENDER_FROM[${RENDER_FROM_COUNT}]}" --as-processing-line
 
-    /usr/bin/asciidoc ${ASCIIDOC_OPTS} --backend="docbook" --doctype="${RENDER_FLOW}" \
+    /usr/bin/asciidoc ${RENDER_FLOW_OPTIONS} --backend="docbook" --doctype="${RENDER_FLOW}" \
         --out-file="${RENDER_FROM_INSTANCES[${RENDER_FROM_COUNT}]}" ${RENDER_FROM[${RENDER_FROM_COUNT}]}
 
 }
