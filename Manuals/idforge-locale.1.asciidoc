@@ -60,8 +60,6 @@ script to exit with an error message.
 
 == Command-line Options
 
-The *{doctitle}* command accepts the following command-line options:
-
 include::Commons/options.inc[]
 
 *-e, --edit*::

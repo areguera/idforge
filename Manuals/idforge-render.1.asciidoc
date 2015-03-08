@@ -27,9 +27,6 @@ the work done.
 
 == Options
 
-The *{doctitle}* command accepts the following command-line
-options:
-
 include::Commons/options.inc[]
 
 The *{doctitle}* command reads configuration from directories

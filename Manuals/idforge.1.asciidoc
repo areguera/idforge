@@ -83,8 +83,6 @@ script, while specific options affect only the execution environment
 of the command that interprets them. The specific options are
 described in the man page of the command they pertain to.
 
-The *{doctitle}* command supports the following options:
-
 include::Commons/options.inc[]
 
 *-d, --debug*::
