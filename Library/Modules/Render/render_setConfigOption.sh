@@ -55,8 +55,9 @@ function render_setConfigOption {
                 COUNT=$(( ++COUNT ))
             done
 
-            # Don't verify existence of translation files here. They
-            # are optional.
+            # Translation files can be provided or not. But, when they
+            # are provided, they must exist.
+            idforge_checkFiles -e ${RENDER_FROM_PO[*]}
             ;;
 
         render-directory )
@@ -68,7 +69,7 @@ function render_setConfigOption {
             # Verify whether the design model has a related
             # translation file assigned or not and, redefine the
             # target directory based on it.
-            if [[ -n ${RENDER_FROM_PO[0]} ]];then
+            if [[ ${#RENDER_FROM_PO[*]} -gt 0 ]];then
                 RENDER_DIRECTORY="${RENDER_DIRECTORY}/${IDFORGE_LANG_LC}"
             fi
             ;;
