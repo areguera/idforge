@@ -42,11 +42,9 @@ function render_setConfigOption {
             local FILE=''
             local FILES=$(render_printConfigValues)
 
-            local COUNT=0
+            [[ -z ${FILES} ]] && return
 
-            [[ -z ${FILES} ]] \
-                && RENDER_FROM_PO[${COUNT}]=${FILE} \
-                && return
+            local COUNT=0
 
             for FILE in ${FILES};do
                 if [[ ${FILE} =~ ^/ ]];then
