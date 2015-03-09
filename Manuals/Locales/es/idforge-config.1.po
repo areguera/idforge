@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: idforge-config.1\n"
-"POT-Creation-Date: 2015-03-08 15:22-0400\n"
-"PO-Revision-Date: 2015-03-08 15:22-0400\n"
+"POT-Creation-Date: 2015-03-09 17:59-0400\n"
+"PO-Revision-Date: 2015-03-09 17:59-0400\n"
 "Last-Translator: The CentOS Documentation SIG <centos-docs@centos.org>\n"
 "Language-Team: es\n"
 "MIME-Version: 1.0\n"
@@ -19,6 +19,7 @@ msgstr ""
 msgid "=MANPAGE_DESCRIPTION="
 msgstr ""
 
+#, no-wrap
 msgid "=MANPAGE_SYNOPSIS="
 msgstr ""
 
@@ -31,10 +32,9 @@ msgstr ""
 msgid "Options"
 msgstr ""
 
-msgid "idforge-config(1)"
-msgstr ""
-
-msgid "The <placeholder-1/> command accepts the following options:"
+msgid ""
+"The <emphasis role=\"strong\">idforge-config(1)</emphasis> command accepts "
+"the following options:"
 msgstr ""
 
 msgid "-h, --help"
@@ -56,26 +56,25 @@ msgid "Prints brief description in one line."
 msgstr ""
 
 msgid ""
-"In case no argument is provided after the command, a brief usage "
-"description will be displayed with the command-line structure."
+"In case no argument is provided after the command, a brief usage description "
+"will be displayed with the command-line structure."
 msgstr ""
 
 msgid "Author"
 msgstr "Autor"
 
-msgid "alain.reguera@gmail.com"
+msgid ""
+"Written by Alain Reguera Delgado &lt;<ulink url=\"mailto:alain.reguera@gmail."
+"com\">alain.reguera@gmail.com</ulink>&gt;"
 msgstr ""
-
-msgid "Written by Alain Reguera Delgado &lt;<placeholder-1/>&gt;"
-msgstr "Escrito por Alain Reguera Delgado &lt;<placeholder-1/>&gt;"
 
 msgid "Reporting Bugs"
 msgstr "Reportando Errores"
 
-msgid "centos-devel@centos.org"
-msgstr ""
-
-msgid "Report bugs to CentOS developers mailing list &lt;<placeholder-1/>&gt;"
+#, fuzzy
+msgid ""
+"Report bugs to CentOS developers mailing list &lt;<ulink url=\"mailto:centos-"
+"devel@centos.org\">centos-devel@centos.org</ulink>&gt;"
 msgstr ""
 "Reporte los problemas a la lista de correo de los desarrolladores de CentOS "
 "&lt;<placeholder-1/>&gt;"
@@ -122,3 +121,10 @@ msgstr "Vea Además"
 
 msgid "=MANPAGE_OTHERS="
 msgstr ""
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
+msgid "translator-credits"
+msgstr ""
+
+#~ msgid "Written by Alain Reguera Delgado &lt;<placeholder-1/>&gt;"
+#~ msgstr "Escrito por Alain Reguera Delgado &lt;<placeholder-1/>&gt;"

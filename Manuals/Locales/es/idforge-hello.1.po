@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: idforge-hello.1\n"
-"POT-Creation-Date: 2015-03-08 15:22-0400\n"
-"PO-Revision-Date: 2015-03-08 15:22-0400\n"
+"POT-Creation-Date: 2015-03-09 17:59-0400\n"
+"PO-Revision-Date: 2015-03-09 17:59-0400\n"
 "Last-Translator: The CentOS Documentation SIG <centos-docs@centos.org>\n"
 "Language-Team: es\n"
 "MIME-Version: 1.0\n"
@@ -19,25 +19,22 @@ msgstr ""
 msgid "=MANPAGE_DESCRIPTION="
 msgstr ""
 
+#, no-wrap
 msgid "=MANPAGE_SYNOPSIS="
 msgstr ""
 
 msgid "Description"
 msgstr "Descripción"
 
-msgid "idforge-hello(1)"
-msgstr ""
-
-msgid "idforge(1)"
-msgstr ""
-
+#, fuzzy
 msgid ""
-"The <placeholder-1/> command prints the arguments you provide in the command-"
-"line to the standard output and exits successfully. It provides several "
-"options to let you control how the output message is printed to standard "
-"output. Each of these options is intentionally written to illustrate "
-"specific ways of using modules inside the <placeholder-2/> command. See "
-"<xref linkend=\"options\"/>."
+"The <emphasis role=\"strong\">idforge-hello(1)</emphasis> command prints the "
+"arguments you provide in the command-line to the standard output and exits "
+"successfully. It provides several options to let you control how the output "
+"message is printed to standard output. Each of these options is "
+"intentionally written to illustrate specific ways of using modules inside "
+"the <emphasis role=\"strong\">idforge(1)</emphasis> command. See <xref "
+"linkend=\"options\"/>."
 msgstr ""
 "El comando <placeholder-1/> imprme a la salida estándar los argumentos que "
 "suministras en la línea de comando y termina la ejecución "
@@ -50,7 +47,10 @@ msgstr ""
 msgid "Options"
 msgstr "Opciones"
 
-msgid "The <placeholder-1/> command accepts the following options:"
+#, fuzzy
+msgid ""
+"The <emphasis role=\"strong\">idforge-hello(1)</emphasis> command accepts "
+"the following options:"
 msgstr "El comando <placeholder-1/> acepta las opciones siguientes:"
 
 msgid "-h, --help"
@@ -122,12 +122,11 @@ msgstr ""
 "es impresa utilizando un caracter por línea para describir cómo funciona la "
 "ejecución recursiva de modules hermanados."
 
-msgid "idforge"
-msgstr ""
-
+#, fuzzy
 msgid ""
-"The <placeholder-1/> command is also affected by options passed to "
-"<placeholder-2/> script. See, <placeholder-3/> script documentation to know "
+"The <emphasis role=\"strong\">idforge-hello(1)</emphasis> command is also "
+"affected by options passed to <emphasis>idforge</emphasis> script. See, "
+"<emphasis role=\"strong\">idforge(1)</emphasis> script documentation to know "
 "what these options are."
 msgstr ""
 "El comando <placeholder-1/> es afectado por las opciones pasadas al guión "
@@ -140,6 +139,7 @@ msgstr "Ejemplos"
 msgid "Debug execution environment of parent and child modules"
 msgstr "Depura el entorno de ejecución de módulos padres e hijos."
 
+#, no-wrap
 msgid "]$ idforge -d hello Welcome --lower"
 msgstr ""
 
@@ -147,25 +147,25 @@ msgid "Debug execution environment of parent, child and sibling modules"
 msgstr ""
 "Depura el entorno de ejecución de los módulos padres, hijos y hermanados."
 
+#, no-wrap
 msgid "]$ idforge -d hello Welcome --camel"
 msgstr ""
 
 msgid "Author"
 msgstr "Autor"
 
-msgid "alain.reguera@gmail.com"
+msgid ""
+"Written by Alain Reguera Delgado &lt;<ulink url=\"mailto:alain.reguera@gmail."
+"com\">alain.reguera@gmail.com</ulink>&gt;"
 msgstr ""
-
-msgid "Written by Alain Reguera Delgado &lt;<placeholder-1/>&gt;"
-msgstr "Escrito por Alain Reguera Delgado &lt;<placeholder-1/>&gt;"
 
 msgid "Reporting Bugs"
 msgstr "Reportando Errores"
 
-msgid "centos-devel@centos.org"
-msgstr ""
-
-msgid "Report bugs to CentOS developers mailing list &lt;<placeholder-1/>&gt;"
+#, fuzzy
+msgid ""
+"Report bugs to CentOS developers mailing list &lt;<ulink url=\"mailto:centos-"
+"devel@centos.org\">centos-devel@centos.org</ulink>&gt;"
 msgstr ""
 "Reporte los problemas a la lista de correo de los desarrolladores de CentOS "
 "&lt;<placeholder-1/>&gt;"
@@ -212,3 +212,10 @@ msgstr "Vea Además"
 
 msgid "=MANPAGE_OTHERS="
 msgstr ""
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
+msgid "translator-credits"
+msgstr ""
+
+#~ msgid "Written by Alain Reguera Delgado &lt;<placeholder-1/>&gt;"
+#~ msgstr "Escrito por Alain Reguera Delgado &lt;<placeholder-1/>&gt;"
