@@ -41,7 +41,7 @@ function xml_setInstanceLocalized {
     pushd $(dirname ${RENDER_FILE}) > /dev/null
 
     # Create the localized instance from design model.
-    /usr/bin/xml2po -a \
+    /usr/bin/xml2po \
         -l ${IDFORGE_LANG_LC} \
         -p ${RENDER_FROM_PO_FILE} \
         -o ${RENDER_FROM_INSTANCE_L10N} \
