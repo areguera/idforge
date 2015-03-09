@@ -1,6 +1,16 @@
 == Environment
 
+LANG::
+    Specifies the locale information you want to run the *idforge(1)*
+    command with. Normally, the *idforge(1)* command runs with the
+    current shell locale information. For example, if your current
+    locale information is en_US.UTF and you want to retrieve
+    translatable strings from shell scripts for Spanish language
+    without changing your current locale information, then you need
+    to set the LANG=es variable definition in the *idforge(1)*
+    command-line.
 IDFORGE_LIBRARY::
-    Specifies the directory where *idforge(1)* common functions and
-    modules are stored in.  When this variable isn't defined in the
-    command-line, it is set to +/usr/libexec/idforge+ by default.
+    Specifies the directory where the *idforge(1)* command will look
+    for common functions and modules.  When this variable isn't
+    defined in *idforge(1)* command-line, it takes the
+    +/usr/libexec/idforge+ value by default.
