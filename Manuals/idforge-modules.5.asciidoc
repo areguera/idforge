@@ -41,12 +41,12 @@ available in subsequent module environments.
 
 .Execution environment of hello module
 ======================================================================
-----------------------------------------------------------------------
+-----------------------------------------------------------------
 idforge.sh                              <1>
 `-- idforge()                           <2>
     `-- idforge_setModuleEnvironment()  <3>
         `-- hello()                     <4>
-----------------------------------------------------------------------
+-----------------------------------------------------------------
 <1> Script initialization
 <2> Library initialization
 <3> Module initialization
@@ -63,15 +63,174 @@ modules", or "sibling modules").
 created and destroyed after executing the the following command:
 
 ----------------------------------------------------------------------
-]$ idforge hello --camel hello
+]$ idforge hello --camel Hello
 ----------------------------------------------------------------------
 
 [[module-environments-in-action]]
 .Module environments in action
 ======================================================================
-----------------------------------------------------------------------
-...
-----------------------------------------------------------------------
+-----------------------------------------------------------------
+03/08/2015 04:20:52 PM =========================> 	[0] idforge
+03/08/2015 04:20:52 PM IDFORGE_MODULE_BASEDIR     	Library/Modules
+03/08/2015 04:20:52 PM IDFORGE_MODULE_NAME        	hello
+03/08/2015 04:20:52 PM IDFORGE_MODULE_TYPE        	parent
+03/08/2015 04:20:52 PM IDFORGE_MODULE_DIR         	Library/Modules/Hello
+03/08/2015 04:20:52 PM IDFORGE_MODULE_ARGUMENT    	--camel Hello
+03/08/2015 04:20:52 PM IDFORGE_MODULE_DIR_MODULES 	Library/Modules/Hello/Modules
+03/08/2015 04:20:52 PM IDFORGE_MODULE_DIR_CONFIGS 	Library/Modules/Hello/Configs
+03/08/2015 04:20:52 PM IDFORGE_MODULE_INIT_FILE   	Library/Modules/Hello/hello.sh
+03/08/2015 04:20:52 PM TEXTDOMAIN                 	idforge-hello
+03/08/2015 04:20:52 PM TEXTDOMAINDIR              	/usr/share/locale
+03/08/2015 04:20:52 PM export -f                  	hello
+03/08/2015 04:20:52 PM export -f                  	hello_setOptions
+03/08/2015 04:20:52 PM -------------------------> 	hello --camel Hello
+03/08/2015 04:20:52 PM =========================> 	[1] hello
+03/08/2015 04:20:52 PM IDFORGE_MODULE_BASEDIR     	Library/Modules/Hello/Modules
+03/08/2015 04:20:52 PM IDFORGE_MODULE_NAME        	output
+03/08/2015 04:20:52 PM IDFORGE_MODULE_TYPE        	child
+03/08/2015 04:20:52 PM IDFORGE_MODULE_DIR         	Library/Modules/Hello/Modules/Output
+03/08/2015 04:20:52 PM IDFORGE_MODULE_ARGUMENT    	Hello
+03/08/2015 04:20:52 PM IDFORGE_MODULE_DIR_MODULES 	Library/Modules/Hello/Modules/Output/Modules
+03/08/2015 04:20:52 PM IDFORGE_MODULE_DIR_CONFIGS 	Library/Modules/Hello/Modules/Output/Configs
+03/08/2015 04:20:52 PM IDFORGE_MODULE_INIT_FILE   	Library/Modules/Hello/Modules/Output/output.sh
+03/08/2015 04:20:52 PM TEXTDOMAIN                 	idforge-hello
+03/08/2015 04:20:52 PM TEXTDOMAINDIR              	/usr/share/locale
+03/08/2015 04:20:52 PM export -f                  	output
+03/08/2015 04:20:52 PM -------------------------> 	output Hello
+03/08/2015 04:20:52 PM =========================> 	[2] output
+03/08/2015 04:20:52 PM IDFORGE_MODULE_BASEDIR     	Library/Modules/Hello/Modules/Output/Modules
+03/08/2015 04:20:52 PM IDFORGE_MODULE_NAME        	camel
+03/08/2015 04:20:52 PM IDFORGE_MODULE_TYPE        	child
+03/08/2015 04:20:52 PM IDFORGE_MODULE_DIR         	Library/Modules/Hello/Modules/Output/Modules/Camel
+03/08/2015 04:20:52 PM IDFORGE_MODULE_ARGUMENT
+03/08/2015 04:20:52 PM IDFORGE_MODULE_DIR_MODULES 	Library/Modules/Hello/Modules/Output/Modules/Camel/Modules
+03/08/2015 04:20:52 PM IDFORGE_MODULE_DIR_CONFIGS 	Library/Modules/Hello/Modules/Output/Modules/Camel/Configs
+03/08/2015 04:20:52 PM IDFORGE_MODULE_INIT_FILE   	Library/Modules/Hello/Modules/Output/Modules/Camel/camel.sh
+03/08/2015 04:20:52 PM TEXTDOMAIN                 	idforge-hello
+03/08/2015 04:20:52 PM TEXTDOMAINDIR              	/usr/share/locale
+03/08/2015 04:20:52 PM export -f                  	camel
+03/08/2015 04:20:52 PM -------------------------> 	camel
+03/08/2015 04:20:52 PM =========================> 	[3] camel
+03/08/2015 04:20:52 PM IDFORGE_MODULE_BASEDIR     	Library/Modules/Hello/Modules/Output/Modules
+03/08/2015 04:20:52 PM IDFORGE_MODULE_NAME        	upper
+03/08/2015 04:20:52 PM IDFORGE_MODULE_TYPE        	sibling
+03/08/2015 04:20:52 PM IDFORGE_MODULE_DIR         	Library/Modules/Hello/Modules/Output/Modules/Upper
+03/08/2015 04:20:52 PM IDFORGE_MODULE_ARGUMENT
+03/08/2015 04:20:52 PM IDFORGE_MODULE_DIR_MODULES 	Library/Modules/Hello/Modules/Output/Modules/Upper/Modules
+03/08/2015 04:20:52 PM IDFORGE_MODULE_DIR_CONFIGS 	Library/Modules/Hello/Modules/Output/Modules/Upper/Configs
+03/08/2015 04:20:52 PM IDFORGE_MODULE_INIT_FILE   	Library/Modules/Hello/Modules/Output/Modules/Upper/upper.sh
+03/08/2015 04:20:52 PM TEXTDOMAIN                 	idforge-hello
+03/08/2015 04:20:52 PM TEXTDOMAINDIR              	/usr/share/locale
+03/08/2015 04:20:52 PM export -f                  	upper
+03/08/2015 04:20:52 PM -------------------------> 	upper
+H
+03/08/2015 04:20:52 PM IDFORGE_MODULE_EXIT        	0
+03/08/2015 04:20:52 PM <------------------------- 	upper
+03/08/2015 04:20:52 PM unset -f                   	upper
+03/08/2015 04:20:53 PM <========================= 	[3] camel
+03/08/2015 04:20:53 PM TEXTDOMAIN                 	idforge-hello
+03/08/2015 04:20:53 PM TEXTDOMAINDIR              	/usr/share/locale
+03/08/2015 04:20:53 PM =========================> 	[3] camel
+03/08/2015 04:20:53 PM IDFORGE_MODULE_BASEDIR     	Library/Modules/Hello/Modules/Output/Modules
+03/08/2015 04:20:53 PM IDFORGE_MODULE_NAME        	lower
+03/08/2015 04:20:53 PM IDFORGE_MODULE_TYPE        	sibling
+03/08/2015 04:20:53 PM IDFORGE_MODULE_DIR         	Library/Modules/Hello/Modules/Output/Modules/Lower
+03/08/2015 04:20:53 PM IDFORGE_MODULE_ARGUMENT
+03/08/2015 04:20:53 PM IDFORGE_MODULE_DIR_MODULES 	Library/Modules/Hello/Modules/Output/Modules/Lower/Modules
+03/08/2015 04:20:53 PM IDFORGE_MODULE_DIR_CONFIGS 	Library/Modules/Hello/Modules/Output/Modules/Lower/Configs
+03/08/2015 04:20:53 PM IDFORGE_MODULE_INIT_FILE   	Library/Modules/Hello/Modules/Output/Modules/Lower/lower.sh
+03/08/2015 04:20:53 PM TEXTDOMAIN                 	idforge-hello
+03/08/2015 04:20:53 PM TEXTDOMAINDIR              	/usr/share/locale
+03/08/2015 04:20:53 PM export -f                  	lower
+03/08/2015 04:20:53 PM -------------------------> 	lower
+e
+03/08/2015 04:20:53 PM IDFORGE_MODULE_EXIT        	0
+03/08/2015 04:20:53 PM <------------------------- 	lower
+03/08/2015 04:20:53 PM unset -f                   	lower
+03/08/2015 04:20:53 PM <========================= 	[3] camel
+03/08/2015 04:20:53 PM TEXTDOMAIN                 	idforge-hello
+03/08/2015 04:20:53 PM TEXTDOMAINDIR              	/usr/share/locale
+03/08/2015 04:20:53 PM =========================> 	[3] camel
+03/08/2015 04:20:53 PM IDFORGE_MODULE_BASEDIR     	Library/Modules/Hello/Modules/Output/Modules
+03/08/2015 04:20:53 PM IDFORGE_MODULE_NAME        	upper
+03/08/2015 04:20:53 PM IDFORGE_MODULE_TYPE        	sibling
+03/08/2015 04:20:53 PM IDFORGE_MODULE_DIR         	Library/Modules/Hello/Modules/Output/Modules/Upper
+03/08/2015 04:20:53 PM IDFORGE_MODULE_ARGUMENT
+03/08/2015 04:20:53 PM IDFORGE_MODULE_DIR_MODULES 	Library/Modules/Hello/Modules/Output/Modules/Upper/Modules
+03/08/2015 04:20:53 PM IDFORGE_MODULE_DIR_CONFIGS 	Library/Modules/Hello/Modules/Output/Modules/Upper/Configs
+03/08/2015 04:20:53 PM IDFORGE_MODULE_INIT_FILE   	Library/Modules/Hello/Modules/Output/Modules/Upper/upper.sh
+03/08/2015 04:20:53 PM TEXTDOMAIN                 	idforge-hello
+03/08/2015 04:20:53 PM TEXTDOMAINDIR              	/usr/share/locale
+03/08/2015 04:20:53 PM export -f                  	upper
+03/08/2015 04:20:53 PM -------------------------> 	upper
+L
+03/08/2015 04:20:53 PM IDFORGE_MODULE_EXIT        	0
+03/08/2015 04:20:53 PM <------------------------- 	upper
+03/08/2015 04:20:53 PM unset -f                   	upper
+03/08/2015 04:20:53 PM <========================= 	[3] camel
+03/08/2015 04:20:53 PM TEXTDOMAIN                 	idforge-hello
+03/08/2015 04:20:53 PM TEXTDOMAINDIR              	/usr/share/locale
+03/08/2015 04:20:53 PM =========================> 	[3] camel
+03/08/2015 04:20:53 PM IDFORGE_MODULE_BASEDIR     	Library/Modules/Hello/Modules/Output/Modules
+03/08/2015 04:20:53 PM IDFORGE_MODULE_NAME        	lower
+03/08/2015 04:20:53 PM IDFORGE_MODULE_TYPE        	sibling
+03/08/2015 04:20:53 PM IDFORGE_MODULE_DIR         	Library/Modules/Hello/Modules/Output/Modules/Lower
+03/08/2015 04:20:53 PM IDFORGE_MODULE_ARGUMENT
+03/08/2015 04:20:53 PM IDFORGE_MODULE_DIR_MODULES 	Library/Modules/Hello/Modules/Output/Modules/Lower/Modules
+03/08/2015 04:20:53 PM IDFORGE_MODULE_DIR_CONFIGS 	Library/Modules/Hello/Modules/Output/Modules/Lower/Configs
+03/08/2015 04:20:53 PM IDFORGE_MODULE_INIT_FILE   	Library/Modules/Hello/Modules/Output/Modules/Lower/lower.sh
+03/08/2015 04:20:53 PM TEXTDOMAIN                 	idforge-hello
+03/08/2015 04:20:53 PM TEXTDOMAINDIR              	/usr/share/locale
+03/08/2015 04:20:53 PM export -f                  	lower
+03/08/2015 04:20:53 PM -------------------------> 	lower
+l
+03/08/2015 04:20:53 PM IDFORGE_MODULE_EXIT        	0
+03/08/2015 04:20:53 PM <------------------------- 	lower
+03/08/2015 04:20:53 PM unset -f                   	lower
+03/08/2015 04:20:53 PM <========================= 	[3] camel
+03/08/2015 04:20:53 PM TEXTDOMAIN                 	idforge-hello
+03/08/2015 04:20:53 PM TEXTDOMAINDIR              	/usr/share/locale
+03/08/2015 04:20:53 PM =========================> 	[3] camel
+03/08/2015 04:20:53 PM IDFORGE_MODULE_BASEDIR     	Library/Modules/Hello/Modules/Output/Modules
+03/08/2015 04:20:53 PM IDFORGE_MODULE_NAME        	upper
+03/08/2015 04:20:53 PM IDFORGE_MODULE_TYPE        	sibling
+03/08/2015 04:20:53 PM IDFORGE_MODULE_DIR         	Library/Modules/Hello/Modules/Output/Modules/Upper
+03/08/2015 04:20:53 PM IDFORGE_MODULE_ARGUMENT
+03/08/2015 04:20:53 PM IDFORGE_MODULE_DIR_MODULES 	Library/Modules/Hello/Modules/Output/Modules/Upper/Modules
+03/08/2015 04:20:53 PM IDFORGE_MODULE_DIR_CONFIGS 	Library/Modules/Hello/Modules/Output/Modules/Upper/Configs
+03/08/2015 04:20:53 PM IDFORGE_MODULE_INIT_FILE   	Library/Modules/Hello/Modules/Output/Modules/Upper/upper.sh
+03/08/2015 04:20:53 PM TEXTDOMAIN                 	idforge-hello
+03/08/2015 04:20:53 PM TEXTDOMAINDIR              	/usr/share/locale
+03/08/2015 04:20:53 PM export -f                  	upper
+03/08/2015 04:20:53 PM -------------------------> 	upper
+O
+03/08/2015 04:20:53 PM IDFORGE_MODULE_EXIT        	0
+03/08/2015 04:20:53 PM <------------------------- 	upper
+03/08/2015 04:20:53 PM unset -f                   	upper
+03/08/2015 04:20:53 PM <========================= 	[3] camel
+03/08/2015 04:20:53 PM TEXTDOMAIN                 	idforge-hello
+03/08/2015 04:20:53 PM TEXTDOMAINDIR              	/usr/share/locale
+03/08/2015 04:20:53 PM IDFORGE_MODULE_EXIT        	0
+03/08/2015 04:20:53 PM <------------------------- 	camel
+03/08/2015 04:20:53 PM unset -f                   	camel
+03/08/2015 04:20:53 PM <========================= 	[2] output
+03/08/2015 04:20:53 PM TEXTDOMAIN                 	idforge-hello
+03/08/2015 04:20:53 PM TEXTDOMAINDIR              	/usr/share/locale
+03/08/2015 04:20:53 PM IDFORGE_MODULE_EXIT        	0
+03/08/2015 04:20:53 PM <------------------------- 	output Hello
+03/08/2015 04:20:53 PM unset -f                   	output
+03/08/2015 04:20:53 PM <========================= 	[1] hello
+03/08/2015 04:20:53 PM TEXTDOMAIN                 	idforge-hello
+03/08/2015 04:20:53 PM TEXTDOMAINDIR              	/usr/share/locale
+03/08/2015 04:20:53 PM IDFORGE_MODULE_EXIT        	0
+03/08/2015 04:20:53 PM <------------------------- 	hello --camel Hello
+03/08/2015 04:20:53 PM unset -f                   	hello
+03/08/2015 04:20:53 PM unset -f                   	hello_setOptions
+03/08/2015 04:20:53 PM <========================= 	[0] idforge
+03/08/2015 04:20:53 PM TEXTDOMAIN                 	idforge
+03/08/2015 04:20:53 PM TEXTDOMAINDIR              	/usr/share/locale
+03/08/2015 04:20:53 PM IDFORGE_EXIT               	0
+-----------------------------------------------------------------
 ======================================================================
 
 [[parent-modules-environment]]
@@ -100,12 +259,27 @@ child modules).
 [[parent-module-layout]]
 .idforge-hello parent module directory layout
 ======================================================================
-----------------------------------------------------------------------
-...
-----------------------------------------------------------------------
+-----------------------------------------------------------------
+Library/Modules/Hello/
+|-- hello.sh                        <1>
+|-- hello_setOptions.sh             <2>
+`-- Modules
+    `-- Output
+        |-- Modules
+        |   |-- Camel
+        |   |   `-- camel.sh
+        |   |-- Lower
+        |   |   `-- lower.sh
+        |   |-- Random
+        |   |   `-- random.sh
+        |   `-- Upper
+        |       `-- upper.sh
+        `-- output.sh
+
+7 directories, 7 files
+-----------------------------------------------------------------
 <1> Module initialization.
 <2> Module command-line parser.
-<3> Module description.
 ======================================================================
 
 The module's initialization contains the module's main function
@@ -121,7 +295,7 @@ Inside the function definition you write all the commands you want the
 module to run, once executed.  The function definition can be as
 simple as one single line of code or as complex as you can imagine
 (too complex code is sign of bad design, so keep it simple). It is the
-place where you express your solutions.   
+place where you express your solutions.
 
 In case you notice the initialization file is growing up inevitably,
 you can reduce its code by refactoring it.  To do so, you can use
@@ -133,20 +307,66 @@ maintain and debug.
 [[hello]]
 .hello.sh
 ======================================================================
-----------------------------------------------------------------------
-...
-----------------------------------------------------------------------
+-----------------------------------------------------------------
+#!/bin/bash
+######################################################################
+#
+#   idFORGE Framework - Manage identity manuals in community
+#   Copyright © 2015 CentOS Artwork SIG
+#
+#   idFORGE Framework is free software; you can redistribute it and/or
+#   modify it under the terms of the GNU General Public License as
+#   published by the Free Software Foundation; either version 2 of the
+#   License, or (at your option) any later version.
+#
+#   idFORGE Framework is distributed in the hope that it will be
+#   useful, but WITHOUT ANY WARRANTY; without even the implied
+#   warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#   See the GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with idFORGE Framework; if not, write to the Free Software
+#   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#
+#   Alain Reguera Delgado <alain.reguera@gmail.com>
+#   39 Street No. 4426 Cienfuegos, Cuba.
+#
+######################################################################
+
+# Print greeting messages and exit successfully.
+function hello {
+
+    # Initialize module's flags.
+    local HELLO_FLAGS=''
+
+    # Initialize command-line arguments and interpret arguments and
+    # options passed through command-line.
+    local ARGUMENT='' ARGUMENTS=''; hello_setOptions "${@}"
+
+    # Verify existence of command-line arguments. When they don't
+    # exist, just return to caller. This is necessary to print the
+    # module's usage information cleanly.
+    [[ -z ${ARGUMENTS} ]] && return
+
+    # Execute output child module to process actions for each
+    # argument.
+    for ARGUMENT in ${ARGUMENTS};do
+        idforge_setModuleEnvironment -m 'output' -t 'child' -g "${ARGUMENT}"
+    done
+
+}
+-----------------------------------------------------------------
 ======================================================================
 
 When you write functions for *idforge(1)* modules you must add a top
-comment describing the legal status of the source code of such
-function you write. The source code of *idforge(1)* is distributed
-under the terms of GNU Public License (GPL) version 2.  This
-repetitive legal information needs to be present in all function
-scripts that make *idforge(1)* to avoid unexpected misunderstanding
-about the legal status of the source code, so as to protect the
-overall operation of it (see the section "How to Apply These Terms to
-Your New Programs" in the LICENSE file).
+comment describing the legal status of the source code you write and
+contributed. The source code of *idforge(1)* is distributed under the
+terms of GNU Public License (GPL) version 2.  This repetitive legal
+information needs to be present in all function scripts that make
+*idforge(1)* to avoid unexpected misunderstanding about the legal
+status of the source code, so as to protect the overall operation of
+it (see the section "How to Apply These Terms to Your New Programs" in
+the LICENSE file).
 
 [[module-optimization]]
 Module Optimization
@@ -183,11 +403,78 @@ will not be executed nor available inside the initialization file of
 the module environment being currently executed.
 
 [[hello_setOptions]]
-.hello_setOptions.sh (legal status cut for brevity)
+.hello_setOptions.sh
 ======================================================================
-----------------------------------------------------------------------
-...
-----------------------------------------------------------------------
+-----------------------------------------------------------------
+# ... top comment removed for brevity
+# Interpret module-specific options for hello.
+function hello_setOptions {
+
+    # Define short options we want to support.
+    local ARGSS="h,v,s,g:,l,u,c,r"
+
+    # Define long options we want to support.
+    local ARGSL="help,version,description,lower,upper,camel,random"
+
+    # Redefine arguments using getopt(1) command parser and reset
+    # positional parameters on this function, using output produced
+    # from (getopt) arguments parser.
+    ARGUMENTS=$(idforge_setArguments "${@}")
+    [[ ${?} -ne 0 ]] && idforge_printMessage "`gettext "The argument verification failed"`" --as-error-line
+    eval set -- "${ARGUMENTS}"
+
+    # Look for options passed through command-line.
+    while true; do
+        case "${1}" in
+
+            -h | --help )
+                idforge_printHelp
+                shift 1
+                ;;
+
+            -v | --version )
+                idforge_setModuleEnvironment -t 'parent' -m 'version' -g ${IDFORGE_MODULE_NAME}
+                shift 1
+                ;;
+
+            -s | --description )
+                idforge_printMessage "`gettext "Print a greeting and exit successfully."`" --as-stdout-line
+                shift 1
+                ;;
+
+            -l | --lower )
+                HELLO_FLAGS="${HELLO_FLAGS} lower"
+                shift 1
+                ;;
+
+            -u | --upper )
+                HELLO_FLAGS="${HELLO_FLAGS} upper"
+                shift 1
+                ;;
+
+            -c | --camel )
+                HELLO_FLAGS="${HELLO_FLAGS} camel"
+                shift 1
+                ;;
+
+            -r | --random )
+                HELLO_FLAGS="${HELLO_FLAGS} random"
+                shift 1
+                ;;
+
+            -- )
+                shift 1
+                break
+                ;;
+        esac
+    done
+
+    # Redefine arguments using current positional parameters. Only
+    # paths should remain as arguments at this point.
+    ARGUMENTS="${@}"
+
+}
+-----------------------------------------------------------------
 ======================================================================
 
 [NOTE]
@@ -236,7 +523,7 @@ generally created when you want to divide one large task into smaller
 tasks and also control which of these smaller tasks is executed based
 on specific conditions (e.g., you may want to render images or
 documentation, but not both, in one single iteration of *idforge(1)*
-script).  
+script).
 
 In a chain of modules, lower modules in the chain (those started last)
 have access to information set by modules higher in the chain (those
@@ -324,9 +611,81 @@ not to get trapped into an endless loop.
 [[debug-recursive-modules]]
 .Processing execution of modules recursively
 ======================================================================
-----------------------------------------------------------------------
-...
-----------------------------------------------------------------------
+-----------------------------------------------------------------
+03/08/2015 04:49:44 PM =========================> 	[0] idforge
+03/08/2015 04:49:44 PM IDFORGE_MODULE_BASEDIR     	Library/Modules
+03/08/2015 04:49:44 PM IDFORGE_MODULE_NAME        	hello
+03/08/2015 04:49:44 PM IDFORGE_MODULE_TYPE        	parent
+03/08/2015 04:49:44 PM IDFORGE_MODULE_DIR         	Library/Modules/Hello
+03/08/2015 04:49:44 PM IDFORGE_MODULE_ARGUMENT    	--random Hello
+03/08/2015 04:49:44 PM IDFORGE_MODULE_DIR_MODULES 	Library/Modules/Hello/Modules
+03/08/2015 04:49:44 PM IDFORGE_MODULE_DIR_CONFIGS 	Library/Modules/Hello/Configs
+03/08/2015 04:49:44 PM IDFORGE_MODULE_INIT_FILE   	Library/Modules/Hello/hello.sh
+03/08/2015 04:49:44 PM TEXTDOMAIN                 	idforge-hello
+03/08/2015 04:49:44 PM TEXTDOMAINDIR              	/usr/share/locale
+03/08/2015 04:49:44 PM export -f                  	hello
+03/08/2015 04:49:44 PM export -f                  	hello_setOptions
+03/08/2015 04:49:44 PM -------------------------> 	hello --random Hello
+03/08/2015 04:49:44 PM =========================> 	[1] hello
+03/08/2015 04:49:44 PM IDFORGE_MODULE_BASEDIR     	Library/Modules/Hello/Modules
+03/08/2015 04:49:44 PM IDFORGE_MODULE_NAME        	output
+03/08/2015 04:49:44 PM IDFORGE_MODULE_TYPE        	child
+03/08/2015 04:49:44 PM IDFORGE_MODULE_DIR         	Library/Modules/Hello/Modules/Output
+03/08/2015 04:49:44 PM IDFORGE_MODULE_ARGUMENT    	Hello
+03/08/2015 04:49:44 PM IDFORGE_MODULE_DIR_MODULES 	Library/Modules/Hello/Modules/Output/Modules
+03/08/2015 04:49:44 PM IDFORGE_MODULE_DIR_CONFIGS 	Library/Modules/Hello/Modules/Output/Configs
+03/08/2015 04:49:44 PM IDFORGE_MODULE_INIT_FILE   	Library/Modules/Hello/Modules/Output/output.sh
+03/08/2015 04:49:44 PM TEXTDOMAIN                 	idforge-hello
+03/08/2015 04:49:44 PM TEXTDOMAINDIR              	/usr/share/locale
+03/08/2015 04:49:44 PM export -f                  	output
+03/08/2015 04:49:44 PM -------------------------> 	output Hello
+03/08/2015 04:49:44 PM =========================> 	[2] output
+03/08/2015 04:49:44 PM IDFORGE_MODULE_BASEDIR     	Library/Modules/Hello/Modules/Output/Modules
+03/08/2015 04:49:44 PM IDFORGE_MODULE_NAME        	random
+03/08/2015 04:49:44 PM IDFORGE_MODULE_TYPE        	child
+03/08/2015 04:49:44 PM IDFORGE_MODULE_DIR         	Library/Modules/Hello/Modules/Output/Modules/Random
+03/08/2015 04:49:44 PM IDFORGE_MODULE_ARGUMENT
+03/08/2015 04:49:44 PM IDFORGE_MODULE_DIR_MODULES 	Library/Modules/Hello/Modules/Output/Modules/Random/Modules
+03/08/2015 04:49:44 PM IDFORGE_MODULE_DIR_CONFIGS 	Library/Modules/Hello/Modules/Output/Modules/Random/Configs
+03/08/2015 04:49:44 PM IDFORGE_MODULE_INIT_FILE   	Library/Modules/Hello/Modules/Output/Modules/Random/random.sh
+03/08/2015 04:49:44 PM TEXTDOMAIN                 	idforge-hello
+03/08/2015 04:49:44 PM TEXTDOMAINDIR              	/usr/share/locale
+03/08/2015 04:49:44 PM export -f                  	random
+03/08/2015 04:49:44 PM -------------------------> 	random
+l
+03/08/2015 04:49:45 PM =========================> 	[3] random
+03/08/2015 04:49:45 PM ~~~~~~~~~~~~~~~~~~~~~~~~~> 	random
+l
+03/08/2015 04:49:45 PM =========================> 	[3] random
+03/08/2015 04:49:45 PM ~~~~~~~~~~~~~~~~~~~~~~~~~> 	random
+l
+03/08/2015 04:49:45 PM =========================> 	[3] random
+03/08/2015 04:49:45 PM ~~~~~~~~~~~~~~~~~~~~~~~~~> 	random
+e
+03/08/2015 04:49:45 PM =========================> 	[3] random
+03/08/2015 04:49:45 PM ~~~~~~~~~~~~~~~~~~~~~~~~~> 	random
+H
+03/08/2015 04:49:45 PM IDFORGE_MODULE_EXIT        	0
+03/08/2015 04:49:45 PM <------------------------- 	random
+03/08/2015 04:49:45 PM unset -f                   	random
+03/08/2015 04:49:45 PM <========================= 	[2] output
+03/08/2015 04:49:45 PM TEXTDOMAIN                 	idforge-hello
+03/08/2015 04:49:45 PM TEXTDOMAINDIR              	/usr/share/locale
+03/08/2015 04:49:45 PM IDFORGE_MODULE_EXIT        	0
+03/08/2015 04:49:45 PM <------------------------- 	output Hello
+03/08/2015 04:49:45 PM unset -f                   	output
+03/08/2015 04:49:45 PM <========================= 	[1] hello
+03/08/2015 04:49:45 PM TEXTDOMAIN                 	idforge-hello
+03/08/2015 04:49:45 PM TEXTDOMAINDIR              	/usr/share/locale
+03/08/2015 04:49:45 PM IDFORGE_MODULE_EXIT        	0
+03/08/2015 04:49:45 PM <------------------------- 	hello --random Hello
+03/08/2015 04:49:45 PM unset -f                   	hello
+03/08/2015 04:49:45 PM unset -f                   	hello_setOptions
+03/08/2015 04:49:45 PM <========================= 	[0] idforge
+03/08/2015 04:49:45 PM TEXTDOMAIN                 	idforge
+03/08/2015 04:49:45 PM TEXTDOMAINDIR              	/usr/share/locale
+03/08/2015 04:49:45 PM IDFORGE_EXIT               	0
+-----------------------------------------------------------------
 ======================================================================
 
 Recursive execution of modules occurs only when the module you are
