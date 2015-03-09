@@ -3,9 +3,13 @@ SHELL=/bin/sh
 all:
 	echo "Nothing to do. Try executing 'make build' instead."
 
-build:
+update-po:
 	for LOCALE in $$(ls Manuals/Locales); do \
 		LANG=$${LOCALE} IDFORGE_LIBRARY=Library ./idforge.sh locale Manuals/idforge.conf; \
+	done
+
+build:
+	for LOCALE in $$(ls Manuals/Locales); do \
 		LANG=$${LOCALE} IDFORGE_LIBRARY=Library ./idforge.sh render Manuals/idforge.conf; \
 	done
 
