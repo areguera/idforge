@@ -43,7 +43,7 @@ function locale {
     local CONFIG_FILE='' CONFIG_FILES=$(locale_printConfigFiles "${ARGUMENTS}")
 
     # Process list of configuration files.
-    for CONFIG_FILE in "${CONFIG_FILES}"; do
+    for CONFIG_FILE in ${CONFIG_FILES}; do
         locale_setConfigSections
     done
 
