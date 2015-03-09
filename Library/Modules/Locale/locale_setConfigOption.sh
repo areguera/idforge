@@ -42,7 +42,10 @@ function locale_setConfigOption {
             local FILE=''
             local FILES=$(locale_printConfigValues)
 
-            [[ -z ${FILES} ]] && return
+            # When no configuration file is found, continue with the
+            # next configuration in the list of configuration files to
+            # process.
+            [[ -z ${FILES} ]] && continue
 
             local COUNT=0
 
