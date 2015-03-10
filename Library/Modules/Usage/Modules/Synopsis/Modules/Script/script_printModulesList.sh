@@ -29,6 +29,7 @@ function script_printModulesList {
     local SCRIPT_MODULE_DESCRIPTION=''
 
     for SCRIPT_MODULE_NAME in ${SCRIPT_MODULES};do
+        SCRIPT_MODULE_NAME=$(echo ${SCRIPT_MODULE_NAME} | tr '[[:upper:]]' '[[:lower:]]')
         SCRIPT_MODULE_DESCRIPTION=$(idforge_setModuleEnvironment -m ${SCRIPT_MODULE_NAME} -t 'parent' -g '--description')
         idforge_printMessage "   ${SCRIPT_MODULE_NAME}: ${SCRIPT_MODULE_DESCRIPTION}" --as-stdout-line=8
     done

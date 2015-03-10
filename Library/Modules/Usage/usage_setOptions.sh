@@ -45,15 +45,19 @@ function usage_setOptions {
 
             -h | --help )
                 idforge_printHelp
+                USAGE_FLAG_RETURN='yes'
+                shift 1
                 ;;
 
             -v | --version )
                 idforge_setModuleEnvironment -t 'parent' -m 'version' -g ${IDFORGE_MODULE_NAME}
+                USAGE_FLAG_RETURN='yes'
                 shift 1
                 ;;
 
             -s | --description )
-                idforge_setModuleEnvironment -t 'child' -m 'description'
+                idforge_printMessage "`gettext "Print usage information and exit."`" --as-stdout-line
+                USAGE_FLAG_RETURN='yes'
                 shift 1
                 ;;
 
