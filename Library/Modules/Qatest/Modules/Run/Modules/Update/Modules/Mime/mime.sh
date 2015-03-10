@@ -2,7 +2,7 @@
 ######################################################################
 #
 #   idFORGE Framework - Manage identity manuals in community
-#   Copyright © 2015 CentOS Artwork SIG
+#   Copyright © 2015 The CentOS Artwork SIG
 #
 #   idFORGE Framework is free software; you can redistribute it and/or
 #   modify it under the terms of the GNU General Public License as
