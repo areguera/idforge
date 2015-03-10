@@ -31,8 +31,6 @@ function manpage {
 
     idforge_printMessage "${MANPAGE}" --as-creating-line
 
-    manpage_setRefmeta
-
     /usr/bin/xsltproc -o ${MANPAGE} --nonet ${RENDER_FROM_XSL} ${RENDER_FROM_FILE}
 
     idforge_checkFiles -ef ${MANPAGE}

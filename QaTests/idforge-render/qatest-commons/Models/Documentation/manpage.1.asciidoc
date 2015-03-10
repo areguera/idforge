@@ -1,5 +1,9 @@
 = manpage(1)
 Author <author@example.com>
+idFORGE Framework =MANPAGE_VERSION=, =MANPAGE_YEAR=: manpage for testing purposes.
+:man source: idFORGE Framework
+:man version: =MANPAGE_VERSION=
+:man manual: User Commands
 
 == Name
 

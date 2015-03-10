@@ -1,6 +1,9 @@
 = idforge-qatest(1)
 Alain Reguera Delgado <alain.reguera@gmail.com>
-idFORGE Framework =IDFORGE_VERSION=, =MANPAGE_YEAR=: =MANPAGE_DESCRIPTION=
+idFORGE Framework =MANPAGE_VERSION=, =MANPAGE_YEAR=: =MANPAGE_DESCRIPTION=
+:man source: idFORGE Framework
+:man version: =MANPAGE_VERSION=
+:man manual: User Commands
 
 == Name
 

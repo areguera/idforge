@@ -1,6 +1,9 @@
 = idforge-modules(5)
 Alain Reguera Delgado <alain.reguera@gmail.com>
-idFORGE Framework =IDFORGE_VERSION=, =MANPAGE_YEAR=: Describes idforge module environments
+idFORGE Framework =MANPAGE_VERSION=, =MANPAGE_YEAR=: Describes idforge module environments
+:man source: idFORGE Framework
+:man version: =MANPAGE_VERSION=
+:man manual: File Formats and Conventions
 
 == Name
 

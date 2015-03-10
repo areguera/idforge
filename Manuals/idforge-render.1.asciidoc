@@ -1,6 +1,9 @@
 = idforge-render(1)
 Alain Reguera Delgado <alain.reguera@gmail.com>
-idFORGE Framework =IDFORGE_VERSION=, =MANPAGE_YEAR=: =MANPAGE_DESCRIPTION=
+idFORGE Framework =MANPAGE_VERSION=, =MANPAGE_YEAR=: =MANPAGE_DESCRIPTION=
+:man source: idFORGE Framework
+:man version: =MANPAGE_VERSION=
+:man manual: User Commands
 
 == Name
 
@@ -345,26 +348,6 @@ The value of this option is applied without any sort of distinction to
 all render-formats and render-flow values provided in the
 configuration section.
 
-In the very specific case of processing modified docbook instances
-with manpage document structure (i.e., render-flow = "manpage"), the
-following configuration options are available for you to customize:
-
-manpage-software::
-    Specifies the name of the software product or component to which
-    this topic applies. When this option is not specified in the
-    configuration section, the value of IDFORGE environment variable
-    is used as default value.
-manpage-version::
-    Specifies the version of the software product or component to
-    which this topic applies. When this option is not specified in the
-    configuration section, the value of IDFORGE_VERSION environment
-    variable is used as default value.
-manpage-sectdesc::
-    Specifies the section title of the reference page. When this
-    option is not specified in the configuration section, its value is
-    determined automatically based on the manpage volume number set
-    inside the modified docbook instance.
-
 === Compressing Files
 
 The *{doctitle}* command initiates file compression when
@@ -705,12 +688,11 @@ render-flow         = "manpage"
 render-from         = "${PWD}/Manuals/${CONFIG_SECTION}.asciidoc"
 render-from-po      = "${PWD}/Manuals/Locales/${IDFORGE_LANG_LC}/${CONFIG_SECTION}.po"
 render-formats      = "manpage"
+xml-expand          = "=\MANPAGE_VERSION=${IDFORGE_VERSION}"
 xml-expand          = "=\MANPAGE_SYNOPSIS=$(${0} render | head -n 1 | sed -r 's,^.+(idforge),\1,')"
 xml-expand          = "=\MANPAGE_DESCRIPTION=$(${0} render --description)"
 xml-expand          = "=\MANPAGE_YEAR=$(date '+%Y')"
 xml-expand          = "=\MANPAGE_OTHERS=$(cd ./Manuals; OTHERS=$(ls *.asciidoc | grep -v ${CONFIG_SECTION} | sed -r 's/\.([[:digit:]])\.asciidoc/(\1),/'); echo ${OTHERS} | sed 's/,$//')"
-manpage-software    = "idFORGE Framework"
-manpage-version     = "${IDFORGE_VERSION}"
 ----------------------------------------------------------------------
 
 [[file-compression]]
