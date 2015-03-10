@@ -29,8 +29,8 @@ function docbook_setConfigOption {
 
     case ${CONFIG_OPTION} in
 
-        render-formats )
-            RENDER_FORMATS="$(render_printConfigValues "xhtml")"
+        docbook-exports )
+            DOCBOOK_EXPORTS="$(render_printConfigValues "xhtml")"
             ;;
 
         * )

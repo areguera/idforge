@@ -326,26 +326,27 @@ translation markers as specified by *xml-expand* configuration option.
 Once the modifications has been applied to asciidoc source file in
 docbook format, the asciidoc module takes control again and calls the
 docbook module to perform the final transformation as specified by
-*render-formats* configuration option (e.g., "manpage", "xhtml",
+*docbook-exports* configuration option (e.g., "manpage", "xhtml",
 "pdf").
 
 [NOTE]
 ======================================================================
-The render-formats must be provided consequently with the render-flow
-specified in the configuration section.  For example, the article and
-book document types can be produced in both xhtml and pdf formats but
-not in manpage format.  However, manpage document types can be
-produced in manpage, xhtml and pdf formats.
+The *docbook-exports* configuration option must be provided
+consequently with the render-flow specified in the configuration
+section.  For example, the article and book document types can be
+produced in both xhtml and pdf formats but not in manpage format.
+However, manpage document types can be produced in manpage, xhtml and
+pdf formats.
 ======================================================================
 
 When several formats for final document transformations are provided
-as value to *render-formats* the docbook module uses the system's
+as value to *docbook-exports* the docbook module uses the system's
 default xsl style sheets stored in the directory
 /usr/share/sgml/docbook/xsl-stylesheets to process them accordingly.
 In case you want to customize the final output using your own xsl
 style sheet, you can use the *render-from-xsl* configuration options.
 The value of this option is applied without any sort of distinction to
-all render-formats and render-flow values provided in the
+all docbook-exports and render-flow values provided in the
 configuration section.
 
 === Compressing Files
@@ -687,7 +688,7 @@ render-type         = "asciidoc"
 render-flow         = "manpage"
 render-from         = "${PWD}/Manuals/${CONFIG_SECTION}.asciidoc"
 render-from-po      = "${PWD}/Manuals/Locales/${IDFORGE_LANG_LC}/${CONFIG_SECTION}.po"
-render-formats      = "manpage"
+docbook-exports     = "manpage"
 xml-expand          = "=\MANPAGE_VERSION=${IDFORGE_VERSION}"
 xml-expand          = "=\MANPAGE_SYNOPSIS=$(${0} render | head -n 1 | sed -r 's,^.+(idforge),\1,')"
 xml-expand          = "=\MANPAGE_DESCRIPTION=$(${0} render --description)"

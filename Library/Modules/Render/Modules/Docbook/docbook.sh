@@ -33,12 +33,13 @@ function docbook {
     idforge_setModuleEnvironment -m 'xml' -t 'sibling'
 
     # Retrieve docbook-specific configuration options.
-    local RENDER_FORMATS=''        ; docbook_setConfigOption 'render-formats'
+    local DOCBOOK_EXPORT=''
+    local DOCBOOK_EXPORTS=''    ; docbook_setConfigOption 'docbook-exports'
 
     # Export array of instances from docbook to final formats.
     for RENDER_FROM_FILE in ${RENDER_FROM_INSTANCES[*]};do
-        for RENDER_FORMAT in ${RENDER_FORMATS};do
-            idforge_setModuleEnvironment -m "${RENDER_FORMAT}" -t 'child'
+        for DOCBOOK_EXPORT in ${DOCBOOK_EXPORTS};do
+            idforge_setModuleEnvironment -m "${DOCBOOK_EXPORT}" -t 'child'
         done
     done
 
