@@ -53,7 +53,7 @@ function version_setOptions {
                 ;;
 
             -s | --description )
-                idforge_setModuleEnvironment -t 'child' -m 'description' -g ${IDFORGE_MODULE_NAME}
+                idforge_printMessage "`gettext "Print version and legal status and exit"`" --as-stdout-line
                 shift 1
                 ;;
 

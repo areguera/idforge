@@ -90,7 +90,7 @@ function status_printCopyright {
             # creation work against LICENSE violations. I trust this
             # responsibility to CentOS Artwork SIG, from CentOS
             # Project organization. 
-            echo "`gettext "CentOS Artwork SIG"`"
+            echo "`gettext "The CentOS Artwork SIG"`"
             ;;
 
         --holder-predicate )

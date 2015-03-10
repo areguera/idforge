@@ -25,9 +25,17 @@
 
 function version {
 
+    # Initialize module's flags.
+    # ...
+
     # Initialize module command-line and interpret both arguments and
     # options passed through through it.
     local ARGUMENT='' ARGUMENTS=''; version_setOptions "${@}"
+
+    # Verify existence of command-line arguments. When they don't
+    # exist, just return to caller. This is necessary to print the
+    # module's usage information cleanly.
+    [[ -z ${ARGUMENTS} ]] && return
 
     for ARGUMENT in ${ARGUMENTS};do
         idforge_setModuleEnvironment -t 'child' -m 'status' -g ${ARGUMENT}
