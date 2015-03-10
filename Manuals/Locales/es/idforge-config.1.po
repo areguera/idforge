@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: idforge-config.1\n"
-"POT-Creation-Date: 2015-03-09 17:59-0400\n"
-"PO-Revision-Date: 2015-03-09 17:59-0400\n"
+"POT-Creation-Date: 2015-03-10 17:16-0400\n"
+"PO-Revision-Date: 2015-03-10 17:16-0400\n"
 "Last-Translator: The CentOS Documentation SIG <centos-docs@centos.org>\n"
 "Language-Team: es\n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,15 @@ msgstr ""
 msgid "1"
 msgstr ""
 
+msgid "idFORGE Framework"
+msgstr ""
+
+msgid "=MANPAGE_VERSION="
+msgstr ""
+
+msgid "User Commands"
+msgstr "Comandos de usuario"
+
 msgid "=MANPAGE_DESCRIPTION="
 msgstr ""
 
@@ -24,13 +33,13 @@ msgid "=MANPAGE_SYNOPSIS="
 msgstr ""
 
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 msgid "…"
 msgstr ""
 
 msgid "Options"
-msgstr ""
+msgstr "Opciones"
 
 msgid ""
 "The <emphasis role=\"strong\">idforge-config(1)</emphasis> command accepts "
@@ -67,17 +76,19 @@ msgid ""
 "Written by Alain Reguera Delgado &lt;<ulink url=\"mailto:alain.reguera@gmail."
 "com\">alain.reguera@gmail.com</ulink>&gt;"
 msgstr ""
+"Escrito por Alain Reguera Delgado &lt;<ulink url=\"mailto:alain."
+"reguera@gmail.com\">alain.reguera@gmail.com</ulink>&gt;"
 
 msgid "Reporting Bugs"
 msgstr "Reportando Errores"
 
-#, fuzzy
 msgid ""
 "Report bugs to CentOS developers mailing list &lt;<ulink url=\"mailto:centos-"
 "devel@centos.org\">centos-devel@centos.org</ulink>&gt;"
 msgstr ""
 "Reporte los problemas a la lista de correo de los desarrolladores de CentOS "
-"&lt;<placeholder-1/>&gt;"
+"&lt;<ulink url=\"mailto:centos-devel@centos.org\">centos-devel@centos.org</"
+"ulink>&gt;"
 
 msgid "Copyright"
 msgstr "Restricciones para la distribución de copias"
@@ -124,7 +135,4 @@ msgstr ""
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 msgid "translator-credits"
-msgstr ""
-
-#~ msgid "Written by Alain Reguera Delgado &lt;<placeholder-1/>&gt;"
-#~ msgstr "Escrito por Alain Reguera Delgado &lt;<placeholder-1/>&gt;"
+msgstr "Alain Reguera Delgado <alain.reguera@gmail.com>, 2015"
