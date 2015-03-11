@@ -1,0 +1,22 @@
+= manpage(1)
+Autor <author@example.com>
+idFORGE Framework =MANPAGE_VERSION=, =MANPAGE_YEAR=: página man con propósitos de prueba
+:man source: idFORGE Framework
+:man version: =MANPAGE_VERSION=
+:man manual: Comandos de usuario
+
+== Name
+
+manpage - manpage for testing purposes.
+
+== Synopsis
+
+Esto es una págia man con propósitos de prueba.
+
+== Descripción
+
+Esto es una págia man con propósitos de prueba.
+
+== Autor
+
+Escrito por {author} <{email}>
