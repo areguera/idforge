@@ -2,61 +2,22 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.2"
    width="765"
    height="990"
-   id="svg2"
-   inkscape:version="0.47 r22583"
-   sodipodi:docname="document-text.svg">
-  <metadata
-     id="metadata3372">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1360"
-     inkscape:window-height="692"
-     id="namedview3370"
-     showgrid="false"
-     inkscape:zoom="0.87115385"
-     inkscape:cx="441.91177"
-     inkscape:cy="684.18393"
-     inkscape:window-x="0"
-     inkscape:window-y="25"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg2" />
+   id="svg2">
   <defs
      id="defs4" />
   <image
-     sodipodi:absref="/home/al/Projects/Frameworks/idforge.git/QaTests/idforge-render/qatest-commons/Models/Images/=BACKGROUND_IMAGE="
      xlink:href="=BACKGROUND_IMAGE="
-     x="0"
-     y="-3.8281252e-07"
-     width="765"
+     id="image5504"
      height="990"
-     id="image5504" />
+     width="765"
+     y="-3.8281252e-07"
+     x="0" />
   <flowRoot
      transform="translate(0,230.76762)"
      id="flowRoot4954"
@@ -78,12 +39,11 @@
        y="361.23438"
        id="text5042"
        xml:space="preserve"
-       style="font-size:32;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur Bold"
-       sodipodi:linespacing="125%"><tspan
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur Bold"><tspan
          x="74.046875"
          y="361.23438"
          id="tspan5044"
-         style="font-size:32;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur Bold">What Is This File For?</tspan></text>
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur Bold">What Is This File For?</tspan></text>
     <flowRoot
        transform="translate(0,147.69393)"
        id="flowRoot5046"
@@ -103,8 +63,8 @@
    style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans">idforge-render(1)</flowSpan> and <flowSpan
    id="flowSpan3074"
    style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans">idforge-locale(1)</flowSpan> commands. This file is specially conceived to validate <flowSpan
-   style="font-weight:bold"
-   id="flowSpan3479">idforge(1)</flowSpan> environments related to image rendition.</flowPara><flowPara
+   id="flowSpan3479"
+   style="font-weight:bold">idforge(1)</flowSpan> environments related to image rendition.</flowPara><flowPara
          id="flowPara3179" /><flowPara
          id="flowPara3189">As result of processing the <flowSpan
    id="flowSpan3205"
@@ -136,46 +96,45 @@
          id="rect4229"
          style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#24221c;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans" /></flowRegion><flowPara
        id="flowPara4231" /></flowRoot>  <g
-     id="g3073"
-     transform="translate(0,21.523796)">
+     transform="translate(0,21.523796)"
+     id="g3073">
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.94988251;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.11764706;stroke-dasharray:2.8496474, 2.8496474;stroke-dashoffset:0"
+       d="m 75.4752,69.525059 614.04912,0"
        id="use4233"
-       d="m 75.4752,69.525059 614.04912,0" />
+       style="fill:none;stroke:#000000;stroke-width:0.94988251;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.11764706;stroke-dasharray:2.8496474, 2.8496474;stroke-dashoffset:0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.94988286;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.11764706;stroke-dasharray:3.79953136, 3.79953136;stroke-dashoffset:0"
+       d="m 180.47494,283.04885 0,-235.097712"
        id="path4237"
-       d="m 180.47494,283.04885 0,-235.097712" />
+       style="fill:none;stroke:#000000;stroke-width:0.94988286;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.11764706;stroke-dasharray:3.79953136, 3.79953136;stroke-dashoffset:0" />
     <use
-       style="stroke:#000000;stroke-opacity:0.11764706"
-       xlink:href="#path4237"
-       height="990"
-       width="765"
-       y="0"
-       x="0"
+       transform="translate(404.12247,-3.7060552e-7)"
        id="use4239"
-       transform="translate(404.12247,-3.7060552e-7)" />
-    <use
        style="stroke:#000000;stroke-opacity:0.11764706"
-       xlink:href="#use4233"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#path4237" />
+    <use
+       transform="matrix(0.99999979,0,0,1.0002615,8.162438e-5,191.98175)"
        id="use4241"
-       transform="matrix(0.99999979,0,0,1.0002615,8.162438e-5,191.98175)" />
+       style="stroke:#000000;stroke-opacity:0.11764706"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4233" />
     <text
-       transform="scale(1.0527614,0.94988285)"
-       sodipodi:linespacing="125%"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       xml:space="preserve"
-       id="text4297-2"
+       x="363.56674"
        y="286.29129"
-       x="363.56674"><tspan
-         id="tspan4334"
-         y="286.29129"
+       transform="scale(1.0527614,0.94988285)"
+       id="text4297-2"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
          x="363.56674"
-         style="font-size:10px;fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">x192</tspan></text>
+         y="286.29129"
+         id="tspan4334"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x192</tspan></text>
   </g>
   <g
      transform="translate(57.338484,-80.304703)"
@@ -205,12 +164,11 @@
        y="909.39209"
        id="text4382"
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       sodipodi:linespacing="125%"><tspan
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
          x="393.02628"
          y="909.39209"
          id="tspan4384"
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">x48</tspan></text>
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x48</tspan></text>
     <use
        transform="translate(195.31779,49.000035)"
        id="use4386"
@@ -356,34 +314,31 @@
        y="909.39209"
        id="text4436"
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       sodipodi:linespacing="125%"><tspan
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
          x="344.00439"
          y="909.39209"
          id="tspan4438"
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">x32</tspan></text>
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x32</tspan></text>
     <text
        x="306.82321"
        y="909.39209"
        id="text4440"
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       sodipodi:linespacing="125%"><tspan
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
          x="306.82321"
          y="909.39209"
          id="tspan4442"
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">x24</tspan></text>
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x24</tspan></text>
     <text
        x="277.79294"
        y="909.39209"
        id="text4444"
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       sodipodi:linespacing="125%"><tspan
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
          x="277.79294"
          y="909.39209"
          id="tspan4446"
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">x16</tspan></text>
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x16</tspan></text>
   </g>
   <g
      transform="translate(258.5381,-80.304726)"
@@ -413,12 +368,11 @@
        y="909.39209"
        id="text4532"
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       sodipodi:linespacing="125%"><tspan
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
          x="393.02628"
          y="909.39209"
          id="tspan4534"
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">x48</tspan></text>
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x48</tspan></text>
     <use
        transform="translate(195.31779,49.000035)"
        id="use4536"
@@ -569,34 +523,31 @@
        y="909.39209"
        id="text4586"
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       sodipodi:linespacing="125%"><tspan
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
          x="344.00439"
          y="909.39209"
          id="tspan4588"
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">x32</tspan></text>
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x32</tspan></text>
     <text
        x="306.82321"
        y="909.39209"
        id="text4590"
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       sodipodi:linespacing="125%"><tspan
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
          x="306.82321"
          y="909.39209"
          id="tspan4592"
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">x24</tspan></text>
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x24</tspan></text>
     <text
        x="277.79294"
        y="909.39209"
        id="text4594"
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       sodipodi:linespacing="125%"><tspan
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
          x="277.79294"
          y="909.39209"
          id="tspan4596"
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">x16</tspan></text>
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x16</tspan></text>
   </g>
   <g
      transform="translate(57.338484,5.4946289)"
@@ -626,12 +577,11 @@
        y="909.39209"
        id="text4721"
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       sodipodi:linespacing="125%"><tspan
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
          x="393.02628"
          y="909.39209"
          id="tspan4723"
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">x48</tspan></text>
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x48</tspan></text>
     <use
        transform="translate(195.31779,49.000035)"
        id="use4725"
@@ -777,34 +727,31 @@
        y="909.39209"
        id="text4775"
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       sodipodi:linespacing="125%"><tspan
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
          x="344.00439"
          y="909.39209"
          id="tspan4777"
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">x32</tspan></text>
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x32</tspan></text>
     <text
        x="306.82321"
        y="909.39209"
        id="text4779"
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       sodipodi:linespacing="125%"><tspan
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
          x="306.82321"
          y="909.39209"
          id="tspan4781"
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">x24</tspan></text>
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x24</tspan></text>
     <text
        x="277.79294"
        y="909.39209"
        id="text4783"
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       sodipodi:linespacing="125%"><tspan
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
          x="277.79294"
          y="909.39209"
          id="tspan4785"
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">x16</tspan></text>
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x16</tspan></text>
   </g>
   <g
      transform="translate(258.5381,5.4946289)"
@@ -834,12 +781,11 @@
        y="909.39209"
        id="text4795"
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       sodipodi:linespacing="125%"><tspan
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
          x="393.02628"
          y="909.39209"
          id="tspan4797"
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">x48</tspan></text>
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x48</tspan></text>
     <use
        transform="translate(195.31779,49.000035)"
        id="use4799"
@@ -985,574 +931,556 @@
        y="909.39209"
        id="text4849"
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       sodipodi:linespacing="125%"><tspan
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
          x="344.00439"
          y="909.39209"
          id="tspan4851"
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">x32</tspan></text>
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x32</tspan></text>
     <text
        x="306.82321"
        y="909.39209"
        id="text4853"
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       sodipodi:linespacing="125%"><tspan
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
          x="306.82321"
          y="909.39209"
          id="tspan4855"
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">x24</tspan></text>
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x24</tspan></text>
     <text
        x="277.79294"
        y="909.39209"
        id="text4857"
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       sodipodi:linespacing="125%"><tspan
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
          x="277.79294"
          y="909.39209"
          id="tspan4859"
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">x16</tspan></text>
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x16</tspan></text>
   </g>
   <g
-     id="g4486"
-     transform="translate(51.456661,-80.304703)">
+     transform="translate(51.456661,-80.304703)"
+     id="g4486">
     <path
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.11764706;stroke-dasharray:3, 3;stroke-dashoffset:0"
+       d="m 173.13846,906.59148 0,-65.24255"
        id="path4243"
-       d="m 173.13846,906.59148 0,-65.24255" />
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.11764706;stroke-dasharray:3, 3;stroke-dashoffset:0" />
     <use
-       style="stroke:#000000;stroke-opacity:0.11764706"
-       xlink:href="#path4243"
-       height="990"
-       width="765"
-       y="0"
-       x="0"
+       transform="translate(48.979865,0)"
        id="use4291"
-       transform="translate(48.979865,0)" />
-    <use
        style="stroke:#000000;stroke-opacity:0.11764706"
-       xlink:href="#use4291"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#path4243" />
+    <use
+       transform="matrix(0,-1,1,0,-676.34181,1071.5885)"
        id="use4293"
-       transform="matrix(0,-1,1,0,-676.34181,1071.5885)" />
+       style="stroke:#000000;stroke-opacity:0.11764706"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4291" />
     <text
-       sodipodi:linespacing="125%"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       xml:space="preserve"
+       x="197.70848"
+       y="909.39209"
        id="text4297"
-       y="909.39209"
-       x="197.70848"><tspan
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="197.70848"
+         y="909.39209"
          id="tspan4299"
-         y="909.39209"
-         x="197.70848">x48</tspan></text>
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x48</tspan></text>
     <use
-       style="stroke:#000000;stroke-opacity:0.11764706"
-       xlink:href="#use4293"
-       height="990"
-       width="765"
-       y="0"
-       x="0"
+       transform="translate(0,49.000035)"
        id="use4338"
-       transform="translate(0,49.000035)" />
-    <use
        style="stroke:#000000;stroke-opacity:0.11764706"
-       xlink:href="#path4243"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4293" />
+    <use
+       transform="translate(-41.02521,0)"
        id="use4340"
-       transform="translate(-41.02521,0)" />
-    <use
        style="stroke:#000000;stroke-opacity:0.11764706"
-       xlink:href="#use4340"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#path4243" />
+    <use
+       transform="translate(-33.028584,0)"
        id="use4342"
-       transform="translate(-33.028584,0)" />
-    <use
        style="stroke:#000000;stroke-opacity:0.11764706"
-       xlink:href="#use4342"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4340" />
+    <use
+       transform="translate(-25.031931,0)"
        id="use4344"
-       transform="translate(-25.031931,0)" />
-    <use
        style="stroke:#000000;stroke-opacity:0.11764706"
-       xlink:href="#use4293"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4342" />
+    <use
+       transform="translate(-49.021857,16.000045)"
        id="use4346"
-       transform="translate(-49.021857,16.000045)" />
-    <use
        style="stroke:#000000;stroke-opacity:0.11764706"
-       xlink:href="#use4346"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4293" />
+    <use
+       transform="translate(0,33)"
        id="use4348"
-       transform="translate(0,33)" />
-    <use
        style="stroke:#000000;stroke-opacity:0.11764706"
-       xlink:href="#use4346"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4346" />
+    <use
+       transform="translate(-37.026906,8.0000021)"
        id="use4350"
-       transform="translate(-37.026906,8.0000021)" />
-    <use
        style="stroke:#000000;stroke-opacity:0.11764706"
-       xlink:href="#use4348"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4346" />
+    <use
+       transform="translate(-37.026906,0)"
        id="use4352"
-       transform="translate(-37.026906,0)" />
-    <use
        style="stroke:#000000;stroke-opacity:0.11764706"
-       xlink:href="#use4352"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4348" />
+    <use
+       transform="translate(-29.030253,0)"
        id="use4354"
-       transform="translate(-29.030253,0)" />
-    <use
        style="stroke:#000000;stroke-opacity:0.11764706"
-       xlink:href="#use4350"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4352" />
+    <use
+       transform="translate(-29.030253,8.0000011)"
        id="use4356"
-       transform="translate(-29.030253,8.0000011)" />
+       style="stroke:#000000;stroke-opacity:0.11764706"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4350" />
     <g
-       style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706"
+       transform="matrix(0.14688637,0,0,0.14688637,71.01348,801.84194)"
        id="g4179-5"
-       transform="matrix(0.14688637,0,0,0.14688637,71.01348,801.84194)">
+       style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706">
       <g
-         style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706"
+         transform="translate(-110.98556,-129.29271)"
          id="g4183-6"
-         transform="translate(-110.98556,-129.29271)" />
+         style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706" />
     </g>
     <g
-       style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706"
+       transform="matrix(0.22032955,0,0,0.22032955,94.275784,753.7778)"
        id="g4273"
-       transform="matrix(0.22032955,0,0,0.22032955,94.275784,753.7778)">
+       style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706">
       <g
-         style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706"
+         transform="translate(-110.98556,-129.29271)"
          id="g4277"
-         transform="translate(-110.98556,-129.29271)" />
+         style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706" />
     </g>
     <g
-       style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706"
+       transform="matrix(0.29377274,0,0,0.29377274,125.53474,705.71365)"
        id="g4279"
-       transform="matrix(0.29377274,0,0,0.29377274,125.53474,705.71365)">
+       style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706">
       <g
-         style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706"
+         transform="translate(-110.98556,-129.29271)"
          id="g4283"
-         transform="translate(-110.98556,-129.29271)" />
+         style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706" />
     </g>
     <g
-       style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706"
+       transform="matrix(0.44065911,0,0,0.44065911,163.0207,609.58536)"
        id="g4285"
-       transform="matrix(0.44065911,0,0,0.44065911,163.0207,609.58536)">
+       style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706">
       <g
-         style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706"
+         transform="translate(-110.98556,-129.29271)"
          id="g4289"
-         transform="translate(-110.98556,-129.29271)" />
+         style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706" />
     </g>
     <use
-       style="stroke:#000000;stroke-opacity:0.11764706"
-       xlink:href="#use4291"
-       height="990"
-       width="765"
-       y="0"
-       x="0"
+       transform="translate(-57.018499,0)"
        id="use4358"
-       transform="translate(-57.018499,0)" />
-    <use
        style="stroke:#000000;stroke-opacity:0.11764706"
-       xlink:href="#use4358"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4291" />
+    <use
+       transform="translate(-41.025228,0)"
        id="use4360"
-       transform="translate(-41.025228,0)" />
-    <use
        style="stroke:#000000;stroke-opacity:0.11764706"
-       xlink:href="#use4360"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4358" />
+    <use
+       transform="translate(-33.028575,0)"
        id="use4362"
-       transform="translate(-33.028575,0)" />
+       style="stroke:#000000;stroke-opacity:0.11764706"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4360" />
     <text
-       sodipodi:linespacing="125%"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       xml:space="preserve"
+       x="148.68661"
+       y="909.39209"
        id="text4364"
-       y="909.39209"
-       x="148.68661"><tspan
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="148.68661"
+         y="909.39209"
          id="tspan4366"
-         y="909.39209"
-         x="148.68661">x32</tspan></text>
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x32</tspan></text>
     <text
-       sodipodi:linespacing="125%"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       xml:space="preserve"
+       x="111.50542"
+       y="909.39209"
        id="text4368"
-       y="909.39209"
-       x="111.50542"><tspan
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
-         id="tspan4370"
-         y="909.39209"
-         x="111.50542">x24</tspan></text>
-    <text
-       sodipodi:linespacing="125%"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
        xml:space="preserve"
-       id="text4372"
-       y="909.39209"
-       x="82.475159"><tspan
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
-         id="tspan4374"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="111.50542"
          y="909.39209"
-         x="82.475159">x16</tspan></text>
+         id="tspan4370"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x24</tspan></text>
+    <text
+       x="82.475159"
+       y="909.39209"
+       id="text4372"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="82.475159"
+         y="909.39209"
+         id="tspan4374"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x16</tspan></text>
   </g>
   <text
-     sodipodi:linespacing="125%"
-     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-     xml:space="preserve"
-     id="text4372-4"
+     x="118.35015"
      y="829.0874"
-     x="118.35015"><tspan
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur"
-       id="tspan4374-3"
+     id="text4372-4"
+     xml:space="preserve"
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+       x="118.35015"
        y="829.0874"
-       x="118.35015">Y=172.335</tspan></text>
+       id="tspan4374-3"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">Y=172.335</tspan></text>
   <use
-     height="990"
-     width="765"
      transform="translate(204.39793,0)"
      id="use3087"
-     xlink:href="#text4372-4"
-     y="0"
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Vegur;-inkscape-font-specification:Vegur"
      x="0"
-     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Vegur;-inkscape-font-specification:Vegur" />
-  <use
-     height="990"
+     y="0"
      width="765"
+     height="990"
+     xlink:href="#text4372-4" />
+  <use
      transform="translate(201.19961,0)"
      id="use3091"
-     xlink:href="#use3087"
-     y="0"
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Vegur;-inkscape-font-specification:Vegur"
      x="0"
-     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Vegur;-inkscape-font-specification:Vegur" />
+     y="0"
+     width="765"
+     height="990"
+     xlink:href="#use3087" />
   <g
-     id="g4639"
-     transform="translate(51.456661,5.4946213)">
+     transform="translate(51.456661,5.4946213)"
+     id="g4639">
     <path
-       style="fill:none;stroke:#cccccc;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0"
+       d="m 173.13846,906.59148 0,-65.24255"
        id="path4641"
-       d="m 173.13846,906.59148 0,-65.24255" />
+       style="fill:none;stroke:#cccccc;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0" />
     <use
-       xlink:href="#path4243"
-       height="990"
-       width="765"
-       y="0"
-       x="0"
+       transform="translate(48.979865,0)"
        id="use4643"
-       transform="translate(48.979865,0)" />
-    <use
-       xlink:href="#use4291"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#path4243" />
+    <use
+       transform="matrix(0,-1,1,0,-676.34181,1071.5885)"
        id="use4645"
-       transform="matrix(0,-1,1,0,-676.34181,1071.5885)" />
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4291" />
     <text
-       sodipodi:linespacing="125%"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       xml:space="preserve"
+       x="197.70848"
+       y="909.39209"
        id="text4647"
-       y="909.39209"
-       x="197.70848"><tspan
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="197.70848"
+         y="909.39209"
          id="tspan4649"
-         y="909.39209"
-         x="197.70848">x48</tspan></text>
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x48</tspan></text>
     <use
-       xlink:href="#use4293"
-       height="990"
-       width="765"
-       y="0"
-       x="0"
+       transform="translate(0,49.000035)"
        id="use4651"
-       transform="translate(0,49.000035)" />
-    <use
-       xlink:href="#path4243"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4293" />
+    <use
+       transform="translate(-41.02521,0)"
        id="use4653"
-       transform="translate(-41.02521,0)" />
-    <use
-       xlink:href="#use4340"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#path4243" />
+    <use
+       transform="translate(-33.028584,0)"
        id="use4655"
-       transform="translate(-33.028584,0)" />
-    <use
-       xlink:href="#use4342"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4340" />
+    <use
+       transform="translate(-25.031931,0)"
        id="use4657"
-       transform="translate(-25.031931,0)" />
-    <use
-       xlink:href="#use4293"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4342" />
+    <use
+       transform="translate(-49.021857,16.000045)"
        id="use4659"
-       transform="translate(-49.021857,16.000045)" />
-    <use
-       xlink:href="#use4346"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4293" />
+    <use
+       transform="translate(0,33)"
        id="use4661"
-       transform="translate(0,33)" />
-    <use
-       xlink:href="#use4346"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4346" />
+    <use
+       transform="translate(-37.026906,8.0000021)"
        id="use4663"
-       transform="translate(-37.026906,8.0000021)" />
-    <use
-       xlink:href="#use4348"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4346" />
+    <use
+       transform="translate(-37.026906,0)"
        id="use4665"
-       transform="translate(-37.026906,0)" />
-    <use
-       xlink:href="#use4352"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4348" />
+    <use
+       transform="translate(-29.030253,0)"
        id="use4667"
-       transform="translate(-29.030253,0)" />
-    <use
-       xlink:href="#use4350"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4352" />
+    <use
+       transform="translate(-29.030253,8.0000011)"
        id="use4669"
-       transform="translate(-29.030253,8.0000011)" />
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4350" />
     <g
-       style="fill:#000000"
+       transform="matrix(0.14688637,0,0,0.14688637,71.01348,801.84194)"
        id="g4671"
-       transform="matrix(0.14688637,0,0,0.14688637,71.01348,801.84194)">
+       style="fill:#000000">
       <g
-         style="fill:#000000"
+         transform="translate(-110.98556,-129.29271)"
          id="g4675"
-         transform="translate(-110.98556,-129.29271)" />
+         style="fill:#000000" />
     </g>
     <g
-       style="fill:#000000"
+       transform="matrix(0.22032955,0,0,0.22032955,94.275784,753.7778)"
        id="g4677"
-       transform="matrix(0.22032955,0,0,0.22032955,94.275784,753.7778)">
+       style="fill:#000000">
       <g
-         style="fill:#000000"
+         transform="translate(-110.98556,-129.29271)"
          id="g4681"
-         transform="translate(-110.98556,-129.29271)" />
+         style="fill:#000000" />
     </g>
     <g
-       style="fill:#000000"
+       transform="matrix(0.29377274,0,0,0.29377274,125.53474,705.71365)"
        id="g4683"
-       transform="matrix(0.29377274,0,0,0.29377274,125.53474,705.71365)">
+       style="fill:#000000">
       <g
-         style="fill:#000000"
+         transform="translate(-110.98556,-129.29271)"
          id="g4687"
-         transform="translate(-110.98556,-129.29271)" />
+         style="fill:#000000" />
     </g>
     <g
-       style="fill:#000000"
+       transform="matrix(0.44065911,0,0,0.44065911,163.0207,609.58536)"
        id="g4689"
-       transform="matrix(0.44065911,0,0,0.44065911,163.0207,609.58536)">
+       style="fill:#000000">
       <g
-         style="fill:#000000"
+         transform="translate(-110.98556,-129.29271)"
          id="g4693"
-         transform="translate(-110.98556,-129.29271)" />
+         style="fill:#000000" />
     </g>
     <use
-       xlink:href="#use4291"
-       height="990"
-       width="765"
-       y="0"
-       x="0"
+       transform="translate(-57.018499,0)"
        id="use4695"
-       transform="translate(-57.018499,0)" />
-    <use
-       xlink:href="#use4358"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4291" />
+    <use
+       transform="translate(-41.025228,0)"
        id="use4697"
-       transform="translate(-41.025228,0)" />
-    <use
-       xlink:href="#use4360"
-       height="990"
-       width="765"
-       y="0"
        x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4358" />
+    <use
+       transform="translate(-33.028575,0)"
        id="use4699"
-       transform="translate(-33.028575,0)" />
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4360" />
     <text
-       sodipodi:linespacing="125%"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       xml:space="preserve"
+       x="148.68661"
+       y="909.39209"
        id="text4701"
-       y="909.39209"
-       x="148.68661"><tspan
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="148.68661"
+         y="909.39209"
          id="tspan4703"
-         y="909.39209"
-         x="148.68661">x32</tspan></text>
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x32</tspan></text>
     <text
-       sodipodi:linespacing="125%"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       xml:space="preserve"
+       x="111.50542"
+       y="909.39209"
        id="text4705"
-       y="909.39209"
-       x="111.50542"><tspan
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
-         id="tspan4707"
-         y="909.39209"
-         x="111.50542">x24</tspan></text>
-    <text
-       sodipodi:linespacing="125%"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
        xml:space="preserve"
-       id="text4709"
-       y="909.39209"
-       x="82.475159"><tspan
-         style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
-         id="tspan4711"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="111.50542"
          y="909.39209"
-         x="82.475159">x16</tspan></text>
+         id="tspan4707"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x24</tspan></text>
+    <text
+       x="82.475159"
+       y="909.39209"
+       id="text4709"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="82.475159"
+         y="909.39209"
+         id="tspan4711"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x16</tspan></text>
   </g>
   <text
-     sodipodi:linespacing="125%"
-     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-     xml:space="preserve"
-     id="text4207"
+     x="118.16015"
      y="914.88672"
-     x="118.16015"><tspan
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur"
-       id="tspan4209"
+     id="text4207"
+     xml:space="preserve"
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+       x="118.16015"
        y="914.88672"
-       x="118.16015">Y=86.530</tspan></text>
+       id="tspan4209"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">Y=86.530</tspan></text>
   <use
-     height="990"
-     width="765"
      transform="translate(204.39793,0)"
      id="use3089"
-     xlink:href="#text4207"
-     y="0"
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Vegur;-inkscape-font-specification:Vegur"
      x="0"
-     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Vegur;-inkscape-font-specification:Vegur" />
-  <use
-     height="990"
+     y="0"
      width="765"
+     height="990"
+     xlink:href="#text4207" />
+  <use
      transform="translate(201.19961,0)"
      id="use3093"
-     xlink:href="#use3089"
-     y="0"
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Vegur;-inkscape-font-specification:Vegur"
      x="0"
-     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Vegur;-inkscape-font-specification:Vegur" />
+     y="0"
+     width="765"
+     height="990"
+     xlink:href="#use3089" />
   <text
-     sodipodi:linespacing="125%"
      x="-791.27881"
      y="117.69781"
+     transform="matrix(0,-1,1,0,0,0)"
      id="text4372-4-6"
      xml:space="preserve"
-     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-     transform="matrix(0,-1,1,0,0,0)"><tspan
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
        x="-791.27881"
        y="117.69781"
        id="tspan4374-3-8"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">X=125.009</tspan></text>
   <text
-     transform="matrix(0,-1,1,0,0,0)"
-     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-     xml:space="preserve"
-     id="text3431"
-     y="322.09573"
      x="-791.28662"
-     sodipodi:linespacing="125%"><tspan
-       style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%"
-       id="tspan3433"
+     y="322.09573"
+     transform="matrix(0,-1,1,0,0,0)"
+     id="text3431"
+     xml:space="preserve"
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+       x="-791.28662"
        y="322.09573"
-       x="-791.28662">X=326.209</tspan></text>
+       id="tspan3433"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">X=326.209</tspan></text>
   <text
-     sodipodi:linespacing="125%"
      x="-791.27881"
      y="523.29535"
+     transform="matrix(0,-1,1,0,0,0)"
      id="text3435"
      xml:space="preserve"
-     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-     transform="matrix(0,-1,1,0,0,0)"><tspan
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
        x="-791.27881"
        y="523.29535"
        id="tspan3437"
-       style="fill:#000000;-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%">X=527.409</tspan></text>
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">X=527.409</tspan></text>
   <text
-     transform="matrix(0,-1,1,0,0,0)"
-     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-     xml:space="preserve"
-     id="text3439"
-     y="175.88672"
      x="-279.6738"
-     sodipodi:linespacing="125%"><tspan
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur"
-       id="tspan3441"
+     y="175.88672"
+     transform="matrix(0,-1,1,0,0,0)"
+     id="text3439"
+     xml:space="preserve"
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+       x="-279.6738"
        y="175.88672"
-       x="-279.6738">X=180.000</tspan></text>
+       id="tspan3441"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">X=180.000</tspan></text>
   <text
-     sodipodi:linespacing="125%"
      x="184.86989"
      y="293.4613"
      id="text3443"
@@ -1563,28 +1491,28 @@
        id="tspan3445"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">Y=706.476</tspan></text>
   <use
-     x="0"
-     y="0"
-     xlink:href="#text4372-4-6"
+     transform="translate(0,85.799322)"
      id="use3394"
-     transform="translate(0,85.799322)"
-     width="765"
-     height="990" />
-  <use
      x="0"
      y="0"
-     xlink:href="#text3431"
-     id="use3396"
-     transform="translate(0,85.799322)"
      width="765"
      height="990"
-     style="-inkscape-font-specification:Vegur;font-family:Vegur;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:125%" />
+     xlink:href="#text4372-4-6" />
   <use
+     transform="translate(0,85.799322)"
+     id="use3396"
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Vegur;-inkscape-font-specification:Vegur"
      x="0"
      y="0"
-     xlink:href="#text3435"
-     id="use3398"
-     transform="translate(0,85.799322)"
      width="765"
-     height="990" />
+     height="990"
+     xlink:href="#text3431" />
+  <use
+     transform="translate(0,85.799322)"
+     id="use3398"
+     x="0"
+     y="0"
+     width="765"
+     height="990"
+     xlink:href="#text3435" />
 </svg>

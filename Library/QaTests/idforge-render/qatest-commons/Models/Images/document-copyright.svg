@@ -2,84 +2,14 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.2"
    width="765"
    height="990"
-   id="svg2755"
-   inkscape:version="0.47 r22583"
-   sodipodi:docname="document-copyright.svg">
-  <metadata
-     id="metadata3922">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="980"
-     inkscape:window-height="683"
-     id="namedview3920"
-     showgrid="false"
-     inkscape:zoom="0.43232323"
-     inkscape:cx="251.81075"
-     inkscape:cy="495"
-     inkscape:window-x="149"
-     inkscape:window-y="25"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg2755" />
+   id="svg2755">
   <defs
      id="defs2757">
-    <inkscape:perspective
-       sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 495 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="765 : 495 : 1"
-       inkscape:persp3d-origin="382.5 : 330 : 1"
-       id="perspective3924" />
-    <marker
-       refX="0"
-       refY="0"
-       orient="auto"
-       id="Arrow2Lend"
-       style="overflow:visible">
-      <path
-         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
-         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
-         id="path4917"
-         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round" />
-    </marker>
-    <marker
-       refX="0"
-       refY="0"
-       orient="auto"
-       id="Arrow2Lstart"
-       style="overflow:visible">
-      <path
-         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
-         transform="matrix(1.1,0,0,1.1,1.1,0)"
-         id="path4914"
-         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round" />
-    </marker>
     <clipPath
        id="clipPath10282-9-6">
       <rect
@@ -101,111 +31,98 @@
            style="fill:#efa724;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:30;marker:none;visibility:visible;display:inline;overflow:visible" />
       </g>
     </clipPath>
-    <inkscape:perspective
-       id="perspective9177"
-       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-       inkscape:vp_z="1 : 0.5 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_x="0 : 0.5 : 1"
-       sodipodi:type="inkscape:persp3d" />
   </defs>
   <g
      id="g9284">
     <rect
-       y="0"
-       x="0"
-       height="990"
        width="765"
+       height="990"
+       x="0"
+       y="0"
        id="rect9282"
        style="fill:#ffffff;fill-opacity:0;stroke:none" />
     <text
-       sodipodi:linespacing="108%"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:108.00000429%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu LGC Serif;-inkscape-font-specification:DejaVu LGC Serif"
-       xml:space="preserve"
+       x="35.58519"
+       y="66.397736"
        id="text3139"
-       y="66.397736"
-       x="35.58519" />
-    <text
-       sodipodi:linespacing="108%"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:108.00000429%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu LGC Serif;-inkscape-font-specification:DejaVu LGC Serif"
        xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:108.00000429%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu LGC Serif;-inkscape-font-specification:DejaVu LGC Serif" />
+    <text
+       x="35.58519"
+       y="66.397736"
        id="text10797"
-       y="66.397736"
-       x="35.58519" />
-    <text
-       sodipodi:linespacing="108%"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:108.00000429%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu LGC Serif;-inkscape-font-specification:DejaVu LGC Serif"
        xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:108.00000429%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu LGC Serif;-inkscape-font-specification:DejaVu LGC Serif" />
+    <text
+       x="35.58519"
+       y="66.397736"
        id="text10799"
-       y="66.397736"
-       x="35.58519" />
-    <g
-       style="fill:#ffffff;fill-opacity:1"
-       id="g8576"
-       transform="matrix(0.8939415,0,0,0.8939415,357.27418,356.6284)" />
-    <text
-       sodipodi:linespacing="150%"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:150%;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;fill:#24221c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Vegur;-inkscape-font-specification:Vegur"
        xml:space="preserve"
-       id="text4951"
-       y="932.38"
-       x="382.74902" />
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:108.00000429%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu LGC Serif;-inkscape-font-specification:DejaVu LGC Serif" />
     <g
-       id="layer1"
-       transform="matrix(0.47023809,0,0,0.47023809,-45.349107,247.50992)">
+       transform="matrix(0.8939415,0,0,0.8939415,357.27418,356.6284)"
+       id="g8576"
+       style="fill:#ffffff;fill-opacity:1" />
+    <text
+       x="382.74902"
+       y="932.38"
+       id="text4951"
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:150%;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;fill:#24221c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Vegur;-inkscape-font-specification:Vegur" />
+    <g
+       transform="matrix(0.47023809,0,0,0.47023809,-45.349107,247.50992)"
+       id="layer1">
       <flowRoot
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Denmark;-inkscape-font-specification:Denmark Ultra-Light"
-         xml:space="preserve"
+         transform="matrix(2,0,0,2,-161.30386,319.59972)"
          id="flowRoot4519"
-         transform="matrix(2,0,0,2,-161.30386,319.59972)"><flowRegion
+         xml:space="preserve"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Denmark;-inkscape-font-specification:Denmark Ultra-Light"><flowRegion
            id="flowRegion4521"><rect
-             id="rect4523"
-             y="133.12337"
-             x="36.769554"
+             width="299.81326"
              height="299.81326"
-             width="299.81326" /></flowRegion><flowPara
-           style="font-size:30px"
-           id="flowPara4525" /></flowRoot>      <g
-         id="g6491"
-         transform="matrix(4.0202471,0,0,4.0202471,-379.56765,-2869.3086)" />
+             x="36.769554"
+             y="133.12337"
+             id="rect4523" /></flowRegion><flowPara
+           id="flowPara4525"
+           style="font-size:30px" /></flowRoot>      <g
+         transform="matrix(4.0202471,0,0,4.0202471,-379.56765,-2869.3086)"
+         id="g6491" />
       <g
-         style="stroke:#ffffff;stroke-width:0.35433072;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         id="g3880"
+         transform="matrix(2.0370734,0,0,2.0370734,-1271.8507,-1345.1974)"
          clip-path="url(#clipPath10282-9-6)"
-         transform="matrix(2.0370734,0,0,2.0370734,-1271.8507,-1345.1974)" />
+         id="g3880"
+         style="stroke:#ffffff;stroke-width:0.35433072;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
       <g
-         id="g10302"
-         transform="matrix(2,0,0,2,-688.15167,-1401.5478)">
+         transform="matrix(2,0,0,2,-688.15167,-1401.5478)"
+         id="g10302">
         <g
-           id="g10304"
-           transform="matrix(1.0666663,0,0,1,-26.935596,-4.1328125e-5)" />
+           transform="matrix(1.0666663,0,0,1,-26.935596,-4.1328125e-5)"
+           id="g10304" />
         <g
-           id="g10308"
+           transform="matrix(1.0722788,0,0,1,-28.850792,-4.1328125e-5)"
            clip-path="url(#clipPath4429-5-0)"
-           transform="matrix(1.0722788,0,0,1,-28.850792,-4.1328125e-5)" />
+           id="g10308" />
       </g>
     </g>
     <text
-       sodipodi:linespacing="125%"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:0.39215686;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
-       xml:space="preserve"
-       id="text7570"
+       x="379.30548"
        y="51.32592"
-       x="379.30548">=PRODUCT_NAME= VISUAL IDENTITY MANUAL</text>
-    <text
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:129.99999523%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:0.39215686;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"
+       id="text7570"
        xml:space="preserve"
-       id="text7964"
-       y="929.76196"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:0.39215686;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur">=PRODUCT_NAME= VISUAL IDENTITY MANUAL</text>
+    <text
        x="379.79861"
-       sodipodi:linespacing="130%"><tspan
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:129.99999523%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:0.39215686;font-family:Vegur;-inkscape-font-specification:Vegur"
-         id="tspan7966"
+       y="929.76196"
+       id="text7964"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:129.99999523%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:0.39215686;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="379.79861"
          y="929.76196"
-         x="379.79861">Copyright © =COPYRIGHT_YEAR= =COPYRIGHT_HOLDER=</tspan><tspan
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:129.99999523%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:0.39215686;font-family:Vegur;-inkscape-font-specification:Vegur"
-         id="tspan7968"
+         id="tspan7966"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:129.99999523%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:0.39215686;font-family:Vegur;-inkscape-font-specification:Vegur">Copyright © =COPYRIGHT_YEAR= =COPYRIGHT_HOLDER=</tspan><tspan
+         x="379.79861"
          y="942.84998"
-         x="379.79861">This artwork was produced by idFORGE =IDFORGE_VERSION= and released under the terms of =LICENSE=</tspan></text>
+         id="tspan7968"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:129.99999523%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:0.39215686;font-family:Vegur;-inkscape-font-specification:Vegur">This artwork was produced by idFORGE =IDFORGE_VERSION= and released under the terms of =LICENSE=</tspan></text>
   </g>
 </svg>
