@@ -6,21 +6,72 @@ idFORGE Framework
     modification, are permitted in any medium without royalty provided
     the copyright notice and this notice are preserved.
 
-idFORGE Framework provides automation scripts and templates to help
-you reproduce an specific organization's visual identity manual and
-its implementation.
+The idFORGE Framework helps you to rebuild the visual identity manual of a
+particular organization using your own artistic motif. Normally, an
+organization publishes normative information about its visual identity
+and you the visual style that will be applied. Then, you run
+idforge-render(1) to gear everything up and get the final files.
 
-See idforge(1) for more information.
+The visual identity manual is a normative document describing key
+concepts about the organization so it can be better recognized in an
+specific environment or market. In the visual identity manual the
+organization describes its goals, principles, history, strategies,
+visual structure, branding, and visual manifestations where it shows
+its existence on. This information emerges naturally from the heart of
+the organization (i.e., the people), no matter if the organization
+takes or not control over it.
 
-Recent updates for idFORGE Framework are published from time to time
-in <http://wiki.centos.org/ArtWork/Framework>.
+The visual identity manual isn't a conclusive document. It reflects
+the organization existence in a specific point of time so it must be
+updated frequently to introduce the organization's recent changes so
+it can be effectively used as reference by other organization (or
+industries) to produce visual manifestations exactly as it describes.
 
-Discussion about idFORGE Framework take place at CentOS Developers
-mailing list <centos-devel@centos.org>.
+The idFORGE Framework tries to identify key concepts about an
+organization and provides templates that may be useful as starting
+point. It makes easier for people to contribute and become, this way,
+true protagonists of their communities.
 
-idFORGE Framework is written by Alain Reguera Delgado
-<alain.reguera@gmail.com>
+The idFORGE Framework is just a tool. The results a particular
+organization could achieve with it can be good or bad depending on the
+level of compromise the people involved do take continently in the
+duty of describing what the organization is and how it should look
+like in every single visual manifestation it shows its existence on.
 
-idFORGE Framework is copyright of The CentOS Artwork SIG and released
-as free software. See the LICENSE file for more information about
-copying matters.
+Documentation
+-------------
+
+The idFORGE Framework documentation is available for reading using
+on-line manual pages. To start reading, type the following command:
+
+    man idforge
+
+Download
+--------
+
+The packages you need to install the idFORGE Framework are available
+to download from the following location:
+
+    http://wiki.centos.org/ArtWork/Framework
+
+Community
+---------
+
+The idFORGE Framework is a community effort inside The CentOS Project.
+Most discussions take place in the CentOS Developers mailing list
+<centos-devel@centos.org>.
+
+Author
+------
+
+ * Alain Reguera Delgado <alain.reguera@gmail.com>, 2009-2015.
+
+Copyright
+---------
+
+Copyright © 2015 The CentOS Artwork SIG
+
+idFORGE Framework comes with NO WARRANTY, to the extent permitted by
+law. You may redistribute copies of idFORGE Framework under the terms
+of the GNU General Public License. For more information about these
+matters, see the file named LICENSE.
