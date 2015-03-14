@@ -134,10 +134,9 @@ branding restriction that organization specified.
 include::Commons/options.inc[]
 
 *-m "NAME", --model="NAME"*::
-    Specifies the name of the organization that you want to use as
-    model to create the workplace. When this option is not provided, a
-    selection list with all organizations possible names is displayed
-    for you to choose one.
+    Specifies the identity model that you want to use as reference to
+    create the workplace. When this option is not provided, the
+    idFORGE Framework identity model is used by default.
 
 The *{doctitle}* command creates the workplace in the directory you
 provide as argument in the command-line. When the directory you

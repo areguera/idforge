@@ -23,24 +23,31 @@
 #
 ######################################################################
 
-function prepare {
+function prepare_setWorkplace {
 
-    # Initialize module's flags.
-    local PREPARE_FLAG_MODEL='idFORGE'
+    [[ -d ${ARGUMENT} ]] \
+        && idforge_printMessage "`gettext "The workplace you specified already exists."`" --as-error-line
 
-    # Initialize command-line arguments and interpret arguments and
-    # options passed through command-line.
-    local ARGUMENT='' ARGUMENTS=''; prepare_setOptions "${@}"
+    idforge_checkFiles -d ${IDFORGE_MODELS}/${PREPARE_FLAG_MODEL}
 
-    # Verify existence of command-line arguments. When they don't
-    # exist, just return to caller. This is necessary to print the
-    # module's usage information cleanly.
-    [[ -z ${ARGUMENTS} ]] && return
+    idforge_printMessage "${ARGUMENT}" --as-creating-line
 
-    # Process list of directories provided as argument in the
-    # command-line.
-    for ARGUMENT in ${ARGUMENTS}; do
-        prepare_setWorkplace
+    local MODELS_CONFIGURATION=''
+    local MODELS_CONFIGURATIONS=$(idforge_printFileList -t 'f' -p '.+\.conf$' "${IDFORGE_MODELS}/${PREPARE_FLAG_MODEL}")
+
+    for MODELS_CONFIGURATION in ${MODELS_CONFIGURATIONS};do
+
+        local WORKPLACE_DIRECTORY=$(dirname ${MODELS_CONFIGURATION} \
+            | sed -r "s,${IDFORGE_MODELS}/${PREPARE_FLAG_MODEL}/,${ARGUMENT}/,")
+
+        local WORKPLACE_FILE=${WORKPLACE_DIRECTORY}/$(basename ${MODELS_CONFIGURATION})
+
+        idforge_setParentDir ${WORKPLACE_FILE}
+
+        install ${MODELS_CONFIGURATION} ${WORKPLACE_FILE}
+
+        idforge_checkFiles -ef ${WORKPLACE_FILE}
+
     done
 
 }

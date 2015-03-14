@@ -1,21 +1,21 @@
 #!/bin/bash
 ######################################################################
 #
-#   tcar - The CentOS Artwork Repository
-#   Copyright © 2014 The CentOS Artwork SIG
+#   idFORGE Framework - Manage identity manuals in community
+#   Copyright © 2015 The CentOS Artwork SIG
 #
-#   This program is free software; you can redistribute it and/or
+#   idFORGE Framework is free software; you can redistribute it and/or
 #   modify it under the terms of the GNU General Public License as
 #   published by the Free Software Foundation; either version 2 of the
 #   License, or (at your option) any later version.
 #
-#   This program is distributed in the hope that it will be useful,
-#   but WITHOUT ANY WARRANTY; without even the implied warranty of
-#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-#   General Public License for more details.
+#   idFORGE Framework is distributed in the hope that it will be
+#   useful, but WITHOUT ANY WARRANTY; without even the implied
+#   warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#   See the GNU General Public License for more details.
 #
 #   You should have received a copy of the GNU General Public License
-#   along with this program; if not, write to the Free Software
+#   along with idFORGE Framework; if not, write to the Free Software
 #   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
 #   Alain Reguera Delgado <alain.reguera@gmail.com>
@@ -26,10 +26,10 @@
 function prepare_setOptions {
 
     # Define short options we want to support.
-    local ARGSS="h,v,s"
+    local ARGSS="h,v,s,m:"
 
     # Define long options we want to support.
-    local ARGSL="help,version,description"
+    local ARGSL="help,version,description,model:"
 
     # Redefine arguments using getopt(1) command parser and reset
     # positional parameters on this function, using output produced
@@ -53,8 +53,16 @@ function prepare_setOptions {
                 ;;
 
             -s | --description )
-                idforge_printMessage "`gettext "Prepare working directory."`" --as-stdout-line
+                idforge_printMessage "`gettext "Create one or more workplaces from a particular identity model."`" --as-stdout-line
                 shift 1
+                ;;
+
+            -m | --model )
+                PREPARE_FLAG_MODEL="${2}"
+                shift 2
+                if [[ ! ${PREPARE_FLAG_MODEL} =~ ^[[:alnum:]]+$ ]];then
+                    idforge_printMessage "`gettext "The model provided isn't valid."`" --as-error-line
+                fi
                 ;;
 
             -- )
