@@ -14,3 +14,8 @@ IDFORGE_LIBRARY::
     for common functions and modules.  When this variable isn't
     defined in *idforge(1)* command-line, it takes the
     +/usr/libexec/idforge+ value by default.
+IDFORGE_MODELS::
+    Specifies the location where organization's specific visual
+    identity source files are stored in. When this environment
+    variable isn't provided it takes the +/usr/share/idforge/Models+
+    value as default.

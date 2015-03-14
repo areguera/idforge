@@ -25,51 +25,40 @@ specifications of a particular community or organization that is very
 interested in making its visual identity manual and the files
 necessary for its implementation a community effort.
 
-The *{doctitle}* command may result useful for any kind of
-organization, specially those needing to:
+From an organization visual identity manager's point of view, the
+idFORGE Framework results useful to:
 
 - Consolidate an effective and efficient community enrolment in the
   process of building the organization's own visual identity and its
   further implementation.
 
 - Consolidate an effective and efficient procedure to propagate new
-  visual styles (a.k.a., artistic motifs) to all visual manifestations
-  the organization shows its existence on.  This, grants the visual
-  consistency which is necessary to implement a monolithic corporate
-  visual identity structure correctly.
+  visual styles (a.k.a., artistic motifs) to different visual
+  manifestations where the organization shows its existence on (e.g.,
+  the organization's visual identity manual and the files for
+  implementing it in a specific GNU/Linux distribution).  This, grants
+  the visual consistency which is necessary to implement a monolithic
+  corporate visual identity structure correctly.
 
-The organization interested in using the *{doctitle}* command to
-manage its visual identity publishes an easy to install package that
-contains all the source files necessary to build its brand, its visual
-identity manual and the related implementation files.  The information
-this package provides is normative and is installed in the
-"+/usr/share/idforge-$\{PROJECTNAME\}/+" directory.  This directory
-provides a read-only location where regular users cannot write and the
-*{doctitle}* command can predict where to retrieve
-organization-specific visual identity source files.  The name of the
-package also follows the "+idforge-$\{PROJECTNAME\}+" naming
-convention in order to keep them predictable and make their
-installation easier.
+From a graphic designer point of view, the idFORGE Framework results
+useful to reproduce a particular organization's visual identity manual
+and the files necessary for its implementation using arbitrary visual
+styles but a consistent visual structure.  To do so, you need to go
+through the following steps:
 
-The *{doctitle}* command cannot produce content directly inside the
-read-only directory where the normative information was installed in.
-Instead, it uses the *idforge-prepare(1)* command to create a
-writeable instance of it so you can study and change the source files
-used to build the organization's visual identity in your own
-workstation without affecting the official version of it. You can use
-the files in the instance as template to create a brand new visual
-identity package or contribute improvements to the visual identity of
-the organization who published the normative information in first
-place.
+. Create a workplace using the *idforge-prepare(1)* command. This
+  replicates the organization's visual identity structure so you can
+  customize it. The organization's visual identity structure is
+  normally available after installing the organization's identity
+  package in the system.
 
-[IMPORTANT]
-======================================================================
-Most organizations have restrictions about the way their brands are
-used. If you are creating a brand new corporate visual identity manual
-based on another organization's, be sure to make the appropriate
-changes in the one you are creating in order to be consequent with the
-branding restriction that organization specified.
-======================================================================
+. Design the organization new look using graphic design tools like
+  GIMP and Inkscape. This is the images in PNG format that will be
+  used as background to reinforce the visual connection between
+  different visual manifestations.
+
+. Rebuild the organization's visual identity manual using the
+  *idforge-render(1)* command.
 
 == Options
 

@@ -1,0 +1,176 @@
+= idforge-prepare(1)
+Alain Reguera Delgado <alain.reguera@gmail.com>
+idFORGE Framework =MANPAGE_VERSION=, =MANPAGE_YEAR=: =MANPAGE_DESCRIPTION=
+:man source: idFORGE Framework
+:man version: =MANPAGE_VERSION=
+:man manual: User Commands
+
+== Name
+
+idforge-prepare - =MANPAGE_DESCRIPTION=
+
+== Synopsis
+
+----------------------------------------------------------------------
+=MANPAGE_SYNOPSIS=
+----------------------------------------------------------------------
+
+== Description
+
+The *{doctitle}* command creates workplaces based on the configuration
+files installed along the identity packages.
+
+=== Workplace
+
+The workplace created by *{doctitle}* is a regular directory in your
+workstation were you can rebuild and change the visual identity of a
+particular organization.  It contains the configuration files and the
+artistic motif the *idforge-render(1)* command needs to produce the
+visual identity manuals of that particular organization and the files
+necessary for implementing it.  The workplace is also the place where
+the final files produced by *idforge(1)* commands are stored in.
+
+The first time you run the *{doctitle}* command it only copies the
+configuration files and the directory structure published by the
+organization you want to reproduce the visual identity manual for and
+the files necessary for implementing it. The artistic motif doesn't
+exist in the workplace at that moment. Once you create the workplace,
+you must create an artistic motif for it and put in the correct place
+in order for the *idforge-render(1)* command to know about it. The
+final files are produced as specified by the configuration files in
+the workplace.
+
+=== Artistic Motif
+
+The artistic motif controls the visual style (look and feel) of a
+particular organization visual identity. There must be one unique
+artistic motif for each workplace you create so the final files do
+hold a consistent look and feel based on it. 
+
+The artistic motif is a graphical pattern that is used as background
+on different visual manifestations (images) to reinforce the visual
+connection between them.  In occasions, to accelerate the production
+of background images in different sizes, the graphic designers create
+an artistic motif made of several PNG images in high resolution and
+specific proportions, so they can be resized or cropped later based on
+specific visual manifestation needs using configuration files.
+
+=== Configuration files
+
+The configuration files describe how the components that make the
+organization visual identity (e.g., image or document) are produced.
+They establish the connection between source files, translation files,
+and also the output location where final files will be stored. 
+
+The configuration files are used as reference to build the workplace
+directory structure. When you execute *{doctitle}* it looks for all
+configuration file in a particular organization identity package and
+creates a list with them. This list is then used to build the
+workplace. For this reason, the first time you create a workplace it
+only contains configuration files.
+
+The configuration files are produced by the organization that wants to
+distribute its identity source files. You, as graphic designer, don't
+need to change them unless you want to change the final result a
+particular organization expects about its visual identity.
+
+=== Identity Package
+
+The identity package is distributed by organizations using installable
+formats (e.g., RPM or DEB). They install normative information about
+the visual identity of one particular organization.  By normative
+information understand immutable source files (design models)
+necessary to rebuild the organization's visual identity structure
+using different visual styles. Practically, this means that you can
+produce one image (visual manifestation) using different background
+images (artistic motif) but strictly based on the sizes and
+proportions the organization normalized in the source files it
+distributed with the identity package.
+
+The source files in the identity package are used in configuration
+files which in turn are used by *idforge-render(1)* command to produce
+the final output based on them.  Normally, the identity packages
+provide source files in SVG format to produce images in PNG format,
+AsciiDoc files to produce documents in PDF and HTML formats, and
+translation files in PO format to localize both SVG and AsciiDoc
+files.  When you install an identity package the source files it
+provides are stored in a read-only location (e.g.,
+/usr/share/idforge/Models) where you shouldn't make changes to them.
+This is convenient when you want to reproduce the same organization's
+visual identity manual using different artistic motifs.  However, it
+isn't so convenient when you want to change the visual identity manual
+provided by a particular organization with the purpose of changing the
+source files it provides to produce a brand new organization visual
+identity manual.
+
+To customize the source files in the identity package you need to join
+the organization producing it and tell your interest in contribute to
+it. Normally, you cannot not change the official identity package
+because the organization producing it (hopefully) signs it digitally
+to grant a valid distribution of it. Said this, if you want to make
+local changes based on the source files provided by a particular
+identity package, you can to identify what the source files you want
+to customize are and copy them to a workplace so you can change them
+there. After that, you need to change the configuration files in such
+workplace, so the files provided as value to *render-from*
+configuration options point the source files in the workplace not the
+read-only location where you take them from.  When you do this, you
+may want to copy the related translation files in PO format specified
+as value to *render-from-po* configuration options to your workplace,
+too; and change the related configuration files to point to them, as
+well.
+
+[IMPORTANT]
+======================================================================
+Most organizations have restrictions about the way their brands are
+used. If you are creating a brand new corporate visual identity manual
+based on another organization's, be sure to make the appropriate
+changes in the one you are creating in order to be consequent with the
+branding restriction that organization specified.
+======================================================================
+
+== Options
+
+include::Commons/options.inc[]
+
+*-m "NAME", --model="NAME"*::
+    Specifies the name of the organization that you want to use as
+    model to create the workplace. When this option is not provided, a
+    selection list with all organizations possible names is displayed
+    for you to choose one.
+
+The *{doctitle}* command creates the workplace in the directory you
+provide as argument in the command-line. When the directory you
+provide already exist *{doctitle}* terminates *idforge(1)* execution
+with an error message. When several directories are provided, they are
+processed one by one.
+
+== Examples
+
+[[example-1]]
+.Create a workplace with default templates
+======================================================================
+----------------------------------------------------------------------
+]$ idforge prepare ~/Projects/Identity/idFORGE
+----------------------------------------------------------------------
+======================================================================
+
+[[example-2]]
+.Create a workplace based on specific model
+======================================================================
+----------------------------------------------------------------------
+]$ idforge prepare --model="CentOS" ~/Projects/Identity/CentOS
+----------------------------------------------------------------------
+======================================================================
+
+include::Commons/environment.inc[]
+
+include::Commons/author.inc[]
+
+include::Commons/bugs.inc[]
+
+include::Commons/copyright.inc[]
+
+include::Commons/also.inc[]
+
+// vim: set syntax=asciidoc:
