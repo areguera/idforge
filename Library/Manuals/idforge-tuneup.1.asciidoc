@@ -1,0 +1,43 @@
+= idforge-tuneup(1)
+Alain Reguera Delgado <alain.reguera@gmail.com>
+idFORGE Framework =MANPAGE_VERSION=, =MANPAGE_YEAR=: =MANPAGE_DESCRIPTION=
+:man source: idFORGE Framework
+:man version: =MANPAGE_VERSION=
+:man manual: User Commands
+
+== Name
+
+idforge-tuneup - =MANPAGE_DESCRIPTION=
+
+== Synopsis
+
+----------------------------------------------------------------------
+=MANPAGE_SYNOPSIS=
+----------------------------------------------------------------------
+
+== Description
+
+The *{doctitle}* command looks for all SVG files in the directory (or
+directories) you provide as argument in the command-line and optimizes
+them.  The optimization process consists on replacing each SVG file
+with a new version of itself that has been modified using Inkscape's
+*--vaccumm-defs* and *--export-plain-svg* options. 
+
+The *{doctitle}* command uses the list of SVG files to create a list
+of commands that is later passed to Inkscape standard input. In this
+case, Inkscape is executed using the *--shell* option which permits to
+execute all the commands in the list using a single Inkscape process.
+
+== Options
+
+include::Commons/options.inc[]
+
+include::Commons/author.inc[]
+
+include::Commons/bugs.inc[]
+
+include::Commons/copyright.inc[]
+
+include::Commons/also.inc[]
+
+// vim: set syntax=asciidoc:
