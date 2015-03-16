@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: idforge-render\n"
 "Report-Msgid-Bugs-To: centos-docs@centos.org\n"
-"POT-Creation-Date: 2015-02-16 22:58-0500\n"
-"PO-Revision-Date: 2015-02-16 22:58-0500\n"
+"POT-Creation-Date: 2015-03-16 17:52-0400\n"
+"PO-Revision-Date: 2015-03-16 17:52-0400\n"
 "Last-Translator: The CentOS Documentation SIG <centos-docs@centos.org>\n"
 "Language-Team: es\n"
 "MIME-Version: 1.0\n"
@@ -21,32 +21,22 @@ msgstr ""
 msgid "The \"$CONFIG_OPTION\" option isn't supported."
 msgstr "La opción \"$CONFIG_OPTION\" no está soportada."
 
-msgid "User Commands"
-msgstr "Comandos de usuario"
+#
+#, sh-format
+msgid "No public key for \"$GPG_UID\" found in your GPG keyring."
+msgstr "No se encontró llave pública alguna para \"$GPG_UID\" en su llavero GPG."
 
-msgid "System Calls"
-msgstr "Llamadas del sistema"
+msgid "isn't a supported option"
+msgstr "no es una opción soportada."
 
-msgid "C Library Functions"
-msgstr "Funciones de la biblioteca C"
+#
+msgid "Failed to contact the host specified"
+msgstr "Falló al contactar la computadora especificada"
 
-msgid "Devices and Special Files"
-msgstr "Dispositivos y ficheros especiales"
-
-msgid "File Formats and Conventions"
-msgstr "Formato de ficheros y convenciones"
-
-msgid "Games et. Al."
-msgstr "Juegos y otros"
-
-msgid "Miscellanea"
-msgstr "Miscelanea"
-
-msgid "System Administration tools and Deamons"
-msgstr "Herramientas de administración del sistema y demonios"
-
-msgid "Unsupported relationship between models and locales."
-msgstr "Relación no soportada entre modelos y localidades."
+#
+#, sh-format
+msgid "The size of attachments is more than $EMAIL_ATTACHMENT_LIMIT bytes."
+msgstr "El tamaño del adjunto es mayor que $EMAIL_ATTACHMENT_LIMIT bytes."
 
 msgid "Incorrect relation between source files and translation files."
 msgstr "Relación incorrecta entre ficheros fuentes y ficheros de traducciones."
@@ -82,6 +72,10 @@ msgid "The png-base-exports failed."
 msgstr "La opción png-base-exports falló."
 
 #
+msgid "The number of source files and their instances don't coincide."
+msgstr "Los ficheros fuentes y sus instancias no coinciden en número."
+
+#
 msgid "The argument verification failed."
 msgstr "La verifiacción del argument falló."
 
@@ -91,6 +85,33 @@ msgstr "Genera contenido desde ficheros de configuración."
 #, sh-format
 msgid "The \"$CONFIG_OPTION\" option is required."
 msgstr "La opción \"$CONFIG_OPTION\" es obligatoria."
+
+#~ msgid "User Commands"
+#~ msgstr "Comandos de usuario"
+
+#~ msgid "System Calls"
+#~ msgstr "Llamadas del sistema"
+
+#~ msgid "C Library Functions"
+#~ msgstr "Funciones de la biblioteca C"
+
+#~ msgid "Devices and Special Files"
+#~ msgstr "Dispositivos y ficheros especiales"
+
+#~ msgid "File Formats and Conventions"
+#~ msgstr "Formato de ficheros y convenciones"
+
+#~ msgid "Games et. Al."
+#~ msgstr "Juegos y otros"
+
+#~ msgid "Miscellanea"
+#~ msgstr "Miscelanea"
+
+#~ msgid "System Administration tools and Deamons"
+#~ msgstr "Herramientas de administración del sistema y demonios"
+
+#~ msgid "Unsupported relationship between models and locales."
+#~ msgstr "Relación no soportada entre modelos y localidades."
 
 #~ msgid "The \"$FORMAT\" format isn't supported."
 #~ msgstr "El formato \"$FORMAT\" no está soportado."
@@ -103,6 +124,3 @@ msgstr "La opción \"$CONFIG_OPTION\" es obligatoria."
 
 #~ msgid "The \"$OPTION\" option cannot be empty."
 #~ msgstr "La opción \"$OPTION\" no puede estar vacía."
-
-#~ msgid "isn't supported."
-#~ msgstr "no tiene soporte."
