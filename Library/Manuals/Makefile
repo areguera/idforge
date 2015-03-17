@@ -14,8 +14,6 @@ build:
 	done
 
 install:
-	if [ -z ${DESTDIR} ];then exit 1;fi
-	if [ ! -d ${DESTDIR} ];then mkdir ${DESTDIR};fi
 	MANVOLNUMS=$$(ls Library/Manuals/*.?.asciidoc | awk -F'.' '{print $$2}' | sort | uniq); \
 	for MANVOLNUM in $$MANVOLNUMS;do \
 		mkdir -p ${DESTDIR}/usr/share/man/man$${MANVOLNUM}; \
