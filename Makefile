@@ -28,7 +28,6 @@ install:
 	make install -f Library/Messages/Makefile
 
 test:
-	#
-	# Quality assurance tests
-	#
-	IDFORGE_LIBRARY=${DESTDIR}/usr/libexec/${NAME} ./idforge.sh qatest QaTests/idforge-*
+	for DIR in $$( ls -d Library/QaTests/* );do \
+		IDFORGE_LIBRARY=${DESTDIR}/usr/libexec/${NAME} ${DESTDIR}/usr/bin/${NAME} qatest $${DIR}; \
+	done;
