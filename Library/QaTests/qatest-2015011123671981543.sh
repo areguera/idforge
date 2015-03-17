@@ -14,4 +14,4 @@ QATEST_FLAG_COMMAND="./idforge.sh"
 #=====================================================================
 # Enter integrity checks target arguments:
 #=====================================================================
-command_line "render ./QaTests/idforge-render/${QATEST_UNIT_NAME}/${QATEST_UNIT_NAME}.conf"
+command_line "render ${QATEST_UNIT_DIR}/${QATEST_UNIT_NAME}.conf"

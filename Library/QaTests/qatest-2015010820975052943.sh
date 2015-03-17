@@ -16,7 +16,7 @@ QATEST_FLAG_COMMAND="./idforge.sh"
 command_line "config"
 command_line "config --version"
 command_line "config --description"
-command_line "config --help"
+#command_line "qatest --help"
 
 # Retrieve configuration files from a directory and print them to
 # standard output.
