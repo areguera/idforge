@@ -56,7 +56,7 @@ function usage_setOptions {
                 ;;
 
             -s | --description )
-                idforge_printMessage "`gettext "Print usage information and exit."`" --as-stdout-line
+                idforge_printMessage "`gettext "Print module's usage information."`" --as-stdout-line
                 USAGE_FLAG_RETURN='yes'
                 shift 1
                 ;;

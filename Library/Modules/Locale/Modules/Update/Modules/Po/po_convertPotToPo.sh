@@ -30,12 +30,26 @@ function po_convertPotToPo {
     idforge_setParentDir ${PO}
 
     if [[ -f ${PO} ]];then
+
+        # Merge the POT file with current PO file.
         msgmerge --output-file="${PO}" "${PO}" "${POT}"
+
     else
-        msginit -i ${POT} -o ${PO} \
-            --width=70 \
-            --no-translator \
-            --locale=${IDFORGE_LANG_LC}
+
+        # Very the LANG environment variable you'll use as reference
+        # to create the PO file. Be sure that both language and
+        # charset are provided, at least (e.g., If the charset value
+        # isn't in the LANG environment variable, the PO file is
+        # created for ASCII charset which may or may not be
+        # appropriate for your needs). Whenever you run
+        # idforge-locale(1) command, provide the LANG environment
+        # variable in the command-line with the appropriate charset in
+        # it (e.g., es.UTF-8, es_ES.UTF-8).
+        idforge_checkFiles -m '^[[:lower:]]{2}(_[[:upper:]]{2})?.[[:alnum:]-]+$' ${LANG}
+
+        # Initialize the POT file.
+        msginit -i ${POT} -o ${PO} --locale=${LANG} --width=70 --no-translator
+
     fi
 
 }

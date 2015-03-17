@@ -34,8 +34,6 @@ function base {
 
         idforge_printMessage "${PO}" --as-creating-line
 
-        po_setPotMetadata
-
         po_convertPotToPo
 
         po_setPoMetadata

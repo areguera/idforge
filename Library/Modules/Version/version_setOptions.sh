@@ -53,7 +53,7 @@ function version_setOptions {
                 ;;
 
             -s | --description )
-                idforge_printMessage "`gettext "Print version and legal status and exit"`" --as-stdout-line
+                idforge_printMessage "`gettext "Print module's version and legal status."`" --as-stdout-line
                 shift 1
                 ;;
 

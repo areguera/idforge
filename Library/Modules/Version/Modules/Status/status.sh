@@ -35,6 +35,6 @@ function status {
 
     status_printCopyright
 
-    echo "`eval_gettext "idFORGE Framework comes with NO WARRANTY, to the extent permitted by law. You may redistribute copies of idFORGE Framework under the terms of the GNU General Public License. For more information about these matters, see the file named LICENSE."`" | fold --width=66 --spaces
+    echo "`gettext "idFORGE Framework comes with NO WARRANTY, to the extent permitted by law. You may redistribute copies of idFORGE Framework under the terms of the GNU General Public License. For more information about these matters, see the file named LICENSE."`" | fold --width=66 --spaces
 
 }
