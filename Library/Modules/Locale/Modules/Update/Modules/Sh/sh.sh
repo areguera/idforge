@@ -43,6 +43,11 @@ function sh {
         --width=70 --no-location \
         ${RENDER_FROM[*]}
 
+    # Fix charset information in the POT file based on LANG
+    # environment variable.
+    local LANG_CHARSET=$(echo ${LANG} | cut -d. -f2)
+    sed -i -r "/^\"Content-Type:/{s/CHARSET/${LANG_CHARSET:-UTF-8}/}" ${LOCALE_PO_TEMPLATES[0]}
+
     [[ -f ${LOCALE_PO_TEMPLATES[0]} ]] \
         && idforge_setModuleEnvironment -m 'po' -t 'sibling'
 
