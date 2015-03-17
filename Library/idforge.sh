@@ -69,7 +69,7 @@ function idforge {
     local -r IDFORGE_MODULES=${IDFORGE_LIBRARY}/Modules
 
     # Base directory where documentation manuals are installed in.
-    local -r IDFORGE_MANUALS=/usr/share/man
+    local -r IDFORGE_MANUALS=${IDFORGE_MANUALS:-/usr/share/man}
 
     # Directory to store temporal files. CAUTION: Don't make this
     # variable local. If you do so, the trap built-in won't be able to
