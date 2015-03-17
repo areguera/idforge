@@ -43,7 +43,7 @@ function idforge {
     # are stored in. The value of variable is the same for shared
     # functions and modules, so it is exported to the shell
     # environment for wide use.
-    declare -x TEXTDOMAINDIR=/usr/share/locale
+    declare -x TEXTDOMAINDIR=${TEXTDOMAINDIR:-/usr/share/locale}
 
     # Set the script language information using the LC format. This
     # format shows both language and country information (e.g.,
