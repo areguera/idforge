@@ -5,7 +5,7 @@ all:
 
 build:
 	for LOCALE in $$(ls Library/Messages/Locales); do \
-		LANG=$${LOCALE} IDFORGE_LIBRARY=Library ./idforge.sh locale Library/Messages/idforge.conf; \
+		LANG=$${LOCALE}.UTF-8 IDFORGE_LIBRARY=Library ./idforge.sh locale Library/Messages/idforge.conf; \
 	done
 	
 install: build
@@ -13,6 +13,5 @@ install: build
 	if [ ! -d ${DESTDIR} ];then mkdir ${DESTDIR};fi
 	for LOCALE in $$(ls Library/Messages/Locales); do \
 		mkdir -p ${DESTDIR}/usr/share/locale/$${LOCALE}/LC_MESSAGES; \
-		install -p Library/Messages/Locales/$${LOCALE}/*.mo ${DESTDIR}/usr/share/locale/$${LOCALE}/LC_MESSAGES; \
-		rm Library/Messages/Locales/$${LOCALE}/*.mo; \
+		install -p Library/Messages/Final/$${LOCALE}/*.mo ${DESTDIR}/usr/share/locale/$${LOCALE}/LC_MESSAGES; \
 	done;

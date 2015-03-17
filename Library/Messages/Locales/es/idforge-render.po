@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: idforge-render\n"
 "Report-Msgid-Bugs-To: centos-docs@centos.org\n"
-"POT-Creation-Date: 2015-03-16 17:52-0400\n"
-"PO-Revision-Date: 2015-03-16 17:52-0400\n"
+"POT-Creation-Date: 2015-03-17 00:13-0400\n"
+"PO-Revision-Date: 2015-03-17 00:13-0400\n"
 "Last-Translator: The CentOS Documentation SIG <centos-docs@centos.org>\n"
 "Language-Team: es\n"
 "MIME-Version: 1.0\n"
@@ -21,19 +21,17 @@ msgstr ""
 msgid "The \"$CONFIG_OPTION\" option isn't supported."
 msgstr "La opción \"$CONFIG_OPTION\" no está soportada."
 
-#
 #, sh-format
 msgid "No public key for \"$GPG_UID\" found in your GPG keyring."
-msgstr "No se encontró llave pública alguna para \"$GPG_UID\" en su llavero GPG."
+msgstr ""
+"No se encontró llave pública alguna para \"$GPG_UID\" en su llavero GPG."
 
 msgid "isn't a supported option"
 msgstr "no es una opción soportada."
 
-#
 msgid "Failed to contact the host specified"
 msgstr "Falló al contactar la computadora especificada"
 
-#
 #, sh-format
 msgid "The size of attachments is more than $EMAIL_ATTACHMENT_LIMIT bytes."
 msgstr "El tamaño del adjunto es mayor que $EMAIL_ATTACHMENT_LIMIT bytes."
@@ -45,7 +43,6 @@ msgstr "Relación incorrecta entre ficheros fuentes y ficheros de traducciones."
 msgid "The \"$CONFIG_OPTION\" option must be provided."
 msgstr "La opción \"$CONFIG_OPTION\" debe ser suministrada."
 
-#
 #, sh-format
 msgid "The \"$SVG_EXPORT_ID\" export id isn't found in the source file:"
 msgstr ""
@@ -55,27 +52,21 @@ msgstr ""
 msgid "The flow options were not provided."
 msgstr "Las opciones del flujo no fueron suministradas."
 
-#
 msgid "The png-base-comment failed."
 msgstr "La opción png-base-comment falló."
 
-#
 msgid "The png-base-command failed:"
 msgstr "La opción png-base-command fallo:"
 
-#
 msgid "The png-base-composition failed."
 msgstr "La opción png-base-composition falló."
 
-#
 msgid "The png-base-exports failed."
 msgstr "La opción png-base-exports falló."
 
-#
 msgid "The number of source files and their instances don't coincide."
 msgstr "Los ficheros fuentes y sus instancias no coinciden en número."
 
-#
 msgid "The argument verification failed."
 msgstr "La verifiacción del argument falló."
 

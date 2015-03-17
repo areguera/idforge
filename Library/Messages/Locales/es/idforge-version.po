@@ -7,12 +7,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: idforge-version\n"
 "Report-Msgid-Bugs-To: centos-docs@centos.org\n"
-"POT-Creation-Date: 2015-03-16 17:52-0400\n"
-"PO-Revision-Date: 2015-03-16 17:52-0400\n"
+"POT-Creation-Date: 2015-03-17 00:13-0400\n"
+"PO-Revision-Date: 2015-03-17 00:13-0400\n"
 "Last-Translator: The CentOS Documentation SIG <centos-docs@centos.org>\n"
 "Language-Team: es\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -27,7 +27,6 @@ msgid "idFORGE Framework ($COMMAND) $IDFORGE_VERSION"
 msgstr ""
 
 #
-#, sh-format
 msgid ""
 "idFORGE Framework comes with NO WARRANTY, to the extent permitted by law. "
 "You may redistribute copies of idFORGE Framework under the terms of the GNU "
@@ -36,8 +35,8 @@ msgid ""
 msgstr ""
 "idFORGE Framework viene SIN GARANTÍAS, hasta donde lo permita la ley. Usted "
 "puede redistribuir copias de idFORGE Framework bajo los términos de la "
-"Licencia Pública General de GNU. Para más información sobre estos "
-"asuntos, vea el fichero nombrado LICENSE."
+"Licencia Pública General de GNU. Para más información sobre estos asuntos, "
+"vea el fichero nombrado LICENSE."
 
 #
 msgid "The CentOS Artwork SIG"
@@ -52,5 +51,5 @@ msgid "The argument verification failed"
 msgstr "La verificación de argumento falló"
 
 #
-msgid "Print version and legal status and exit"
-msgstr "Imprime versión y estado legal"
+msgid "Print module's version and legal status."
+msgstr "Muestra la versión y estado legal para un módulo."
