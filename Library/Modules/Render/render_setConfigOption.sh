@@ -84,6 +84,9 @@ function render_setConfigOption {
             else
                 RENDER_FILE=${RENDER_DIRECTORY}/${RENDER_FILE}
             fi
+
+            # Prepare final directory for final output.
+            idforge_setParentDir ${RENDER_FILE}
             ;;
 
         render-from )

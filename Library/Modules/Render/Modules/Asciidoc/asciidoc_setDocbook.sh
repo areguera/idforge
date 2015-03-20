@@ -25,9 +25,9 @@
 
 function asciidoc_setDocbook {
 
-    idforge_printMessage "${RENDER_FROM[${COUNT}]}" --as-processing-line
+    RENDER_FROM_INSTANCES[${COUNT}]=${IDFORGE_TEMPDIR}/$(basename ${RENDER_FROM[${COUNT}]}).docbook
 
-    RENDER_FROM_INSTANCES[${COUNT}]=$(idforge_printTemporalFile ${RENDER_FROM[${COUNT}]}).docbook
+    idforge_printMessage "${RENDER_FROM[${COUNT}]}" --as-processing-line
 
     /usr/bin/asciidoc ${RENDER_FLOW_OPTIONS} --backend="docbook" --doctype="${RENDER_FLOW}" \
         --out-file="${RENDER_FROM_INSTANCES[${COUNT}]}" ${RENDER_FROM[${COUNT}]}

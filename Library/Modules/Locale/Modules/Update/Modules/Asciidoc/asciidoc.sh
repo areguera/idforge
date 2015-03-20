@@ -36,7 +36,6 @@ function asciidoc {
     local COUNT=0
 
     while [[ ${COUNT} -lt ${#RENDER_FROM[*]} ]];do
-        RENDER_FROM_INSTANCES[${COUNT}]=$(idforge_printTemporalFile ${RENDER_FROM[${COUNT}]})
         asciidoc_convertAsciidocToDocbook
         COUNT=$(( ++COUNT ))
     done

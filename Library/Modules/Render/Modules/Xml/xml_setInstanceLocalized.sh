@@ -32,8 +32,6 @@ function xml_setInstanceLocalized {
 
     local RENDER_FROM_INSTANCE_L10N=$(idforge_printTemporalFile ${RENDER_FROM_INSTANCES[${OPTION}]})
 
-    idforge_setParentDir ${RENDER_FILE}
-
     # Move the directory stack to final location before processing
     # source file in order for relative calls (e.g., image files)
     # inside the source files can be found by xml2po and no warning be

@@ -33,11 +33,8 @@ function asciidoc {
     local COUNT=0
 
     while [[ ${COUNT} -lt ${#RENDER_FROM[*]} ]];do
-
         asciidoc_setDocbook
-
         COUNT=$(( ++COUNT ))
-
     done
 
     idforge_setModuleEnvironment -m 'docbook' -t 'sibling'
