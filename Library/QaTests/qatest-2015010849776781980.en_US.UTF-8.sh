@@ -1,17 +1,28 @@
 #!/bin/bash
 ######################################################################
 #
-#  This test verifies production of documentation manuals in several
-#  formats from configuration files.
+#   ...
+#
+#   ------------------------------------------------------------------
+#   ...
+#   ------------------------------------------------------------------
 #
 ######################################################################
 
 #=====================================================================
+# Enter integrity checks target locale:
+#=====================================================================
+LANG=en_US.UTF-8
+
+#=====================================================================
 # Enter integrity checks target command:
 #=====================================================================
-QATEST_FLAG_COMMAND="./idforge.sh"
+QATEST_FLAG_COMMAND="${0}"
 
 #=====================================================================
 # Enter integrity checks target arguments:
 #=====================================================================
-command_line "render ${QATEST_UNIT_DIR}/${QATEST_UNIT_NAME}.conf"
+command_line "qatest"
+command_line "qatest --version"
+command_line "qatest --description"
+#command_line "qatest --help"
