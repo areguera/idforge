@@ -63,7 +63,7 @@ function idforge {
     #=================================================================
 
     # Absolute path to design models.
-    local IDFORGE_MODELS=${IDFORGE_MODELS:-/usr/share/${IDFORGE}/Models}
+    local IDFORGE_MODELS=${IDFORGE_MODELS:-/usr/share/${IDFORGE}/Models/Common}
 
     # Base directory where automation script modules are installed in.
     local -r IDFORGE_MODULES=${IDFORGE_LIBRARY}/Modules

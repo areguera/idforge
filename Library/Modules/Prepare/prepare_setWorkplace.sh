@@ -28,17 +28,17 @@ function prepare_setWorkplace {
     [[ -d ${ARGUMENT} ]] \
         && idforge_printMessage "`gettext "The workplace you specified already exists."`" --as-error-line
 
-    idforge_checkFiles -d ${IDFORGE_MODELS}/${PREPARE_FLAG_MODEL}
+    idforge_checkFiles -d ${IDFORGE_MODELS}
 
     idforge_printMessage "${ARGUMENT}" --as-creating-line
 
     local MODELS_CONFIGURATION=''
-    local MODELS_CONFIGURATIONS=$(idforge_printFileList -t 'f' -p '.+\.conf$' "${IDFORGE_MODELS}/${PREPARE_FLAG_MODEL}")
+    local MODELS_CONFIGURATIONS=$(idforge_printFileList -t 'f' -p '.+\.conf$' "${IDFORGE_MODELS}")
 
     for MODELS_CONFIGURATION in ${MODELS_CONFIGURATIONS};do
 
         local WORKPLACE_DIRECTORY=$(dirname ${MODELS_CONFIGURATION} \
-            | sed -r "s,${IDFORGE_MODELS}/${PREPARE_FLAG_MODEL}/,${ARGUMENT}/,")
+            | sed -r "s,${IDFORGE_MODELS},${ARGUMENT}/,")
 
         local WORKPLACE_FILE=${WORKPLACE_DIRECTORY}/$(basename ${MODELS_CONFIGURATION})
 

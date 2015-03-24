@@ -26,11 +26,15 @@
 function prepare {
 
     # Initialize module's flags.
-    local PREPARE_FLAG_MODEL='idFORGE'
+    local PREPARE_FLAG_MODEL='Common'
 
     # Initialize command-line arguments and interpret arguments and
     # options passed through command-line.
     local ARGUMENT='' ARGUMENTS=''; prepare_setOptions "${@}"
+
+    # Redefine design models directory based on the name of the
+    # identity model name provided as argument to --model option..
+    IDFORGE_MODELS=${IDFORGE_MODELS%Common/${PREPARE_FLAG_MODEL}}
 
     # Verify existence of command-line arguments. When they don't
     # exist, just return to caller. This is necessary to print the
