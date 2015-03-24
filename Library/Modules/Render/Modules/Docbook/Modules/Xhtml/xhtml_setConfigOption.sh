@@ -34,6 +34,14 @@ function xhtml_setConfigOption {
             idforge_checkFiles -ef ${RENDER_FROM_XSL}
             ;;
 
+        render-from-css )
+            RENDER_FROM_CSS=$(render_printConfigValues "$(dirname ${CONFIG_FILE})/Css")
+            ;;
+
+        render-from-img )
+            RENDER_FROM_IMG=$(render_printConfigValues "$(dirname ${CONFIG_FILE})/Images")
+            ;;
+
         * )
             idforge_printMessage "`eval_gettext "The \\\"\\\$CONFIG_OPTION\\\" option isn't supported."`" --as-error-line
             ;;

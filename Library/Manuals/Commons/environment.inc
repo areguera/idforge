@@ -17,5 +17,5 @@ IDFORGE_LIBRARY::
 IDFORGE_MODELS::
     Specifies the location where organization's specific visual
     identity source files are stored in. When this environment
-    variable isn't provided it takes the +/usr/share/idforge/Models+
-    value as default.
+    variable isn't provided it takes the
+    +/usr/share/idforge/Models/Common+ directory as default value.

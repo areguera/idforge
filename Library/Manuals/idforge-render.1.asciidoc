@@ -313,20 +313,20 @@ The *{doctitle}* command initiates document construction when
 *render-type* is set either to "asciidoc" or "docbook".
 
 When *render-type* is set to "asciidoc", the *render* module executes
-the *asciidoc* module. The asciidoc module expects you to provide an
-asciidoc file as value to *render-from* in order to transform it to a
-source file instance in docbook format based on the type of document
-specified to *render-flow* configuration option (e.g., "manpage",
-"article" or "book").
+the *asciidoc* module which expects you to provide an asciidoc file as
+value to *render-from* in order to transform it to a source file
+instance in docbook format based on the type of document specified to
+*render-flow* configuration option (e.g., "manpage", "article" or
+"book").
 
 When the source file instance in docbook format is available, the
 asciidoc module calls the *xml* module to perform content localization
 as specified by *render-from-po* configuration option and expand the
 translation markers as specified by *xml-expand* configuration option.
 Once the modifications has been applied to asciidoc source file in
-docbook format, the asciidoc module takes control again and calls the
-docbook module to perform the final transformation as specified by
-*docbook-exports* configuration option (e.g., "manpage", "xhtml",
+docbook format, the *asciidoc* module takes control again and calls
+the *docbook* module to perform the final transformation as specified
+by *docbook-exports* configuration option (e.g., "manpage", "xhtml",
 "pdf").
 
 [NOTE]
@@ -340,14 +340,38 @@ pdf formats.
 ======================================================================
 
 When several formats for final document transformations are provided
-as value to *docbook-exports* the docbook module uses the system's
-default xsl style sheets stored in the directory
-/usr/share/sgml/docbook/xsl-stylesheets to process them accordingly.
-In case you want to customize the final output using your own xsl
-style sheet, you can use the *render-from-xsl* configuration options.
-The value of this option is applied without any sort of distinction to
-all docbook-exports and render-flow values provided in the
-configuration section.
+as value to *docbook-exports* configuration option, the *docbook*
+module uses the system's default xsl style sheets stored in the
+directory /usr/share/sgml/docbook/xsl-stylesheets to process them
+accordingly.  In case you want to customize the final output using
+your own style sheets and images, you can use the following
+configuration options:
+
+*render-from-xsl*::
+    Specifies the path of the XSL file that you want to use to
+    transform the docbook file.  The xsl file you provide as value to
+    this configuration option affects all exportation formats you
+    specify through the *docbook-exports* configuration option. So, to
+    get the correct result, you need to be consequent between the xsl
+    file and the exportation format you provide here. For example,
+    don't provide an xsl file to produce books when the exporting
+    format you provided was manpage.
+*render-from-css*::
+    Specifies the path of the directory containing the CSS files you
+    want to use in the final output files. When this option is not
+    provided in the configuration section, the common style sheets are
+    taken from the Css directory stored in
+    ${IDFORGE_MODELS}/Common/Documents/Css directory first and from
+    the Css/ directory relative to the configuration file being
+    currently processed later.
+*render-from-img*::
+    Specifies the path of the directory containing the image files you
+    want to use in final output files.  When this option is not
+    provided in the configuration section, the common style sheets are
+    taken from the Images directory stored in
+    ${IDFORGE_MODELS}/Common/Documents/Images directory first and from
+    the Images/ directory relative to the configuration file being
+    currently processed later.
 
 === Compressing Files
 

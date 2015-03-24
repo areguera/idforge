@@ -34,6 +34,8 @@ function pdf {
 
     local FOP=$(idforge_printTemporalFile ${PDF}.fo)
 
+    pdf_setImages
+
     /usr/bin/xsltproc -o ${FOP} --nonet ${RENDER_FROM_XSL} ${RENDER_FROM_FILE}
 
     idforge_checkFiles -efi '^application/xml;' ${FOP}

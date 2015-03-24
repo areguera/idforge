@@ -34,6 +34,14 @@ function pdf_setConfigOption {
             idforge_checkFiles -ef ${RENDER_FROM_XSL}
             ;;
 
+        render-from-img )
+            RENDER_FROM_IMG=$(render_printConfigValues "$(dirname ${CONFIG_FILE})/Images")
+            # Be sure to use absolute paths here. The images in this
+            # directory are linked from /tmp, so relative paths would
+            # fail to point to the image files correctly.
+            [[ ! ${RENDER_FROM_IMG} =~ ^/ ]] && RENDER_FROM_IMG=${PWD}/${RENDER_FROM_IMG}
+            ;;
+
         * )
             idforge_printMessage "`eval_gettext "The \\\"\\\$CONFIG_OPTION\\\" option isn't supported."`" --as-error-line
             ;;

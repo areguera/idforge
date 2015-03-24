@@ -32,6 +32,10 @@ function xhtml {
 
     idforge_printMessage "${XHTML}" --as-creating-line
 
+    xhtml_setStyles
+
+    xhtml_setImages
+
     /usr/bin/xsltproc -o ${XHTML} --nonet ${RENDER_FROM_XSL} ${RENDER_FROM_FILE}
 
 }
