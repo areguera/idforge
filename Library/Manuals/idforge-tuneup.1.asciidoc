@@ -30,14 +30,14 @@ execute all the commands in the list using a single Inkscape process.
 
 == Options
 
-include::Commons/options.inc[]
+include::Commons/options.asciidoc[]
 
-include::Commons/author.inc[]
+include::Commons/author.asciidoc[]
 
-include::Commons/bugs.inc[]
+include::Commons/bugs.asciidoc[]
 
-include::Commons/copyright.inc[]
+include::Commons/copyright.asciidoc[]
 
-include::Commons/also.inc[]
+include::Commons/also.asciidoc[]
 
 // vim: set syntax=asciidoc:

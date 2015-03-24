@@ -734,12 +734,12 @@ Manuals/::
     by *idforge-locale(1)* command and the Manuals/idforge.conf
     configuration file.
 
-include::Commons/author.inc[]
+include::Commons/author.asciidoc[]
 
-include::Commons/bugs.inc[]
+include::Commons/bugs.asciidoc[]
 
-include::Commons/copyright.inc[]
+include::Commons/copyright.asciidoc[]
 
-include::Commons/also.inc[]
+include::Commons/also.asciidoc[]
 
 // vim: set syntax=asciidoc:

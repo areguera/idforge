@@ -27,7 +27,7 @@ written to illustrate specific ways of using modules inside the
 [[options]]
 == Options
 
-include::Commons/options.inc[]
+include::Commons/options.asciidoc[]
 
 *-l, --lower*::
     Shows message in lowercase. The final output is printed out all in
@@ -62,12 +62,12 @@ these options are.
 ]$ idforge -d hello Welcome --camel
 ----------------------------------------------------------------------
 
-include::Commons/author.inc[]
+include::Commons/author.asciidoc[]
 
-include::Commons/bugs.inc[]
+include::Commons/bugs.asciidoc[]
 
-include::Commons/copyright.inc[]
+include::Commons/copyright.asciidoc[]
 
-include::Commons/also.inc[]
+include::Commons/also.asciidoc[]
 
 // vim: set syntax=asciidoc:

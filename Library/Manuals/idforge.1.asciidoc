@@ -75,7 +75,7 @@ script, while specific options affect only the execution environment
 of the command that interprets them. The specific options are
 described in the man page of the command they pertain to.
 
-include::Commons/options.inc[]
+include::Commons/options.asciidoc[]
 
 *-d, --debug*::
     Runs *{doctitle}* in debugging mode. This option is very useful if
@@ -106,15 +106,15 @@ exit status:
 * 0 -- Exit successfully without errors.
 * 1 -- Exit with errors.
 
-include::Commons/environment.inc[]
+include::Commons/environment.asciidoc[]
 
-include::Commons/author.inc[]
+include::Commons/author.asciidoc[]
 
-include::Commons/bugs.inc[]
+include::Commons/bugs.asciidoc[]
 
-include::Commons/copyright.inc[]
+include::Commons/copyright.asciidoc[]
 
-include::Commons/also.inc[]
+include::Commons/also.asciidoc[]
 
 == Reference
 

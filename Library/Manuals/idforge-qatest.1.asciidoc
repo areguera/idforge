@@ -39,7 +39,7 @@ validate using integrity checks.
 [[options]]
 == Options
 
-include::Commons/options.inc[]
+include::Commons/options.asciidoc[]
 
 *-a, --add*::
     Creates the shell script you need to implement a new assurance
@@ -267,15 +267,15 @@ $ idforge --filter="2014121344576579785" qatest ./Qatests/idforge-qatest
 <5> Command-specific shell script used to initiate integrity checks
 ======================================================================
 
-include::Commons/environment.inc[]
+include::Commons/environment.asciidoc[]
 
-include::Commons/author.inc[]
+include::Commons/author.asciidoc[]
 
-include::Commons/bugs.inc[]
+include::Commons/bugs.asciidoc[]
 
-include::Commons/copyright.inc[]
+include::Commons/copyright.asciidoc[]
 
-include::Commons/also.inc[]
+include::Commons/also.asciidoc[]
 
 == Reference
 

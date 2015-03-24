@@ -63,7 +63,7 @@ script to exit with an error message.
 
 == Command-line Options
 
-include::Commons/options.inc[]
+include::Commons/options.asciidoc[]
 
 *-e, --edit*::
     Edits translation files set as value to *render-from-po*
@@ -168,7 +168,7 @@ specify several source files in a single entry of *render-from*
 configuration option.  However, the same is not possible for
 translation files which need to be specified explicitly.
 
-include::Commons/environment.inc[]
+include::Commons/environment.asciidoc[]
 
 VISUAL::
     Specifies the visual editor used to modify translation files in PO
@@ -179,12 +179,12 @@ EDITOR::
     Specifies the text editor used to modify translation files in PO
     format. By default, it is set to /usr/bin/vim.
 
-include::Commons/author.inc[]
+include::Commons/author.asciidoc[]
 
-include::Commons/bugs.inc[]
+include::Commons/bugs.asciidoc[]
 
-include::Commons/copyright.inc[]
+include::Commons/copyright.asciidoc[]
 
-include::Commons/also.inc[]
+include::Commons/also.asciidoc[]
 
 // vim: set syntax=asciidoc:
