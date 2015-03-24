@@ -5,7 +5,7 @@ all:
 
 build:
 	for LOCALE in $$(ls Library/Messages/Locales); do \
-		LANG=$${LOCALE}.UTF-8 IDFORGE_LIBRARY=Library ./idforge.sh locale Library/Messages/idforge.conf; \
+		LANG=$${LOCALE}.UTF-8 IDFORGE_MODELS=$${PWD}/Library IDFORGE_LIBRARY=$${PWD}/Library ./idforge.sh locale Library/Messages/idforge.conf; \
 	done
 	
 install:

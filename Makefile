@@ -29,6 +29,11 @@ install:
 	#
 	mkdir -p ${DESTDIR}/usr/share/locale
 	make install -f Library/Messages/Makefile
+	#
+	# Common design models and configuration files
+	#
+	mkdir -p ${DESTDIR}/usr/share/${NAME}
+	cp -r -p Models ${DESTDIR}/usr/share/${NAME}
 
 test:
 	#
