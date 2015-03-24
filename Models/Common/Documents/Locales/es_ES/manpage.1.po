@@ -1,0 +1,49 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: manpage.1.html\n"
+"POT-Creation-Date: 2015-03-20 22:08-0400\n"
+"PO-Revision-Date: 2015-03-20 22:08-0400\n"
+"Last-Translator: The CentOS Documentation SIG <centos-docs@centos.org>\n"
+"Language-Team: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "manpage"
+msgstr ""
+
+msgid "1"
+msgstr ""
+
+msgid "idFORGE Framework"
+msgstr ""
+
+msgid "=MANPAGE_VERSION="
+msgstr ""
+
+msgid "User Commands"
+msgstr "Comandos de Usuario"
+
+msgid "manpage for testing purposes."
+msgstr "página man con propósitos de prueba"
+
+msgid "This is a manpage for testing purposes."
+msgstr "Esta página man es para propósitos de pruebas."
+
+msgid "Description"
+msgstr "Descripción"
+
+msgid "Authors"
+msgstr "Autores"
+
+msgid ""
+"Written by Author &lt;<ulink url=\"mailto:author@example.com"
+"\">author@example.com</ulink>&gt;"
+msgstr ""
+"Escrito por Autor <ulink url=\"mailto:author@example.com"
+"\">author@example.com</ulink>&gt;"
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
+msgid "translator-credits"
+msgstr "Alain Reguera Delgado <alain.reguera@gmail.com>, 2015"

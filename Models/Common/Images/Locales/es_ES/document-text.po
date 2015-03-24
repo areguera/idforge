@@ -1,0 +1,94 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: document.png\n"
+"POT-Creation-Date: 2015-02-15 23:17-0500\n"
+"PO-Revision-Date: 2015-02-15 23:17-0500\n"
+"Last-Translator: The CentOS Documentation SIG <centos-docs@centos.org>\n"
+"Language-Team: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: textplain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "image/svg+xml"
+msgstr ""
+
+#, no-wrap
+msgid "What Is This File For?"
+msgstr "¿Para qué es este fichero?"
+
+#, no-wrap
+msgid "idforge-qatest(1)"
+msgstr ""
+
+#, no-wrap
+msgid "idforge-render(1)"
+msgstr ""
+
+#, no-wrap
+msgid "idforge-locale(1)"
+msgstr ""
+
+#, no-wrap
+msgid "idforge(1)"
+msgstr ""
+
+#, no-wrap
+msgid "This file provides a predictable SVG input for <placeholder-1/> command to validate production processes implemented by <placeholder-2/> and <placeholder-3/> commands. This file is specially conceived to validate <placeholder-4/> environments related to image rendition."
+msgstr "Este fichero brinda una entrada de tipo SVG predecible para que el comando <placeholder-1/> pueda validar el proceso de producción implementado por los comandos <placeholder-2/> y <placeholder-3/>. Este fichero es especialmente concevido para validar los entornos <placeholder-4/> relacionados a la creación de imágens."
+
+#, no-wrap
+msgid "=CONFIG_SECTIONS="
+msgstr ""
+
+#, no-wrap
+msgid "As result of processing the <placeholder-1/> configuration sections, using the production standards implemented by <placeholder-2/> command, you must see a composition with idFORGE brand on document's header, document's background and document's footer."
+msgstr "Como resultado de procesar las secciones de configuración <placeholder-1/>, utilizando los procedimientos estándares que implementa el comando <placeholder-2/>, usted puede ver una composición con las marcas idFORGE en el encabezado, pie y fondo del documento."
+
+#, no-wrap
+msgid "x192"
+msgstr ""
+
+#, no-wrap
+msgid "x48"
+msgstr ""
+
+#, no-wrap
+msgid "x32"
+msgstr ""
+
+#, no-wrap
+msgid "x24"
+msgstr ""
+
+#, no-wrap
+msgid "x16"
+msgstr ""
+
+#, no-wrap
+msgid "Y=172.335"
+msgstr ""
+
+#, no-wrap
+msgid "Y=86.530"
+msgstr ""
+
+#, no-wrap
+msgid "X=125.009"
+msgstr ""
+
+#, no-wrap
+msgid "X=326.209"
+msgstr ""
+
+#, no-wrap
+msgid "X=527.409"
+msgstr ""
+
+#, no-wrap
+msgid "X=180.000"
+msgstr ""
+
+#, no-wrap
+msgid "Y=706.476"
+msgstr ""

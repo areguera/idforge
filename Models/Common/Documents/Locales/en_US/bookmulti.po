@@ -1,0 +1,165 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: bookmulti-customized.asciidoc\n"
+"POT-Creation-Date: 2015-03-23 11:20-0400\n"
+"PO-Revision-Date: 2015-03-23 11:20-0400\n"
+"Last-Translator: The CentOS Documentation SIG <centos-docs@centos.org>\n"
+"Language-Team: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+msgid ""
+"@@image: '=IDFORGE_MODELS=/Brands/idforge-symbol.svg'; md5=THIS FILE DOESN'T "
+"EXIST"
+msgstr ""
+
+msgid "2015-03-22"
+msgstr ""
+
+msgid "Reference Manual"
+msgstr ""
+
+msgid "Manage identity manuals in community"
+msgstr ""
+
+msgid "idFORGE Framework"
+msgstr ""
+
+msgid "=IDFORGE_VERSION="
+msgstr ""
+
+msgid "0"
+msgstr ""
+
+msgid "Abstract goes here ..."
+msgstr ""
+
+msgid ""
+"Copyright <trademark class=\"copyright\"/> =COPYRIGHT_YEAR= "
+"=COPYRIGHT_HOLDER=; This material may only be distributed subject to the "
+"terms and conditions set forth in the GNU Free Documentation License (GFDL), "
+"V1.2 or later (the latest version is presently available at <ulink url="
+"\"http://www.gnu.org/licenses/fdl.txt\">http://www.gnu.org/licenses/fdl.txt</"
+"ulink>)."
+msgstr ""
+
+msgid "Alain"
+msgstr ""
+
+msgid "Reguera Delgado"
+msgstr ""
+
+msgid "The CentOS Artwork SIG"
+msgstr ""
+
+msgid "=REVISION_DATE="
+msgstr ""
+
+msgid "alain.reguera@gmail.com"
+msgstr ""
+
+msgid "Initial creation"
+msgstr ""
+
+msgid "Test Part 1"
+msgstr "Test Part 1"
+
+msgid "Test Chapter"
+msgstr "Test Chapter"
+
+msgid "This is a test paragraph in a chapter"
+msgstr "This is a test paragraph in a chapter"
+
+msgid "Test Section 1"
+msgstr "Test Section 1"
+
+msgid "This is a test paragraph in a section"
+msgstr "This is a test paragraph in a section"
+
+msgid "Callout Testing Example"
+msgstr ""
+
+#, no-wrap
+msgid ""
+"First item <co id=\"CO1-1\"></co>\n"
+"Second item <co id=\"CO1-2\"></co>\n"
+"Third item <co id=\"CO1-3\"></co>"
+msgstr ""
+
+msgid "First item"
+msgstr ""
+
+msgid "Second item"
+msgstr ""
+
+msgid "Third item"
+msgstr ""
+
+msgid "Test Section 2"
+msgstr "Test Section 2"
+
+msgid "Big Cats"
+msgstr "Big Cats"
+
+msgid "Tiger"
+msgstr "Tiger"
+
+msgid "This is a test paragraph in a section 2"
+msgstr "This is a test paragraph in a section 2"
+
+msgid "listitem text"
+msgstr "listitem text"
+
+msgid ""
+"Notes are tips, shortcuts or alternative approaches to the task at hand. "
+"Ignoring a note should have no negative consequences, but you might miss out "
+"on a trick that makes your life easier."
+msgstr ""
+"Notes are tips, shortcuts or alternative approaches to the task at hand. "
+"Ignoring a note should have no negative consequences, but you might miss out "
+"on a trick that makes your life easier."
+
+msgid ""
+"Important boxes detail things that are easily missed: configuration changes "
+"that only apply to the current session, or services that need restarting "
+"before an update will apply. Ignoring a box labeled <emphasis>Important</"
+"emphasis> won’t cause data loss but may cause irritation and frustration."
+msgstr ""
+"Important boxes detail things that are easily missed: configuration changes "
+"that only apply to the current session, or services that need restarting "
+"before an update will apply. Ignoring a box labeled <emphasis>Important</"
+"emphasis> won’t cause data loss but may cause irritation and frustration."
+
+msgid ""
+"Warnings should not be ignored. Ignoring warnings will most likely cause "
+"data loss."
+msgstr ""
+"Warnings should not be ignored. Ignoring warnings will most likely cause "
+"data loss."
+
+msgid "Test Part 2"
+msgstr "Test Part 2"
+
+#, no-wrap
+msgid ""
+"First item <co id=\"CO2-1\"></co>\n"
+"Second item <co id=\"CO2-2\"></co>\n"
+"Third item <co id=\"CO2-3\"></co>"
+msgstr ""
+
+msgid "Index"
+msgstr "Index"
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#~ msgid "Optional part introduction goes here."
+#~ msgstr "Optional part introduction goes here."
+
+#~ msgid "Test Section"
+#~ msgstr "Test Section"

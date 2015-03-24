@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<refentry lang="en">
+  <refmeta>
+    <refentrytitle>manpage</refentrytitle>
+    <manvolnum>1</manvolnum>
+    <refmiscinfo class="source">idforge</refmiscinfo>
+    <refmiscinfo class="software">idforge</refmiscinfo>
+    <refmiscinfo class="version">0.2</refmiscinfo>
+    <refmiscinfo class="manual">User Commands</refmiscinfo>
+    <refmiscinfo class="sectdesc">User Commands</refmiscinfo>
+  </refmeta>
+  <refnamediv>
+    <refname>manpage</refname>
+    <refpurpose>manpage for testing purposes.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv id="_synopsis">
+    <simpara>This is a manpage for testing purposes.</simpara>
+  </refsynopsisdiv>
+  <refsect1 id="_description">
+    <title>Description</title>
+    <simpara>This is a manpage for testing purposes.</simpara>
+  </refsect1>
+  <refsect1 id="_authors">
+    <title>Authors</title>
+    <simpara>Written by Author &lt;<ulink url="mailto:author@example.com">author@example.com</ulink>&gt;</simpara>
+  </refsect1>
+</refentry>

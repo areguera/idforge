@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   version="1.0"
+   width="15"
+   height="300"
+   id="svg2">
+  <defs
+     id="defs4">
+    <pattern
+       patternTransform="translate(2.4177263e-3,3.0223382e-3)"
+       id="pattern3887"
+       xlink:href="#pattern3161" />
+    <pattern
+       id="pattern3161"
+       patternTransform="translate(0.1112185,-19.680851)"
+       height="15"
+       width="15"
+       patternUnits="userSpaceOnUse">
+      <g
+         transform="translate(-0.1112185,19.680851)"
+         id="g3157">
+        <rect
+           y="-19.680851"
+           x="0.11121847"
+           height="15"
+           width="15"
+           id="rect2383"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+        <path
+           transform="matrix(0.7180555,0,0,0.7180555,4.7466352,-2.0246013)"
+           d="m 10.952611,-14.144101 c 0,3.845696 -3.1175526,6.9632495 -6.9632492,6.9632495 -3.84569665,0 -6.9632497,-3.1175535 -6.9632497,-6.9632495 0,-3.845697 3.11755305,-6.96325 6.9632497,-6.96325 3.8456966,0 6.9632492,3.117553 6.9632492,6.96325 z"
+           sodipodi:ry="6.9632497"
+           sodipodi:rx="6.9632497"
+           sodipodi:cy="-14.144101"
+           sodipodi:cx="3.9893618"
+           id="path2385"
+           style="opacity:1;fill:#f7f7f7;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           sodipodi:type="arc" />
+      </g>
+    </pattern>
+  </defs>
+  <g
+     id="layer1">
+    <rect
+       width="15"
+       height="300"
+       x="0"
+       y="0"
+       id="CENTOSARTWORK"
+       style="fill:url(#pattern3887);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+  </g>
+</svg>

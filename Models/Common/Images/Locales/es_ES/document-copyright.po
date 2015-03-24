@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: document-copyright.png\n"
+"POT-Creation-Date: 2015-02-15 23:17-0500\n"
+"PO-Revision-Date: 2015-02-15 23:17-0500\n"
+"Last-Translator: The CentOS Documentation SIG <centos-docs@centos.org>\n"
+"Language-Team: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "image/svg+xml"
+msgstr ""
+
+#, no-wrap
+msgid "=PRODUCT_NAME= VISUAL IDENTITY MANUAL"
+msgstr "MANUAL DE IDENTIDAD VISUAL =PRODUCT_NAME="
+
+#, no-wrap
+msgid "Copyright © =COPYRIGHT_YEAR= =COPYRIGHT_HOLDER="
+msgstr ""
+
+#, no-wrap
+msgid "This artwork was produced by idFORGE =IDFORGE_VERSION= and released under the terms of =LICENSE="
+msgstr "Este trabajo artístico fue producido por idFORGE =IDFORGE_VERSION= y liberado bajo los términos de =LICENSE="

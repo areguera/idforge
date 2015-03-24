@@ -1,0 +1,1518 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.2"
+   width="765"
+   height="990"
+   id="svg2">
+  <defs
+     id="defs4" />
+  <image
+     xlink:href="=BACKGROUND_IMAGE="
+     id="image5504"
+     height="990"
+     width="765"
+     y="-3.8281252e-07"
+     x="0" />
+  <flowRoot
+     transform="translate(0,230.76762)"
+     id="flowRoot4954"
+     xml:space="preserve"
+     style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"><flowRegion
+       id="flowRegion4956"><rect
+         width="614.79449"
+         height="58.967369"
+         x="74.589043"
+         y="230.54794"
+         id="rect4958"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans" /></flowRegion><flowPara
+       id="flowPara2928" /></flowRoot>  <g
+     transform="translate(0,5.213856)"
+     id="g3078"
+     style="fill:#000000">
+    <text
+       x="74.046875"
+       y="361.23438"
+       id="text5042"
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur Bold"><tspan
+         x="74.046875"
+         y="361.23438"
+         id="tspan5044"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur Bold">What Is This File For?</tspan></text>
+    <flowRoot
+       transform="translate(0,147.69393)"
+       id="flowRoot5046"
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"><flowRegion
+         id="flowRegion5048"><rect
+           width="614.79449"
+           height="377.67401"
+           x="74.589043"
+           y="230.54794"
+           id="rect5050"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans" /></flowRegion><flowPara
+         id="flowPara3167">This file provides a predictable SVG input for <flowSpan
+   id="flowSpan2877"
+   style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans">idforge-qatest(1)</flowSpan> command to validate production processes implemented by <flowSpan
+   id="flowSpan2881"
+   style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans">idforge-render(1)</flowSpan> and <flowSpan
+   id="flowSpan3074"
+   style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans">idforge-locale(1)</flowSpan> commands. This file is specially conceived to validate <flowSpan
+   id="flowSpan3479"
+   style="font-weight:bold">idforge(1)</flowSpan> environments related to image rendition.</flowPara><flowPara
+         id="flowPara3179" /><flowPara
+         id="flowPara3189">As result of processing the <flowSpan
+   id="flowSpan3205"
+   style="font-size:14px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans">=CONFIG_SECTIONS=</flowSpan> configuration sections, using the production standards implemented by <flowSpan
+   id="flowSpan3207"
+   style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans">idforge-render(1)</flowSpan> command, you must see a composition with idFORGE brand on document's header, document's background and document's footer.</flowPara></flowRoot>  </g>
+  <flowRoot
+     transform="translate(-0.6171875,258.09822)"
+     id="flowRoot4213"
+     xml:space="preserve"
+     style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#24221c;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"><flowRegion
+       id="flowRegion4215"><rect
+         width="614.79449"
+         height="285.64386"
+         x="74.589043"
+         y="230.54794"
+         id="rect4217"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#24221c;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans" /></flowRegion><flowPara
+       id="flowPara3883" /></flowRoot>  <flowRoot
+     transform="translate(780.84116,466.18611)"
+     id="flowRoot4225"
+     xml:space="preserve"
+     style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#24221c;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"><flowRegion
+       id="flowRegion4227"><rect
+         width="614.79449"
+         height="71.589241"
+         x="74.589043"
+         y="230.54794"
+         id="rect4229"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#24221c;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans" /></flowRegion><flowPara
+       id="flowPara4231" /></flowRoot>  <g
+     transform="translate(0,21.523796)"
+     id="g3073">
+    <path
+       d="m 75.4752,69.525059 614.04912,0"
+       id="use4233"
+       style="fill:none;stroke:#000000;stroke-width:0.94988251;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.11764706;stroke-dasharray:2.8496474, 2.8496474;stroke-dashoffset:0" />
+    <path
+       d="m 180.47494,283.04885 0,-235.097712"
+       id="path4237"
+       style="fill:none;stroke:#000000;stroke-width:0.94988286;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.11764706;stroke-dasharray:3.79953136, 3.79953136;stroke-dashoffset:0" />
+    <use
+       transform="translate(404.12247,-3.7060552e-7)"
+       id="use4239"
+       style="stroke:#000000;stroke-opacity:0.11764706"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#path4237" />
+    <use
+       transform="matrix(0.99999979,0,0,1.0002615,8.162438e-5,191.98175)"
+       id="use4241"
+       style="stroke:#000000;stroke-opacity:0.11764706"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4233" />
+    <text
+       x="363.56674"
+       y="286.29129"
+       transform="scale(1.0527614,0.94988285)"
+       id="text4297-2"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="363.56674"
+         y="286.29129"
+         id="tspan4334"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x192</tspan></text>
+  </g>
+  <g
+     transform="translate(57.338484,-80.304703)"
+     id="g4448">
+    <path
+       d="m 368.45625,906.59148 0,-65.24255"
+       id="path4376"
+       style="fill:none;stroke:#cccccc;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0" />
+    <use
+       transform="translate(244.29765,0)"
+       id="use4378"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#path4243" />
+    <use
+       transform="matrix(0,-1,1,0,-481.02402,1071.5885)"
+       id="use4380"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4291" />
+    <text
+       x="393.02628"
+       y="909.39209"
+       id="text4382"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="393.02628"
+         y="909.39209"
+         id="tspan4384"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x48</tspan></text>
+    <use
+       transform="translate(195.31779,49.000035)"
+       id="use4386"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4293" />
+    <use
+       transform="translate(154.29258,0)"
+       id="use4388"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#path4243" />
+    <use
+       transform="translate(162.28921,0)"
+       id="use4390"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4340" />
+    <use
+       transform="translate(170.28586,0)"
+       id="use4392"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4342" />
+    <use
+       transform="translate(146.29593,16.000045)"
+       id="use4394"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4293" />
+    <use
+       transform="translate(195.31779,33)"
+       id="use4396"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4346" />
+    <use
+       transform="translate(158.29088,8.0000021)"
+       id="use4398"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4346" />
+    <use
+       transform="translate(158.29088,0)"
+       id="use4400"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4348" />
+    <use
+       transform="translate(166.28754,0)"
+       id="use4402"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4352" />
+    <use
+       transform="translate(166.28754,8.0000011)"
+       id="use4404"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4350" />
+    <g
+       transform="matrix(0.14688637,0,0,0.14688637,266.33127,801.84194)"
+       id="g4406"
+       style="fill:#000000">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4410"
+         style="fill:#000000" />
+    </g>
+    <g
+       transform="matrix(0.22032955,0,0,0.22032955,289.59357,753.7778)"
+       id="g4412"
+       style="fill:#000000">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4416"
+         style="fill:#000000" />
+    </g>
+    <g
+       transform="matrix(0.29377274,0,0,0.29377274,320.85253,705.71365)"
+       id="g4418"
+       style="fill:#000000">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4422"
+         style="fill:#000000" />
+    </g>
+    <g
+       transform="matrix(0.44065911,0,0,0.44065911,358.33849,609.58536)"
+       id="g4424"
+       style="fill:#000000">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4428"
+         style="fill:#000000" />
+    </g>
+    <use
+       transform="translate(138.29929,0)"
+       id="use4430"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4291" />
+    <use
+       transform="translate(154.29256,0)"
+       id="use4432"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4358" />
+    <use
+       transform="translate(162.28921,0)"
+       id="use4434"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4360" />
+    <text
+       x="344.00439"
+       y="909.39209"
+       id="text4436"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="344.00439"
+         y="909.39209"
+         id="tspan4438"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x32</tspan></text>
+    <text
+       x="306.82321"
+       y="909.39209"
+       id="text4440"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="306.82321"
+         y="909.39209"
+         id="tspan4442"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x24</tspan></text>
+    <text
+       x="277.79294"
+       y="909.39209"
+       id="text4444"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="277.79294"
+         y="909.39209"
+         id="tspan4446"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x16</tspan></text>
+  </g>
+  <g
+     transform="translate(258.5381,-80.304726)"
+     id="g4524">
+    <path
+       d="m 368.45625,906.59148 0,-65.24255"
+       id="path4526"
+       style="fill:none;stroke:#cccccc;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0" />
+    <use
+       transform="translate(244.29765,0)"
+       id="use4528"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#path4243" />
+    <use
+       transform="matrix(0,-1,1,0,-481.02402,1071.5885)"
+       id="use4530"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4291" />
+    <text
+       x="393.02628"
+       y="909.39209"
+       id="text4532"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="393.02628"
+         y="909.39209"
+         id="tspan4534"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x48</tspan></text>
+    <use
+       transform="translate(195.31779,49.000035)"
+       id="use4536"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4293" />
+    <use
+       transform="translate(154.29258,0)"
+       id="use4538"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#path4243" />
+    <use
+       transform="translate(162.28921,0)"
+       id="use4540"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4340" />
+    <use
+       transform="translate(170.28586,0)"
+       id="use4542"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4342" />
+    <use
+       transform="translate(146.29593,16.000045)"
+       id="use4544"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4293" />
+    <use
+       transform="translate(195.31779,33)"
+       id="use4546"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4346" />
+    <use
+       transform="translate(158.29088,8.0000021)"
+       id="use4548"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4346" />
+    <use
+       transform="translate(158.29088,0)"
+       id="use4550"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4348" />
+    <use
+       transform="translate(166.28754,0)"
+       id="use4552"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4352" />
+    <use
+       transform="translate(166.28754,8.0000011)"
+       id="use4554"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4350" />
+    <g
+       transform="matrix(0.14688637,0,0,0.14688637,266.33127,801.84194)"
+       id="g4556"
+       style="fill:#000000">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4560"
+         style="fill:#000000" />
+    </g>
+    <g
+       transform="matrix(0.22032955,0,0,0.22032955,289.59357,753.7778)"
+       id="g4562"
+       style="fill:#000000">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4566"
+         style="fill:#000000" />
+    </g>
+    <g
+       transform="matrix(0.29377274,0,0,0.29377274,320.85253,705.71365)"
+       id="g4568"
+       style="fill:#000000">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4572"
+         style="fill:#000000" />
+    </g>
+    <g
+       transform="matrix(0.44065911,0,0,0.44065911,358.33849,609.58536)"
+       id="g4574"
+       style="fill:#000000">
+      <path
+         d="M 77.53125,2.34375 C 77.019072,2.3354786 76.465116,2.3368418 75.875,2.375 56.991288,3.5960625 82.105266,23.795251 64.0625,29.5 46.019734,35.204748 54.96574,4.2368546 38.8125,14.09375 c -16.15324,9.856895 15.481197,16.063805 2.15625,29.5 C 27.643803,57.029945 21.159756,25.452868 11.4375,41.6875 c -9.7222561,16.234632 21.148293,7.035428 15.59375,25.125 -5.554543,18.089572 -25.9359797,-6.830711 -27,12.0625 -1.0640204,18.893211 22.011661,-3.598845 25.5,15 3.488339,18.59885 -26.18171956,5.963918 -18.34375,23.1875 7.83797,17.22358 17.799165,-13.40985 29.53125,1.4375 11.732085,14.84735 -20.350625,17.45426 -5.40625,29.0625 14.944375,11.60824 9.524348,-20.132 26.8125,-12.4375 17.288152,7.6945 -9.939704,24.91641 8.6875,28.25 18.627205,3.33359 -0.914962,-22.27894 17.96875,-23.5 18.88371,-1.22106 2.769734,26.70475 20.8125,21 18.04277,-5.70475 -11.15324,-19.29935 5,-29.15625 16.15324,-9.8569 14.86255,22.34245 28.1875,8.90625 13.32495,-13.4362 -18.84726,-11.89037 -9.125,-28.125 9.72226,-16.234632 23.53921,12.87082 29.09375,-5.21875 5.55454,-18.089572 -22.18902,-1.76304 -21.125,-20.65625 1.06402,-18.893211 26.80084,0.442595 23.3125,-18.15625 C 157.44916,49.869905 140.46297,77.223582 132.625,60 124.78703,42.776418 156.57584,47.909847 144.84375,33.0625 133.11166,18.215153 130.78813,50.358239 115.84375,38.75 100.89937,27.141761 131.4444,16.913251 114.15625,9.21875 96.868098,1.5242488 109.72095,31.083587 91.09375,27.75 73.048646,24.520587 93.408774,2.6001642 77.53125,2.34375 z M 73.9375,61.1875 c 2.58678,-0.238652 4.936981,2.294342 5.25,5.6875 l 0.9375,10.21875 c 0.313019,3.393173 -1.506955,6.323863 -4.09375,6.5625 -2.58678,0.238637 -4.936981,-2.325607 -5.25,-5.71875 L 69.84375,67.75 c -0.313019,-3.393158 1.50697,-6.323863 4.09375,-6.5625 z m -16.34375,1.53125 c 2.389077,0.0948 4.456531,2.537678 4.75,5.71875 l 0.9375,10.21875 c 0.313019,3.393158 -1.50697,6.292613 -4.09375,6.53125 -2.58678,0.238652 -4.936967,-2.294357 -5.25,-5.6875 L 53,69.28125 c -0.313048,-3.393158 1.53822,-6.292613 4.125,-6.53125 0.161675,-0.01492 0.309478,-0.03757 0.46875,-0.03125 z"
+         transform="matrix(0.67516752,0,0,0.67516752,24.098164,543.93239)"
+         id="path4576"
+         style="fill:#ff0000;fill-opacity:0;stroke:none" />
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4578"
+         style="fill:#000000" />
+    </g>
+    <use
+       transform="translate(138.29929,0)"
+       id="use4580"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4291" />
+    <use
+       transform="translate(154.29256,0)"
+       id="use4582"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4358" />
+    <use
+       transform="translate(162.28921,0)"
+       id="use4584"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4360" />
+    <text
+       x="344.00439"
+       y="909.39209"
+       id="text4586"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="344.00439"
+         y="909.39209"
+         id="tspan4588"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x32</tspan></text>
+    <text
+       x="306.82321"
+       y="909.39209"
+       id="text4590"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="306.82321"
+         y="909.39209"
+         id="tspan4592"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x24</tspan></text>
+    <text
+       x="277.79294"
+       y="909.39209"
+       id="text4594"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="277.79294"
+         y="909.39209"
+         id="tspan4596"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x16</tspan></text>
+  </g>
+  <g
+     transform="translate(57.338484,5.4946289)"
+     id="g4713">
+    <path
+       d="m 368.45625,906.59148 0,-65.24255"
+       id="path4715"
+       style="fill:none;stroke:#cccccc;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0" />
+    <use
+       transform="translate(244.29765,0)"
+       id="use4717"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#path4243" />
+    <use
+       transform="matrix(0,-1,1,0,-481.02402,1071.5885)"
+       id="use4719"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4291" />
+    <text
+       x="393.02628"
+       y="909.39209"
+       id="text4721"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="393.02628"
+         y="909.39209"
+         id="tspan4723"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x48</tspan></text>
+    <use
+       transform="translate(195.31779,49.000035)"
+       id="use4725"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4293" />
+    <use
+       transform="translate(154.29258,0)"
+       id="use4727"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#path4243" />
+    <use
+       transform="translate(162.28921,0)"
+       id="use4729"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4340" />
+    <use
+       transform="translate(170.28586,0)"
+       id="use4731"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4342" />
+    <use
+       transform="translate(146.29593,16.000045)"
+       id="use4733"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4293" />
+    <use
+       transform="translate(195.31779,33)"
+       id="use4735"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4346" />
+    <use
+       transform="translate(158.29088,8.0000021)"
+       id="use4737"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4346" />
+    <use
+       transform="translate(158.29088,0)"
+       id="use4739"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4348" />
+    <use
+       transform="translate(166.28754,0)"
+       id="use4741"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4352" />
+    <use
+       transform="translate(166.28754,8.0000011)"
+       id="use4743"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4350" />
+    <g
+       transform="matrix(0.14688637,0,0,0.14688637,266.33127,801.84194)"
+       id="g4745"
+       style="fill:#000000">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4749"
+         style="fill:#000000" />
+    </g>
+    <g
+       transform="matrix(0.22032955,0,0,0.22032955,289.59357,753.7778)"
+       id="g4751"
+       style="fill:#000000">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4755"
+         style="fill:#000000" />
+    </g>
+    <g
+       transform="matrix(0.29377274,0,0,0.29377274,320.85253,705.71365)"
+       id="g4757"
+       style="fill:#000000">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4761"
+         style="fill:#000000" />
+    </g>
+    <g
+       transform="matrix(0.44065911,0,0,0.44065911,358.33849,609.58536)"
+       id="g4763"
+       style="fill:#000000">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4767"
+         style="fill:#000000" />
+    </g>
+    <use
+       transform="translate(138.29929,0)"
+       id="use4769"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4291" />
+    <use
+       transform="translate(154.29256,0)"
+       id="use4771"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4358" />
+    <use
+       transform="translate(162.28921,0)"
+       id="use4773"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4360" />
+    <text
+       x="344.00439"
+       y="909.39209"
+       id="text4775"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="344.00439"
+         y="909.39209"
+         id="tspan4777"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x32</tspan></text>
+    <text
+       x="306.82321"
+       y="909.39209"
+       id="text4779"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="306.82321"
+         y="909.39209"
+         id="tspan4781"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x24</tspan></text>
+    <text
+       x="277.79294"
+       y="909.39209"
+       id="text4783"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="277.79294"
+         y="909.39209"
+         id="tspan4785"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x16</tspan></text>
+  </g>
+  <g
+     transform="translate(258.5381,5.4946289)"
+     id="g4787">
+    <path
+       d="m 368.45625,906.59148 0,-65.24255"
+       id="path4789"
+       style="fill:none;stroke:#cccccc;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0" />
+    <use
+       transform="translate(244.29765,0)"
+       id="use4791"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#path4243" />
+    <use
+       transform="matrix(0,-1,1,0,-481.02402,1071.5885)"
+       id="use4793"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4291" />
+    <text
+       x="393.02628"
+       y="909.39209"
+       id="text4795"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="393.02628"
+         y="909.39209"
+         id="tspan4797"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x48</tspan></text>
+    <use
+       transform="translate(195.31779,49.000035)"
+       id="use4799"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4293" />
+    <use
+       transform="translate(154.29258,0)"
+       id="use4801"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#path4243" />
+    <use
+       transform="translate(162.28921,0)"
+       id="use4803"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4340" />
+    <use
+       transform="translate(170.28586,0)"
+       id="use4805"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4342" />
+    <use
+       transform="translate(146.29593,16.000045)"
+       id="use4807"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4293" />
+    <use
+       transform="translate(195.31779,33)"
+       id="use4809"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4346" />
+    <use
+       transform="translate(158.29088,8.0000021)"
+       id="use4811"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4346" />
+    <use
+       transform="translate(158.29088,0)"
+       id="use4813"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4348" />
+    <use
+       transform="translate(166.28754,0)"
+       id="use4815"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4352" />
+    <use
+       transform="translate(166.28754,8.0000011)"
+       id="use4817"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4350" />
+    <g
+       transform="matrix(0.14688637,0,0,0.14688637,266.33127,801.84194)"
+       id="g4819"
+       style="fill:#000000">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4823"
+         style="fill:#000000" />
+    </g>
+    <g
+       transform="matrix(0.22032955,0,0,0.22032955,289.59357,753.7778)"
+       id="g4825"
+       style="fill:#000000">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4829"
+         style="fill:#000000" />
+    </g>
+    <g
+       transform="matrix(0.29377274,0,0,0.29377274,320.85253,705.71365)"
+       id="g4831"
+       style="fill:#000000">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4835"
+         style="fill:#000000" />
+    </g>
+    <g
+       transform="matrix(0.44065911,0,0,0.44065911,358.33849,609.58536)"
+       id="g4837"
+       style="fill:#000000">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4841"
+         style="fill:#000000" />
+    </g>
+    <use
+       transform="translate(138.29929,0)"
+       id="use4843"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4291" />
+    <use
+       transform="translate(154.29256,0)"
+       id="use4845"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4358" />
+    <use
+       transform="translate(162.28921,0)"
+       id="use4847"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4360" />
+    <text
+       x="344.00439"
+       y="909.39209"
+       id="text4849"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="344.00439"
+         y="909.39209"
+         id="tspan4851"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x32</tspan></text>
+    <text
+       x="306.82321"
+       y="909.39209"
+       id="text4853"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="306.82321"
+         y="909.39209"
+         id="tspan4855"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x24</tspan></text>
+    <text
+       x="277.79294"
+       y="909.39209"
+       id="text4857"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="277.79294"
+         y="909.39209"
+         id="tspan4859"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x16</tspan></text>
+  </g>
+  <g
+     transform="translate(51.456661,-80.304703)"
+     id="g4486">
+    <path
+       d="m 173.13846,906.59148 0,-65.24255"
+       id="path4243"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.11764706;stroke-dasharray:3, 3;stroke-dashoffset:0" />
+    <use
+       transform="translate(48.979865,0)"
+       id="use4291"
+       style="stroke:#000000;stroke-opacity:0.11764706"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#path4243" />
+    <use
+       transform="matrix(0,-1,1,0,-676.34181,1071.5885)"
+       id="use4293"
+       style="stroke:#000000;stroke-opacity:0.11764706"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4291" />
+    <text
+       x="197.70848"
+       y="909.39209"
+       id="text4297"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="197.70848"
+         y="909.39209"
+         id="tspan4299"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x48</tspan></text>
+    <use
+       transform="translate(0,49.000035)"
+       id="use4338"
+       style="stroke:#000000;stroke-opacity:0.11764706"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4293" />
+    <use
+       transform="translate(-41.02521,0)"
+       id="use4340"
+       style="stroke:#000000;stroke-opacity:0.11764706"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#path4243" />
+    <use
+       transform="translate(-33.028584,0)"
+       id="use4342"
+       style="stroke:#000000;stroke-opacity:0.11764706"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4340" />
+    <use
+       transform="translate(-25.031931,0)"
+       id="use4344"
+       style="stroke:#000000;stroke-opacity:0.11764706"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4342" />
+    <use
+       transform="translate(-49.021857,16.000045)"
+       id="use4346"
+       style="stroke:#000000;stroke-opacity:0.11764706"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4293" />
+    <use
+       transform="translate(0,33)"
+       id="use4348"
+       style="stroke:#000000;stroke-opacity:0.11764706"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4346" />
+    <use
+       transform="translate(-37.026906,8.0000021)"
+       id="use4350"
+       style="stroke:#000000;stroke-opacity:0.11764706"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4346" />
+    <use
+       transform="translate(-37.026906,0)"
+       id="use4352"
+       style="stroke:#000000;stroke-opacity:0.11764706"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4348" />
+    <use
+       transform="translate(-29.030253,0)"
+       id="use4354"
+       style="stroke:#000000;stroke-opacity:0.11764706"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4352" />
+    <use
+       transform="translate(-29.030253,8.0000011)"
+       id="use4356"
+       style="stroke:#000000;stroke-opacity:0.11764706"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4350" />
+    <g
+       transform="matrix(0.14688637,0,0,0.14688637,71.01348,801.84194)"
+       id="g4179-5"
+       style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4183-6"
+         style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706" />
+    </g>
+    <g
+       transform="matrix(0.22032955,0,0,0.22032955,94.275784,753.7778)"
+       id="g4273"
+       style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4277"
+         style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706" />
+    </g>
+    <g
+       transform="matrix(0.29377274,0,0,0.29377274,125.53474,705.71365)"
+       id="g4279"
+       style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4283"
+         style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706" />
+    </g>
+    <g
+       transform="matrix(0.44065911,0,0,0.44065911,163.0207,609.58536)"
+       id="g4285"
+       style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4289"
+         style="fill:#000000;stroke:#000000;stroke-opacity:0.11764706" />
+    </g>
+    <use
+       transform="translate(-57.018499,0)"
+       id="use4358"
+       style="stroke:#000000;stroke-opacity:0.11764706"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4291" />
+    <use
+       transform="translate(-41.025228,0)"
+       id="use4360"
+       style="stroke:#000000;stroke-opacity:0.11764706"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4358" />
+    <use
+       transform="translate(-33.028575,0)"
+       id="use4362"
+       style="stroke:#000000;stroke-opacity:0.11764706"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4360" />
+    <text
+       x="148.68661"
+       y="909.39209"
+       id="text4364"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="148.68661"
+         y="909.39209"
+         id="tspan4366"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x32</tspan></text>
+    <text
+       x="111.50542"
+       y="909.39209"
+       id="text4368"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="111.50542"
+         y="909.39209"
+         id="tspan4370"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x24</tspan></text>
+    <text
+       x="82.475159"
+       y="909.39209"
+       id="text4372"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="82.475159"
+         y="909.39209"
+         id="tspan4374"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x16</tspan></text>
+  </g>
+  <text
+     x="118.35015"
+     y="829.0874"
+     id="text4372-4"
+     xml:space="preserve"
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+       x="118.35015"
+       y="829.0874"
+       id="tspan4374-3"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">Y=172.335</tspan></text>
+  <use
+     transform="translate(204.39793,0)"
+     id="use3087"
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Vegur;-inkscape-font-specification:Vegur"
+     x="0"
+     y="0"
+     width="765"
+     height="990"
+     xlink:href="#text4372-4" />
+  <use
+     transform="translate(201.19961,0)"
+     id="use3091"
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Vegur;-inkscape-font-specification:Vegur"
+     x="0"
+     y="0"
+     width="765"
+     height="990"
+     xlink:href="#use3087" />
+  <g
+     transform="translate(51.456661,5.4946213)"
+     id="g4639">
+    <path
+       d="m 173.13846,906.59148 0,-65.24255"
+       id="path4641"
+       style="fill:none;stroke:#cccccc;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0" />
+    <use
+       transform="translate(48.979865,0)"
+       id="use4643"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#path4243" />
+    <use
+       transform="matrix(0,-1,1,0,-676.34181,1071.5885)"
+       id="use4645"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4291" />
+    <text
+       x="197.70848"
+       y="909.39209"
+       id="text4647"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="197.70848"
+         y="909.39209"
+         id="tspan4649"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x48</tspan></text>
+    <use
+       transform="translate(0,49.000035)"
+       id="use4651"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4293" />
+    <use
+       transform="translate(-41.02521,0)"
+       id="use4653"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#path4243" />
+    <use
+       transform="translate(-33.028584,0)"
+       id="use4655"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4340" />
+    <use
+       transform="translate(-25.031931,0)"
+       id="use4657"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4342" />
+    <use
+       transform="translate(-49.021857,16.000045)"
+       id="use4659"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4293" />
+    <use
+       transform="translate(0,33)"
+       id="use4661"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4346" />
+    <use
+       transform="translate(-37.026906,8.0000021)"
+       id="use4663"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4346" />
+    <use
+       transform="translate(-37.026906,0)"
+       id="use4665"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4348" />
+    <use
+       transform="translate(-29.030253,0)"
+       id="use4667"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4352" />
+    <use
+       transform="translate(-29.030253,8.0000011)"
+       id="use4669"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4350" />
+    <g
+       transform="matrix(0.14688637,0,0,0.14688637,71.01348,801.84194)"
+       id="g4671"
+       style="fill:#000000">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4675"
+         style="fill:#000000" />
+    </g>
+    <g
+       transform="matrix(0.22032955,0,0,0.22032955,94.275784,753.7778)"
+       id="g4677"
+       style="fill:#000000">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4681"
+         style="fill:#000000" />
+    </g>
+    <g
+       transform="matrix(0.29377274,0,0,0.29377274,125.53474,705.71365)"
+       id="g4683"
+       style="fill:#000000">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4687"
+         style="fill:#000000" />
+    </g>
+    <g
+       transform="matrix(0.44065911,0,0,0.44065911,163.0207,609.58536)"
+       id="g4689"
+       style="fill:#000000">
+      <g
+         transform="translate(-110.98556,-129.29271)"
+         id="g4693"
+         style="fill:#000000" />
+    </g>
+    <use
+       transform="translate(-57.018499,0)"
+       id="use4695"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4291" />
+    <use
+       transform="translate(-41.025228,0)"
+       id="use4697"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4358" />
+    <use
+       transform="translate(-33.028575,0)"
+       id="use4699"
+       x="0"
+       y="0"
+       width="765"
+       height="990"
+       xlink:href="#use4360" />
+    <text
+       x="148.68661"
+       y="909.39209"
+       id="text4701"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="148.68661"
+         y="909.39209"
+         id="tspan4703"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x32</tspan></text>
+    <text
+       x="111.50542"
+       y="909.39209"
+       id="text4705"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="111.50542"
+         y="909.39209"
+         id="tspan4707"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x24</tspan></text>
+    <text
+       x="82.475159"
+       y="909.39209"
+       id="text4709"
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+         x="82.475159"
+         y="909.39209"
+         id="tspan4711"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">x16</tspan></text>
+  </g>
+  <text
+     x="118.16015"
+     y="914.88672"
+     id="text4207"
+     xml:space="preserve"
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+       x="118.16015"
+       y="914.88672"
+       id="tspan4209"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">Y=86.530</tspan></text>
+  <use
+     transform="translate(204.39793,0)"
+     id="use3089"
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Vegur;-inkscape-font-specification:Vegur"
+     x="0"
+     y="0"
+     width="765"
+     height="990"
+     xlink:href="#text4207" />
+  <use
+     transform="translate(201.19961,0)"
+     id="use3093"
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Vegur;-inkscape-font-specification:Vegur"
+     x="0"
+     y="0"
+     width="765"
+     height="990"
+     xlink:href="#use3089" />
+  <text
+     x="-791.27881"
+     y="117.69781"
+     transform="matrix(0,-1,1,0,0,0)"
+     id="text4372-4-6"
+     xml:space="preserve"
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+       x="-791.27881"
+       y="117.69781"
+       id="tspan4374-3-8"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">X=125.009</tspan></text>
+  <text
+     x="-791.28662"
+     y="322.09573"
+     transform="matrix(0,-1,1,0,0,0)"
+     id="text3431"
+     xml:space="preserve"
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+       x="-791.28662"
+       y="322.09573"
+       id="tspan3433"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">X=326.209</tspan></text>
+  <text
+     x="-791.27881"
+     y="523.29535"
+     transform="matrix(0,-1,1,0,0,0)"
+     id="text3435"
+     xml:space="preserve"
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+       x="-791.27881"
+       y="523.29535"
+       id="tspan3437"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">X=527.409</tspan></text>
+  <text
+     x="-279.6738"
+     y="175.88672"
+     transform="matrix(0,-1,1,0,0,0)"
+     id="text3439"
+     xml:space="preserve"
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+       x="-279.6738"
+       y="175.88672"
+       id="tspan3441"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">X=180.000</tspan></text>
+  <text
+     x="184.86989"
+     y="293.4613"
+     id="text3443"
+     xml:space="preserve"
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Vegur;-inkscape-font-specification:Vegur"><tspan
+       x="184.86989"
+       y="293.4613"
+       id="tspan3445"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Vegur;-inkscape-font-specification:Vegur">Y=706.476</tspan></text>
+  <use
+     transform="translate(0,85.799322)"
+     id="use3394"
+     x="0"
+     y="0"
+     width="765"
+     height="990"
+     xlink:href="#text4372-4-6" />
+  <use
+     transform="translate(0,85.799322)"
+     id="use3396"
+     style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Vegur;-inkscape-font-specification:Vegur"
+     x="0"
+     y="0"
+     width="765"
+     height="990"
+     xlink:href="#text3431" />
+  <use
+     transform="translate(0,85.799322)"
+     id="use3398"
+     x="0"
+     y="0"
+     width="765"
+     height="990"
+     xlink:href="#text3435" />
+</svg>
