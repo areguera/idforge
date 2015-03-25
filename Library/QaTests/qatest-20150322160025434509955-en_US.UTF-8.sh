@@ -17,7 +17,7 @@ export LANG=en_US.UTF-8
 #=====================================================================
 # Enter integrity checks target models:
 #=====================================================================
-export export IDFORGE_MODELS=$(dirname ${0})/Models/Common
+export IDFORGE_MODELS=$(dirname ${0})/Models/Common
 
 #=====================================================================
 # Enter integrity checks target command:
