@@ -39,6 +39,7 @@ test:
 	#
 	# Automation scripts' quality assurance tests
 	#
+	IDFORGE_MODELS=${DESTDIR}/usr/share/${NAME}/Common \
 	IDFORGE_LIBRARY=${DESTDIR}/usr/libexec/${NAME} \
 	IDFORGE_MANUALS=${DESTDIR}/usr/share/man \
 	TEXTDOMAINDIR=${DESTDIR}/usr/share/locale \
