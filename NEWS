@@ -1,5 +1,7 @@
+======================================================================
 idFORGE Framework v0.2 (2015-03-26) [stable]
-============================================
+======================================================================
+
 - Customize source files' base directory in configuration files (#156)
 - idforge-qatest doesn't process tests all at once (#155)
 - Cannot nest sibling modules after two or more levels (#147)
