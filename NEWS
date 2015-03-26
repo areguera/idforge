@@ -1,0 +1,18 @@
+idFORGE Framework v0.2 (2015-03-26) [stable]
+============================================
+- Customize source files' base directory in configuration files (#156)
+- idforge-qatest doesn't process tests all at once (#155)
+- Cannot nest sibling modules after two or more levels (#147)
+- Strange behavior when qatest module is target of itself (#146)
+- Refactor translation markers expansion (#145)
+- Fix idforge_printConfValue to support default value (#144)
+- Retrieve manpage section from asciidoc sources (#143)
+- Fix paths to default docbook XSL files (#142)
+- Fix idforge_getConfigValue command not found (#139)
+- Fix value expansion of render-dir configuration option (#95)
+- Refactor configuration files processing (#54)
+- Support command execution from configuration files (#37)
+- Fix idforge command-line support for several common options (#30)
+- Support asciidoc customization in configuration files (#26)
+- Support several values to render-as configuration option (#25)
+- Support manpage product customization (#4)
