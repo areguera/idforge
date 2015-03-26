@@ -23,20 +23,32 @@ Requires:       gnupg2
 Requires:       mailx
 
 %description
-The idFORGE Framework provides standard procedures to rebuild the
-visual identity manual of a particular organization and the files
-necessary for its implementation, using your own visual style.
-Normally, one organization publishes the source files about its visual
-identity in an RPM package for you to install it in your workstations,
-prepare a workplace where you provide the visual style you want to
-apply, and rebuild everything.
+The idFORGE Framework exists to improve the visual recognition of your
+organization. It provides standard procedures to rebuild the visual
+identity manual of a particular organization and the files necessary
+for its implementation, using customized visual styles.  In this
+context, the organization publishes the source files describing its
+visual identity and allows others (e.g., you) to provide visual styles
+to customize it.
 
-The idFORGE Framework results useful for organizations that want to
-"refresh" the visual style of its visual identity structure frequently
-(e.g., every two years approximately).
+The idFORGE Framework results useful for organizations and projects
+that need to "refresh" their visual style within frequent periods of
+time (e.g., every two years approximately) without altering their
+visual identity structure.  For example, whenever the CentOS Project
+(the organization) releases a new major release of CentOS GNU/Linux
+distribution (visual manifestation) it must have a new image (visual
+style) to differentiate it from other major releases of the same
+visual manifestation. This major change of image demands the CentOS
+Project to propagate the new visual style to dependent visual
+manifestation (e.g., web sites, documentation, promotion stuff, etc.)
+so they can be all recognized as a single visual unit. This visual
+consistency renders a huge impact in the way the organization presents
+itself both internally and externally; so it is the mission and vision
+that motivates idFORGE Framework development.
 
-Install %{name} package if you want to rebuild visual identity manuals
-and the files necessary for their implementation in community.
+Install the %{name} package if you want to create a community focused
+in the effort needed to conceived the visual identity manual of your
+organization and the files necessary for implementing it.
 
 %build
 make build NAME=%{name} VERSION=%{version}
