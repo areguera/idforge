@@ -2,6 +2,33 @@
 idFORGE Framework v0.2 (2015-03-26) [stable]
 ======================================================================
 
+commit 608c26ad83db85a45b3cf570ddf8bf08c8215ba1
+Author: Alain Reguera Delgado <alain.reguera@gmail.com>
+Date:   Thu Mar 26 11:52:21 2015 -0400
+
+    Update idforge.spec to add NEWS and CHANGES file
+
+ idforge.spec |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 1e2943f07e85c9fea17306b9211655ff3ee7868c
+Author: Alain Reguera Delgado <alain.reguera@gmail.com>
+Date:   Thu Mar 26 11:51:47 2015 -0400
+
+    Update the NEWS file header
+
+ NEWS |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
+commit a6cdfb940afac4052298b9e96815f74fd146862c
+Author: Alain Reguera Delgado <alain.reguera@gmail.com>
+Date:   Thu Mar 26 11:51:26 2015 -0400
+
+    Add the CHANGES file
+
+ CHANGES | 5154 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 files changed, 5154 insertions(+), 0 deletions(-)
+
 commit d08c024d5b482e23b8d535a961ef46b536fc1b33
 Author: Alain Reguera Delgado <alain.reguera@gmail.com>
 Date:   Thu Mar 26 11:41:08 2015 -0400
