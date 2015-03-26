@@ -100,7 +100,7 @@ rm -rf ${RPM_BUILD_ROOT}
 %files -f %{name}-modules.lang
 
 %defattr(-,root,root,-)
-%doc README INSTALL LICENSE
+%doc README INSTALL COPYING
 %{_mandir}/man1/%{name}.1.gz
 %{_mandir}/man1/%{name}-*.1.gz
 %{_mandir}/man5/%{name}-*.5.gz
