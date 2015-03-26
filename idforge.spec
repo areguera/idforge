@@ -4,7 +4,7 @@ Release:        1%{?dist}
 Summary:        Manage identity manuals in community
 
 Group:          Development/Tools
-Vendor:         The CentOS Artwork SIG
+Vendor:         The CentOS Artwork SIG <centos-devel@centos.org>
 License:        GPLv2+
 URL:            http://wiki.centos.org/ArtWork/Framework
 Source0:        http://wiki.centos.org/ArtWork/Framework/%{name}-%{version}.tar.gz
@@ -21,6 +21,15 @@ Requires:       gettext, asciidoc, docbook-style-xsl, fop, gnome-doc-utils
 Requires:       inkscape, ImageMagick, netpbm-progs, syslinux-perl
 Requires:       gnupg2
 Requires:       mailx
+
+Obsoletes:      tcar
+Obsoletes:      tcar-scripts
+Obsoletes:      tcar-models
+Obsoletes:      tcar-models-branding
+Obsoletes:      tcar-models-distribution
+Obsoletes:      tcar-models-documentation
+Obsoletes:      tcar-models-marketing
+Obsoletes:      tcar-models-webenv
 
 %description
 The idFORGE Framework exists to improve the visual recognition of your
@@ -101,5 +110,5 @@ rm -rf ${RPM_BUILD_ROOT}
 
 
 %changelog
-* Wed Mar 25 2015 Alain Reguera Delgado <alain.reguera@gmail.com> - 0.2-1
+* Thu Mar 26 2015 Alain Reguera Delgado <alain.reguera@gmail.com> - 0.2-1
 - Update to idFORGE Framework v0.2
