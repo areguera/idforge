@@ -67,6 +67,7 @@ function idforge_setOptions {
 
             -h | --help )
                 idforge_printHelp
+                shift 1
                 ;;
 
             -v | --version )
