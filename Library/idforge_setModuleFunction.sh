@@ -47,7 +47,13 @@ function idforge_setModuleFunction {
 
         idforge_checkFiles -ex ${FUNCTION_FILE}
 
-        local FUNCTION_NAME=''; idforge_setModuleFunctionName
+        local FUNCTION_NAME=$(egrep ${FUNCTION_DEF_REGEX} ${FUNCTION_FILE} | gawk '{ print $2 }')
+
+        [[ -z "${FUNCTION_NAME}" ]] && idforge_printMessage "`gettext "No function definition found."`" --as-error-line
+
+        declare -F | gawk '{ print $3 }' | egrep "^${FUNCTION_NAME}$" > /dev/null
+
+        [[ ${?} -eq 0 ]] && continue
 
         . ${FUNCTION_FILE}
 
